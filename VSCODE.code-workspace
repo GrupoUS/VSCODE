@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "aegiswallet",
+			"path": "aegiswallet"
+		},
+		{
+			"name": "mcp-r-task-manager",
+			"path": "mcp-r-task-manager"
+		},
+		{
+			"name": "assessoria",
+			"path": "assessoria"
+		},
+		{
+			"name": "neonpro",
+			"path": "neonpro"
+		},
+		{
+			"name": "harmoniza-facil-agendas",
+			"path": "harmoniza-facil-agendas"
+		},
+		{
+			"name": "trintae3",
+			"path": "trintae3"
+		}
+	],
+	"settings": {
+		"powershell.cwd": "VSCODE"
+	}
+}

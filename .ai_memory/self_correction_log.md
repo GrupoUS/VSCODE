@@ -1,21 +1,34 @@
-# AI Self-Correction Log
-This file logs mistakes I have made and their corrections to prevent repetition and improve my performance over time. [cite: 23]
+# Log de Auto-Correção e Aprendizado
+
+Este arquivo registra todos os erros, soluções e aprendizados do sistema para evolução contínua.
 
 ---
 
-## 2025-06-01 - Initial Setup
-**Context**: Setting up TaskMaster + Sequential Thinking integration project
-**Learning**: Established baseline for coordination patterns and decision-making processes
-**Status**: Foundation established for future learning
+## Exemplo de Entrada (Para Referência)
+
+**### Análise de Correção - [2025-01-15 14:30:22] ###**
+
+**1. Tarefa Solicitada:**
+   - Criar componente de perfil de usuário com dados do Supabase
+
+**2. Comando/Ação que Falhou:**
+   - Query Supabase: `supabase.from('profiles').select('*').eq('id', userId)`
+
+**3. Saída do Erro:**
+```
+Error: Row Level Security policy violation
+Details: Policy "Users can view own profile" failed for table "profiles"
+```
+
+**4. Análise da Causa Raiz:**
+- O erro ocorreu porque a política RLS estava configurada para verificar `auth.uid()` mas a query não estava sendo executada no contexto de um usuário autenticado. A política esperava `auth.uid() = user_id` mas o `auth.uid()` retornava null.
+
+**5. Ação Corretiva Implementada:**
+- Adicionei verificação de autenticação antes da query: `const { data: { user } } = await supabase.auth.getUser()` e modifiquei a query para usar o ID do usuário autenticado.
+
+**6. Sugestão de Melhoria para as Regras:**
+- Sugiro adicionar ao `coding_standards/03_nextjs_stack.md` na seção de Supabase: "Sempre verificar autenticação antes de queries que dependem de RLS. Use `supabase.auth.getUser()` para obter o usuário atual e validar se está autenticado antes de executar queries em tabelas com RLS ativo."
 
 ---
 
-## Template for Future Entries:
-### [DATE] - [BRIEF_DESCRIPTION]
-**Mistake**: [Description of what went wrong]
-**Context**: [Situation where the mistake occurred]
-**Correction**: [What the correct approach should have been]
-**Learning**: [Key insight to prevent repetition]
-**Applied**: [How this learning was integrated into the system]
-
----
+*[Futuras entradas de log serão adicionadas aqui automaticamente pelo protocolo de auto-melhoria]*
