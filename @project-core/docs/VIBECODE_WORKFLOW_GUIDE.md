@@ -2,6 +2,33 @@
 
 Este guia explica como usar o sistema de personas para desenvolver de forma eficiente e padronizada.
 
+## 📁 NOVA ESTRUTURA DE PROJETOS (OBRIGATÓRIA)
+
+**IMPORTANTE**: A partir da reorganização arquitetural V4.0, todos os projetos de desenvolvimento devem residir em `@project-core/projects/`.
+
+### Estrutura Atual:
+
+```
+C:\Users\Admin\OneDrive\GRUPOUS\VSCODE\
+├── @project-core/projects/
+│   ├── primeiro-projeto-nextjs/    # Projeto Next.js reorganizado
+│   ├── aegiswallet/               # Projeto existente
+│   ├── neonpro/                   # Projeto existente
+│   └── [seu-novo-projeto]/        # Futuros projetos aqui
+├── @project-core/memory/          # Memory Bank compartilhado
+└── [arquivos do sistema VIBECODE] # Apenas na raiz
+```
+
+### Comandos de Sincronização Atualizados:
+
+```bash
+# Para projeto específico
+.\sync-github-auto.ps1 -ProjectName "primeiro-projeto-nextjs"
+
+# Para sistema completo
+.\sync-github-auto.ps1
+```
+
 ### O Ciclo de Desenvolvimento em 4 Passos
 
 **1. Análise e Decomposição (O Desenvolvedor)**

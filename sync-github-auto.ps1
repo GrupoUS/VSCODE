@@ -1,27 +1,52 @@
 # 🚀 VIBECODE SYSTEM V4.0 - Sincronização Automática GitHub
 # Script para sincronização automática entre pasta local e repositório GitHub
+# Suporte para projetos específicos dentro de @project-core/projects/
 
 param(
     [switch]$Force,
     [switch]$DryRun,
+    [string]$ProjectName = "",
     [string]$Message = "🔄 Sincronização automática - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 )
 
-# Configurações
-$LocalPath = "C:\Users\Admin\OneDrive\GRUPOUS\VSCODE"
+# Configurações base
+$SystemRootPath = "C:\Users\Admin\OneDrive\GRUPOUS\VSCODE"
 $RemoteRepo = "https://github.com/GrupoUS/VSCODE.git"
 $Branch = "clean-final"
+
+# Determinar caminho de trabalho
+if ($ProjectName) {
+    $LocalPath = Join-Path $SystemRootPath "@project-core\projects\$ProjectName"
+    $Message = "🔄 [$ProjectName] $Message"
+    Write-Host "🎯 Modo Projeto: $ProjectName" -ForegroundColor Magenta
+} else {
+    $LocalPath = $SystemRootPath
+    Write-Host "🌐 Modo Sistema: Sincronização completa" -ForegroundColor Magenta
+}
 
 Write-Host "🚀 VIBECODE SYSTEM V4.0 - Sincronização Automática" -ForegroundColor Cyan
 Write-Host "=================================================" -ForegroundColor Cyan
 
 # Verificar se estamos na pasta correta
 if (-not (Test-Path $LocalPath)) {
-    Write-Error "❌ Pasta local não encontrada: $LocalPath"
+    if ($ProjectName) {
+        Write-Error "❌ Projeto não encontrado: $ProjectName em $LocalPath"
+        Write-Host "💡 Projetos disponíveis:" -ForegroundColor Yellow
+        Get-ChildItem -Path (Join-Path $SystemRootPath "@project-core\projects") -Directory | ForEach-Object { Write-Host "   - $($_.Name)" -ForegroundColor White }
+    } else {
+        Write-Error "❌ Pasta do sistema não encontrada: $LocalPath"
+    }
     exit 1
 }
 
-Set-Location $LocalPath
+# Para projetos específicos, navegar para a raiz do sistema para operações git
+if ($ProjectName) {
+    Set-Location $SystemRootPath
+    Write-Host "📁 Projeto: $LocalPath" -ForegroundColor Green
+    Write-Host "🔧 Operações Git em: $SystemRootPath" -ForegroundColor Green
+} else {
+    Set-Location $LocalPath
+}
 
 # Verificar se é um repositório git
 if (-not (Test-Path ".git")) {

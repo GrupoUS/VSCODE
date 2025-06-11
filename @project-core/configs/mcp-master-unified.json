@@ -164,8 +164,14 @@
     "workspace": {
       "root": "C:/Users/Admin/OneDrive/GRUPOUS/VSCODE",
       "projectCore": "@project-core",
+      "projectsDirectory": "@project-core/projects",
       "knowledgeBase": "@project-core/knowledge-base",
-      "automation": "@project-core/automation"
+      "automation": "@project-core/automation",
+      "projectStructure": {
+        "enforced": true,
+        "isolationRequired": true,
+        "description": "All development projects must reside within @project-core/projects/ directory"
+      }
     },
     "rules": {
       "centralizedPath": "@project-core/rules",

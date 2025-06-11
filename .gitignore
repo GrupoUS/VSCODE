@@ -153,3 +153,48 @@ next-env.d.ts
 
 # storybook
 storybook-static/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos de secrets
+*.pem
+*.key
+*.cert
+*.crt
+
+# Logs e caches
+*.log
+.cache/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos de secrets
+*.pem
+*.key
+*.cert
+*.crt
+
+# Logs e caches
+*.log
+.cache/
+
+# Arquivos de ambiente
+@project-core/env/.env
+@project-core/env/.env.local
+@project-core/env/.env.*.local
+
+# Arquivos de secrets
+*.pem
+*.key
+*.cert
+*.crt
+
+# Logs e caches
+*.log
+.cache/

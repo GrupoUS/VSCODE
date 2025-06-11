@@ -25,6 +25,54 @@ Este arquivo é a **ÚNICA FONTE DE VERDADE** para todos os ambientes de desenvo
 
 ---
 
+## 📁 ESTRUTURA DE DIRETÓRIOS DE PROJETO MANDATÓRIA
+
+### **ISOLAMENTO OBRIGATÓRIO DE PROJETOS**
+
+**REGRA FUNDAMENTAL**: Todos os projetos de desenvolvimento devem, obrigatoriamente, residir dentro do diretório `@project-core/projects/`. A raiz do sistema VIBECODE não deve conter arquivos de projeto.
+
+### **ESTRUTURA ENFORÇADA**
+
+```
+C:\Users\Admin\OneDrive\GRUPOUS\VSCODE\
+├── @project-core/                    # SISTEMA VIBECODE (CORE)
+│   ├── projects/                     # PROJETOS ISOLADOS
+│   │   ├── primeiro-projeto-nextjs/  # Projeto Next.js movido
+│   │   ├── aegiswallet/              # Projeto existente
+│   │   ├── neonpro/                  # Projeto existente
+│   │   └── [novo-projeto]/           # Futuros projetos
+│   ├── memory/                       # Memory Bank compartilhado
+│   ├── configs/                      # Configurações unificadas
+│   └── rules/                        # Regras do sistema
+├── .cursor/                          # Configurações Cursor
+├── .vscode/                          # Configurações VS Code
+├── .git/                             # Controle de versão
+├── sync-github-auto.ps1              # Scripts do sistema
+└── setup-auto-sync.ps1               # Scripts do sistema
+```
+
+### **COMPLIANCE AUTOMÁTICO**
+
+- **Toda automação**: DEVE respeitar e impor essa estrutura
+- **Prompts e agentes MCP**: DEVEM trabalhar dentro de `@project-core/projects/`
+- **Scripts de sincronização**: DEVEM suportar projetos específicos
+- **Configurações**: DEVEM referenciar a estrutura correta
+
+### **COMANDOS ATUALIZADOS**
+
+```bash
+# Sincronização de projeto específico
+.\sync-github-auto.ps1 -ProjectName "primeiro-projeto-nextjs"
+
+# Sincronização do sistema completo
+.\sync-github-auto.ps1
+
+# Setup de automação para projeto
+.\setup-auto-sync.ps1 -Install -ProjectName "primeiro-projeto-nextjs"
+```
+
+---
+
 ## 🧠 SISTEMA FMC - FUSÃO DE MEMÓRIA COGNITIVA UNIFICADA
 
 ### **PROTOCOLO DE CONSULTA OBRIGATÓRIA**

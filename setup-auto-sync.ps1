@@ -1,14 +1,16 @@
 # 🚀 VIBECODE SYSTEM V4.0 - Configuração de Sincronização Automática
 # Script para configurar sincronização automática com GitHub
+# Suporte para projetos específicos dentro de @project-core/projects/
 
 param(
     [switch]$Install,
     [switch]$Uninstall,
+    [string]$ProjectName = "",
     [int]$IntervalMinutes = 30
 )
 
 $ScriptPath = "C:\Users\Admin\OneDrive\GRUPOUS\VSCODE\sync-github-auto.ps1"
-$TaskName = "VIBECODE-GitHub-AutoSync"
+$TaskName = if ($ProjectName) { "VIBECODE-GitHub-AutoSync-$ProjectName" } else { "VIBECODE-GitHub-AutoSync-System" }
 
 Write-Host "🚀 VIBECODE SYSTEM V4.0 - Configuração de Sincronização Automática" -ForegroundColor Cyan
 Write-Host "=================================================================" -ForegroundColor Cyan
@@ -30,7 +32,8 @@ if ($Install) {
     }
 
     # Criar nova tarefa agendada
-    $action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-ExecutionPolicy Bypass -File `"$ScriptPath`""
+    $scriptArgs = if ($ProjectName) { "-ExecutionPolicy Bypass -File `"$ScriptPath`" -ProjectName `"$ProjectName`"" } else { "-ExecutionPolicy Bypass -File `"$ScriptPath`"" }
+    $action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument $scriptArgs
     $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes $IntervalMinutes) -RepetitionDuration (New-TimeSpan -Days 3650)
     $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -ExecutionTimeLimit (New-TimeSpan -Hours 1)
     $principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -LogonType Interactive -RunLevel Highest
