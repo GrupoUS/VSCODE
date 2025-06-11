@@ -1,0 +1,3 @@
+# GRUPO US VIBECODE SYSTEM
+
+Este projeto é a base do ecossistema GRUPO US VIBECODE SYSTEM, focado em automação, integração de agentes MCP e workflows inteligentes para desenvolvimento de software. Aqui você encontra a estrutura principal do sistema, incluindo automações, configurações, documentação, scripts e regras de orquestração. Consulte a pasta `docs/` para guias detalhados de setup, workflows de desenvolvimento, arquitetura e padrões. Para integrações avançadas, veja também `@project-core/knowledge-base/rules/` e `@project-core/configs/`. Este README serve como ponto de partida para desenvolvedores, arquitetos e gestores do GRUPO US.
