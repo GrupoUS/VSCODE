@@ -1,0 +1,118 @@
+# VS Code System Files
+Cache/
+CachedConfigurations/
+CachedData/
+CachedExtensionVSIXs/
+CachedProfilesData/
+Code Cache/
+Crashpad/
+DawnGraphiteCache/
+DawnWebGPUCache/
+GPUCache/
+Local State
+Local Storage/
+Network/
+Preferences
+Service Worker/
+Session Storage/
+Shared Dictionary/
+SharedStorage*
+VideoDecodeStats/
+WebStorage/
+code.lock
+languagepacks.json
+logs/
+machineid
+shared_proto_db/
+
+# Node.js
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables and sensitive configuration
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+**/configs/*.env
+**/configs/*-mcp.env
+@project-core/configs/*.env
+@project-core/configs/figma-context-mcp.env
+@project-core/env/
+@project-core/secrets/
+
+# API Keys and Tokens
+**/api-keys/
+**/tokens/
+**/*api-key*
+**/*token*
+**/*secret*
+**/credentials/
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*_backup_*
+*.backup
+*.bak
+
+# Build outputs
+dist/
+build/
+out/
+
+# Dependencies
+vendor/
+
+# Testing
+coverage/
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local files
+.cursor/
+.vscode/
+
+# Large files
+*.node
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Cache
+.cache/
+.npm/
+.yarn/
