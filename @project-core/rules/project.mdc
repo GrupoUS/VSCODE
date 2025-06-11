@@ -1,0 +1,27 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+## Segurança: Prevenção de Vazamento de Segredos
+- Nunca commitar arquivos `.env`, `*.json` de configuração com segredos, ou arquivos de backup contendo tokens/API keys.
+- Sempre rodar scripts de detecção de segredos antes de commit/push:
+  - `pip install detect-secrets`
+  - `detect-secrets scan > .secrets.baseline`
+  - `detect-secrets-hook --baseline .secrets.baseline`
+- Adicionar ao pre-commit:
+  - `npx husky add .husky/pre-commit "detect-secrets-hook --baseline .secrets.baseline"`
+- Atualizar `.gitignore` para incluir:
+  ```
+  *.env
+  *.json
+  *config*.json
+  *mcp.json
+  *secrets*
+  *token*
+  *backup*
+  ```
+- Em caso de vazamento:
+  - Rodar imediatamente o `git filter-repo` para remover arquivos/commits sensíveis.
+  - Forçar push após limpeza.
+  - Notificar todos os colaboradores para re-clonar o repositório.

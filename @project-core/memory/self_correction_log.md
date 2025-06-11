@@ -1273,7 +1273,7 @@ C:\Users\Admin\OneDrive\GRUPOUS\VSCODE\
 
 **Status**: ✅ EVOLUÇÃO COMPLETA - 100% SUCCESS RATE
 **Complexity**: 10/10 (Maximum architectural complexity)
-**Duration**: ~90 minutes
+**Duration**: ~90 minutos
 **Confidence**: 10/10
 **Validation Score**: 100% (18/18 tests passed)
 
@@ -1383,7 +1383,7 @@ C:\Users\Admin\OneDrive\GRUPOUS\VSCODE\
 
 **Status**: ✅ WORKFLOWS TOTALMENTE VALIDADOS - 95% SUCCESS RATE
 **Complexity**: 9/10 (ARCHITECT Agent activated)
-**Duration**: ~45 minutes
+**Duration**: ~45 minutos
 **Confidence**: 9/10
 **Validation Score**: 95% (19/20 workflows passed)
 
@@ -1520,7 +1520,7 @@ C:\Users\Admin\OneDrive\GRUPOUS\VSCODE\
 
 **Status**: ✅ OTIMIZAÇÃO BEM-SUCEDIDA - 93.3% SUCCESS RATE
 **Complexity**: 10/10 (Maximum architectural complexity - ARCHITECT Agent)
-**Duration**: ~60 minutes
+**Duration**: ~60 minutos
 **Confidence**: 9/10
 **Validation Score**: 93.3% (14/15 optimizations successful)
 
@@ -1638,7 +1638,7 @@ C:\Users\Admin\OneDrive\GRUPOUS\VSCODE\
 **Data**: [2025-01-10 17:50:00]
 **Status**: ✅ CORREÇÃO COMPLETA - 100% SUCCESS RATE ALCANÇADO
 **Complexity**: 7/8 (CODER Agent)
-**Duration**: ~15 minutes
+**Duration**: ~15 minutos
 **Confidence**: 9/10
 
 #### **PROBLEMA CORRIGIDO**:
@@ -2922,7 +2922,7 @@ Correção de conflitos estruturais no projeto NEON PRO V2.0 que impediam o func
 
 **Status**: ✅ SUCCESSFULLY COMPLETED
 **Complexity**: 9/10
-**Duration**: ~45 minutes
+**Duration**: ~45 minutos
 **Confidence**: 10/10
 
 ### **ACHIEVEMENTS**:
@@ -3240,3 +3240,38 @@ Correção de conflitos estruturais no projeto NEON PRO V2.0 que impediam o func
    - Comparação sistemática: terceiros vs oficial (62.5% gap identificado)
    - 40+ ferramentas avançadas mapeadas vs 10 básicas atuais
    - Scorecard comparativo documentado com gaps críticos
+
+### Erro: Vazamento de segredos (tokens/API keys) no histórico do git
+
+**Errado**:
+
+- Commits contendo arquivos com tokens/API keys (ex: figma_config.json, mcp.json, package.json, etc.)
+- Push bloqueado pelo GitHub por violação de segurança
+
+**Correto**:
+
+- Remover arquivos sensíveis do histórico usando `git filter-repo`:
+  ```sh
+  git filter-repo --path @project-core/configs/figma_config.json --path @project-core/backups/20250608_110621/mcp.json --path @project-core/backups/20250610_141622/mcp.json --path @project-core/configs/package.json --path @project-core/memory/gitlab-mcp-integration-complete.md --invert-paths --force
+  ```
+- Forçar push após limpeza:
+  ```sh
+  git push --force origin clean-final
+  ```
+- Instalar e configurar scripts de pre-commit/pre-push para detectar segredos antes do commit:
+  ```sh
+  pip install detect-secrets
+  detect-secrets scan > .secrets.baseline
+  detect-secrets-hook --baseline .secrets.baseline
+  ```
+- Atualizar `.gitignore` para nunca versionar arquivos sensíveis:
+  ```
+  *.env
+  *.json
+  *config*.json
+  *mcp.json
+  *secrets*
+  *token*
+  *backup*
+  ```
+- Documentar o processo de resposta a incidentes de vazamento.

@@ -11,30 +11,7 @@
     "sourceConfig": "@project-core/configs/mcp-master-unified.json"
   },
   "mcpServers": {
-    "think-mcp-server": {
-      "priority": 1,
-      "command": "node",
-      "name": "Think MCP Server - GRUPO US VIBECODE SYSTEM V4.0",
-      "description": "Structured reasoning and thought processing with unified memory integration",
-      "env": {
-        "NODE_ENV": "production",
-        "LOG_LEVEL": "info",
-        "DATA_DIR": "@project-core/memory",
-        "CACHE_ENABLED": "true",
-        "MEMORY_INTEGRATION": "true",
-        "UNIFIED_SYSTEM": "true",
-        "CROSS_ENVIRONMENT": "true"
-      },
-      "args": ["@project-core/tools/think-tool.js"],
-      "enabled": true,
-      "capabilities": [
-        "structured-thinking",
-        "complexity-assessment",
-        "memory-consultation",
-        "thought-caching",
-        "intercalated-reflection",
-        "cross-environment-coordination"
-      ],
+
       "integration": {
         "workspace": "@project-core",
         "rulesPath": "@project-core/rules",

@@ -24,42 +24,6 @@
     }
   },
   "mcpServers": {
-    "think-mcp-server": {
-      "priority": 1,
-      "command": "node",
-      "name": "Think MCP Server - GRUPO US VIBECODE SYSTEM V4.0",
-      "description": "Structured reasoning and thought processing with unified memory integration",
-      "env": {
-        "NODE_ENV": "production",
-        "LOG_LEVEL": "info",
-        "DATA_DIR": "@project-core/memory",
-        "CACHE_ENABLED": "true",
-        "MEMORY_INTEGRATION": "true",
-        "UNIFIED_SYSTEM": "true",
-        "CROSS_ENVIRONMENT": "true"
-      },
-      "args": ["@project-core/tools/think-tool.js"],
-      "enabled": true,
-      "capabilities": [
-        "structured-thinking",
-        "complexity-assessment",
-        "memory-consultation",
-        "thought-caching",
-        "intercalated-reflection",
-        "cross-environment-coordination"
-      ],
-      "integration": {
-        "workspace": "@project-core",
-        "rulesPath": "@project-core/rules",
-        "memoryPath": "@project-core/memory",
-        "thoughtLogPath": "@project-core/memory/thought_log.md",
-        "cacheDir": "@project-core/memory/think-mcp-cache",
-        "masterRule": "@project-core/memory/master_rule.md",
-        "unifiedConfig": "@project-core/configs/ide/shared/unified-config.json"
-      },
-      "environments": ["vscode-augment"],
-      "complexityRange": [7, 10]
-    },
     "sequential-thinking": {
       "priority": 2,
       "command": "npx",
@@ -190,7 +154,6 @@
     "format": "structured",
     "outputs": ["@project-core/logs/mcp-activity.log"],
     "components": {
-      "think-mcp-server": "info",
       "sequential-thinking": "debug",
       "mcp-shrimp-task-manager": "info",
       "security": "warn",
@@ -221,11 +184,7 @@
         "enabled": true,
         "configPath": ".vscode/mcp.json",
         "syncSource": "@project-core/configs/mcp-master-unified.json",
-        "servers": [
-          "think-mcp-server",
-          "sequential-thinking",
-          "mcp-shrimp-task-manager"
-        ]
+        "servers": ["sequential-thinking", "mcp-shrimp-task-manager"]
       },
       "cursor": {
         "enabled": true,
