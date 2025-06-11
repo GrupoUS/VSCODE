@@ -231,6 +231,45 @@ test: adiciona testes para auth hook
 - **Minimal permissions** para cada chave
 - **Monitoring** de uso de APIs
 
+## 🔒 Padrões de Segurança
+
+### Gestão de Segredos
+
+1. **Uso Obrigatório do Git Secrets**
+
+   - Todo repositório DEVE ter o `git-secrets` configurado
+   - Execute `setup-git-secrets.ps1` durante o setup inicial
+   - Mantenha os hooks do git-secrets atualizados
+
+2. **Variáveis de Ambiente**
+
+   - Use SEMPRE arquivos `.env` para segredos
+   - Mantenha um `.env.example` atualizado
+   - Nunca comite arquivos `.env` ou outros com segredos
+   - Use nomes descritivos para variáveis (ex: `DB_PASSWORD`, `API_KEY`)
+
+3. **Padrões de Bloqueio**
+
+   - Chaves de API (AWS, Google, etc.)
+   - Tokens de autenticação
+   - Senhas e credenciais
+   - Chaves privadas e certificados
+   - Outros padrões sensíveis
+
+4. **Boas Práticas**
+
+   - Revise o código antes de commitar
+   - Use `git secrets --scan` para verificar commits
+   - Mantenha segredos em serviços de gestão de segredos
+   - Rotacione chaves regularmente
+   - Use diferentes segredos por ambiente
+
+5. **Validação de Segurança**
+   - Execute `git secrets --scan` antes de cada commit
+   - Verifique o `.gitignore` regularmente
+   - Mantenha o `setup-git-secrets.ps1` atualizado
+   - Documente qualquer exceção necessária
+
 ## 📁 DIRECTORY STRUCTURE MAINTENANCE PROTOCOLS
 
 **Authority**: GRUPO US VIBECODE SYSTEM V4.0 Post-Consolidation Implementation

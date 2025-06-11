@@ -1,0 +1,67 @@
+name: Security Check
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install git-secrets
+        run: |
+          git clone https://github.com/awslabs/git-secrets.git
+          cd git-secrets
+          make install
+          cd ..
+          rm -rf git-secrets
+
+      - name: Configure git-secrets
+        run: |
+          git secrets --install -f
+          git secrets --register-aws
+          git secrets --add "api_key"
+          git secrets --add "api-key"
+          git secrets --add "secret_key"
+          git secrets --add "secret-key"
+          git secrets --add "access_key"
+          git secrets --add "access-key"
+          git secrets --add "bearer"
+          git secrets --add "token"
+          git secrets --add "password"
+          git secrets --add "senha"
+          git secrets --add "BEGIN RSA PRIVATE KEY"
+          git secrets --add "BEGIN DSA PRIVATE KEY"
+          git secrets --add "BEGIN EC PRIVATE KEY"
+          git secrets --add "BEGIN OPENSSH PRIVATE KEY"
+          git secrets --add "BEGIN CERTIFICATE"
+
+      - name: Check for secrets
+        run: |
+          if git secrets --scan; then
+            echo "✅ Nenhum secret encontrado"
+            exit 0
+          else
+            echo "❌ Secrets encontrados no código"
+            exit 1
+          fi
+
+      - name: Validate .env files
+        run: |
+          if git ls-files | grep -E '\.env$' | grep -v '.env.example'; then
+            echo "❌ Arquivos .env encontrados no repositório"
+            exit 1
+          else
+            echo "✅ Nenhum arquivo .env encontrado"
+          fi

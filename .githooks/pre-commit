@@ -1,0 +1,51 @@
+#!/bin/bash
+# GRUPO US VIBECODE SYSTEM V4.0 - Pre-Commit Security Hook
+
+echo "🚀 Executando verificação de segurança pré-commit..."
+
+# Padrões de regex para secrets comuns
+FORBIDDEN_PATTERNS=(
+    "api_key"
+    "secret"
+    "token"
+    "password"
+    "sk_live_"
+    "pk_live_"
+    "ghp_"
+    "AKIA[0-9A-Z]{16}"
+    "-----BEGIN (RSA|DSA|EC|OPENSSH) PRIVATE KEY-----"
+    "-----BEGIN CERTIFICATE-----"
+)
+
+# Arquivos a serem ignorados na verificação
+IGNORED_FILES=(
+    ".githooks/pre-commit"
+    ".gitignore"
+    "package.json"
+    "README.md"
+    ".env.example"
+    "setup_git_secrets.py"
+)
+
+HAS_SECRET=0
+
+for pattern in "${FORBIDDEN_PATTERNS[@]}"; do
+    # Procura por secrets nos arquivos em staged
+    MATCHES=$(git diff --staged --name-only -z | xargs -0 grep -l -i -E "$pattern" | grep -vFf <(printf "%s\n" "${IGNORED_FILES[@]}"))
+
+    if [ -n "$MATCHES" ]; then
+        echo "❌ ERRO: Secret potencial encontrado no(s) arquivo(s) abaixo:"
+        echo "$MATCHES"
+        echo "Padrão detectado: '$pattern'"
+        HAS_SECRET=1
+    fi
+done
+
+if [ $HAS_SECRET -eq 1 ]; then
+    echo "🛑 Commit bloqueado. Remova os secrets antes de continuar."
+    echo "💡 Dica: Use variáveis de ambiente e o arquivo .env para secrets."
+    exit 1
+fi
+
+echo "✅ Verificação de segurança concluída. Nenhum secret encontrado."
+exit 0
