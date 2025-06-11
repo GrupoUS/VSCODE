@@ -1,0 +1,231 @@
+{
+  "timestamp": "2025-06-11T19:38:14.055402",
+  "duration_seconds": 113.871597,
+  "tests_passed": 18,
+  "tests_failed": 4,
+  "warnings": 2,
+  "success_rate": 81.82,
+  "status": "\u274c NEEDS ATTENTION",
+  "details": [
+    {
+      "timestamp": "19:36:20",
+      "level": "INFO",
+      "message": "\ud83d\ude80 GRUPO US VIBECODE SYSTEM V4.0 - POST-CLEANUP FINAL TEST"
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "INFO",
+      "message": "======================================================================"
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "INFO",
+      "message": "Running test: Git Repository Status"
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "INFO",
+      "message": "\ud83d\udd0d Testing Git repository status..."
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "SUCCESS",
+      "message": "Git branch: clean-no-history (Clean history branch)"
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "WARNING",
+      "message": "Git status: Has uncommitted changes"
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "SUCCESS",
+      "message": "Git remote: Connected to GitHub repository"
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "INFO",
+      "message": "--------------------------------------------------"
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "INFO",
+      "message": "Running test: Secrets Absence"
+    },
+    {
+      "timestamp": "19:36:20",
+      "level": "INFO",
+      "message": "\ud83d\udd12 Testing absence of secrets in current files..."
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "ERROR",
+      "message": "Secret found in: .\\test_secrets_demo\\app_config.ts"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "ERROR",
+      "message": "Secret found in: .\\test_secrets_demo\\config.js"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "ERROR",
+      "message": "Secret found in: .\\test_secrets_demo\\database_config.json"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "ERROR",
+      "message": "Secrets scan: 3 secrets found!"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "--------------------------------------------------"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "Running test: Core Files"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "\ud83d\udcc1 Testing core system files..."
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Core file: @project-core/memory/self_correction_log.md (156177 bytes)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Core file: @project-core/memory/global-standards.md (11641 bytes)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Core file: @project-core/rules/00-vibecode-system-v4-master.md (11306 bytes)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Core file: @project-core/configs/mcp-servers.json (3694 bytes)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Core file: config.json (650 bytes)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Core file: sync_secure.py (11763 bytes)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "--------------------------------------------------"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "Running test: Directory Structure"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "\ud83c\udfd7\ufe0f Testing directory structure..."
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Directory: @project-core/memory (71 files)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Directory: @project-core/rules (13 files)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Directory: @project-core/automation (57 files)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Directory: @project-core/configs (24 files)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Directory: @project-core/docs (51 files)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Directory: @project-core/tools (3 files)"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "--------------------------------------------------"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "Running test: Sync Functionality"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "\ud83d\udd04 Testing sync functionality..."
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Sync config: Configured for clean-no-history branch"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "Sync system: Ready for operation"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "--------------------------------------------------"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "Running test: MCP Configuration"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "\ud83d\udd27 Testing MCP configuration..."
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "MCP servers: 5 servers configured"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "WARNING",
+      "message": "MCP server: sequential-thinking-mcp missing"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "SUCCESS",
+      "message": "MCP server: mcp-shrimp-task-manager configured"
+    },
+    {
+      "timestamp": "19:38:14",
+      "level": "INFO",
+      "message": "--------------------------------------------------"
+    }
+  ]
+}
