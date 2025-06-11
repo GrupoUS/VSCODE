@@ -1,0 +1,240 @@
+{
+  "timestamp": "2025-06-09T18:45:01.813Z",
+  "phase": "Phase 4A - Hybrid Search + Result Reranking",
+  "overallScore": 0,
+  "testSummary": {
+    "hybridSearch": {
+      "total": 5,
+      "passed": 0,
+      "successRate": 0
+    },
+    "reranking": {
+      "total": 5,
+      "passed": 2,
+      "successRate": 40
+    },
+    "backwardCompatibility": {
+      "total": 5,
+      "passed": 0,
+      "successRate": 0
+    },
+    "performance": {
+      "total": 5,
+      "passed": 5,
+      "successRate": 100
+    }
+  },
+  "detailedResults": {
+    "hybridSearchTests": [
+      {
+        "testCase": "react-auth-component",
+        "passed": false,
+        "error": "ENOENT: no such file or directory, open 'C:\\Users\\Admin\\OneDrive\\GRUPOUS\\VSCODE\\@project-core\\memory\\protocols\\@project-core\\memory\\learning\\pattern-library.json'"
+      },
+      {
+        "testCase": "api-optimization",
+        "duration": 2,
+        "resultsCount": 0,
+        "hasSemanticResults": false,
+        "hasKeywordResults": false,
+        "hasBoostedResults": false,
+        "averageHybridScore": 0,
+        "passed": false
+      },
+      {
+        "testCase": "database-migration",
+        "duration": 2,
+        "resultsCount": 0,
+        "hasSemanticResults": false,
+        "hasKeywordResults": false,
+        "hasBoostedResults": false,
+        "averageHybridScore": 0,
+        "passed": false
+      },
+      {
+        "testCase": "ui-component-library",
+        "duration": 2,
+        "resultsCount": 0,
+        "hasSemanticResults": false,
+        "hasKeywordResults": false,
+        "hasBoostedResults": false,
+        "averageHybridScore": 0,
+        "passed": false
+      },
+      {
+        "testCase": "simple-bug-fix",
+        "duration": 2,
+        "resultsCount": 0,
+        "hasSemanticResults": false,
+        "hasKeywordResults": false,
+        "hasBoostedResults": false,
+        "averageHybridScore": 0,
+        "passed": false
+      }
+    ],
+    "rerankingTests": [
+      {
+        "testCase": "react-auth-component",
+        "duration": 2,
+        "originalCount": 3,
+        "rerankedCount": 1,
+        "hasRerankedFlag": true,
+        "hasCombinedScores": true,
+        "isSortedByCombinedScore": true,
+        "meetsLatencyTarget": true,
+        "averageCombinedScore": 0.7193333333333334,
+        "passed": true
+      },
+      {
+        "testCase": "api-optimization",
+        "duration": 1,
+        "originalCount": 3,
+        "rerankedCount": 0,
+        "hasRerankedFlag": false,
+        "hasCombinedScores": false,
+        "isSortedByCombinedScore": true,
+        "meetsLatencyTarget": true,
+        "averageCombinedScore": 0,
+        "passed": false
+      },
+      {
+        "testCase": "database-migration",
+        "duration": 1,
+        "originalCount": 3,
+        "rerankedCount": 0,
+        "hasRerankedFlag": false,
+        "hasCombinedScores": false,
+        "isSortedByCombinedScore": true,
+        "meetsLatencyTarget": true,
+        "averageCombinedScore": 0,
+        "passed": false
+      },
+      {
+        "testCase": "ui-component-library",
+        "duration": 1,
+        "originalCount": 3,
+        "rerankedCount": 0,
+        "hasRerankedFlag": false,
+        "hasCombinedScores": false,
+        "isSortedByCombinedScore": true,
+        "meetsLatencyTarget": true,
+        "averageCombinedScore": 0,
+        "passed": false
+      },
+      {
+        "testCase": "simple-bug-fix",
+        "duration": 1,
+        "originalCount": 3,
+        "rerankedCount": 1,
+        "hasRerankedFlag": true,
+        "hasCombinedScores": true,
+        "isSortedByCombinedScore": true,
+        "meetsLatencyTarget": true,
+        "averageCombinedScore": 0.7096363636363636,
+        "passed": true
+      }
+    ],
+    "backwardCompatibilityTests": [
+      {
+        "testCase": "react-auth-component",
+        "hasConsultationId": true,
+        "hasTimestamp": true,
+        "hasRecommendations": true,
+        "hasMemoryContext": false,
+        "hasRAGEnhancements": false,
+        "passed": false
+      },
+      {
+        "testCase": "api-optimization",
+        "hasConsultationId": true,
+        "hasTimestamp": true,
+        "hasRecommendations": true,
+        "hasMemoryContext": false,
+        "hasRAGEnhancements": false,
+        "passed": false
+      },
+      {
+        "testCase": "database-migration",
+        "hasConsultationId": true,
+        "hasTimestamp": true,
+        "hasRecommendations": true,
+        "hasMemoryContext": false,
+        "hasRAGEnhancements": false,
+        "passed": false
+      },
+      {
+        "testCase": "ui-component-library",
+        "hasConsultationId": true,
+        "hasTimestamp": true,
+        "hasRecommendations": true,
+        "hasMemoryContext": false,
+        "hasRAGEnhancements": false,
+        "passed": false
+      },
+      {
+        "testCase": "simple-bug-fix",
+        "hasConsultationId": true,
+        "hasTimestamp": true,
+        "hasRecommendations": true,
+        "hasMemoryContext": false,
+        "hasRAGEnhancements": false,
+        "passed": false
+      }
+    ],
+    "performanceTests": [
+      {
+        "testCase": "react-auth-component",
+        "totalLatency": 5,
+        "memoryIncrease": 219216,
+        "meetsLatencyTarget": true,
+        "memoryEfficient": true,
+        "passed": true
+      },
+      {
+        "testCase": "api-optimization",
+        "totalLatency": 4,
+        "memoryIncrease": 217360,
+        "meetsLatencyTarget": true,
+        "memoryEfficient": true,
+        "passed": true
+      },
+      {
+        "testCase": "database-migration",
+        "totalLatency": 4,
+        "memoryIncrease": -610416,
+        "meetsLatencyTarget": true,
+        "memoryEfficient": true,
+        "passed": true
+      },
+      {
+        "testCase": "ui-component-library",
+        "totalLatency": 4,
+        "memoryIncrease": 237672,
+        "meetsLatencyTarget": true,
+        "memoryEfficient": true,
+        "passed": true
+      },
+      {
+        "testCase": "simple-bug-fix",
+        "totalLatency": 5,
+        "memoryIncrease": 232664,
+        "meetsLatencyTarget": true,
+        "memoryEfficient": true,
+        "passed": true
+      }
+    ],
+    "overallScore": 0
+  },
+  "recommendations": [
+    {
+      "type": "improvement",
+      "area": "hybrid_search",
+      "message": "Hybrid search success rate below 80%. Consider improving semantic search algorithms."
+    },
+    {
+      "type": "improvement",
+      "area": "reranking",
+      "message": "Reranking success rate below 80%. Consider optimizing cross-encoder scoring."
+    }
+  ]
+}

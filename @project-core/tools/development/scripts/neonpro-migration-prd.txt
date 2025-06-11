@@ -1,0 +1,264 @@
+# NEONPRO MIGRATION PRD - Next.js 15 + React 19 + TypeScript + Supabase + Tailwind CSS + shadcn-ui
+
+## 📋 PROJECT OVERVIEW
+
+**Project Name**: NEONPRO V3.0 - Healthcare SaaS Platform Migration
+**Current Stack**: React + Vite + TypeScript + Supabase + Horizon UI + Tailwind CSS + daisyUI
+**Target Stack**: Next.js 15 + React 19 + TypeScript + Supabase + Tailwind CSS + shadcn-ui
+**Migration Type**: Complete architectural modernization with performance optimization
+**Timeline**: 4-6 weeks
+**Complexity**: High (9/10)
+
+## 🎯 MIGRATION OBJECTIVES
+
+### Primary Goals
+1. **Performance Optimization**: Achieve 40-60% improvement in Core Web Vitals
+2. **Modern Architecture**: Leverage Next.js 15 App Router + React 19 features
+3. **UI/UX Enhancement**: Migrate from Horizon UI + daisyUI to shadcn-ui
+4. **Developer Experience**: Improve development speed and maintainability
+5. **Scalability**: Prepare for enterprise-level growth
+
+### Success Metrics
+- **Performance**: Core Web Vitals score > 90
+- **Bundle Size**: Reduce by 30%
+- **Development Speed**: 40-60% faster component development
+- **User Experience**: Improved accessibility (WCAG 2.1 AA)
+- **SEO**: Perfect Lighthouse scores
+
+## 🏗️ CURRENT ARCHITECTURE ANALYSIS
+
+### Existing Stack Assessment
+```
+Current: React + Vite + TypeScript + Supabase + Horizon UI + daisyUI
+├── Frontend: React 18.3.1 + Vite 5.4.1
+├── UI Framework: Horizon UI + daisyUI
+├── Backend: Supabase (PostgreSQL + Auth + Storage)
+├── Styling: Tailwind CSS
+├── State: Zustand + React Query
+└── Testing: Jest + Playwright
+```
+
+### Pain Points Identified
+1. **Performance**: Vite SPA limitations for healthcare data
+2. **SEO**: Client-side rendering issues
+3. **UI Consistency**: Mixed UI libraries causing conflicts
+4. **Bundle Size**: Large client-side bundles
+5. **Caching**: Limited caching strategies
+
+## 🚀 TARGET ARCHITECTURE
+
+### Next.js 15 + React 19 Stack
+```
+Target: Next.js 15 + React 19 + TypeScript + Supabase + shadcn-ui
+├── Framework: Next.js 15.3.3 (App Router + Turbopack)
+├── React: React 19 (Server Components + Concurrent Features)
+├── UI Library: shadcn-ui (Radix + Tailwind CSS)
+├── Backend: Supabase (Enhanced with Edge Functions)
+├── State: Zustand + React Query + Server State
+├── Performance: PPR + Streaming + Edge Runtime
+└── Testing: Jest + Playwright + Storybook
+```
+
+### Key Architectural Improvements
+1. **Server Components**: Static content rendering
+2. **Partial Pre-Rendering (PPR)**: Hybrid static/dynamic pages
+3. **Streaming**: Progressive page loading
+4. **Edge Functions**: Reduced latency
+5. **Component Architecture**: Modular shadcn-ui system
+
+## 📊 MIGRATION PHASES
+
+### Phase 1: Foundation Setup (Week 1)
+**Objective**: Establish Next.js 15 foundation
+**Tasks**:
+- [ ] Create new Next.js 15 project structure
+- [ ] Configure TypeScript strict mode
+- [ ] Setup Tailwind CSS + shadcn-ui
+- [ ] Migrate Supabase configuration
+- [ ] Setup development environment
+
+**Deliverables**:
+- Working Next.js 15 app with basic routing
+- shadcn-ui component library setup
+- Supabase integration functional
+- Development scripts configured
+
+### Phase 2: Core Components Migration (Week 2)
+**Objective**: Migrate essential UI components
+**Tasks**:
+- [ ] Audit existing Horizon UI components
+- [ ] Create shadcn-ui component mapping
+- [ ] Migrate authentication components
+- [ ] Migrate navigation and layout
+- [ ] Setup design system tokens
+
+**Deliverables**:
+- Complete component library in shadcn-ui
+- Authentication flow working
+- Responsive layout system
+- Design system documentation
+
+### Phase 3: Feature Migration (Week 3-4)
+**Objective**: Migrate core healthcare features
+**Tasks**:
+- [ ] Patient management system
+- [ ] Appointment scheduling
+- [ ] Financial dashboard
+- [ ] Reports and analytics
+- [ ] User management
+
+**Deliverables**:
+- All core features functional
+- Data migration completed
+- User workflows preserved
+- Performance optimizations applied
+
+### Phase 4: Optimization & Testing (Week 5-6)
+**Objective**: Performance optimization and quality assurance
+**Tasks**:
+- [ ] Implement Server Components
+- [ ] Setup Partial Pre-Rendering
+- [ ] Optimize bundle size
+- [ ] Comprehensive testing
+- [ ] Performance monitoring
+
+**Deliverables**:
+- Performance targets achieved
+- Full test coverage
+- Production deployment ready
+- Documentation complete
+
+## 🛠️ TECHNICAL SPECIFICATIONS
+
+### Next.js 15 Configuration
+```typescript
+// next.config.ts
+const nextConfig: NextConfig = {
+  experimental: {
+    ppr: 'incremental',
+    turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'] } } }
+  },
+  images: { remotePatterns: [{ hostname: 'storage.supabase.co' }] }
+}
+```
+
+### Component Architecture
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── (auth)/            # Authentication routes
+│   ├── (dashboard)/       # Main application
+│   ├── api/               # API routes
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── ui/                # shadcn-ui base components
+│   ├── features/          # Feature-specific components
+│   └── layout/            # Layout components
+├── lib/                   # Utilities and configurations
+├── hooks/                 # Custom React hooks
+├── stores/                # Zustand stores
+└── types/                 # TypeScript definitions
+```
+
+### Performance Targets
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Cumulative Layout Shift**: < 0.1
+- **First Input Delay**: < 100ms
+- **Bundle Size**: < 250KB gzipped
+
+## 🔧 MIGRATION STRATEGY
+
+### Data Migration
+1. **Supabase Schema**: Maintain existing schema
+2. **Authentication**: Preserve user sessions
+3. **File Storage**: Migrate assets to Supabase Storage
+4. **Real-time**: Enhance with Supabase Realtime
+
+### Component Migration Mapping
+```
+Horizon UI → shadcn-ui
+├── Card → Card
+├── Button → Button
+├── Input → Input
+├── Modal → Dialog
+├── Table → Table
+├── Form → Form (React Hook Form + Zod)
+└── Charts → Recharts integration
+```
+
+### State Management
+- **Global State**: Zustand (preserve existing stores)
+- **Server State**: React Query + Supabase
+- **Form State**: React Hook Form + Zod validation
+- **UI State**: React 19 built-in state
+
+## 📈 EXPECTED BENEFITS
+
+### Performance Improvements
+- **40-60% faster page loads** (Server Components)
+- **30% smaller bundle size** (Tree shaking + Code splitting)
+- **50% better Core Web Vitals** (PPR + Streaming)
+- **Improved SEO** (Server-side rendering)
+
+### Developer Experience
+- **40-60% faster development** (shadcn-ui components)
+- **Better TypeScript integration** (Next.js 15 improvements)
+- **Enhanced debugging** (React 19 DevTools)
+- **Improved testing** (Server Components testing)
+
+### User Experience
+- **Faster initial load** (Server Components)
+- **Better accessibility** (Radix primitives)
+- **Improved mobile performance** (Edge runtime)
+- **Enhanced offline support** (Service Workers)
+
+## 🚨 RISKS & MITIGATION
+
+### Technical Risks
+1. **Breaking Changes**: Comprehensive testing strategy
+2. **Performance Regression**: Continuous monitoring
+3. **Data Loss**: Robust backup strategy
+4. **User Disruption**: Phased rollout plan
+
+### Mitigation Strategies
+- **Feature Flags**: Gradual feature rollout
+- **A/B Testing**: Compare old vs new performance
+- **Rollback Plan**: Quick revert capability
+- **User Training**: Documentation and support
+
+## 📋 ACCEPTANCE CRITERIA
+
+### Functional Requirements
+- [ ] All existing features preserved
+- [ ] User authentication working
+- [ ] Data integrity maintained
+- [ ] Real-time features functional
+- [ ] Mobile responsiveness preserved
+
+### Performance Requirements
+- [ ] Core Web Vitals score > 90
+- [ ] Bundle size < 250KB gzipped
+- [ ] Page load time < 2s
+- [ ] Accessibility score > 95
+- [ ] SEO score > 95
+
+### Quality Requirements
+- [ ] Test coverage > 80%
+- [ ] Zero critical bugs
+- [ ] Documentation complete
+- [ ] Code review passed
+- [ ] Security audit passed
+
+## 🎯 SUCCESS DEFINITION
+
+**Migration is considered successful when**:
+1. All healthcare features are functional in Next.js 15
+2. Performance targets are achieved
+3. User experience is improved or maintained
+4. Development velocity is increased
+5. System is ready for enterprise scaling
+
+**Timeline**: 4-6 weeks
+**Budget**: Development resources + testing
+**Team**: 2-3 developers + 1 QA + 1 DevOps

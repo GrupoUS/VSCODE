@@ -1,0 +1,144 @@
+# PRD: REORGANIZAÇÃO COMPLETA DO PROJETO @VSCODE
+## GRUPO US VIBECODE SYSTEM V2.0
+
+### 📋 VISÃO GERAL DO PROJETO
+
+**Objetivo**: Reorganizar completamente o diretório @vscode, consolidando arquivos dispersos em uma estrutura limpa e lógica com apenas 4 pastas principais: @project-core, @neonpro, @aegiswallet, e @harmoniza-facil-agendas.
+
+**Complexidade**: 10/10 (Projeto multi-fase com múltiplas dependências)
+
+### 🎯 OBJETIVOS PRINCIPAIS
+
+1. **Estrutura Final**: Diretório raiz com apenas 4 pastas + arquivos essenciais
+2. **Consolidação**: Eliminar redundâncias e duplicatas
+3. **Centralização**: Mover memory-bank para @project-core/memory/
+4. **Configurações**: Centralizar configs em @project-core/configs/
+5. **Links**: Atualizar todas as referências internas
+6. **Funcionalidade**: Manter 100% da funcionalidade existente
+
+### 📁 ESTRUTURA FINAL DESEJADA
+
+```
+@vscode/
+├── package.json
+├── package-lock.json  
+├── README.md
+├── tsconfig.json (proxy)
+├── 
+├── @project-core/
+│   ├── memory/              # Antiga memory-bank/
+│   ├── rules/               # Regras centralizadas
+│   ├── workflows/           # Workflows de desenvolvimento
+│   ├── tools/               # Scripts e automação
+│   ├── docs/                # Documentação geral
+│   ├── configs/             # Configurações centralizadas
+│   └── README.md
+│
+├── @neonpro/
+│   └── (Conteúdo atual de neonpro/)
+│
+├── @aegiswallet/
+│   └── (Conteúdo atual de aegiswallet/)
+│
+└── @harmoniza-facil-agendas/
+    └── (Conteúdo atual de harmoniza-facil-agendas/)
+```
+
+### 🔧 TAREFAS PRINCIPAIS
+
+#### FASE 1: ANÁLISE E PREPARAÇÃO
+- Catalogar todos os arquivos do diretório raiz
+- Identificar arquivos duplicados/obsoletos
+- Mapear dependências entre arquivos
+- Criar lista de arquivos para deletar
+- Identificar todas as referências que precisam ser atualizadas
+
+#### FASE 2: REORGANIZAÇÃO DE CONFIGURAÇÕES
+- Mover tsconfig.json para @project-core/configs/
+- Mover jest.config.js para @project-core/configs/
+- Mover babel.config.js para @project-core/configs/
+- Mover playwright.config.ts para @project-core/configs/
+- Deletar docker-compose.yml (obsoleto)
+- Criar proxies no root se necessário
+
+#### FASE 3: CONSOLIDAÇÃO DE PASTAS
+- Mover memory-bank/ para @project-core/memory/
+- Mover docs/ para @project-core/docs/
+- Mover scripts/ para @project-core/tools/scripts/
+- Mover automation/ para @project-core/tools/automation/
+- Mover utils/ para @project-core/tools/utils/
+- Mover monitoring/ para @project-core/tools/monitoring/
+- Mover feedback/ para @project-core/tools/feedback/
+- Mover improvement/ para @project-core/tools/improvement/
+
+#### FASE 4: REORGANIZAÇÃO DE PROJETOS
+- Renomear neonpro/ para @neonpro/
+- Renomear aegiswallet/ para @aegiswallet/
+- Renomear harmoniza-facil-agendas/ para @harmoniza-facil-agendas/
+
+#### FASE 5: LIMPEZA E CONSOLIDAÇÃO
+- Deletar arquivos duplicados/obsoletos
+- Consolidar scripts de automação
+- Mover arquivos .md dispersos para @project-core/docs/
+- Organizar arquivos de relatórios
+
+#### FASE 6: ATUALIZAÇÃO DE REFERÊNCIAS
+- Atualizar package.json (scripts)
+- Atualizar todos os arquivos .md com novos paths
+- Atualizar scripts com novos caminhos
+- Atualizar configurações MCP
+- Atualizar imports em arquivos de código
+
+#### FASE 7: VALIDAÇÃO E TESTES
+- Testar configurações (npm test, playwright, etc.)
+- Verificar funcionalidade de scripts
+- Validar links em documentação
+- Testar builds dos projetos
+- Executar testes de integração
+
+#### FASE 8: DOCUMENTAÇÃO FINAL
+- Atualizar README.md principal
+- Criar @project-core/README.md
+- Documentar nova estrutura
+- Criar guia de migração
+- Atualizar memory-bank com aprendizados
+
+### ⚠️ RISCOS E MITIGAÇÕES
+
+**Riscos Identificados**:
+1. Links quebrados após reorganização
+2. Scripts com paths hardcoded
+3. Configurações de build quebradas
+4. Dependências entre projetos
+
+**Mitigações**:
+1. Mapeamento completo antes de mover
+2. Atualização sistemática de referências
+3. Testes após cada fase
+4. Backup automático (já existe externamente)
+
+### 📊 CRITÉRIOS DE SUCESSO
+
+- [ ] Estrutura final com apenas 4 pastas principais
+- [ ] Zero links quebrados
+- [ ] Todos os scripts funcionando
+- [ ] Builds dos projetos funcionando
+- [ ] Testes passando
+- [ ] Documentação atualizada
+- [ ] Memory-bank preservado e funcional
+
+### 🔄 PROTOCOLO DE EXECUÇÃO
+
+- **TaskMaster**: Obrigatório para complexidade 10/10
+- **Execução Sequencial**: Fase por fase com validação
+- **Verificação Contínua**: Teste após cada movimentação
+- **Rollback**: Possível a qualquer momento
+- **Documentação**: Registro de todas as mudanças
+
+### 📈 MÉTRICAS DE QUALIDADE
+
+- **Completion Rate**: >95% primeira tentativa
+- **Error Rate**: <5% em produção
+- **Link Integrity**: 100% links funcionando
+- **Build Success**: 100% projetos buildando
+- **Test Success**: 100% testes passando

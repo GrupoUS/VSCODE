@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-06-10T15:57:51.716995",
+  "phase": "FASE 2 - Monitoring de Produ\u00e7\u00e3o",
+  "dashboard_validation": {
+    "status": "PASSED",
+    "file_exists": true,
+    "structure_valid": true,
+    "metrics_present": true,
+    "metrics_count": 3,
+    "system_status": "healthy"
+  },
+  "alerting_validation": {
+    "status": "PASSED",
+    "alerts_file_exists": true,
+    "alerts_in_file": 2,
+    "alerts_in_memory": 2,
+    "total_alerts": 4
+  },
+  "logging_validation": {
+    "status": "PASSED",
+    "metrics_file_exists": true,
+    "metrics_logged": 9,
+    "log_structure_valid": true
+  },
+  "integration_validation": {
+    "status": "PASSED",
+    "initial_metrics_count": 3,
+    "final_metrics_count": 5,
+    "metrics_increased": true,
+    "js_bridge_working": true,
+    "memory_coordinator_working": true
+  },
+  "performance_validation": {
+    "status": "PASSED",
+    "monitoring_active": true,
+    "metrics_tracked": 5,
+    "uptime_seconds": 25.316778,
+    "baselines_configured": true,
+    "baseline_count": 9
+  },
+  "overall_status": "PASSED",
+  "monitoring_startup": {
+    "status": "SUCCESS",
+    "integration_enabled": true,
+    "instrumented_components": [
+      "crawl4ai_strategies",
+      "crosscheck_system",
+      "js_bridge",
+      "ecl_pipeline",
+      "memory_coordinator"
+    ]
+  }
+}

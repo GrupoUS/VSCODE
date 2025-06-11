@@ -1,0 +1,3 @@
+#!/bin/sh
+# Verifica por secrets nos arquivos staged
+git secrets --pre_commit_hook -- "$@"

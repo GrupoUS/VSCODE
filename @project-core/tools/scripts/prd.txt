@@ -1,0 +1,43 @@
+# GRUPO US VIBECODE SYSTEM V2.0 - RULE AUDIT & REFACTORING PRD
+
+## Project Overview
+Comprehensive audit and refactoring of all rules in @project-core/rules/ directory to ensure interconnectivity, eliminate orphan rules, optimize performance, and unify communication under a master rule system for maximum efficiency and reduced API requests.
+
+## MACRO OBJECTIVES (Preferred)
+1. Complete Rule System Refactoring
+   - Rule dependency mapping + Orphan detection + Architecture optimization
+   - Centralized master protocol implementation
+   - Performance validation and documentation
+
+## MICRO OBJECTIVES (Only when necessary)
+1. Individual rule file corrections
+2. Isolated dependency fixes
+3. Specific integration validations
+
+## Goals
+- Audit all rules for connectivity and identify orphan rules
+- Refactor rule structure for maximum performance and efficiency
+- Unify all rules under centralized master execution protocol
+- Reduce API requests and token usage through conditional loading
+- Maintain centralized rule management in @project-core/ exclusively
+
+## Features
+- Rule Dependency Mapping: Create comprehensive dependency graph of all rules
+- Orphan Rule Detection: Identify and integrate unused or disconnected rules
+- Hierarchical Architecture: Implement conditional rule loading based on task context
+- Performance Optimization: Reduce initial context load through smart rule organization
+- Validation Framework: Ensure all changes maintain system integrity
+
+## Technical Requirements
+- All modifications must occur exclusively in @project-core/rules/ directory
+- Maintain backward compatibility with existing workflows
+- Implement conditional loading mechanism in 00-master-execution-protocol.md
+- Update docs/architecture.md to reflect new structure
+- Pass all integration tests (npm run integration:test)
+
+## Success Criteria
+- Zero orphan rules exist in the system
+- All rules interconnected through single dependency graph
+- Measurable reduction in token usage for standard tasks
+- All quality metrics maintained (>85% completion rate, <50k tokens per feature)
+- Complete documentation of new architecture

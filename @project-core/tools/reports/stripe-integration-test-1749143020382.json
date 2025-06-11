@@ -1,0 +1,62 @@
+{
+  "startTime": "2025-06-05T17:03:40.371Z",
+  "tests": [
+    {
+      "name": "Stripe MCP Manager Initialization",
+      "success": false,
+      "timestamp": "2025-06-05T17:03:40.377Z",
+      "data": {
+        "error": "Configurações Stripe obrigatórias ausentes: secretKey"
+      }
+    },
+    {
+      "name": "Basic Stripe Operations",
+      "success": false,
+      "timestamp": "2025-06-05T17:03:40.378Z",
+      "data": {
+        "error": "Configurações Stripe obrigatórias ausentes: secretKey"
+      }
+    },
+    {
+      "name": "Playwright Integration",
+      "success": false,
+      "timestamp": "2025-06-05T17:03:40.378Z",
+      "data": {
+        "error": "Configurações Stripe obrigatórias ausentes: secretKey"
+      }
+    },
+    {
+      "name": "Webhook Processing",
+      "success": false,
+      "timestamp": "2025-06-05T17:03:40.379Z",
+      "data": {
+        "error": "Configurações Stripe obrigatórias ausentes: secretKey"
+      }
+    },
+    {
+      "name": "Error Handling",
+      "success": false,
+      "timestamp": "2025-06-05T17:03:40.380Z",
+      "data": {
+        "errorHandled": false,
+        "message": "Error handling funcionando corretamente"
+      }
+    },
+    {
+      "name": "Metrics and Monitoring",
+      "success": false,
+      "timestamp": "2025-06-05T17:03:40.380Z",
+      "data": {
+        "error": "Configurações Stripe obrigatórias ausentes: secretKey"
+      }
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 0,
+    "failed": 6,
+    "skipped": 0
+  },
+  "endTime": "2025-06-05T17:03:40.380Z",
+  "duration": 9
+}

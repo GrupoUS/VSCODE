@@ -1,0 +1,20 @@
+# Augment Memory Configuration
+# This file specifies the primary memory path for Augment Code
+
+PRIMARY_MEMORY_PATH="C:\Users\Admin\AppData\Roaming\Code\User\workspaceStorage\f93728a73b8802154d6c1bd441b921c0\Augment.vscode-augment\Augment-Memories"
+
+# Memory Integration Settings
+MEMORY_INTEGRATION_ENABLED=true
+MEMORY_SYNC_INTERVAL=300  # 5 minutes
+MEMORY_BACKUP_ENABLED=true
+MEMORY_BACKUP_INTERVAL=3600  # 1 hour
+
+# Memory Access Settings
+MEMORY_READ_ONLY=false
+MEMORY_WRITE_ENABLED=true
+MEMORY_APPEND_ONLY=false
+
+# Memory Validation Settings
+MEMORY_VALIDATION_ENABLED=true
+MEMORY_INTEGRITY_CHECK=true
+MEMORY_FORMAT_CHECK=true 

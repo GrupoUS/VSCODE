@@ -1,0 +1,131 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.yarn-integrity
+.yarn-state.yml
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# GRUPO US - Project Core Environment Files (SECURITY CRITICAL)
+@project-core/.env/
+@project-core/.env/*
+@project-core/.env/**/*
+@project-core/env/.env*
+@project-core/env/*.env
+@project-core/env/**/*.env
+@project-core/configs/*-secrets.json
+@project-core/configs/*-keys.json
+@project-core/configs/**/*-secrets.json
+@project-core/configs/**/*-keys.json
+
+# Additional Security Protection
+**/api-keys-*.md
+**/security-*.env
+**/*-recovery.env
+**/*-backup.env
+**/secrets/
+**/keys/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and editors (external - use @project-core/configs/ide/ for project configs)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.atom/
+
+# Project IDE configurations are managed in @project-core/configs/ide/
+# - VS Code: @project-core/configs/ide/vscode/
+# - Cursor: @project-core/configs/ide/cursor/
+# - Cline Rules: @project-core/configs/ide/clinerules/
+
+# Build artifacts
+dist/
+build/
+out/
+.next/
+
+# Test results
+coverage/
+.nyc_output/
+
+# Playwright
+test-results/
+playwright-report/
+
+# TaskMaster - Security Critical Files
+.taskmaster/.env
+.taskmaster/.env.*
+.taskmaster/**/secrets.json
+.taskmaster/**/api-keys.json
+
+# Cursor MCP Configuration (contains API keys) - external instances
+.cursor/mcp.json
+# Project Cursor config managed in @project-core/configs/ide/cursor/
+
+# Root .env file (contains API keys)
+.env
+tasks/
+scripts/task-complexity-report.json
+
+# Figma
+figma-cache/
+figma-exports/
+figma-generated-components/
+
+# Screenshots
+screenshots/
+
+# Other
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.bak
+*.tmp
+
+# Added by Task Master AI
+dev-debug.log
+# Environment variables
+# Editor directories and files (external instances)
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Note: Project-specific IDE configs are in @project-core/configs/ide/
+# OS specific
+# Task files
+tasks.json

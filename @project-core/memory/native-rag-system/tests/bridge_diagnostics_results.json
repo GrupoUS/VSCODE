@@ -1,0 +1,113 @@
+{
+  "path_analysis": {
+    "embedding_service": {
+      "relative_path": "./rag-enhanced/contextual-embeddings/embedding-service.js",
+      "absolute_path": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\@project-core\\memory\\rag-enhanced\\contextual-embeddings\\embedding-service.js",
+      "normalized_path": "C:/Users/Admin/AppData/Roaming/Code/@project-core/memory/rag-enhanced/contextual-embeddings/embedding-service.js",
+      "path_exists": false,
+      "memory_dir": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\@project-core\\memory"
+    },
+    "knowledge_graph": {
+      "relative_path": "./rag-enhanced/knowledge-graph/knowledge-graph-foundation.js",
+      "absolute_path": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\@project-core\\memory\\rag-enhanced\\knowledge-graph\\knowledge-graph-foundation.js",
+      "normalized_path": "C:/Users/Admin/AppData/Roaming/Code/@project-core/memory/rag-enhanced/knowledge-graph/knowledge-graph-foundation.js",
+      "path_exists": false,
+      "memory_dir": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\@project-core\\memory"
+    },
+    "consultation_optimization": {
+      "relative_path": "./protocols/consultation-optimization.js",
+      "absolute_path": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\@project-core\\memory\\protocols\\consultation-optimization.js",
+      "normalized_path": "C:/Users/Admin/AppData/Roaming/Code/@project-core/memory/protocols/consultation-optimization.js",
+      "path_exists": false,
+      "memory_dir": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\@project-core\\memory"
+    }
+  },
+  "file_existence": {
+    "embedding_service": {
+      "exists": false,
+      "is_file": false,
+      "is_readable": false,
+      "size_bytes": 0,
+      "permissions": "N/A"
+    },
+    "knowledge_graph": {
+      "exists": false,
+      "is_file": false,
+      "is_readable": false,
+      "size_bytes": 0,
+      "permissions": "N/A"
+    },
+    "consultation_optimization": {
+      "exists": false,
+      "is_file": false,
+      "is_readable": false,
+      "size_bytes": 0,
+      "permissions": "N/A"
+    }
+  },
+  "node_js_availability": true,
+  "component_loading": {
+    "embedding_service": {
+      "loadable": false,
+      "error": "File does not exist"
+    },
+    "knowledge_graph": {
+      "loadable": false,
+      "error": "File does not exist"
+    },
+    "consultation_optimization": {
+      "loadable": false,
+      "error": "File does not exist"
+    }
+  },
+  "method_testing": {},
+  "performance_metrics": {
+    "health_check_time_ms": 48.7217903137207,
+    "health_status": "healthy",
+    "component_call_times_ms": [
+      46.20027542114258,
+      42.387962341308594
+    ],
+    "bridge_metrics": {
+      "total_calls": 3,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "fallback_count": 2,
+      "average_latency": 48.540353775024414,
+      "error_count": 2,
+      "success_rate": 33.33333333333333,
+      "cache_hit_rate": 0.0,
+      "api_request_reduction": 0.0
+    },
+    "fallback_rate": 66.66666666666666
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "issue": "Missing JavaScript files: ['embedding_service', 'knowledge_graph', 'consultation_optimization']",
+      "solution": "Create missing JavaScript component files",
+      "impact": "Components cannot be loaded, forcing fallback mode"
+    },
+    {
+      "priority": "MEDIUM",
+      "issue": "Component loading failed: ['embedding_service', 'knowledge_graph', 'consultation_optimization']",
+      "solution": "Fix JavaScript syntax or dependency issues",
+      "impact": "Components load but may have runtime errors"
+    },
+    {
+      "priority": "MEDIUM",
+      "issue": "High fallback rate: 66.7%",
+      "solution": "Fix component loading and method calling issues",
+      "impact": "Bridge reuse rate is low, performance not optimal"
+    }
+  ],
+  "node_js_execution": true,
+  "summary": {
+    "node_js_available": true,
+    "files_exist": false,
+    "components_load": false,
+    "execution_time": 0.19872593879699707,
+    "high_priority_issues": 1,
+    "medium_priority_issues": 2
+  }
+}

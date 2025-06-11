@@ -1,0 +1,23 @@
+[
+  {
+    "type": "HIGH_ERROR_RATE",
+    "message": "Error rate 100% exceeds target 15%",
+    "severity": "HIGH",
+    "metric": {
+      "type": "error_rate",
+      "value": 100,
+      "context": {
+        "agent": "validation-test",
+        "task": "Real Development Task Simulation",
+        "errors": 1
+      },
+      "timestamp": "2025-06-06T18:14:26.497Z",
+      "agent": "validation-test",
+      "task": "Real Development Task Simulation",
+      "ruleSet": "project-core"
+    },
+    "id": 1749233666498.1067,
+    "timestamp": "2025-06-06T18:14:26.498Z",
+    "resolved": false
+  }
+]

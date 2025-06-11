@@ -1,0 +1,24 @@
+{
+  "repository_path": "C:\\Users\\Admin\\OneDrive\\GRUPOUS\\VSCODE",
+  "branch": "clean-final",
+  "remote_name": "origin",
+  "git_user_email": "admin@grupous.com",
+  "git_user_name": "GrupoUS",
+  "commit_message_prefix": "[AUTO-SYNC]",
+  "max_file_size_mb": 100,
+  "excluded_extensions": [".log", ".tmp", ".cache", ".lock", ".backup"],
+  "excluded_directories": [
+    "node_modules",
+    ".git",
+    "__pycache__",
+    ".vscode",
+    "dist",
+    "build",
+    ".env"
+  ],
+  "secrets_scan_enabled": true,
+  "quality_gate_enabled": true,
+  "auto_remediation_enabled": true,
+  "create_backups": true,
+  "env_file_directory": "@project-core/.env"
+}

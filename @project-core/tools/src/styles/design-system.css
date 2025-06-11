@@ -1,0 +1,227 @@
+/* NEON PRO V2.0 - Consolidated Design System */
+/* This file consolidates all design tokens and prevents conflicts */
+
+@layer design-system {
+  /* Design Tokens - Single Source of Truth */
+  :root {
+    /* NEON PRO Brand Colors */
+    --neon-primary: 42 96% 65%; /* #f2c75a - Dourado NEON */
+    --neon-secondary: 210 40% 12%; /* #112031 - Azul escuro */
+    --neon-accent: 210 25% 31%; /* #294359 - Azul médio */
+    
+    /* Semantic Colors */
+    --color-success: 120 60% 50%;
+    --color-warning: 38 92% 50%;
+    --color-error: 0 84% 60%;
+    --color-info: 210 25% 31%;
+    
+    /* Typography Scale */
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 1.875rem;  /* 30px */
+    --font-size-4xl: 2.25rem;   /* 36px */
+    
+    /* Spacing Scale */
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+    
+    /* Border Radius Scale */
+    --radius-sm: 0.25rem;   /* 4px */
+    --radius-md: 0.5rem;    /* 8px */
+    --radius-lg: 0.75rem;   /* 12px */
+    --radius-xl: 1rem;      /* 16px */
+    --radius-2xl: 1.5rem;   /* 24px */
+    --radius-full: 9999px;
+    
+    /* Shadow Scale */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.1);
+    
+    /* NEON Glow Shadows */
+    --glow-sm: 0 0 5px hsl(var(--neon-primary) / 0.3);
+    --glow-md: 0 0 10px hsl(var(--neon-primary) / 0.4), 0 0 20px hsl(var(--neon-primary) / 0.2);
+    --glow-lg: 0 0 15px hsl(var(--neon-primary) / 0.5), 0 0 30px hsl(var(--neon-primary) / 0.3);
+    
+    /* Animation Durations */
+    --duration-fast: 150ms;
+    --duration-normal: 200ms;
+    --duration-slow: 300ms;
+    --duration-slower: 500ms;
+    
+    /* Animation Easings */
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Z-Index Scale */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+  }
+  
+  /* Component Base Styles */
+  .neon-button {
+    /* Base button styles */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    line-height: 1;
+    transition: all var(--duration-normal) var(--ease-out);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    
+    /* Performance optimizations */
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+  }
+  
+  .neon-button--primary {
+    background: hsl(var(--neon-primary));
+    color: hsl(var(--neon-secondary));
+  }
+  
+  .neon-button--primary:hover {
+    box-shadow: var(--glow-md);
+    transform: translateY(-1px);
+  }
+  
+  .neon-card {
+    /* Base card styles */
+    background: hsl(var(--background));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--duration-normal) var(--ease-out);
+    
+    /* Performance optimizations */
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+  }
+  
+  .neon-card:hover {
+    box-shadow: var(--shadow-md), var(--glow-sm);
+    transform: translateY(-2px);
+  }
+  
+  .neon-input {
+    /* Base input styles */
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-lg);
+    background: hsl(var(--input));
+    color: hsl(var(--foreground));
+    font-size: var(--font-size-sm);
+    transition: border-color var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
+  }
+  
+  .neon-input:focus {
+    border-color: hsl(var(--neon-primary));
+    box-shadow: 0 0 0 3px hsl(var(--neon-primary) / 0.1);
+    outline: none;
+  }
+  
+  /* Utility Classes */
+  .neon-glow {
+    box-shadow: var(--glow-md);
+  }
+  
+  .neon-glow-sm {
+    box-shadow: var(--glow-sm);
+  }
+  
+  .neon-glow-lg {
+    box-shadow: var(--glow-lg);
+  }
+  
+  .neon-text-glow {
+    text-shadow: 0 0 10px hsl(var(--neon-primary) / 0.5);
+  }
+  
+  /* Responsive Utilities */
+  @media (max-width: 768px) {
+    .neon-button {
+      padding: var(--space-4) var(--space-6);
+      font-size: var(--font-size-base);
+    }
+    
+    .neon-card {
+      padding: var(--space-4);
+    }
+    
+    .neon-glow,
+    .neon-glow-lg {
+      box-shadow: var(--glow-sm);
+    }
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .neon-button,
+    .neon-card,
+    .neon-input {
+      transition: none;
+    }
+    
+    .neon-button:hover,
+    .neon-card:hover {
+      transform: none;
+    }
+  }
+  
+  @media (prefers-contrast: high) {
+    .neon-glow,
+    .neon-glow-sm,
+    .neon-glow-lg {
+      box-shadow: 0 0 0 2px hsl(var(--neon-primary));
+    }
+    
+    .neon-text-glow {
+      text-shadow: none;
+      color: hsl(var(--neon-primary));
+      font-weight: 600;
+    }
+  }
+  
+  /* Performance Mode */
+  .low-end .neon-glow,
+  .low-end .neon-glow-sm,
+  .low-end .neon-glow-lg {
+    box-shadow: 0 0 0 1px hsl(var(--neon-primary));
+  }
+  
+  .low-end .neon-button:hover,
+  .low-end .neon-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+  }
+}

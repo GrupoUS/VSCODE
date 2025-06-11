@@ -1,0 +1,29 @@
+{
+  "total_tests": 33,
+  "passed_tests": 28,
+  "failed_tests": 5,
+  "performance_metrics": {
+    "api_reduction_percent": 25,
+    "memory_consultation_ms": 1.3561248779296875,
+    "crosscheck_analysis_ms": 0.09846687316894531
+  },
+  "compliance_metrics": {
+    "native_implementation": true,
+    "zero_mcp_dependencies": true,
+    "bridge_pattern_used": true,
+    "crawl4ai_native": true,
+    "cognee_native": true,
+    "mcp_integration": true,
+    "backward_compatibility": true,
+    "overall_compliance_rate": 100.0
+  },
+  "bridge_pattern_metrics": {
+    "reuse_rate": 0.0
+  },
+  "native_implementation_validation": {},
+  "final_metrics": {
+    "success_rate": 84.84848484848484,
+    "execution_time": 1.7622621059417725,
+    "validation_status": "FAILED"
+  }
+}

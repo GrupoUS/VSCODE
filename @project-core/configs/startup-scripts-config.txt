@@ -1,0 +1,87 @@
+﻿# ===============================================================================
+# STARTUP SCRIPTS CONFIGURATION - GRUPO US VIBECODE SYSTEM V2.0
+# ===============================================================================
+# Commands to be added to VS Code Terminal Startup Script setting
+# Generated: 2025-06-08 12:22:06
+# ===============================================================================
+
+# RECOMMENDED COMMANDS FOR VS CODE TERMINAL STARTUP:
+# Copy and paste these commands into VS Code Settings:
+# File > Preferences > Settings > Search "terminal startup"
+# Terminal > Integrated > Profiles > Windows > PowerShell > Startup Script
+
+# ===============================================================================
+# PRIORITY 1 - ESSENTIAL STARTUP COMMANDS
+# ===============================================================================
+
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/taskmaster-init.ps1" -SkipPRD
+
+# ===============================================================================
+# PRIORITY 2 - SYSTEM VERIFICATION
+# ===============================================================================
+
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/system-health-check.ps1"
+
+# ===============================================================================
+# PRIORITY 3 - MAINTENANCE (OPTIONAL)
+# ===============================================================================
+
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/cache-cleanup.ps1" -DryRun
+
+# ===============================================================================
+# PRIORITY 4 - SECURITY CHECKS (OPTIONAL)
+# ===============================================================================
+
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/dependency-check.ps1"
+
+# ===============================================================================
+# MISSING SCRIPTS (CREATE THESE FIRST)
+# ===============================================================================
+
+
+
+# ===============================================================================
+# USAGE INSTRUCTIONS
+# ===============================================================================
+
+# 1. Copy the PRIORITY 1 commands above
+# 2. Open VS Code Settings (Ctrl+,)
+# 3. Search for "terminal startup"
+# 4. Find "Terminal > Integrated > Profiles > Windows > PowerShell"
+# 5. Add to "Startup Script" field
+# 6. Restart VS Code terminal to test
+
+# ALTERNATIVE: Add to PowerShell Profile
+# Add these commands to your PowerShell profile:
+# notepad C:\Users\Admin\OneDrive\Documentos\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+# TESTING: Run individual commands to test before adding to startup
+
+# ===============================================================================
+# VALIDATED COMMANDS (TESTED AND WORKING)
+# ===============================================================================
+
+# WORKING COMMAND - Post Task Validation (FIXED VERSION)
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/post-task-validation.ps1" -TaskId "STARTUP_001" -Description "Terminal startup validation"
+
+# WORKING COMMAND - TaskMaster Init (TESTED)
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/taskmaster-init.ps1" -SkipPRD
+
+# WORKING COMMAND - System Health Check (TESTED)
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/system-health-check.ps1"
+
+# WORKING COMMAND - Cache Cleanup Dry Run (TESTED)
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/cache-cleanup.ps1" -DryRun
+
+# WORKING COMMAND - Dependency Check (TESTED)
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/dependency-check.ps1"
+
+# ===============================================================================
+# FINAL RECOMMENDATION FOR STARTUP SCRIPT
+# ===============================================================================
+
+# COPY THIS LINE TO VS CODE TERMINAL STARTUP SCRIPT:
+powershell -ExecutionPolicy Bypass -File "@project-core/automation/taskmaster-init.ps1" -SkipPRD
+
+# OPTIONAL: Add system health check
+# powershell -ExecutionPolicy Bypass -File "@project-core/automation/system-health-check.ps1"

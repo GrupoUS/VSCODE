@@ -1,0 +1,168 @@
+# 🚀 GRUPO US VIBECODE SYSTEM V3.1 - AUGMENT CODE UNIFIED CONFIGURATION
+
+# Memory Configuration
+
+AUGMENT_MEMORY_PATH="C:\Users\Admin\AppData\Roaming\Code\User\workspaceStorage\f93728a73b8802154d6c1bd441b921c0\Augment.vscode-augment\Augment-Memories"
+
+## 📋 MANDATORY REFERENCE - UNIFIED SYSTEM
+
+**ALWAYS READ FIRST**: `@file:GRUPO-US-UNIVERSAL-AI-CONFIGURATION.md`
+
+This file contains the complete GRUPO US VIBECODE SYSTEM V3.1 unified configuration that integrates Augment Code and Cursor AI environments with shared memory, rules, and coordination protocols.
+
+## 📂 MEMORY CONFIGURATION
+
+**Primary Memory Path**: `C:\Users\Admin\AppData\Roaming\Code\User\workspaceStorage\f93728a73b8802154d6c1bd441b921c0\Augment.vscode-augment\Augment-Memories`
+
+## 🎯 AUGMENT CODE SPECIALIZATION
+
+**Primary Role**: Backend & Architecture Development Specialist
+**Complexity Range**: 7-10 (High complexity tasks)
+**Coordination**: Seamless handoff with Cursor AI for frontend/UI tasks
+
+## 🧠 UNIFIED MEMORY SYSTEM INTEGRATION
+
+### Mandatory Memory Consultation Protocol
+
+**🚨 CRITICAL: BEFORE ANY ACTION**
+
+```bash
+# 1. ALWAYS consult memory bank first
+cat @project-core/memory/master_rule.md
+cat @project-core/memory/self_correction_log.md
+cat @project-core/memory/global-standards.md
+
+# 2. Check for error patterns
+grep -i "erro\|error\|bug" @project-core/memory/self_correction_log.md
+
+# 3. Load unified environment rules
+cat @project-core/rules/unified-development-environment-rules.md
+```
+
+## Tech Stack Preferences
+
+- Use Next.js 14+ with App Router and server components
+- Prefer TypeScript with strict mode enabled
+- Use Tailwind CSS for styling with custom design system
+- Use Prisma ORM for database operations
+- Implement NextAuth.js or Clerk for authentication
+- Use Stripe for payment processing
+- Deploy on Vercel for frontend, Railway/Render for backend
+
+## Code Standards and Patterns
+
+- Functions should start with verbs (get, set, create, update, delete)
+- Use descriptive variable names that explain intent
+- Implement proper error handling with try-catch blocks
+- Add JSDoc comments for all public functions and components
+- Follow SOLID principles and clean architecture
+- Use async/await instead of .then() for promises
+- Implement proper TypeScript types, avoid 'any'
+- Use const assertions and readonly where appropriate
+
+## Component Architecture
+
+- Create reusable components in components/ directory
+- Use compound component pattern for complex UI
+- Implement proper prop validation with TypeScript
+- Use React.memo() for performance optimization
+- Implement proper loading and error states
+- Use Suspense boundaries for async components
+
+## Testing Requirements
+
+- Write unit tests for all business logic using Jest
+- Create integration tests for API endpoints
+- Aim for >80% code coverage
+- Use React Testing Library for component tests
+- Mock external dependencies properly
+- Test error scenarios and edge cases
+
+## Performance Guidelines
+
+- Optimize images using next/image component
+- Implement proper caching strategies (Redis, SWR)
+- Use dynamic imports for code splitting
+- Monitor Core Web Vitals and performance metrics
+- Implement lazy loading for heavy components
+- Use React.lazy() for route-based code splitting
+
+## Security Practices
+
+- Validate all user inputs with Zod schemas
+- Use environment variables for all secrets
+- Implement rate limiting on API endpoints
+- Follow OWASP security guidelines
+- Sanitize user-generated content
+- Use HTTPS everywhere and secure headers
+
+## API Design
+
+- Follow RESTful conventions for API endpoints
+- Use proper HTTP status codes
+- Implement consistent error response format
+- Add request/response validation
+- Use middleware for authentication and authorization
+- Document APIs with OpenAPI/Swagger
+
+## Database Patterns
+
+- Use Prisma schema for database modeling
+- Implement proper indexing strategies
+- Use transactions for data consistency
+- Follow database normalization principles
+- Implement soft deletes where appropriate
+- Use connection pooling for performance
+
+## State Management
+
+- Use React Context for global state when needed
+- Prefer server state with SWR or React Query
+- Use Zustand for complex client state
+- Implement proper state normalization
+- Avoid prop drilling with proper component structure
+
+## Error Handling
+
+- Implement global error boundaries
+- Use proper error logging with Sentry
+- Provide user-friendly error messages
+- Implement retry mechanisms for network requests
+- Handle loading states gracefully
+- Log errors with proper context
+
+## Development Workflow
+
+- Use TaskMaster for complex task management
+- Follow pre-task checklist for complexity assessment
+- Implement post-task validation protocols
+- Update memory bank with learnings
+- Use Sequential Thinking for complex decisions
+- Document architectural decisions
+
+## Code Review Standards
+
+- Review for security vulnerabilities
+- Check performance implications
+- Verify test coverage
+- Ensure proper error handling
+- Validate TypeScript types
+- Check accessibility compliance
+
+## Deployment and DevOps
+
+- Use CI/CD pipelines for automated deployment
+- Implement proper environment separation
+- Use feature flags for gradual rollouts
+- Monitor application performance
+- Implement proper logging and monitoring
+- Use infrastructure as code
+
+## Documentation Requirements
+
+- Maintain up-to-date README files
+- Document API endpoints and schemas
+- Create architectural decision records (ADRs)
+- Document deployment procedures
+- Maintain troubleshooting guides
+- Update memory bank with project learnings

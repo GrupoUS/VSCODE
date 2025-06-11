@@ -1,0 +1,15 @@
+{
+  "id": "command_1749302944877_6b2866",
+  "sessionId": "session_1749302918771_9f3265c2",
+  "timestamp": 1749302944877,
+  "command": "npm run docs",
+  "success": true,
+  "fallbackUsed": true,
+  "executionTime": 4902,
+  "nonInteractiveFlags": [],
+  "project": "unknown",
+  "context": {
+    "timestamp": 1749302944877,
+    "sessionId": "session_1749302918771_9f3265c2"
+  }
+}

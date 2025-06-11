@@ -1,0 +1,38 @@
+PRD para Correção de Erro em replace_in_file
+
+Objetivo:
+Implementar uma estratégia robusta para resolver definitivamente o erro de correspondência em SEARCH blocks do `replace_in_file`, prevenindo loops de erro e estabelecendo um workflow eficiente para edições de arquivo.
+
+Requisitos:
+
+1.  **Identificação de Uso Correto**:
+    *   A ferramenta deve ser capaz de identificar quando `replace_in_file` é a ferramenta apropriada versus `write_to_file`.
+    *   Critérios para `replace_in_file`: pequenas alterações, modificações pontuais, refatoração de código existente.
+    *   Critérios para `write_to_file`: criação de novos arquivos, sobrescrita completa de arquivos, grandes alterações estruturais.
+
+2.  **Prevenção de Loops de Erro em `replace_in_file`**:
+    *   Implementar um mecanismo de fallback automático para `write_to_file` se `replace_in_file` falhar após um número definido de tentativas.
+    *   **Primeira tentativa**: Usar o SEARCH block completo fornecido.
+    *   **Segunda tentativa**: Se a primeira falhar, tentar com um SEARCH block mínimo (1-3 linhas) para aumentar a chance de correspondência.
+    *   **Terceira ação (Fallback)**: Se a segunda tentativa também falhar, realizar um fallback para `write_to_file`.
+
+3.  **Workflow de Fallback Detalhado**:
+    *   **Passo 1**: `read_file` para obter o conteúdo atual do arquivo.
+    *   **Passo 2**: `modify_in_memory` para aplicar as mudanças desejadas ao conteúdo lido.
+    *   **Passo 3**: `write_to_file` para sobrescrever o arquivo com o conteúdo modificado.
+    *   **Passo 4**: `validate` para verificar se as mudanças foram aplicadas corretamente.
+
+4.  **Regras de Prevenção e Boas Práticas**:
+    *   Normalizar quebras de linha (`\r\n` para `\n`) e remover espaços em branco (`trailing spaces`) antes de qualquer operação de `replace_in_file`.
+    *   Sempre usar `read_file` antes de `replace_in_file` para confirmar o conteúdo atual do arquivo e garantir a correspondência exata do SEARCH block.
+    *   Preferir blocos SEARCH pequenos e únicos para minimizar erros de correspondência.
+    *   Documentar no `memory bank` (`.ai_memory/replace-in-file-solutions.md`) cada vez que o fallback for utilizado, incluindo detalhes do erro e da solução.
+
+5.  **Snippets Práticos (Implementação)**:
+    *   **Script de Validação (`validate-replace.js`)**: Uma função para validar se um `SEARCH block` existe no arquivo antes de tentar o `replace_in_file`.
+    *   **Workflow Automático (`.taskmaster/workflows/file-edit.yml`)**: Um workflow que orquestra as tentativas de `replace_in_file` e o fallback para `write_to_file`.
+
+6.  **Documentação e Conhecimento**:
+    *   Criar ou atualizar a regra `.clinerules/error-handling/replace-in-file-fallback.md` com as diretrizes e o workflow de fallback.
+    *   Atualizar o arquivo `.ai_memory/replace-in-file-solutions.md` com o problema, a solução e um checklist de prevenção.
+    *   Adicionar um "Comando de Emergência" para forçar o uso de `write_to_file` e pular a validação em casos críticos.

@@ -1,0 +1,32 @@
+{
+  "weekly": {
+    "day": "Friday",
+    "time": "17:00",
+    "enabled": true,
+    "lastRun": null,
+    "nextRun": "2025-06-06T20:00:00.000Z"
+  },
+  "monthly": {
+    "day": "first Monday",
+    "time": "09:00",
+    "enabled": true,
+    "lastRun": null,
+    "nextRun": "2025-07-07T12:00:00.000Z"
+  },
+  "quarterly": {
+    "month": "first month",
+    "day": "first Monday",
+    "time": "09:00",
+    "enabled": true,
+    "lastRun": null,
+    "nextRun": "2025-07-07T12:00:00.000Z"
+  },
+  "annual": {
+    "month": "January",
+    "day": "second Monday",
+    "time": "09:00",
+    "enabled": true,
+    "lastRun": null,
+    "nextRun": "2026-01-12T12:00:00.000Z"
+  }
+}

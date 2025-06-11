@@ -1,0 +1,183 @@
+{
+  "period": {
+    "start": "2025-05-30T18:14:45.948Z",
+    "end": "2025-06-06T18:14:45.949Z"
+  },
+  "summary": {
+    "completion_rate": {
+      "count": 9,
+      "average": 96.55555555555556,
+      "min": 85,
+      "max": 100,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "token_usage": {
+      "count": 4,
+      "average": 40478,
+      "min": 35000,
+      "max": 45956,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "error_rate": {
+      "count": 4,
+      "average": 32.125,
+      "min": 8,
+      "max": 100,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "loading_time": {
+      "count": 3,
+      "average": 1001.3333333333334,
+      "min": 4,
+      "max": 1500,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "session_start": {
+      "count": 1,
+      "average": 1,
+      "min": 1,
+      "max": 1,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "test_metric": {
+      "count": 1,
+      "average": 100,
+      "min": 100,
+      "max": 100,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "system_validation": {
+      "count": 1,
+      "average": 91.66666666666666,
+      "min": 91.66666666666666,
+      "max": 91.66666666666666,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "duration": {
+      "count": 1,
+      "average": 916,
+      "min": 916,
+      "max": 916,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "completionRate": {
+      "count": 1,
+      "average": 100,
+      "min": 100,
+      "max": 100,
+      "target": 85,
+      "baseline": 70
+    },
+    "avgTokensPerTask": {
+      "count": 1,
+      "average": 7659.333333333333,
+      "min": 7659.333333333333,
+      "max": 7659.333333333333,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "errorRate": {
+      "count": 1,
+      "average": 16.666666666666664,
+      "min": 16.666666666666664,
+      "max": 16.666666666666664,
+      "target": 15,
+      "baseline": 25
+    },
+    "avgLoadingTime": {
+      "count": 1,
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "totalTasks": {
+      "count": 1,
+      "average": 6,
+      "min": 6,
+      "max": 6,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "completedTasks": {
+      "count": 1,
+      "average": 6,
+      "min": 6,
+      "max": 6,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "failedTasks": {
+      "count": 1,
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "target": "N/A",
+      "baseline": "N/A"
+    },
+    "totalErrors": {
+      "count": 1,
+      "average": 1,
+      "min": 1,
+      "max": 1,
+      "target": "N/A",
+      "baseline": "N/A"
+    }
+  },
+  "trends": {
+    "completion_rate": {
+      "direction": "increasing",
+      "changePercent": "8.70",
+      "status": "good"
+    },
+    "token_usage": {
+      "direction": "increasing",
+      "changePercent": "31.30",
+      "status": "concerning"
+    },
+    "error_rate": {
+      "direction": "increasing",
+      "changePercent": "1150.00",
+      "status": "concerning"
+    },
+    "loading_time": {
+      "direction": "decreasing",
+      "changePercent": "99.73",
+      "status": "good"
+    }
+  },
+  "alerts": [
+    {
+      "type": "HIGH_ERROR_RATE",
+      "message": "Error rate 100% exceeds target 15%",
+      "severity": "HIGH",
+      "metric": {
+        "type": "error_rate",
+        "value": 100,
+        "context": {
+          "agent": "validation-test",
+          "task": "Real Development Task Simulation",
+          "errors": 1
+        },
+        "timestamp": "2025-06-06T18:14:26.497Z",
+        "agent": "validation-test",
+        "task": "Real Development Task Simulation",
+        "ruleSet": "project-core"
+      },
+      "id": 1749233666498.1067,
+      "timestamp": "2025-06-06T18:14:26.498Z",
+      "resolved": false
+    }
+  ],
+  "recommendations": [],
+  "generatedAt": "2025-06-06T18:14:45.949Z"
+}

@@ -1,0 +1,1218 @@
+{
+  "augment_preferences_summary": {
+    "total_preferences": 61,
+    "categories": {
+      "architecture": [
+        {
+          "line_number": 20,
+          "type": "preference",
+          "text": "comprehensive architectural audits with specific phases: reconnaissance/mapping, critical analysis by category, optimized architecture proposals, and executable implementation plans with \u22658/10 confidence level and copy-paste ready commands.",
+          "category": "architecture",
+          "priority": 9,
+          "keywords": [
+            "analysis"
+          ],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 21,
+          "type": "preference",
+          "text": "to follow the established TaskMaster initialization protocol when starting complex architectural refactoring tasks.",
+          "category": "architecture",
+          "priority": 5,
+          "keywords": [
+            "protocol"
+          ],
+          "technologies": [
+            "TaskMaster"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 25,
+          "type": "preference",
+          "text": "comprehensive post-task cleanup methodology including memory bank optimization, configuration validation, documentation consolidation, system health checks, and performance optimization with 100% validation success criteria for maintaining system integrity after major architectural changes.",
+          "category": "architecture",
+          "priority": 6,
+          "keywords": [
+            "memory",
+            "optimization",
+            "validation",
+            "performance",
+            "documentation",
+            "methodology",
+            "system"
+          ],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 26,
+          "type": "preference",
+          "text": "systematic post-audit validation including MCP configuration testing, rule loading verification, and redirection integrity checks as immediate next steps after architectural consolidation.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "validation",
+            "verification",
+            "testing",
+            "audit"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 27,
+          "type": "preference",
+          "text": "comprehensive post-task validation methodology including task completion verification, error analysis with memory updates, solution documentation, and rule/file updates with correct commands for systematic task closure.",
+          "category": "architecture",
+          "priority": 6,
+          "keywords": [
+            "memory",
+            "validation",
+            "documentation",
+            "methodology",
+            "analysis",
+            "verification"
+          ],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 40,
+          "type": "preference",
+          "text": "implementing systematic rule improvement methodology by comparing with Cline's effective rule-writing guidelines, extracting applicable principles, creating meta-rule protocols for future guideline edits, and establishing quality metrics for rule updates while maintaining MCP architecture compatibility.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "methodology",
+            "improvement"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 41,
+          "type": "preference",
+          "text": "structured 5-phase protocols for MCP server analysis and optimization: Phase 1 (Official documentation analysis, 2) Current system audit, 3) Comparative gap analysis, 4) Implementation of improvements, 5) Validation and documentation, with confidence \u22658/10 requirements and comprehensive documentation in memory bank.",
+          "category": "architecture",
+          "priority": 9,
+          "keywords": [
+            "memory",
+            "optimization",
+            "validation",
+            "documentation",
+            "analysis",
+            "audit",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [
+            "5-phase protocols"
+          ],
+          "confidence_requirements": "confidence \u22658"
+        },
+        {
+          "line_number": 43,
+          "type": "preference",
+          "text": "Next.js 15 + React 19 + TypeScript + Supabase + Tailwind CSS + shadcn-ui stack for NEONPRO aesthetic clinic SaaS project, requiring MCP Sequential Thinking integration for planning and execution of complex architectural migrations.",
+          "category": "architecture",
+          "priority": 7,
+          "keywords": [
+            "integration"
+          ],
+          "technologies": [
+            "Supabase",
+            "Sequential Thinking",
+            "React",
+            "Tailwind",
+            "Next.js",
+            "MCP",
+            "TypeScript"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 51,
+          "type": "preference",
+          "text": "implementing a Boomerang multi-agent architecture with specialized AI models: Gemini Flash Thinking for simple tasks, Gemini Pro for project management, Claude Sonnet 4 for complex code creation, coordinated by a master agent that routes tasks to specialized sub-agents, based on Roo Code structure from https://github.com/RooCodeInc/Roo-Code with MCP integration.",
+          "category": "architecture",
+          "priority": 7,
+          "keywords": [
+            "integration"
+          ],
+          "technologies": [
+            "Claude",
+            "MCP",
+            "Gemini"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 52,
+          "type": "preference",
+          "text": "systematic 4-phase approach for multi-agent system optimization: Phase 1 (rule conflict audit), Phase 2 (performance optimization with 20-30% code reduction), Phase 3 (MCP server diagnostics and unified configuration), Phase 4 (comprehensive validation), with mandatory !finaltest execution and zero tolerance for functionality loss during optimization.",
+          "category": "architecture",
+          "priority": 10,
+          "keywords": [
+            "optimization",
+            "validation",
+            "performance",
+            "audit",
+            "system",
+            "phase",
+            "reduction"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [
+            "4-phase approach"
+          ],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 53,
+          "type": "preference",
+          "text": "implementing Memory Bank MCP system (https://github.com/aakarsh-sasi/memory-bank-mcp) integrated with MCP Shrimp Task Manager for enhanced memory coordination, requiring mandatory pre-execution memory consultation protocols, post-execution automatic memory updates, 20-30% API request reduction targets, and self-improving machine learning capabilities within @project-core structure using Sequential Thinking methodology.",
+          "category": "architecture",
+          "priority": 10,
+          "keywords": [
+            "memory",
+            "methodology",
+            "system",
+            "learning",
+            "reduction"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 55,
+          "type": "preference",
+          "text": "structured 4-phase architectural enhancement methodology: Phase 1 (deep research with MCP Context7 and Perplexity), Phase 2 (current system audit), Phase 3 (comparative analysis and enhancement design), Phase 4 (selective implementation), with requirements for \u22658/10 confidence, zero disruption to existing workflows, 20-30% performance improvement targets, and mandatory !finaltest validation.",
+          "category": "architecture",
+          "priority": 10,
+          "keywords": [
+            "audit",
+            "validation",
+            "performance",
+            "enhancement",
+            "methodology",
+            "improvement",
+            "analysis",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [
+            "4-phase architectural"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 59,
+          "type": "preference",
+          "text": "4-phase architectural enhancement methodology for Enhanced Memory System V4.0 using Cognee MCP as reference, requires retiring TaskMaster completely and confirming Sequential Thinking > think-mcp-server > MCP Shrimp workflow in project guidelines, with 20-30% memory efficiency improvement targets and zero workflow disruption requirements.",
+          "category": "architecture",
+          "priority": 10,
+          "keywords": [
+            "memory",
+            "enhancement",
+            "methodology",
+            "improvement",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "TaskMaster",
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [
+            "4-phase architectural"
+          ],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 60,
+          "type": "preference",
+          "text": "comprehensive 3-phase cleanup methodology for deprecated system components: Phase 1 (scan and verify complete removal of references), Phase 2 (extract valuable patterns before deletion), Phase 3 (system integrity validation), with mandatory backup creation, dependency verification, and functionality testing after each deletion.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "validation",
+            "methodology",
+            "testing",
+            "system",
+            "verification",
+            "phase"
+          ],
+          "technologies": [],
+          "methodologies": [
+            "3-phase cleanup"
+          ],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 61,
+          "type": "preference",
+          "text": "4-phase architectural enhancement methodology for RAG integration: Phase 1 (deep research with MCP Context7 and Perplexity from specific GitHub repos), Phase 2 (current system audit), Phase 3 (strategic integration design), Phase 4 (selective implementation), with requirements for \u22658/10 confidence, zero disruption to existing workflows, 20-30% performance improvement targets, and mandatory !finaltest validation.",
+          "category": "architecture",
+          "priority": 10,
+          "keywords": [
+            "validation",
+            "performance",
+            "enhancement",
+            "integration",
+            "methodology",
+            "improvement",
+            "audit",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [
+            "4-phase architectural"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 63,
+          "type": "preference",
+          "text": "Phase 4B RAG implementation with real embedding models (text-embedding-3-large), semantic similarity caching for 45-55% API reduction, knowledge graph foundation preparation, and reranking optimization to 80%+ success rate while maintaining 100% backward compatibility with established Sequential Thinking workflow.",
+          "category": "architecture",
+          "priority": 7,
+          "keywords": [
+            "optimization",
+            "knowledge",
+            "phase",
+            "reduction"
+          ],
+          "technologies": [
+            "Sequential Thinking"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 64,
+          "type": "preference",
+          "text": "4-phase methodology for MCP server integration: Phase 1 (deep research with MCP Context7 and Perplexity), Phase 2 (current system audit), Phase 3 (diagnostic analysis and root cause investigation), Phase 4 (implementation and integration), with requirements for \u22658/10 confidence, zero workflow disruption, complete memory bank documentation, and !finaltest validation.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "memory",
+            "validation",
+            "documentation",
+            "analysis",
+            "integration",
+            "methodology",
+            "audit",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [
+            "4-phase methodology"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 65,
+          "type": "preference",
+          "text": "systematic sequential execution of established task plans, specifically continuing with all remaining tasks in the MCP integration optimization sequence (8 tasks total) to complete full implementation including Phase 4C, maintaining the established Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager protocol throughout.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "optimization",
+            "integration",
+            "protocol",
+            "phase"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 66,
+          "type": "preference",
+          "text": "systematic task execution methodology: execute task \u2192 validate \u2192 document \u2192 proceed to next task in sequence, specifically for MCP integration optimization with Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager protocol.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "optimization",
+            "integration",
+            "methodology",
+            "protocol"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 67,
+          "type": "preference",
+          "text": "systematic MCP integration task execution methodology: execute task \u2192 validate \u2192 document \u2192 proceed to next task in sequence, maintaining Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager protocol with 100% backward compatibility and comprehensive testing validation for multi-phase integration projects.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "protocol",
+            "validation",
+            "integration",
+            "methodology",
+            "testing",
+            "phase"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 68,
+          "type": "preference",
+          "text": "comprehensive final validation methodology for complex system implementations: 1) Execute comprehensive test suite with MCP integration validation, 2) Analyze results and implement missing specialized methods, 3) Expand capabilities with proper error handling, 4) Re-validate and document with target \u226580% success rate while maintaining backward compatibility.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "validation",
+            "system",
+            "methodology",
+            "integration"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 69,
+          "type": "preference",
+          "text": "systematic 3-phase implementation methodology for complex system optimizations: Phase 1 (missing methods implementation, 60-70% target), Phase 2 (threshold optimization, 80%+ target), Phase 3 (validation framework, 90%+ target), with mandatory Enhanced Memory System V4.0 consultation, Sequential Thinking MCP for complexity \u22657, comprehensive test validation after each phase, and \u22658/10 confidence requirements throughout implementation.",
+          "category": "architecture",
+          "priority": 10,
+          "keywords": [
+            "memory",
+            "optimization",
+            "validation",
+            "methodology",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking"
+          ],
+          "methodologies": [
+            "3-phase implementation"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 70,
+          "type": "preference",
+          "text": "4-phase methodology for MCP tool optimization analysis: Phase 1 (current usage analysis), Phase 2 (documentation research with MCP Context7), Phase 3 (internet research with Perplexity), Phase 4 (integration strategy design), with requirements for \u22658/10 confidence, 20-30% performance improvement targets, 100% backward compatibility, and comprehensive validation methodology for Enhanced Memory System V4.0 workflow optimization.",
+          "category": "architecture",
+          "priority": 9,
+          "keywords": [
+            "memory",
+            "optimization",
+            "validation",
+            "performance",
+            "documentation",
+            "integration",
+            "methodology",
+            "improvement",
+            "analysis",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [
+            "4-phase methodology"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 71,
+          "type": "preference",
+          "text": "systematic 5-phase methodology for MCP server optimization: Phase 1 (configuration audit), Phase 2 (optimization deployment), Phase 3 (comprehensive validation), Phase 4 (performance monitoring setup), Phase 5 (optimization iteration), with specific success criteria including 75% cache hit rate targets and 20-30% performance improvement expectations.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "optimization",
+            "validation",
+            "performance",
+            "methodology",
+            "improvement",
+            "audit",
+            "phase"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [
+            "5-phase methodology"
+          ],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 72,
+          "type": "preference",
+          "text": "4-phase system optimization methodology: Phase 1 (guidelines modernization with Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager workflow), Phase 2 (Augment Code configuration optimization for 20-30% performance improvement), Phase 3 (MCP server deduplication with established workflow hierarchy), Phase 4 (comprehensive validation with !finaltest), requiring \u22658/10 confidence and zero workflow disruption.",
+          "category": "architecture",
+          "priority": 9,
+          "keywords": [
+            "optimization",
+            "validation",
+            "performance",
+            "methodology",
+            "improvement",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "Augment",
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [
+            "4-phase system"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 74,
+          "type": "preference",
+          "text": "4-phase methodology for Supabase MCP server integration: Phase 1 (research with MCP Context7), Phase 2 (system audit), Phase 3 (secure installation with API key in @project-core/.env/), Phase 4 (validation with !finaltest), requiring \u22658/10 confidence, 100% backward compatibility with Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager workflow, and proper security protocols for API key management.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "validation",
+            "integration",
+            "methodology",
+            "audit",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP",
+            "Supabase",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [
+            "4-phase methodology"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 75,
+          "type": "preference",
+          "text": "4-phase methodology for think-mcp-server implementation: Phase 1 (deep research with MCP Context7 and Perplexity), Phase 2 (current system audit), Phase 3 (global installation with permanent configuration), Phase 4 (comprehensive testing and validation), with requirements for \u22658/10 confidence, 100% backward compatibility with Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager workflow, automatic startup without manual activation, and comprehensive memory bank documentation throughout.",
+          "category": "architecture",
+          "priority": 9,
+          "keywords": [
+            "memory",
+            "validation",
+            "documentation",
+            "methodology",
+            "audit",
+            "testing",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [
+            "4-phase methodology"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 76,
+          "type": "preference",
+          "text": "comprehensive MCP connectivity validation methodology including specific test commands for Supabase (list_projects), think-mcp-server (think command), and Perplexity (ask_perplexity) servers, with Sequential Thinking for diagnosis, memory bank documentation of issues/solutions, and 100% operational status as success criteria.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "validation",
+            "methodology",
+            "memory",
+            "documentation"
+          ],
+          "technologies": [
+            "Supabase",
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 77,
+          "type": "preference",
+          "text": "comprehensive 7-step MCP server validation methodology: connectivity test, core functionality test, advanced features test, error handling test, performance validation, Enhanced Memory System V4.0 documentation, and integration verification with Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager workflow, requiring \u22658/10 confidence and results documented in @project-core/memory/self_correction_log.md.",
+          "category": "architecture",
+          "priority": 9,
+          "keywords": [
+            "memory",
+            "validation",
+            "performance",
+            "documentation",
+            "integration",
+            "methodology",
+            "system",
+            "verification"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 79,
+          "type": "preference",
+          "text": "comprehensive research methodology using MCP Context7 for documentation retrieval, Perplexity for best practices research, and deep analysis of @project-core workflow/rules/routing/self-improvement architecture before implementing solutions.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "methodology",
+            "improvement",
+            "documentation",
+            "analysis"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 86,
+          "type": "preference",
+          "text": "4-phase diagnostic methodology for MCP server connectivity issues: Phase 1 (system audit with MCP Context7 and Tavily research), Phase 2 (connectivity diagnostics with specific test commands), Phase 3 (root cause analysis with think-mcp-server), Phase 4 (implementation and validation), requiring \u22658/10 confidence, zero workflow disruption, and comprehensive documentation in Enhanced Memory System V4.0 for Sequential Thinking MCP troubleshooting.",
+          "category": "architecture",
+          "priority": 9,
+          "keywords": [
+            "audit",
+            "memory",
+            "validation",
+            "documentation",
+            "methodology",
+            "analysis",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [
+            "4-phase diagnostic"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 90,
+          "type": "preference",
+          "text": "6-phase GitHub security audit methodology: Phase 1 (research and documentation), Phase 2 (repository security audit), Phase 3 (centralized secret management in @project-core/.env/), Phase 4 (GitHub secret cleanup), Phase 5 (MCP configuration compatibility validation), Phase 6 (security validation and documentation), with requirements for zero exposed API keys, 100% MCP server functionality maintenance, \u22658/10 confidence, and !finaltest validation.",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "validation",
+            "documentation",
+            "methodology",
+            "audit",
+            "phase"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [
+            "6-phase github"
+          ],
+          "confidence_requirements": "\u22658/10"
+        },
+        {
+          "line_number": 91,
+          "type": "preference",
+          "text": "4-phase MCP server audit methodology: Phase 1 (configuration analysis of mcp-master-centralized.json), Phase 2 (connectivity validation with specific test commands for each server), Phase 3 (workflow integration audit maintaining Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager hierarchy), Phase 4 (system optimization and documentation), with requirements for \u22658/10 confidence, zero workflow disruption, 20-30% performance",
+          "category": "architecture",
+          "priority": 8,
+          "keywords": [
+            "optimization",
+            "validation",
+            "performance",
+            "documentation",
+            "analysis",
+            "integration",
+            "methodology",
+            "audit",
+            "system",
+            "phase"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [
+            "4-phase mcp"
+          ],
+          "confidence_requirements": "\u22658/10"
+        }
+      ],
+      "taskmaster": [
+        {
+          "line_number": 22,
+          "type": "preference",
+          "text": "analyzing existing .taskmaster configurations to extract valuable patterns and integrate them into the current TaskMaster system for continuous improvement.",
+          "category": "taskmaster",
+          "priority": 5,
+          "keywords": [
+            "system",
+            "improvement"
+          ],
+          "technologies": [
+            "taskmaster",
+            "TaskMaster"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 37,
+          "type": "preference",
+          "text": "testing startup scripts format for Augment terminal settings with specific automation scripts including taskmaster-init, cache-cleanup, auto-backup, optimize-build, dependency-check, and post-task-validation with parameters.",
+          "category": "taskmaster",
+          "priority": 7,
+          "keywords": [
+            "testing",
+            "validation"
+          ],
+          "technologies": [
+            "taskmaster",
+            "Augment"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 46,
+          "type": "preference",
+          "text": "TaskMaster to use OpenRouter with google/gemini-2.5-flash-preview-05-20:thinking model as default for all modes, using existing API key from env folder.",
+          "category": "taskmaster",
+          "priority": 5,
+          "keywords": [],
+          "technologies": [
+            "gemini",
+            "TaskMaster",
+            "OpenRouter"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 47,
+          "type": "preference",
+          "text": "TaskMaster to have separate task folders for each project to organize tasks and PRDs individually per project.",
+          "category": "taskmaster",
+          "priority": 5,
+          "keywords": [],
+          "technologies": [
+            "TaskMaster"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 48,
+          "type": "preference",
+          "text": "OpenRouter API key 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 to be configured for TaskMaster access but excluded from GitHub pushes for security.",
+          "category": "taskmaster",
+          "priority": 5,
+          "keywords": [],
+          "technologies": [
+            "TaskMaster",
+            "OpenRouter"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        }
+      ],
+      "memory_system": [
+        {
+          "line_number": 23,
+          "type": "preference",
+          "text": "implementing systematic learning analysis after major projects, including error documentation, success pattern cataloging, permanent memory storage in knowledge base, self-correction protocols, and continuous improvement frameworks for future development initiatives.",
+          "category": "memory_system",
+          "priority": 6,
+          "keywords": [
+            "memory",
+            "knowledge",
+            "documentation",
+            "improvement",
+            "analysis",
+            "learning"
+          ],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 24,
+          "type": "preference",
+          "text": "implementing self-improving learning systems with real-time error capture, automated knowledge base updates at @project-core/knowledge-base/memory/, pattern recognition for successful methodologies, and continuous validation using validate-system.ps1 and retroactive-corrections.ps1 scripts.",
+          "category": "memory_system",
+          "priority": 5,
+          "keywords": [
+            "memory",
+            "validation",
+            "knowledge",
+            "system",
+            "learning"
+          ],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 28,
+          "type": "requirement",
+          "text": "mandatory post-task validation protocol including script verification, error analysis with memory updates, solution documentation, and automatic rule/file updates with correct commands for systematic task closure.",
+          "category": "memory_system",
+          "priority": 8,
+          "keywords": [
+            "protocol",
+            "memory",
+            "validation",
+            "documentation",
+            "analysis",
+            "verification"
+          ],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 38,
+          "type": "preference",
+          "text": "creating enhanced guidelines focused on error reduction, continuous learning, memory feedback, performance optimization, and API request reduction, building upon existing AUGMENT AGENT GUIDELINES V2.0 structure.",
+          "category": "memory_system",
+          "priority": 7,
+          "keywords": [
+            "memory",
+            "optimization",
+            "performance",
+            "learning",
+            "reduction"
+          ],
+          "technologies": [
+            "AUGMENT"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 39,
+          "type": "preference",
+          "text": "a !finaltest command that executes a final validation script to verify all changes were executed, check for errors, learn from them, update memory with solutions and correct commands, and update rules/files with correct commands.",
+          "category": "memory_system",
+          "priority": 5,
+          "keywords": [
+            "validation",
+            "memory"
+          ],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 62,
+          "type": "requirement",
+          "text": "RAG-Enhanced Memory System implementations to maintain 100% backward compatibility with existing workflows, implement comprehensive fallback mechanisms, target specific performance improvements (+30% consultation accuracy, +50% result relevance), and follow GRUPO US VIBECODE SYSTEM protocols for documentation and validation with zero disruption to current operations.",
+          "category": "memory_system",
+          "priority": 6,
+          "keywords": [
+            "memory",
+            "validation",
+            "performance",
+            "documentation",
+            "system"
+          ],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": null
+        }
+      ],
+      "general": [
+        {
+          "line_number": 29,
+          "type": "preference",
+          "text": "receiving all code as copy-paste ready commands that can be executed automatically by Augment in the terminal.",
+          "category": "general",
+          "priority": 7,
+          "keywords": [],
+          "technologies": [
+            "Augment"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 45,
+          "type": "preference",
+          "text": "to work directly in the main @neonpro folder for definitive changes rather than creating separate subfolders like neonpro-v3.",
+          "category": "general",
+          "priority": 5,
+          "keywords": [],
+          "technologies": [],
+          "methodologies": [],
+          "confidence_requirements": null
+        }
+      ],
+      "mcp_integration": [
+        {
+          "line_number": 31,
+          "type": "preference",
+          "text": "TaskMaster-Sequential Thinking integration with smart triggers based on complexity analysis, using Sequential Thinking only for complex tasks to optimize API costs, implementing fallback mechanisms, and structuring output as pseudo-PRDs for better Taskmaster consumption.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [
+            "integration",
+            "analysis"
+          ],
+          "technologies": [
+            "TaskMaster",
+            "Taskmaster",
+            "Sequential Thinking"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 42,
+          "type": "preference",
+          "text": "implementing Playwright MCP advanced features in this order: Vision Mode for visual interactions, automatic test generation, and performance optimization with accessibility snapshots.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [
+            "optimization",
+            "performance"
+          ],
+          "technologies": [
+            "Playwright",
+            "MCP"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 44,
+          "type": "preference",
+          "text": "using Sequential Thinking MCP for complex migration implementations and Playwright for testing when necessary, specifically for NEONPRO Next.js 15 + React 19 migration project.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [
+            "testing"
+          ],
+          "technologies": [
+            "Playwright",
+            "Sequential Thinking",
+            "React",
+            "Next.js",
+            "MCP"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 50,
+          "type": "preference",
+          "text": "using mcp-sequentialthinking-tools MCP server from https://github.com/xinzhongyouhai/mcp-sequentialthinking-tools and wants it properly configured for their development workflow.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [],
+          "technologies": [
+            "MCP",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 54,
+          "type": "preference",
+          "text": "removing TaskMaster AI completely from Enhanced Memory System V4.0 and replacing it with integrated mcp-sequentialthinking-tools + Sequential Thinking MCP + MCP Shrimp Task Manager workflow for complex reasoning and task management.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [
+            "system",
+            "memory"
+          ],
+          "technologies": [
+            "TaskMaster",
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 57,
+          "type": "preference",
+          "text": "using only sequentialthinking_Sequential_Thinking MCP tool (disable sequentialthinking_tools_mcp-sequentialthinking-tools due to connection errors), requires Sequential Thinking integration with Enhanced Memory System V4.0 including access to master_rule.md, self_correction_log.md, global-standards.md, and storage of thoughts in memory bank for future reference.",
+          "category": "mcp_integration",
+          "priority": 10,
+          "keywords": [
+            "integration",
+            "system",
+            "memory"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 58,
+          "type": "requirement",
+          "text": "comprehensive testing and validation of think-mcp-server and mcp-shrimp-task-manager MCPs for operational status, workflow integration with Enhanced Memory System V4.0, task management capabilities, and compliance with complexity \u2265 7 activation requirements within GRUPO US VIBECODE SYSTEM protocols.",
+          "category": "mcp_integration",
+          "priority": 8,
+          "keywords": [
+            "memory",
+            "validation",
+            "integration",
+            "testing",
+            "system"
+          ],
+          "technologies": [
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 73,
+          "type": "preference",
+          "text": "comprehensive MCP workflow integration tests after system optimizations, including MCP server connectivity verification, workflow chain testing (Sequential Thinking \u2192 MCP Shrimp \u2192 think-mcp-server), complexity-based routing validation (\u22657 triggers Sequential Thinking), performance validation for optimization improvements, and documentation of results in self_correction_log.md with post-restart validation reports.",
+          "category": "mcp_integration",
+          "priority": 8,
+          "keywords": [
+            "optimization",
+            "validation",
+            "performance",
+            "documentation",
+            "integration",
+            "testing",
+            "system",
+            "verification"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 78,
+          "type": "preference",
+          "text": "using @c:\\Users\\Admin\\AppData\\Roaming\\Code\\.vscode\\mcp-master-centralized.json as the main MCP configuration file (not mcp.json) and emphasizes focusing on performance with fewer API requests rather than excessive verification sequences.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [
+            "performance",
+            "verification"
+          ],
+          "technologies": [
+            "MCP",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 81,
+          "type": "preference",
+          "text": "accurate verification of which specific MCP server is being used during tests, not just assuming functionality based on successful results.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [
+            "verification"
+          ],
+          "technologies": [
+            "MCP"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 82,
+          "type": "preference",
+          "text": "modifying Augment extension's native MCP configuration directly rather than creating synchronization scripts or monitoring systems for MCP server management.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [],
+          "technologies": [
+            "Augment",
+            "MCP"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 83,
+          "type": "preference",
+          "text": "MCP Shrimp Task Manager to use Tavily MCP tools (tavily-search, tavily-extract, tavily-crawl, tavily-map) as default search engine instead of current RESEARCH_MODE_DEFAULT_ENGINE, while maintaining Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager workflow hierarchy.",
+          "category": "mcp_integration",
+          "priority": 7,
+          "keywords": [],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        },
+        {
+          "line_number": 87,
+          "type": "preference",
+          "text": "Sequential Thinking \u2192 think-mcp-server \u2192 MCP Shrimp Task Manager workflow hierarchy and requires Sequential Thinking MCP integration with Enhanced Memory System V4.0 for complex reasoning tasks with complexity \u22657, with proper parameter validation and memory bank storage of results.",
+          "category": "mcp_integration",
+          "priority": 10,
+          "keywords": [
+            "validation",
+            "integration",
+            "system",
+            "memory"
+          ],
+          "technologies": [
+            "MCP",
+            "Sequential Thinking",
+            "mcp"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        }
+      ],
+      "technology_stack": [
+        {
+          "line_number": 49,
+          "type": "preference",
+          "text": "to maintain TypeScript configuration files (like next.config.ts) instead of simplifying to JavaScript equivalents.",
+          "category": "technology_stack",
+          "priority": 5,
+          "keywords": [],
+          "technologies": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        }
+      ],
+      "performance": [
+        {
+          "line_number": 88,
+          "type": "preference",
+          "text": "configuring the multi-agent system (Boomerang, Architect, Coder, Manager, Executor, Researcher) to use Augment's native API and token system instead of OpenRouter for AI model consumption to utilize existing Augment credits for cost optimization, with specific model enforcement per agent (claude-sonnet-4 for complex tasks, gemini-2.5-pro for coordination, gemini-flash for simple tasks) rather than defaulting to Augment's standard model selection.",
+          "category": "performance",
+          "priority": 7,
+          "keywords": [
+            "optimization",
+            "system"
+          ],
+          "technologies": [
+            "gemini",
+            "claude",
+            "Augment",
+            "OpenRouter"
+          ],
+          "methodologies": [],
+          "confidence_requirements": null
+        }
+      ]
+    },
+    "top_technologies": [
+      "Gemini",
+      "TaskMaster",
+      "React",
+      "Claude",
+      "Tailwind",
+      "claude",
+      "Taskmaster",
+      "AUGMENT",
+      "Supabase",
+      "JavaScript"
+    ],
+    "key_methodologies": [
+      "4-phase methodology",
+      "6-phase github",
+      "4-phase approach",
+      "3-phase implementation",
+      "5-phase protocols"
+    ],
+    "last_sync": 1749579978.6517663,
+    "sync_source": "augment_bridge"
+  }
+}

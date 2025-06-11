@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "name": "GRUPO US Unified Development Environment Configuration",
+    "version": "1.0.0",
+    "description": "Unified configuration system for Augment Code and Cursor AI integration",
+    "lastUpdated": "2025-01-09T18:30:00Z",
+    "author": "GRUPO US - VIBECODE SYSTEM V3.1"
+  },
+  "environments": {
+    "augment": {
+      "name": "Augment Code",
+      "priority": 1,
+      "capabilities": [
+        "codebase-context",
+        "next-edit-suggestions", 
+        "instructions-mode",
+        "completions",
+        "chat-mode"
+      ],
+      "specializations": [
+        "backend-development",
+        "api-integration", 
+        "database-operations",
+        "complex-refactoring",
+        "architecture-design"
+      ],
+      "configFiles": [
+        ".vscode/settings.json",
+        ".augmentignore",
+        ".augment-guidelines"
+      ]
+    },
+    "cursor": {
+      "name": "Cursor AI", 
+      "priority": 2,
+      "capabilities": [
+        "composer-mode",
+        "chat-mode",
+        "interactive-development",
+        "ui-generation",
+        "real-time-feedback"
+      ],
+      "specializations": [
+        "frontend-development",
+        "component-creation",
+        "ui-ux-improvements", 
+        "styling-optimization",
+        "interactive-debugging"
+      ],
+      "configFiles": [
+        ".cursorrules",
+        ".cursor/mcp.json"
+      ]
+    }
+  },
+  "sharedConfiguration": {
+    "memorySystem": {
+      "centralPath": "@project-core/memory/",
+      "masterRule": "@project-core/memory/master_rule.md",
+      "guidelines": "@project-core/memory/augment-agent-guidelines-v3.md",
+      "selfCorrection": "@project-core/memory/self_correction_log.md",
+      "globalStandards": "@project-core/memory/global-standards.md"
+    },
+    "rulesSystem": {
+      "centralPath": "@project-core/rules/",
+      "masterProtocol": "@project-core/rules/00-master-execution-protocol.md",
+      "codingStandards": "@project-core/rules/02-coding-standards-universal.md"
+    },
+    "mcpIntegration": {
+      "configPath": "@project-core/configs/mcp-master-unified.json",
+      "servers": [
+        "sequential-thinking",
+        "mcp-shrimp-task-manager", 
+        "playwright-official",
+        "figma-integration",
+        "supabase-operations"
+      ]
+    }
+  },
+  "coordinationProtocols": {
+    "taskSpecialization": {
+      "augment": {
+        "complexity": [7, 8, 9, 10],
+        "domains": ["backend", "api", "database", "architecture"],
+        "triggers": ["complex-refactoring", "system-design", "performance-optimization"]
+      },
+      "cursor": {
+        "complexity": [1, 2, 3, 4, 5, 6],
+        "domains": ["frontend", "ui", "components", "styling"],
+        "triggers": ["component-creation", "ui-improvements", "interactive-development"]
+      }
+    },
+    "handoffProtocols": {
+      "augmentToCursor": {
+        "conditions": ["backend-complete", "api-ready", "ui-development-needed"],
+        "artifacts": ["component-specs", "api-documentation", "design-requirements"]
+      },
+      "cursorToAugment": {
+        "conditions": ["ui-complete", "integration-needed", "backend-optimization-required"],
+        "artifacts": ["component-code", "integration-points", "performance-requirements"]
+      }
+    }
+  }
+}

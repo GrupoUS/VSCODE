@@ -1,0 +1,15 @@
+{
+  "id": "command_1749302951896_97cfa5",
+  "sessionId": "session_1749302918771_9f3265c2",
+  "timestamp": 1749302951896,
+  "command": "npm run lint",
+  "success": true,
+  "fallbackUsed": false,
+  "executionTime": 4457,
+  "nonInteractiveFlags": [],
+  "project": "unknown",
+  "context": {
+    "timestamp": 1749302951896,
+    "sessionId": "session_1749302918771_9f3265c2"
+  }
+}

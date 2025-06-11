@@ -1,0 +1,161 @@
+{
+  "startTime": "2025-06-05T17:04:03.082Z",
+  "tests": [
+    {
+      "name": "Stripe MCP Manager Initialization",
+      "success": true,
+      "timestamp": "2025-06-05T17:04:03.084Z",
+      "data": {
+        "initialized": true,
+        "config": {
+          "secretKey": "sk_test_mock_key_for_testing_grupo_us",
+          "publishableKey": "pk_test_mock_key_for_testing_grupo_us",
+          "webhookSecret": "whsec_mock_webhook_secret_for_testing",
+          "environment": "test",
+          "apiVersion": "2023-10-16",
+          "port": 3334,
+          "mode": "stdio"
+        },
+        "metrics": {
+          "apiCalls": 0,
+          "successfulPayments": 0,
+          "failedPayments": 0,
+          "webhooksProcessed": 0,
+          "errors": 0,
+          "lastOperation": null,
+          "isInitialized": true,
+          "mcpConnected": true,
+          "cacheSize": 0,
+          "uptime": 0.019803006
+        }
+      }
+    },
+    {
+      "name": "Basic Stripe Operations",
+      "success": true,
+      "timestamp": "2025-06-05T17:04:03.398Z",
+      "data": {
+        "customer": "cus_vbzevkec5",
+        "paymentIntent": "pi_hb1trydqp",
+        "subscription": "sub_7kxly7h9a",
+        "metrics": {
+          "apiCalls": 3,
+          "successfulPayments": 1,
+          "failedPayments": 0,
+          "webhooksProcessed": 0,
+          "errors": 0,
+          "lastOperation": "create_subscription",
+          "isInitialized": true,
+          "mcpConnected": true,
+          "cacheSize": 0,
+          "uptime": 0.334266995
+        }
+      }
+    },
+    {
+      "name": "Playwright Integration",
+      "success": true,
+      "timestamp": "2025-06-05T17:04:05.626Z",
+      "data": {
+        "testId": "test_1749143043399",
+        "steps": 5,
+        "metrics": {
+          "testsRun": 1,
+          "testsPassed": 1,
+          "testsFailed": 0,
+          "paymentsProcessed": 0,
+          "screenshotsTaken": 3,
+          "stripeMetrics": {
+            "apiCalls": 2,
+            "successfulPayments": 1,
+            "failedPayments": 0,
+            "webhooksProcessed": 0,
+            "errors": 0,
+            "lastOperation": "create_payment_intent",
+            "isInitialized": true,
+            "mcpConnected": true,
+            "cacheSize": 0,
+            "uptime": 2.561502579
+          },
+          "testResults": 1,
+          "lastTest": "2025-06-05T17:04:05.625Z"
+        }
+      }
+    },
+    {
+      "name": "Webhook Processing",
+      "success": true,
+      "timestamp": "2025-06-05T17:04:05.627Z",
+      "data": {
+        "eventType": "payment_intent.succeeded",
+        "eventId": "evt_k19gi3o7u",
+        "metrics": {
+          "apiCalls": 0,
+          "successfulPayments": 0,
+          "failedPayments": 0,
+          "webhooksProcessed": 1,
+          "errors": 0,
+          "lastOperation": null,
+          "isInitialized": true,
+          "mcpConnected": true,
+          "cacheSize": 0,
+          "uptime": 2.562482103
+        }
+      }
+    },
+    {
+      "name": "Error Handling",
+      "success": false,
+      "timestamp": "2025-06-05T17:04:05.627Z",
+      "data": {
+        "errorHandled": false,
+        "message": "Error handling funcionando corretamente"
+      }
+    },
+    {
+      "name": "Metrics and Monitoring",
+      "success": true,
+      "timestamp": "2025-06-05T17:04:05.732Z",
+      "data": {
+        "metrics": {
+          "apiCalls": 1,
+          "successfulPayments": 0,
+          "failedPayments": 0,
+          "webhooksProcessed": 0,
+          "errors": 0,
+          "lastOperation": "create_customer",
+          "isInitialized": true,
+          "mcpConnected": true,
+          "cacheSize": 0,
+          "uptime": 2.667730466
+        },
+        "healthStatus": {
+          "status": "healthy",
+          "mcp": "connected",
+          "metrics": {
+            "apiCalls": 1,
+            "successfulPayments": 0,
+            "failedPayments": 0,
+            "webhooksProcessed": 0,
+            "errors": 0,
+            "lastOperation": "create_customer",
+            "isInitialized": true,
+            "mcpConnected": true,
+            "cacheSize": 0,
+            "uptime": 2.667811202
+          },
+          "timestamp": "2025-06-05T17:04:05.732Z"
+        },
+        "validation": "Métricas e monitoramento funcionando"
+      }
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 5,
+    "failed": 1,
+    "skipped": 0
+  },
+  "endTime": "2025-06-05T17:04:05.732Z",
+  "duration": 2650
+}

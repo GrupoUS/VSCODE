@@ -1,0 +1,193 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-01-27",
+  "routing_algorithm": {
+    "primary_factors": [
+      "complexity_score",
+      "task_type",
+      "urgency_level",
+      "domain_expertise",
+      "agent_availability"
+    ],
+    "decision_weights": {
+      "complexity": 0.35,
+      "task_type": 0.25,
+      "domain": 0.20,
+      "urgency": 0.15,
+      "availability": 0.05
+    }
+  },
+  "routing_rules": {
+    "complexity_based": {
+      "1-2": {
+        "primary": "executor",
+        "fallback": "manager",
+        "description": "Simple tasks, quick operations"
+      },
+      "3-4": {
+        "primary": "manager",
+        "fallback": "executor",
+        "description": "Medium complexity, coordination needed"
+      },
+      "5-6": {
+        "primary": "coder",
+        "fallback": "architect",
+        "description": "Complex implementation tasks"
+      },
+      "7-8": {
+        "primary": "architect",
+        "fallback": "coder",
+        "description": "High complexity, design required"
+      },
+      "9-10": {
+        "primary": "architect",
+        "fallback": "boomerang",
+        "description": "Critical complexity, multi-agent coordination"
+      }
+    },
+    "task_type": {
+      "research": {
+        "primary": "researcher",
+        "secondary": "architect",
+        "tools": ["web-search", "documentation", "analysis"]
+      },
+      "planning": {
+        "primary": "architect",
+        "secondary": "manager",
+        "tools": ["design", "architecture", "roadmap"]
+      },
+      "implementation": {
+        "primary": "coder",
+        "secondary": "architect",
+        "tools": ["coding", "debugging", "testing"]
+      },
+      "management": {
+        "primary": "manager",
+        "secondary": "boomerang",
+        "tools": ["coordination", "tracking", "reporting"]
+      },
+      "validation": {
+        "primary": "executor",
+        "secondary": "coder",
+        "tools": ["testing", "verification", "quality_check"]
+      },
+      "documentation": {
+        "primary": "researcher",
+        "secondary": "manager",
+        "tools": ["writing", "analysis", "organization"]
+      },
+      "coordination": {
+        "primary": "boomerang",
+        "secondary": "manager",
+        "tools": ["orchestration", "routing", "consolidation"]
+      }
+    },
+    "urgency_levels": {
+      "immediate": {
+        "agent": "executor",
+        "max_response_time": "5_minutes",
+        "escalation_threshold": "2_minutes"
+      },
+      "urgent": {
+        "agent": "auto_select",
+        "max_response_time": "15_minutes", 
+        "escalation_threshold": "10_minutes"
+      },
+      "normal": {
+        "agent": "auto_select",
+        "max_response_time": "1_hour",
+        "escalation_threshold": "45_minutes"
+      },
+      "planned": {
+        "agent": "manager",
+        "max_response_time": "4_hours",
+        "escalation_threshold": "3_hours"
+      }
+    },
+    "domain_expertise": {
+      "frontend": {
+        "primary": "coder",
+        "secondary": "architect",
+        "technologies": ["react", "vue", "angular", "css", "javascript"]
+      },
+      "backend": {
+        "primary": "coder",
+        "secondary": "architect", 
+        "technologies": ["node", "python", "java", "apis", "databases"]
+      },
+      "architecture": {
+        "primary": "architect",
+        "secondary": "researcher",
+        "technologies": ["system_design", "patterns", "scalability"]
+      },
+      "devops": {
+        "primary": "coder",
+        "secondary": "manager",
+        "technologies": ["docker", "ci_cd", "deployment", "monitoring"]
+      },
+      "documentation": {
+        "primary": "researcher",
+        "secondary": "manager",
+        "technologies": ["markdown", "apis", "guides", "tutorials"]
+      },
+      "project_management": {
+        "primary": "manager",
+        "secondary": "boomerang",
+        "technologies": ["planning", "tracking", "coordination"]
+      },
+      "research": {
+        "primary": "researcher",
+        "secondary": "architect",
+        "technologies": ["analysis", "investigation", "trends"]
+      }
+    }
+  },
+  "escalation_paths": {
+    "executor": {
+      "complexity_increase": "manager",
+      "technical_depth": "coder",
+      "coordination_needed": "boomerang"
+    },
+    "manager": {
+      "technical_decisions": "architect",
+      "implementation_issues": "coder",
+      "research_needed": "researcher"
+    },
+    "coder": {
+      "architecture_questions": "architect",
+      "research_needed": "researcher",
+      "coordination_issues": "manager"
+    },
+    "architect": {
+      "implementation_details": "coder",
+      "project_coordination": "manager",
+      "external_research": "researcher"
+    },
+    "researcher": {
+      "technical_implementation": "architect",
+      "project_integration": "manager",
+      "quick_validation": "executor"
+    },
+    "boomerang": {
+      "human_intervention": "escalate_to_user",
+      "system_failure": "error_recovery_protocol"
+    }
+  },
+  "fallback_strategies": {
+    "agent_unavailable": {
+      "use_secondary": true,
+      "queue_for_primary": true,
+      "notify_coordinator": true
+    },
+    "task_too_complex": {
+      "decompose_task": true,
+      "escalate_to_architect": true,
+      "request_human_input": false
+    },
+    "multiple_agents_needed": {
+      "coordinate_via_boomerang": true,
+      "create_subtasks": true,
+      "track_dependencies": true
+    }
+  }
+}

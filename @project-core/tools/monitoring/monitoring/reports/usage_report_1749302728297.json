@@ -1,0 +1,54 @@
+{
+  "sessionId": "session_1749302728293_7e472b38",
+  "generatedAt": 1749302728297,
+  "collectionPeriod": {
+    "start": 1749302728293,
+    "end": 1749302728297,
+    "duration": 4
+  },
+  "summary": {
+    "totalDataPoints": 0,
+    "executionPatterns": 0,
+    "commandsTracked": 0,
+    "fileOperations": 0,
+    "userInterventions": 0,
+    "optimizationOpportunities": 0
+  },
+  "insights": [
+    {
+      "type": "file_operations",
+      "data": {},
+      "summary": "Processed 0 file operations across 0 file types"
+    }
+  ],
+  "recommendations": [],
+  "trends": {
+    "executionSuccessRate": 0,
+    "averageExecutionTime": 0,
+    "userInterventionFrequency": 0,
+    "fileOperationAutonomy": 0
+  },
+  "projectBreakdown": {
+    "neonpro": {
+      "executions": 0,
+      "successRate": 0,
+      "fileOperations": 0,
+      "userInterventions": 0,
+      "averageComplexity": 0
+    },
+    "aegiswallet": {
+      "executions": 0,
+      "successRate": 0,
+      "fileOperations": 0,
+      "userInterventions": 0,
+      "averageComplexity": 0
+    },
+    "harmoniza-facil-agendas": {
+      "executions": 0,
+      "successRate": 0,
+      "fileOperations": 0,
+      "userInterventions": 0,
+      "averageComplexity": 0
+    }
+  }
+}

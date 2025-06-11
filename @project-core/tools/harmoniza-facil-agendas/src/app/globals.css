@@ -1,0 +1,153 @@
+/* GRUPO US Design System - Harmoniza Facil Agendas */
+@import url("https://fonts.googleapis.com/css2?family=Optima:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Mode Colors - GRUPO US PANTONE Specification */
+  --text-primary: #112031;
+  --text-secondary: #294359;
+  --text-muted: #b4ac9c;
+  --background: #ffffff;
+  --surface: #f8f9fa;
+
+  /* Spacing System */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+
+  /* Border Radius */
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Dark Mode Colors - GRUPO US PANTONE Specification */
+  --text-primary: #f5f5f5;
+  --text-secondary: #d2d0c8;
+  --text-muted: #8a8275;
+  --background: #0f0f0f;
+  --surface: #1a1a1a;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* GRUPO US Neon Gold Utility Classes */
+@layer utilities {
+  .text-gold-neon {
+    @apply text-accent-gold drop-shadow-gold-neon;
+  }
+
+  .text-gold-neon-strong {
+    @apply text-accent-gold drop-shadow-gold-neon-strong;
+  }
+
+  .btn-gold-neon {
+    @apply bg-accent-gold text-primary-dark shadow-lg;
+    box-shadow: 0 0 20px rgba(172, 148, 105, 0.3);
+  }
+
+  .btn-gold-neon:hover {
+    box-shadow: 0 0 30px rgba(172, 148, 105, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .focus-visible {
+    @apply outline-none ring-2 ring-accent-gold ring-offset-2 ring-offset-background;
+  }
+}
+
+/* GRUPO US Component Base Classes */
+@layer components {
+  .heading-optima {
+    font-family: 'Optima', serif;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .text-inter {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+  }
+
+  .card-surface {
+    background: var(--surface);
+    border: 1px solid #B4AC9C;
+    border-radius: var(--radius);
+    padding: var(--spacing-lg);
+    transition: all 0.3s ease;
+  }
+
+  .input-surface {
+    background: var(--surface);
+    border: 1px solid #B4AC9C;
+    border-radius: var(--radius);
+    padding: var(--spacing-sm);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
+
+  .input-surface:focus {
+    outline: none;
+    border-color: #AC9469;
+    box-shadow: 0 0 0 2px rgba(172, 148, 105, 0.2);
+  }
+}
+
+/* Accessibility Support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --background: #ffffff;
+  }
+
+  .dark {
+    --text-primary: #ffffff;
+    --background: #000000;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B4AC9C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AC9469;
+}

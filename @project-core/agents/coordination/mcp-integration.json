@@ -1,0 +1,314 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-01-27",
+  "mcp_server_assignments": {
+    "boomerang": {
+      "primary_servers": [
+        {
+          "server": "sequentialthinking_tools_mcp-sequentialthinking-tools",
+          "purpose": "Advanced thinking with tool recommendations",
+          "tools": ["sequentialthinking_tools"],
+          "priority": 1
+        },
+        {
+          "server": "mcp-shrimp-task-manager",
+          "purpose": "Task coordination and management",
+          "tools": ["plan_task", "analyze_task", "split_tasks", "list_tasks"],
+          "priority": 2
+        },
+        {
+          "server": "think_think-mcp-server",
+          "purpose": "Internal reasoning and decision making",
+          "tools": ["think"],
+          "priority": 3
+        }
+      ],
+      "optional_servers": [
+        {
+          "server": "render-mermaid",
+          "purpose": "Workflow visualization",
+          "tools": ["render-mermaid"],
+          "priority": 4
+        }
+      ]
+    },
+    "architect": {
+      "primary_servers": [
+        {
+          "server": "sequentialthinking_tools_mcp-sequentialthinking-tools",
+          "purpose": "Complex architectural analysis",
+          "tools": ["sequentialthinking"],
+          "priority": 1
+        },
+        {
+          "server": "mcp-shrimp-task-manager",
+          "purpose": "Design task management",
+          "tools": ["analyze_task", "reflect_task", "process_thought"],
+          "priority": 2
+        },
+        {
+          "server": "codebase-retrieval",
+          "purpose": "Code analysis and architecture review",
+          "tools": ["codebase-retrieval"],
+          "priority": 3
+        },
+        {
+          "server": "render-mermaid",
+          "purpose": "Architecture diagram creation",
+          "tools": ["render-mermaid"],
+          "priority": 4
+        }
+      ],
+      "optional_servers": [
+        {
+          "server": "github-api",
+          "purpose": "Repository analysis",
+          "tools": ["github-api"],
+          "priority": 5
+        }
+      ]
+    },
+    "coder": {
+      "primary_servers": [
+        {
+          "server": "str-replace-editor",
+          "purpose": "Code editing and modification",
+          "tools": ["str-replace-editor"],
+          "priority": 1
+        },
+        {
+          "server": "save-file",
+          "purpose": "File creation and management",
+          "tools": ["save-file"],
+          "priority": 2
+        },
+        {
+          "server": "view",
+          "purpose": "File and directory inspection",
+          "tools": ["view"],
+          "priority": 3
+        },
+        {
+          "server": "diagnostics",
+          "purpose": "Code quality and error detection",
+          "tools": ["diagnostics"],
+          "priority": 4
+        },
+        {
+          "server": "launch-process",
+          "purpose": "Command execution and testing",
+          "tools": ["launch-process", "read-process", "write-process"],
+          "priority": 5
+        }
+      ],
+      "optional_servers": [
+        {
+          "server": "codebase-retrieval",
+          "purpose": "Code context and analysis",
+          "tools": ["codebase-retrieval"],
+          "priority": 6
+        },
+        {
+          "server": "github-api",
+          "purpose": "Version control operations",
+          "tools": ["github-api"],
+          "priority": 7
+        }
+      ]
+    },
+    "manager": {
+      "primary_servers": [
+        {
+          "server": "mcp-shrimp-task-manager",
+          "purpose": "Project and task management",
+          "tools": ["plan_task", "split_tasks", "list_tasks", "execute_task", "verify_task"],
+          "priority": 1
+        },
+        {
+          "server": "github-api",
+          "purpose": "Project tracking and collaboration",
+          "tools": ["github-api"],
+          "priority": 2
+        }
+      ],
+      "optional_servers": [
+        {
+          "server": "supabase",
+          "purpose": "Data management and reporting",
+          "tools": ["supabase"],
+          "priority": 3
+        },
+        {
+          "server": "str-replace-editor",
+          "purpose": "Documentation management",
+          "tools": ["str-replace-editor"],
+          "priority": 4
+        },
+        {
+          "server": "save-file",
+          "purpose": "Report and document creation",
+          "tools": ["save-file"],
+          "priority": 5
+        }
+      ]
+    },
+    "executor": {
+      "primary_servers": [
+        {
+          "server": "view",
+          "purpose": "Quick file and status checks",
+          "tools": ["view"],
+          "priority": 1
+        },
+        {
+          "server": "launch-process",
+          "purpose": "Command execution and validation",
+          "tools": ["launch-process", "read-terminal"],
+          "priority": 2
+        },
+        {
+          "server": "diagnostics",
+          "purpose": "Quick error detection",
+          "tools": ["diagnostics"],
+          "priority": 3
+        }
+      ],
+      "optional_servers": [
+        {
+          "server": "str-replace-editor",
+          "purpose": "Simple file modifications",
+          "tools": ["str-replace-editor"],
+          "priority": 4
+        },
+        {
+          "server": "save-file",
+          "purpose": "Basic file creation",
+          "tools": ["save-file"],
+          "priority": 5
+        }
+      ]
+    },
+    "researcher": {
+      "primary_servers": [
+        {
+          "server": "search_perplexity-search",
+          "purpose": "Advanced web research",
+          "tools": ["search_perplexity-search"],
+          "priority": 1
+        },
+        {
+          "server": "web-search",
+          "purpose": "General web search",
+          "tools": ["web-search"],
+          "priority": 2
+        },
+        {
+          "server": "web-fetch",
+          "purpose": "Content retrieval and analysis",
+          "tools": ["web-fetch"],
+          "priority": 3
+        },
+        {
+          "server": "resolve-library-id_context7-mcp",
+          "purpose": "Library identification",
+          "tools": ["resolve-library-id_context7-mcp"],
+          "priority": 4
+        },
+        {
+          "server": "get-library-docs_context7-mcp",
+          "purpose": "Documentation retrieval",
+          "tools": ["get-library-docs_context7-mcp"],
+          "priority": 5
+        }
+      ],
+      "optional_servers": [
+        {
+          "server": "str-replace-editor",
+          "purpose": "Research documentation",
+          "tools": ["str-replace-editor"],
+          "priority": 6
+        },
+        {
+          "server": "save-file",
+          "purpose": "Report creation",
+          "tools": ["save-file"],
+          "priority": 7
+        }
+      ]
+    }
+  },
+  "server_configurations": {
+    "sequentialthinking_tools_mcp-sequentialthinking-tools": {
+      "description": "Advanced thinking and problem decomposition",
+      "agents_using": ["boomerang", "architect"],
+      "configuration": {
+        "max_thoughts": 10,
+        "enable_branching": true,
+        "enable_revision": true
+      }
+    },
+    "mcp-shrimp-task-manager": {
+      "description": "Comprehensive task management system",
+      "agents_using": ["boomerang", "architect", "manager"],
+      "configuration": {
+        "task_folder": "@project-core/tasks/",
+        "enable_validation": true,
+        "auto_backup": true
+      }
+    },
+    "codebase-retrieval": {
+      "description": "Intelligent code analysis and retrieval",
+      "agents_using": ["architect", "coder"],
+      "configuration": {
+        "index_path": ".augment/",
+        "max_results": 20,
+        "include_context": true
+      }
+    },
+    "github-api": {
+      "description": "GitHub integration for project management",
+      "agents_using": ["manager", "coder"],
+      "configuration": {
+        "default_repo": "current",
+        "enable_webhooks": false,
+        "auto_sync": true
+      }
+    }
+  },
+  "tool_access_matrix": {
+    "high_privilege": {
+      "tools": ["str-replace-editor", "save-file", "launch-process", "github-api"],
+      "agents": ["coder", "manager"],
+      "restrictions": ["require_validation", "audit_log"]
+    },
+    "medium_privilege": {
+      "tools": ["view", "diagnostics", "codebase-retrieval", "render-mermaid"],
+      "agents": ["architect", "researcher", "executor"],
+      "restrictions": ["read_only_preferred"]
+    },
+    "low_privilege": {
+      "tools": ["web-search", "web-fetch", "think"],
+      "agents": ["all"],
+      "restrictions": ["none"]
+    }
+  },
+  "coordination_protocols": {
+    "tool_sharing": {
+      "enabled": true,
+      "queue_management": true,
+      "priority_system": true,
+      "conflict_resolution": "coordinator_decides"
+    },
+    "resource_management": {
+      "max_concurrent_operations": 5,
+      "timeout_handling": "graceful_degradation",
+      "error_recovery": "automatic_retry"
+    },
+    "monitoring": {
+      "tool_usage_tracking": true,
+      "performance_metrics": true,
+      "error_logging": true,
+      "success_rate_monitoring": true
+    }
+  }
+}

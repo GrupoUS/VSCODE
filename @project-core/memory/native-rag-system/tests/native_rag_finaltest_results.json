@@ -1,0 +1,116 @@
+{
+  "timestamp": "2025-06-10T16:44:47.679115",
+  "test_version": "1.0",
+  "phase_1_validation": {
+    "bridge_reuse_rate": 100.0,
+    "fallback_rate": 0.0,
+    "success_rate": 100.0,
+    "targets_met": {
+      "bridge_reuse_rate": true,
+      "fallback_rate": true,
+      "success_rate": true,
+      "embedding_service_working": true,
+      "knowledge_graph_working": true
+    },
+    "all_targets_met": true,
+    "components_working": 2,
+    "status": "PASSED"
+  },
+  "system_integrity": {
+    "component_checks": {
+      "memory_coordinator": true,
+      "crosscheck_system": false,
+      "augment_bridge": true,
+      "critical_files": true
+    },
+    "file_integrity": {
+      "rag-enhanced/contextual-embeddings/embedding-service.js": true,
+      "rag-enhanced/knowledge-graph/knowledge-graph-foundation.js": true,
+      "native-rag-system/integration/js_bridge.py": true,
+      "native-rag-system/central_hub/memory_coordinator.py": true
+    },
+    "all_components_working": false,
+    "status": "FAILED"
+  },
+  "performance_metrics": {
+    "avg_embedding_time": 0.7365544637044271,
+    "avg_kg_time": 0.37860870361328125,
+    "avg_response_time": 0.5575815836588542,
+    "final_bridge_metrics": {
+      "total_calls": 6,
+      "cache_hits": 6,
+      "cache_misses": 0,
+      "fallback_count": 0,
+      "average_latency": 0,
+      "error_count": 0,
+      "success_rate": 100.0,
+      "circuit_breaker_trips": 0,
+      "auto_recovery_count": 0,
+      "component_validation_failures": 0,
+      "retry_attempts": 0,
+      "preemptive_fallbacks": 0,
+      "connection_pool_hits": 0,
+      "cache_hit_rate": 100.0,
+      "api_request_reduction": 100.0
+    },
+    "performance_targets": {
+      "avg_response_time_under_200ms": true,
+      "embedding_service_responsive": true,
+      "knowledge_graph_responsive": true,
+      "zero_errors": true
+    },
+    "all_targets_met": true,
+    "status": "PASSED"
+  },
+  "documentation_status": {
+    "doc_files_status": {
+      "NATIVE_RAG_SYSTEM_V1.md": {
+        "exists": true,
+        "size": 8755,
+        "has_content": true,
+        "updated_recently": true
+      },
+      "CRAWL4AI_NATIVE_IMPLEMENTATION.md": {
+        "exists": true,
+        "size": 10078,
+        "has_content": true,
+        "updated_recently": true
+      },
+      "COGNEE_NATIVE_IMPLEMENTATION.md": {
+        "exists": true,
+        "size": 12803,
+        "has_content": true,
+        "updated_recently": true
+      },
+      "BRIDGE_PATTERN_GUIDE.md": {
+        "exists": true,
+        "size": 13396,
+        "has_content": true,
+        "updated_recently": true
+      },
+      "FINAL_IMPLEMENTATION_REPORT.md": {
+        "exists": true,
+        "size": 9934,
+        "has_content": true,
+        "updated_recently": true
+      }
+    },
+    "all_docs_exist": true,
+    "all_docs_have_content": true,
+    "documentation_complete": true,
+    "status": "PASSED"
+  },
+  "phase_2_readiness": {
+    "requirements": {
+      "phase_1_completed": true,
+      "system_integrity_ok": false,
+      "performance_acceptable": true,
+      "documentation_ready": true,
+      "bridge_pattern_optimized": true
+    },
+    "readiness_score": 80.0,
+    "ready_for_phase_2": true,
+    "status": "READY"
+  },
+  "overall_status": "PARTIAL"
+}
