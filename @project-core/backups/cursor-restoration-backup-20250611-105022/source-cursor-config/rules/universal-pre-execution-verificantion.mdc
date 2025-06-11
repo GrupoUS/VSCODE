@@ -1,0 +1,206 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Universal Pre-Execution Verification Rule - GRUPO US VIBECODE SYSTEM V2.0
+
+## 🚨 MANDATORY FOR ALL AI AGENTS
+
+This rule is MANDATORY and must be implemented as the **FIRST STEP** in every AI agent's workflow before ANY task execution. No exceptions.
+
+## 📋 UNIVERSAL VERIFICATION PROTOCOL
+
+### Scope of Application
+
+- **Cline**: Before any "Plan & Act" session
+- **Cursor**: Before any development task or code analysis
+- **Roo Code**: Before any analysis, optimization, or quality assessment
+- **Any Future AI Agent**: Before any task execution
+
+### Verification Sequence (MANDATORY - CORRECTED)
+
+#### Step 1: Workspace Structure Verification
+
+```bash
+# Verify workspace structure
+echo "Checking workspace structure..."
+ls -la
+test -d ".clinerules" && test -d "clinerules-bank" && test -d "cline_docs" && test -d "workflows"
+test -f ".clinerules/01-memory-bank.md" && test -f ".clinerules/02-error-prevention.md"
+test -f "cline_docs/projectRoadmap.md" && test -f "cline_docs/techStack.md"
+# ONLY PROCEED if ALL verifications return TRUE
+```
+
+#### Step 2: Critical Directories Verification (PowerShell)
+
+```powershell
+# Verificação de diretórios críticos
+Test-Path "memory-bank" -PathType Container
+Test-Path "project-core" -PathType Container
+Test-Path ".clinerules" -PathType Container
+Test-Path "cline_docs" -PathType Container
+Test-Path "workflows" -PathType Container
+Test-Path "src" -PathType Container
+Test-Path "scripts" -PathType Container
+
+# All must return: True
+```
+
+#### Step 3: Essential Files Verification (PowerShell)
+
+```powershell
+# Verificação de arquivos essenciais
+Test-Path "memory-bank/master_rule.md" -PathType Leaf
+Test-Path "project-core/README.md" -PathType Leaf
+Test-Path "package.json" -PathType Leaf
+Test-Path ".clinerules/01-memory-bank.md" -PathType Leaf
+Test-Path ".clinerules/02-error-prevention.md" -PathType Leaf
+Test-Path ".clinerules/03-context-90.md" -PathType Leaf
+Test-Path ".clinerules/04-confidence-check.md" -PathType Leaf
+Test-Path "cline_docs/projectRoadmap.md" -PathType Leaf
+Test-Path "scripts/prd.txt" -PathType Leaf
+Test-Path "docs/architecture.md" -PathType Leaf
+Test-Path "memory-bank/self_correction_log.md" -PathType Leaf
+Test-Path "project-core/rules/00-master-execution-protocol.md" -PathType Leaf
+
+# All must return: True
+```
+
+#### Step 4: Additional Verification Files (PowerShell)
+
+```powershell
+# Verificação de arquivos adicionais do protocolo oficial
+Test-Path ".clinerules/rules/sequential-thinking-mcp.md" -PathType Leaf
+Test-Path ".clinerules/05-taskmaster-sequential.md" -PathType Leaf
+
+# Verificação de Diretórios Adicionais
+Test-Path "memory-bank" -PathType Container
+Test-Path "project-core" -PathType Container
+Test-Path ".clinerules" -PathType Container
+Test-Path "workflows" -PathType Container
+
+# All must return: True
+```
+
+#### Step 5: Content Accessibility Test
+
+```powershell
+# Test file read access
+Get-Content "memory-bank/master_rule.md" -TotalCount 3
+Get-Content "project-core/README.md" -TotalCount 3
+Get-Content ".clinerules/01-memory-bank.md" -TotalCount 3
+
+# Expected: Readable content from all files
+```
+
+## 🚨 FAILURE RESPONSE PROTOCOL
+
+### If ANY verification step fails:
+
+#### Immediate Actions:
+
+1. **STOP ALL EXECUTION** immediately
+2. **DO NOT PROCEED** with any task
+3. **DO NOT LOAD** any context
+4. **DO NOT ATTEMPT** workarounds
+
+#### Required Failure Report:
+
+```
+🚨 WORKSPACE VERIFICATION FAILED 🚨
+
+Agent: [Cline/Cursor/Roo Code]
+Timestamp: [Current timestamp]
+Failed Step: [Specific verification step]
+Failed Item: [Exact file/directory path]
+Error Type: [Access Denied/File Not Found/Permission Error]
+Expected Result: [What should have happened]
+Actual Result: [What actually happened]
+
+🛑 TASK EXECUTION BLOCKED 🛑
+ACTION REQUIRED: User intervention needed to resolve workspace access issues.
+NEXT STEP: Fix workspace access and retry verification.
+```
+
+#### User Intervention Required:
+
+- Fix file/directory access issues
+- Verify workspace integrity
+- Confirm all systems are properly installed
+- Retry verification after fixes
+
+## ✅ SUCCESS CONFIRMATION PROTOCOL
+
+### Upon 100% verification success:
+
+#### Required Success Report:
+
+```
+✅ WORKSPACE VERIFICATION COMPLETE ✅
+
+Agent: [Cline/Cursor/Roo Code]
+Timestamp: [Current timestamp]
+Root Directory: ✅ ACCESSIBLE
+Memory-Bank System: ✅ ACCESSIBLE (X files verified)
+Project-Core System: ✅ ACCESSIBLE (X files verified)
+Configuration Files: ✅ ACCESSIBLE (X files verified)
+Integration System: ✅ ACCESSIBLE (X files verified)
+
+🚀 STATUS: READY FOR TASK EXECUTION
+🎯 CONFIDENCE: 10/10
+📋 NEXT PHASE: Context Loading
+```
+
+#### Proceed to Normal Workflow:
+
+1. Load appropriate context from memory-bank and project-core
+2. Execute agent-specific protocols
+3. Begin task analysis and execution
+
+## 📊 COMPLIANCE MONITORING
+
+### Required Implementation:
+
+- **Cline**: Updated .clinerules/00-adapter-mode.md with verification
+- **Cursor**: Updated .cursorrules with verification
+- **Roo Code**: Template includes verification protocol
+- **Memory-Bank**: master_rule.md updated with verification requirement
+
+### Audit Trail:
+
+Every verification execution must be logged with:
+
+- Agent identifier
+- Timestamp
+- Verification results (pass/fail for each step)
+- Total verification time
+- Any failures encountered
+
+### Quality Assurance:
+
+- Verification must complete in under 30 seconds
+- 100% success rate required for task execution
+- Any recurring failures must be escalated
+- Verification logs reviewed weekly
+
+## 🎯 ENFORCEMENT AND COMPLIANCE
+
+### Non-Negotiable Requirements:
+
+- ✅ Execute verification FIRST, before any other action
+- ✅ Report verification status clearly and completely
+- ✅ Stop execution immediately if verification fails
+- ✅ Only proceed after 100% success confirmation
+- ✅ Log all verification results for audit trail
+- ✅ No exceptions or workarounds permitted
+
+### Violation Consequences:
+
+- Task execution without verification is a critical violation
+- Proceeding after failed verification is a critical violation
+- Incomplete verification reporting is a compliance violation
+- All violations must be reported and addressed immediately
+
+This protocol ensures reliable, consistent, and safe operation of the GRUPO US VIBECODE SYSTEM V2.0 across all AI agents and prevents execution in compromised or incomplete workspace environments.
+

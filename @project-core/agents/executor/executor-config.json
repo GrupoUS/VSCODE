@@ -1,0 +1,191 @@
+{
+  "agent_config": {
+    "agent_id": "executor",
+    "name": "Quick Task Executor",
+    "version": "1.0.0",
+    "description": "Fast execution specialist for simple tasks, validations, and routine operations",
+    "model_config": {
+      "model": "google/gemini-2.5-flash-preview-05-20:thinking",
+      "provider": "openrouter",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "temperature": 0.1,
+      "max_tokens": 4096,
+      "context_window": 131000,
+      "supports_thinking": true,
+      "supports_vision": false,
+      "supports_function_calling": true
+    },
+    "specialization": {
+      "primary_domains": [
+        "quick_fixes",
+        "simple_validations",
+        "routine_operations",
+        "basic_file_operations",
+        "status_checks"
+      ],
+      "secondary_domains": [
+        "simple_testing",
+        "basic_documentation",
+        "file_management",
+        "process_monitoring"
+      ],
+      "complexity_range": {
+        "min": 1,
+        "max": 4,
+        "optimal": [1, 3]
+      }
+    },
+    "mcp_integration": {
+      "required_servers": [
+        "view",
+        "launch-process",
+        "read-terminal"
+      ],
+      "optional_servers": [
+        "diagnostics",
+        "str-replace-editor",
+        "save-file"
+      ],
+      "tool_permissions": {
+        "file_operations": ["view", "save-file"],
+        "process_management": ["launch-process", "read-terminal", "write-process"],
+        "diagnostics": ["diagnostics", "read-terminal"],
+        "basic_editing": ["str-replace-editor"]
+      }
+    },
+    "capabilities": {
+      "quick_operations": {
+        "file_checks": true,
+        "simple_commands": true,
+        "status_validation": true,
+        "basic_testing": true
+      },
+      "validation": {
+        "functionality_check": true,
+        "syntax_validation": true,
+        "basic_performance": true,
+        "error_detection": true
+      },
+      "monitoring": {
+        "process_status": true,
+        "log_analysis": true,
+        "health_checks": true,
+        "basic_metrics": true
+      },
+      "maintenance": {
+        "cleanup_operations": true,
+        "basic_fixes": true,
+        "routine_updates": true,
+        "simple_optimizations": true
+      }
+    },
+    "task_types": {
+      "immediate_response": [
+        "file_existence_check",
+        "process_status_check",
+        "simple_command_execution",
+        "basic_validation"
+      ],
+      "quick_fixes": [
+        "syntax_error_correction",
+        "simple_bug_fixes",
+        "configuration_updates",
+        "dependency_checks"
+      ],
+      "routine_operations": [
+        "file_cleanup",
+        "log_rotation",
+        "cache_clearing",
+        "basic_maintenance"
+      ],
+      "validation_tasks": [
+        "functionality_testing",
+        "integration_checks",
+        "performance_monitoring",
+        "error_reporting"
+      ]
+    },
+    "workflow_patterns": {
+      "quick_validation": {
+        "steps": [
+          "immediate_check",
+          "result_reporting"
+        ],
+        "max_duration": "2_minutes"
+      },
+      "simple_fix": {
+        "steps": [
+          "issue_identification",
+          "quick_fix_application",
+          "validation",
+          "reporting"
+        ],
+        "max_duration": "5_minutes"
+      },
+      "routine_operation": {
+        "steps": [
+          "operation_execution",
+          "status_check",
+          "completion_report"
+        ],
+        "max_duration": "3_minutes"
+      }
+    },
+    "collaboration": {
+      "escalation_to": ["manager", "coder"],
+      "delegates_to": [],
+      "coordinates_with": ["coder", "manager"],
+      "reports_to": ["boomerang", "manager"]
+    },
+    "performance_targets": {
+      "response_time": "< 30_seconds",
+      "task_completion": "< 5_minutes",
+      "accuracy_rate": 0.95,
+      "escalation_rate": "< 10%"
+    },
+    "escalation_triggers": {
+      "complexity_increase": {
+        "threshold": 4,
+        "escalate_to": "manager"
+      },
+      "technical_depth_required": {
+        "threshold": "implementation_needed",
+        "escalate_to": "coder"
+      },
+      "coordination_needed": {
+        "threshold": "multi_component",
+        "escalate_to": "boomerang"
+      },
+      "time_exceeded": {
+        "threshold": "5_minutes",
+        "escalate_to": "manager"
+      }
+    }
+  },
+  "operational_rules": {
+    "speed_optimization": {
+      "prefer_simple_solutions": true,
+      "avoid_complex_analysis": true,
+      "use_cached_results": true,
+      "minimize_context_switching": true
+    },
+    "quality_gates": {
+      "basic_validation_required": true,
+      "error_handling_minimal": true,
+      "documentation_brief": true,
+      "testing_simple": true
+    },
+    "collaboration_protocols": {
+      "escalate_when_uncertain": true,
+      "report_completion_immediately": true,
+      "request_clarification_quickly": true,
+      "coordinate_with_other_agents": false
+    },
+    "error_handling": {
+      "retry_attempts": 2,
+      "escalation_on_failure": true,
+      "simple_recovery_only": true,
+      "detailed_error_reporting": true
+    }
+  }
+}

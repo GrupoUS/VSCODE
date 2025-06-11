@@ -1,0 +1,26 @@
+{
+  "content": "Develop a comprehensive strategy for migrating a legacy monolithic application to a cloud-native architecture while maintaining zero downtime and ensuring data consistency across distributed systems",
+  "tag": "ultrathink",
+  "complexity": 10,
+  "insights": [
+    "Exhaustive multi-dimensional analysis completed",
+    "All possible approaches evaluated",
+    "Comprehensive risk assessment performed",
+    "Optimization opportunities identified",
+    "Long-term implications considered",
+    "Stakeholder impact analyzed",
+    "Resource requirements estimated"
+  ],
+  "nextSteps": [
+    "Validate approach with memory bank patterns",
+    "Identify required resources and dependencies",
+    "Plan implementation phases",
+    "Establish success criteria",
+    "Prepare rollback strategy"
+  ],
+  "memoryReferences": [
+    "master_rule.md consulted",
+    "self_correction_log.md consulted",
+    "global-standards.md consulted"
+  ]
+}

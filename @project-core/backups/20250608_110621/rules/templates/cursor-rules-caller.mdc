@@ -1,0 +1,231 @@
+---
+description: Cursor-specific caller rule that references centralized @project-core/rules/ system
+globs: ["**/*"]
+alwaysApply: true
+version: 4.0
+author: GRUPO US VIBECODE SYSTEM V2.0 - Cursor Integration
+---
+
+# 🚀 CURSOR CENTRALIZED RULE CALLER - GRUPO US VIBECODE SYSTEM V2.0
+
+## 📋 CRITICAL NOTICE FOR CURSOR
+
+**This file is a CURSOR-SPECIFIC CALLER RULE (.mdc format) that references the centralized rule system.**
+
+**⚠️ DO NOT MODIFY THIS FILE DIRECTLY**  
+**✅ ALL rule modifications must target @project-core/rules/ exclusively**
+
+## 🎯 CURSOR-OPTIMIZED RULE LOADING
+
+### **MANDATORY CURSOR INITIALIZATION:**
+
+- **Always Reference Centralized Rules**: Use [file references](mdc:project-core/rules/) for all rule content
+- **Cursor-Specific Formatting**: Follow .mdc format requirements for Cursor compatibility
+- **Interactive Development**: Optimize for real-time code assistance and suggestions
+
+### **CORE RULES (ALWAYS LOADED FOR CURSOR):**
+
+- **Master Protocol**: [00-master-execution-protocol.md](mdc:project-core/rules/00-master-execution-protocol.md)
+- **Core Principles**: [01-core-principles.md](mdc:project-core/rules/01-core-principles.md)
+- **Universal Standards**: [02-coding-standards-universal.md](mdc:project-core/rules/02-coding-standards-universal.md)
+- **Pre-Execution Verification**: [universal-pre-execution-verification.md](mdc:project-core/rules/universal-pre-execution-verification.md)
+
+### **CURSOR-SPECIFIC TOOLING RULES:**
+
+- **Cursor Integration**: [cursor-integration.md](mdc:project-core/rules/tooling/cursor-integration.md)
+- **Development Workflow**: [development-workflow.md](mdc:project-core/rules/workflows/development-workflow.md)
+- **Component Standards**: [component-naming-standards.mdc](mdc:project-core/rules/frameworks/component-naming-standards.mdc)
+
+### **FRAMEWORK RULES (CONDITIONAL LOADING):**
+
+- **Next.js + React**: [nextjs-react.md](mdc:project-core/rules/frameworks/nextjs-react.md)
+  - Load when: Project contains `next.config.js`, `package.json` with Next.js
+  - Context: React components, Next.js App Router, TypeScript
+  
+- **Laravel + Livewire**: [laravel-livewire.md](mdc:project-core/rules/frameworks/laravel-livewire.md)
+  - Load when: Project contains `composer.json`, Livewire components
+  - Context: PHP, Blade templates, Livewire components
+
+### **MCP INTEGRATION RULES (CONDITIONAL):**
+
+- **TaskMaster Protocol**: [taskmaster-protocol.md](mdc:project-core/rules/mcp-integration/taskmaster-protocol.md)
+  - Load when: Task complexity ≥7 or multi-phase operations
+  - Context: Complex refactoring, architecture changes, integrations
+
+- **Playwright Automation**: [playwright-automation.md](mdc:project-core/rules/mcp-integration/playwright-automation.md)
+  - Load when: UI testing, automation tasks, visual validation
+  - Context: Test files, automation scripts, UI components
+
+- **Figma Design Sync**: [figma-design-sync.md](mdc:project-core/rules/mcp-integration/figma-design-sync.md)
+  - Load when: Design system tasks, component creation from Figma
+  - Context: Design tokens, component libraries, UI implementation
+
+- **Supabase Database**: [supabase-database.md](mdc:project-core/rules/mcp-integration/supabase-database.md)
+  - Load when: Database operations, authentication, storage tasks
+  - Context: Supabase client, database schemas, auth implementation
+
+## 🚨 CURSOR-SPECIFIC ENFORCEMENT RULES
+
+### **CURSOR RULE MODIFICATION PROTOCOL:**
+
+**✅ CORRECT ACTIONS FOR CURSOR:**
+- Navigate to [project-core/rules/](mdc:project-core/rules/) for all rule modifications
+- Use Cursor's file editing capabilities to update centralized rules
+- Reference rules using `[filename](mdc:path/to/file)` format
+- Maintain .mdc format for Cursor-specific rules
+
+**❌ FORBIDDEN ACTIONS FOR CURSOR:**
+- Modify .cursor/rules/ files directly (except this caller)
+- Create new rule files outside [project-core/](mdc:project-core/)
+- Bypass centralized rule system
+- Use non-.mdc format for Cursor-specific rules
+
+### **CURSOR WORKFLOW INTEGRATION:**
+
+- **Real-Time Assistance**: Rules provide context for Cursor's AI suggestions
+- **Code Completion**: Standards guide Cursor's autocomplete suggestions
+- **Error Prevention**: Rules help Cursor identify potential issues early
+- **Consistency Enforcement**: Centralized rules ensure consistent code style
+
+## 🔄 CURSOR CONDITIONAL LOADING
+
+### **Context Detection for Cursor:**
+
+```javascript
+// Cursor automatically detects context based on:
+const contextDetection = {
+  framework: {
+    nextjs: ['next.config.js', 'app/', 'pages/', 'package.json with next'],
+    laravel: ['composer.json', 'app/', 'resources/views/', 'artisan']
+  },
+  taskType: {
+    component: ['components/', '.tsx', '.vue', '.blade.php'],
+    testing: ['test/', 'spec/', '.test.', '.spec.'],
+    database: ['prisma/', 'migrations/', 'models/', 'supabase/'],
+    design: ['figma', 'design-system/', 'tokens/', 'theme/']
+  },
+  complexity: {
+    high: ['refactor', 'migration', 'architecture', 'integration'],
+    medium: ['feature', 'component', 'optimization'],
+    low: ['fix', 'update', 'style', 'documentation']
+  }
+};
+```
+
+### **Cursor Rule Loading Algorithm:**
+
+```javascript
+function loadRulesForCursor(fileContext, taskContext) {
+  const rules = [
+    // Always load core rules
+    'project-core/rules/00-master-execution-protocol.md',
+    'project-core/rules/01-core-principles.md',
+    'project-core/rules/02-coding-standards-universal.md',
+    'project-core/rules/tooling/cursor-integration.md'
+  ];
+  
+  // Framework detection
+  if (fileContext.includes('next') || fileContext.includes('react')) {
+    rules.push('project-core/rules/frameworks/nextjs-react.md');
+  }
+  
+  if (fileContext.includes('laravel') || fileContext.includes('livewire')) {
+    rules.push('project-core/rules/frameworks/laravel-livewire.md');
+  }
+  
+  // Component work
+  if (fileContext.includes('component')) {
+    rules.push('project-core/rules/frameworks/component-naming-standards.mdc');
+  }
+  
+  // MCP integration based on task complexity
+  const complexity = assessTaskComplexity(taskContext);
+  if (complexity >= 7) {
+    rules.push('project-core/rules/mcp-integration/taskmaster-protocol.md');
+  }
+  
+  return rules;
+}
+```
+
+## 📊 CURSOR PERFORMANCE OPTIMIZATION
+
+### **Real-Time Performance for Cursor:**
+
+- **Lazy Loading**: Load rules only when relevant files are opened
+- **Context Caching**: Cache rule combinations for similar file types
+- **Smart Suggestions**: Use rules to enhance Cursor's AI suggestions
+- **Error Prevention**: Real-time validation based on centralized standards
+
+### **Cursor-Specific Targets:**
+
+- **Response Time**: <100ms for rule-based suggestions
+- **Accuracy**: >95% rule compliance in suggestions
+- **Context Awareness**: 100% framework detection accuracy
+- **User Experience**: Seamless integration with Cursor workflow
+
+## 🎯 CURSOR INTEGRATION FEATURES
+
+### **Enhanced Code Assistance:**
+
+- **Smart Autocomplete**: Rules guide variable naming, function structure
+- **Pattern Recognition**: Consistent patterns across all projects
+- **Error Prevention**: Early detection of rule violations
+- **Refactoring Support**: Rules-based refactoring suggestions
+
+### **Project-Specific Adaptations:**
+
+- **NEONPRO**: [neonpro-overrides.md](mdc:project-core/rules/project-overrides/neonpro-overrides.md)
+  - Next.js 14 + TypeScript + Tailwind CSS + Supabase
+  - Horizon UI Pro component library
+  - Performance targets: Build <60s, Component gen <5s
+
+- **AEGISWALLET**: [aegiswallet-overrides.md](mdc:project-core/rules/project-overrides/aegiswallet-overrides.md)
+  - Vite + React + TypeScript + Enhanced Security
+  - Security-first development approach
+  - Performance targets: Build <45s, Security scan <30s
+
+- **HARMONIZA**: [harmoniza-overrides.md](mdc:project-core/rules/project-overrides/harmoniza-overrides.md)
+  - Next.js 14 + Prisma + PostgreSQL + Calendar APIs
+  - Appointment scheduling optimization
+  - Performance targets: Booking <2s, Calendar load <1.5s
+
+## ✅ CURSOR DEPLOYMENT CHECKLIST
+
+Before using this caller rule with Cursor:
+
+- [ ] All [mdc:] references point to existing centralized rules
+- [ ] Cursor can access [project-core/rules/](mdc:project-core/rules/) directory
+- [ ] Framework detection working correctly
+- [ ] Real-time rule loading functional
+- [ ] Performance targets achievable
+- [ ] Integration with Cursor AI suggestions working
+
+## 🔧 CURSOR CUSTOMIZATION
+
+### **To Deploy This Caller Rule for Cursor:**
+
+1. **Replace Existing**: Replace `.cursor/rules/` files with this caller
+2. **Validate References**: Ensure all `[mdc:]` paths are correct
+3. **Test Integration**: Verify Cursor can load and apply rules
+4. **Monitor Performance**: Track suggestion accuracy and response time
+5. **Update Documentation**: Document Cursor-specific customizations
+
+### **Cursor-Specific Rule Example:**
+
+```markdown
+# In project-core/rules/tooling/cursor-integration.md
+- **Cursor AI Enhancement**: Use centralized rules to improve AI suggestions
+- **Real-Time Validation**: Validate code against standards as you type
+- **Context-Aware Loading**: Load only relevant rules for current file
+- **Performance Optimization**: Cache frequently used rule combinations
+```
+
+---
+
+**REMEMBER FOR CURSOR**: This is a CALLER RULE in .mdc format for Cursor compatibility.  
+**All actual rule content lives in [project-core/rules/](mdc:project-core/rules/).**  
+**Cursor Workflow**: Context detection → Rule loading → AI enhancement → Real-time assistance  
+**Enforcement**: Centralized rule architecture prevents rule fragmentation.  
+
+**🎯 GRUPO US VIBECODE SYSTEM V2.0 - PHASE 4 CURSOR INTEGRATION**

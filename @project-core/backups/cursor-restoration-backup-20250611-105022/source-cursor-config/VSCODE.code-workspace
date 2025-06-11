@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    },
+    {
+      "path": "../../../../AppData/Roaming/Cursor/User"
+    }
+  ],
+  "settings": {
+    "powershell.cwd": "VSCODE"
+  }
+}

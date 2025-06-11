@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json.schemastore.org/vscode-settings",
+  "description": "Unified VS Code settings for Augment Code and Cursor AI integration - GRUPO US VIBECODE SYSTEM V3.1",
+  
+  "// === CORE EDITOR SETTINGS ===": "",
+  "git.autofetch": "all",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "workbench.panel.defaultLocation": "right",
+  "workbench.sideBar.location": "right",
+  
+  "// === AUGMENT CODE CONFIGURATION ===": "",
+  "augment.interface.showModelSelector": true,
+  "augment.interface.showMaxMode": true,
+  "augment.interface.showAgentControls": true,
+  "augment.interface.showToolbar": true,
+  "augment.interface.mode": "default",
+  
+  "// === AUGMENT MCP INTEGRATION ===": "",
+  "augment.mcp.enableServers": true,
+  "augment.mcp.autoReload": true,
+  "augment.mcp.debugMode": false,
+  
+  "// === AUGMENT MULTI-AGENT SYSTEM ===": "",
+  "augment.agents.boomerang.model": "google/gemini-2.5-pro-exp-03-25",
+  "augment.agents.boomerang.temperature": 0.7,
+  "augment.agents.boomerang.maxTokens": 8192,
+  "augment.agents.boomerang.provider": "openrouter",
+  "augment.agents.boomerang.primaryDomains": [
+    "task_analysis",
+    "agent_coordination", 
+    "workflow_orchestration",
+    "context_management",
+    "result_consolidation"
+  ],
+  "augment.agents.boomerang.complexityRange": {
+    "min": 1,
+    "max": 10,
+    "optimal": [1, 10]
+  },
+  
+  "augment.agents.architect.model": "claude-sonnet-4-20250514",
+  "augment.agents.architect.temperature": 0.3,
+  "augment.agents.architect.maxTokens": 8192,
+  "augment.agents.architect.provider": "anthropic",
+  "augment.agents.architect.primaryDomains": [
+    "system_architecture",
+    "technical_design",
+    "complexity_analysis",
+    "design_patterns",
+    "scalability_planning"
+  ],
+  "augment.agents.architect.complexityRange": {
+    "min": 7,
+    "max": 10,
+    "optimal": [8, 9]
+  },
+  
+  "augment.agents.coder.model": "claude-sonnet-4-20250514",
+  "augment.agents.coder.temperature": 0.2,
+  "augment.agents.coder.maxTokens": 8192,
+  "augment.agents.coder.provider": "anthropic",
+  "augment.agents.coder.primaryDomains": [
+    "code_implementation",
+    "complex_refactoring",
+    "debugging",
+    "performance_optimization",
+    "technical_debt_resolution"
+  ],
+  "augment.agents.coder.complexityRange": {
+    "min": 5,
+    "max": 10,
+    "optimal": [6, 8]
+  },
+  
+  "// === CURSOR AI COMPATIBILITY ===": "",
+  "cline.interface.showControls": true,
+  "cline.interface.showModelSelector": true,
+  "cline.interface.showMaxMode": true,
+  "roo-cline.interface.showModelSelector": true,
+  "roo-cline.interface.showMaxMode": true,
+  "roo-cline.interface.showAgentControls": true,
+  
+  "// === PLAYWRIGHT INTEGRATION ===": "",
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": true,
+  
+  "// === JSON SCHEMA VALIDATION ===": "",
+  "json.schemas": [
+    {
+      "fileMatch": ["settings.json"],
+      "url": "./@project-core/configs/vscode-settings-schema.json"
+    },
+    {
+      "fileMatch": ["unified-dev-environment-config.json"],
+      "url": "./@project-core/configs/unified-config-schema.json"
+    }
+  ],
+  
+  "// === FILE ASSOCIATIONS ===": "",
+  "files.associations": {
+    "*.cursorrules": "markdown",
+    ".augmentignore": "ignore",
+    ".augment-guidelines": "markdown"
+  },
+  
+  "// === GRUPO US SPECIFIC SETTINGS ===": "",
+  "grupous.vibecode.version": "3.1",
+  "grupous.vibecode.memoryPath": "@project-core/memory/",
+  "grupous.vibecode.rulesPath": "@project-core/rules/",
+  "grupous.vibecode.unifiedConfig": "@project-core/configs/unified-dev-environment-config.json"
+}

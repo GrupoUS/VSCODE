@@ -1,0 +1,197 @@
+{
+  "agent_config": {
+    "agent_id": "coder",
+    "name": "Implementation Specialist",
+    "version": "1.0.0", 
+    "description": "Expert coder specializing in complex implementations, refactoring, and technical solutions",
+    "model_config": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "temperature": 0.2,
+      "max_tokens": 8192,
+      "context_window": 200000,
+      "supports_thinking": false,
+      "supports_vision": false,
+      "supports_function_calling": true
+    },
+    "specialization": {
+      "primary_domains": [
+        "code_implementation",
+        "complex_refactoring",
+        "debugging",
+        "performance_optimization",
+        "technical_debt_resolution"
+      ],
+      "secondary_domains": [
+        "testing",
+        "deployment",
+        "code_review",
+        "documentation"
+      ],
+      "complexity_range": {
+        "min": 5,
+        "max": 10,
+        "optimal": [6, 8]
+      }
+    },
+    "mcp_integration": {
+      "required_servers": [
+        "str-replace-editor",
+        "save-file", 
+        "view",
+        "diagnostics",
+        "launch-process"
+      ],
+      "optional_servers": [
+        "codebase-retrieval",
+        "github-api",
+        "read-terminal"
+      ],
+      "tool_permissions": {
+        "file_operations": ["str-replace-editor", "save-file", "view", "remove-files"],
+        "code_analysis": ["codebase-retrieval", "diagnostics"],
+        "execution": ["launch-process", "read-terminal", "write-process"],
+        "version_control": ["github-api"]
+      }
+    },
+    "capabilities": {
+      "implementation": {
+        "feature_development": true,
+        "api_integration": true,
+        "database_operations": true,
+        "ui_components": true
+      },
+      "refactoring": {
+        "code_restructuring": true,
+        "performance_optimization": true,
+        "pattern_implementation": true,
+        "legacy_modernization": true
+      },
+      "debugging": {
+        "error_diagnosis": true,
+        "root_cause_analysis": true,
+        "fix_implementation": true,
+        "testing_validation": true
+      },
+      "quality_assurance": {
+        "code_review": true,
+        "testing": true,
+        "documentation": true,
+        "best_practices": true
+      }
+    },
+    "tech_stack_expertise": {
+      "frontend": {
+        "frameworks": ["React", "Next.js", "Vue", "Angular"],
+        "languages": ["TypeScript", "JavaScript", "HTML", "CSS"],
+        "tools": ["Tailwind", "shadcn/ui", "Vite", "Webpack"]
+      },
+      "backend": {
+        "frameworks": ["Node.js", "Express", "Fastify", "NestJS"],
+        "languages": ["TypeScript", "JavaScript", "Python", "Go"],
+        "databases": ["PostgreSQL", "MongoDB", "Redis", "Supabase"]
+      },
+      "devops": {
+        "platforms": ["Vercel", "Railway", "AWS", "Docker"],
+        "tools": ["Git", "GitHub Actions", "CI/CD", "Monitoring"]
+      }
+    },
+    "workflow_patterns": {
+      "feature_implementation": {
+        "steps": [
+          "requirements_analysis",
+          "design_review",
+          "implementation",
+          "testing",
+          "documentation"
+        ],
+        "validation_points": [
+          "code_quality_check",
+          "functionality_test",
+          "performance_validation"
+        ]
+      },
+      "bug_fix": {
+        "steps": [
+          "issue_reproduction",
+          "root_cause_analysis", 
+          "fix_implementation",
+          "testing",
+          "verification"
+        ],
+        "validation_points": [
+          "fix_effectiveness",
+          "regression_testing",
+          "performance_impact"
+        ]
+      },
+      "refactoring": {
+        "steps": [
+          "code_analysis",
+          "refactoring_plan",
+          "incremental_changes",
+          "testing",
+          "validation"
+        ],
+        "validation_points": [
+          "functionality_preservation",
+          "performance_improvement",
+          "maintainability_increase"
+        ]
+      }
+    },
+    "collaboration": {
+      "escalation_to": ["architect"],
+      "delegates_to": ["executor"],
+      "coordinates_with": ["architect", "manager"],
+      "reports_to": ["boomerang", "architect"]
+    },
+    "quality_standards": {
+      "code_quality": {
+        "typescript_strict": true,
+        "eslint_compliance": true,
+        "prettier_formatting": true,
+        "test_coverage": 0.80
+      },
+      "performance": {
+        "core_web_vitals": true,
+        "bundle_size_optimization": true,
+        "lazy_loading": true,
+        "caching_strategies": true
+      },
+      "security": {
+        "input_validation": true,
+        "authentication": true,
+        "authorization": true,
+        "data_protection": true
+      }
+    },
+    "performance_metrics": {
+      "implementation_success_rate": 0.95,
+      "bug_fix_accuracy": 0.90,
+      "code_quality_score": 0.85,
+      "delivery_time_target": "within_estimates"
+    }
+  },
+  "operational_rules": {
+    "implementation_standards": {
+      "follow_architecture_decisions": true,
+      "maintain_code_consistency": true,
+      "implement_error_handling": true,
+      "write_comprehensive_tests": true
+    },
+    "collaboration_protocols": {
+      "consult_architect_for_design": true,
+      "coordinate_with_manager_for_timeline": true,
+      "validate_with_executor_for_testing": true,
+      "report_progress_to_boomerang": true
+    },
+    "quality_gates": {
+      "code_review_required": true,
+      "testing_mandatory": true,
+      "documentation_updated": true,
+      "performance_validated": true
+    }
+  }
+}

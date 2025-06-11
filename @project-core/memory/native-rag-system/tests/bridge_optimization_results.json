@@ -1,0 +1,43 @@
+{
+  "before_optimization": {
+    "bridge_reuse_rate": 0,
+    "fallback_rate": 100,
+    "success_rate": 0,
+    "components_working": 0
+  },
+  "after_optimization": {
+    "bridge_reuse_rate": 100.0,
+    "fallback_rate": 0.0,
+    "success_rate": 100.0,
+    "components_working": 6,
+    "avg_embedding_time": 257.16686248779297,
+    "avg_kg_time": 53.017377853393555
+  },
+  "performance_improvement": {
+    "bridge_reuse_improvement": 100.0,
+    "fallback_reduction": 100.0,
+    "success_rate_improvement": 100.0
+  },
+  "target_achievement": {
+    "bridge_reuse_rate": {
+      "target": 85,
+      "achieved": 100.0,
+      "met": true
+    },
+    "fallback_rate": {
+      "target": 15,
+      "achieved": 0.0,
+      "met": true
+    },
+    "success_rate": {
+      "target": 90,
+      "achieved": 100.0,
+      "met": true
+    },
+    "avg_response_time": {
+      "target": 100,
+      "achieved": 155.09212017059326,
+      "met": false
+    }
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "title": "GRUPO US Rules System Validation Report",
+  "timestamp": "2025-06-06T18:14:26.504Z",
+  "version": "2.0",
+  "startTime": "2025-06-06T18:14:25.582Z",
+  "endTime": "2025-06-06T18:14:26.499Z",
+  "tests": [
+    {
+      "name": "Load project-core/rules/README.md",
+      "status": "passed",
+      "duration": 1,
+      "details": {
+        "contentLength": 8269
+      }
+    },
+    {
+      "name": "Load project-core/rules/00-master-execution-protocol.md",
+      "status": "passed",
+      "duration": 1,
+      "details": {
+        "contentLength": 8467
+      }
+    },
+    {
+      "name": "Load project-core/rules/01-core-principles.md",
+      "status": "passed",
+      "duration": 1,
+      "details": {
+        "contentLength": 9939
+      }
+    },
+    {
+      "name": "Load project-core/rules/02-coding-standards-universal.md",
+      "status": "passed",
+      "duration": 0,
+      "details": {
+        "contentLength": 7059
+      }
+    },
+    {
+      "name": "Cline Configuration",
+      "status": "passed",
+      "details": {
+        "hasProjectCoreReference": true,
+        "hasUpdatedStructure": true,
+        "fileSize": 8721
+      }
+    },
+    {
+      "name": "Cursor Configuration",
+      "status": "warning",
+      "details": {
+        "hasProjectCoreReference": true,
+        "hasUpdatedStructure": false,
+        "fileSize": 4594
+      }
+    },
+    {
+      "name": "Roo Code Configuration",
+      "status": "passed",
+      "details": {
+        "hasProjectCoreReference": true,
+        "hasUpdatedStructure": true,
+        "fileSize": 4820
+      }
+    },
+    {
+      "name": "MCP taskmaster-protocol",
+      "status": "passed",
+      "details": {
+        "hasSetup": true,
+        "hasExamples": true,
+        "hasIntegration": true,
+        "contentLength": 8597
+      }
+    },
+    {
+      "name": "MCP playwright-automation",
+      "status": "passed",
+      "details": {
+        "hasSetup": true,
+        "hasExamples": true,
+        "hasIntegration": true,
+        "contentLength": 15639
+      }
+    },
+    {
+      "name": "MCP figma-design-sync",
+      "status": "passed",
+      "details": {
+        "hasSetup": true,
+        "hasExamples": true,
+        "hasIntegration": true,
+        "contentLength": 18219
+      }
+    },
+    {
+      "name": "MCP supabase-database",
+      "status": "passed",
+      "details": {
+        "hasSetup": true,
+        "hasExamples": true,
+        "hasIntegration": true,
+        "contentLength": 16573
+      }
+    },
+    {
+      "name": "Figma API Configuration",
+      "status": "warning",
+      "details": {
+        "configured": false
+      }
+    },
+    {
+      "name": "Monitoring Dashboard",
+      "status": "passed",
+      "details": {
+        "status": "HEALTHY",
+        "metricsCount": 5,
+        "alertsCount": 0
+      }
+    },
+    {
+      "name": "Metric Recording",
+      "status": "passed",
+      "details": {
+        "testMetricRecorded": true
+      }
+    },
+    {
+      "name": "Feedback Submission",
+      "status": "passed",
+      "details": {
+        "feedbackId": 1749233665601.9932,
+        "priority": "LOW"
+      }
+    },
+    {
+      "name": "Feedback Summary",
+      "status": "passed",
+      "details": {
+        "totalFeedback": 1,
+        "averageRating": 9
+      }
+    },
+    {
+      "name": "Development Step 1: Load project-core/rules/00-master-execution-protocol.md",
+      "status": "passed",
+      "duration": 105
+    },
+    {
+      "name": "Development Step 2: Apply 4-step execution cycle",
+      "status": "passed",
+      "duration": 66
+    },
+    {
+      "name": "Development Step 3: Load framework-specific rules (Next.js)",
+      "status": "passed",
+      "duration": 156
+    },
+    {
+      "name": "Development Step 4: Apply coding standards",
+      "status": "passed",
+      "duration": 77
+    },
+    {
+      "name": "Development Step 5: Implement feature with error handling",
+      "status": "passed",
+      "duration": 80
+    },
+    {
+      "name": "Development Step 6: Apply MCP integration protocols",
+      "status": "passed",
+      "duration": 156
+    },
+    {
+      "name": "Development Step 7: Validate implementation",
+      "status": "passed",
+      "duration": 126
+    },
+    {
+      "name": "Development Step 8: Update memory-bank with learnings",
+      "status": "passed",
+      "duration": 125
+    }
+  ],
+  "metrics": {},
+  "summary": {
+    "totalTests": 24,
+    "passedTests": 22,
+    "failedTests": 0,
+    "warningTests": 2,
+    "successRate": 91.66666666666666,
+    "duration": -1749233665582,
+    "status": "PASSED"
+  },
+  "sessionMetrics": {
+    "duration": 916,
+    "completionRate": 100,
+    "avgTokensPerTask": 7659.333333333333,
+    "errorRate": 16.666666666666664,
+    "avgLoadingTime": 0,
+    "totalTasks": 6,
+    "completedTasks": 6,
+    "failedTasks": 0,
+    "totalErrors": 1
+  }
+}

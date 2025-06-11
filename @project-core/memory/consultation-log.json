@@ -1,0 +1,873 @@
+{
+  "created": "2025-06-09T16:46:30.167Z",
+  "consultations": [
+    {
+      "consultationId": "e64865f0",
+      "timestamp": "2025-06-09T16:46:30.167Z",
+      "taskContext": {
+        "type": "implementation",
+        "description": "Create a new React component for user authentication",
+        "technology": "React",
+        "complexity": "medium"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      }
+    },
+    {
+      "consultationId": "7ef29127",
+      "timestamp": "2025-06-09T18:47:45.025Z",
+      "taskContext": {
+        "type": "implementation",
+        "description": "Create a React component for user authentication with enhanced security",
+        "technology": "React",
+        "complexity": "high",
+        "requirements": "TypeScript, Supabase integration, form validation"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 5,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.4551756104976719,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 1,
+          "averageLatency": 1,
+          "cacheHits": 0,
+          "cacheMisses": 1,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783
+          ],
+          "averageRelevanceImprovement": -51.42436758434783,
+          "cacheHitRate": 0,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 6,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 0,
+        "consultationId": "7ef29127"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "4b46a56e",
+      "timestamp": "2025-06-09T18:47:45.032Z",
+      "taskContext": {
+        "type": "optimization",
+        "description": "Optimize API endpoints for better performance and caching",
+        "technology": "Node.js",
+        "complexity": "medium",
+        "requirements": "Redis caching, rate limiting, monitoring"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 3,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.45382305001058815,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 2,
+          "averageLatency": 1,
+          "cacheHits": 0,
+          "cacheMisses": 2,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641
+          ],
+          "averageRelevanceImprovement": -47.78037070749712,
+          "cacheHitRate": 0,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 7,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 5,
+        "consultationId": "4b46a56e"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "2ac1b620",
+      "timestamp": "2025-06-09T18:47:45.036Z",
+      "taskContext": {
+        "type": "migration",
+        "description": "Migrate database schema from PostgreSQL to support new features",
+        "technology": "PostgreSQL",
+        "complexity": "high",
+        "requirements": "Zero downtime, data integrity, rollback strategy"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 8,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.4556216158345156,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 3,
+          "averageLatency": 1,
+          "cacheHits": 0,
+          "cacheMisses": 3,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385
+          ],
+          "averageRelevanceImprovement": -49.67989108583254,
+          "cacheHitRate": 0,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 8,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 4.5,
+        "consultationId": "2ac1b620"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "c3e14a12",
+      "timestamp": "2025-06-09T18:47:45.041Z",
+      "taskContext": {
+        "type": "development",
+        "description": "Build reusable UI component library with Storybook",
+        "technology": "React",
+        "complexity": "medium",
+        "requirements": "TypeScript, Storybook, accessibility, testing"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 3,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.44834009011671866,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 4,
+          "averageLatency": 1,
+          "cacheHits": 0,
+          "cacheMisses": 4,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385,
+            -55.42772891080858
+          ],
+          "averageRelevanceImprovement": -51.11685054207655,
+          "cacheHitRate": 0,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 9,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 4.75,
+        "consultationId": "c3e14a12"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "66136be4",
+      "timestamp": "2025-06-09T18:47:45.044Z",
+      "taskContext": {
+        "type": "bugfix",
+        "description": "Fix CSS styling issue in navigation menu",
+        "technology": "CSS",
+        "complexity": "low",
+        "requirements": "Cross-browser compatibility"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 0,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 5,
+          "averageLatency": 1,
+          "cacheHits": 0,
+          "cacheMisses": 4,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385,
+            -55.42772891080858
+          ],
+          "averageRelevanceImprovement": -51.11685054207655,
+          "cacheHitRate": 0,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 10,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 4.375,
+        "consultationId": "66136be4"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "bed3770e",
+      "timestamp": "2025-06-09T18:47:45.049Z",
+      "taskContext": {
+        "type": "implementation",
+        "description": "Create a React component for user authentication with enhanced security",
+        "technology": "React",
+        "complexity": "high",
+        "requirements": "TypeScript, Supabase integration, form validation"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 5,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.4551756104976719,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 6,
+          "averageLatency": 1,
+          "cacheHits": 1,
+          "cacheMisses": 4,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385,
+            -55.42772891080858
+          ],
+          "averageRelevanceImprovement": -51.11685054207655,
+          "cacheHitRate": 16.666666666666664,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 11,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 3.6875,
+        "consultationId": "bed3770e"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "b8b30db7",
+      "timestamp": "2025-06-09T18:47:45.052Z",
+      "taskContext": {
+        "type": "optimization",
+        "description": "Optimize API endpoints for better performance and caching",
+        "technology": "Node.js",
+        "complexity": "medium",
+        "requirements": "Redis caching, rate limiting, monitoring"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 3,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.45382305001058815,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 7,
+          "averageLatency": 1,
+          "cacheHits": 2,
+          "cacheMisses": 4,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385,
+            -55.42772891080858
+          ],
+          "averageRelevanceImprovement": -51.11685054207655,
+          "cacheHitRate": 28.57142857142857,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 12,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 3.34375,
+        "consultationId": "b8b30db7"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "638e1c1b",
+      "timestamp": "2025-06-09T18:47:45.057Z",
+      "taskContext": {
+        "type": "migration",
+        "description": "Migrate database schema from PostgreSQL to support new features",
+        "technology": "PostgreSQL",
+        "complexity": "high",
+        "requirements": "Zero downtime, data integrity, rollback strategy"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 8,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.4556216158345156,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 8,
+          "averageLatency": 1,
+          "cacheHits": 3,
+          "cacheMisses": 4,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385,
+            -55.42772891080858
+          ],
+          "averageRelevanceImprovement": -51.11685054207655,
+          "cacheHitRate": 37.5,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 13,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 3.171875,
+        "consultationId": "638e1c1b"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "59e7378f",
+      "timestamp": "2025-06-09T18:47:45.060Z",
+      "taskContext": {
+        "type": "development",
+        "description": "Build reusable UI component library with Storybook",
+        "technology": "React",
+        "complexity": "medium",
+        "requirements": "TypeScript, Storybook, accessibility, testing"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 3,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.44834009011671866,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 9,
+          "averageLatency": 1,
+          "cacheHits": 4,
+          "cacheMisses": 4,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385,
+            -55.42772891080858
+          ],
+          "averageRelevanceImprovement": -51.11685054207655,
+          "cacheHitRate": 44.44444444444444,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 14,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 3.5859375,
+        "consultationId": "59e7378f"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "9ee3cad9",
+      "timestamp": "2025-06-09T18:47:45.064Z",
+      "taskContext": {
+        "type": "bugfix",
+        "description": "Fix CSS styling issue in navigation menu",
+        "technology": "CSS",
+        "complexity": "low",
+        "requirements": "Cross-browser compatibility"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 0,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 10,
+          "averageLatency": 1,
+          "cacheHits": 4,
+          "cacheMisses": 4,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385,
+            -55.42772891080858
+          ],
+          "averageRelevanceImprovement": -51.11685054207655,
+          "cacheHitRate": 40,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 15,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 3.29296875,
+        "consultationId": "9ee3cad9"
+      },
+      "enhancedRecommendations": []
+    },
+    {
+      "consultationId": "4cb2f3ab",
+      "timestamp": "2025-06-09T18:47:45.068Z",
+      "taskContext": {
+        "type": "implementation",
+        "description": "Create a React component for user authentication with enhanced security",
+        "technology": "React",
+        "complexity": "high",
+        "requirements": "TypeScript, Supabase integration, form validation"
+      },
+      "memoryBankStatus": {
+        "productContext": true,
+        "activeContext": true,
+        "progress": true,
+        "decisionLog": true,
+        "systemPatterns": true
+      },
+      "cacheAnalysis": {
+        "similarTasksFound": false,
+        "cacheHitRate": 0,
+        "solutions": []
+      },
+      "patternMatching": {
+        "matchesFound": 0,
+        "topMatches": [],
+        "confidence": 0
+      },
+      "relevantDecisions": {
+        "decisionsFound": 0,
+        "topDecisions": []
+      },
+      "recommendations": [],
+      "compliance": {
+        "consultationCompleted": true,
+        "memoryBankAccessed": true,
+        "cacheChecked": true,
+        "patternsAnalyzed": true
+      },
+      "ragEnhancements": {
+        "hybridSearchEnabled": true,
+        "semanticSearchResults": 5,
+        "keywordSearchResults": 0,
+        "boostedResults": 0,
+        "averageHybridScore": 0.4551756104976719,
+        "rerankedResults": 0,
+        "rerankingMetrics": {
+          "rerankingQueries": 11,
+          "averageLatency": 1,
+          "cacheHits": 5,
+          "cacheMisses": 4,
+          "fallbackCount": 0,
+          "relevanceImprovements": [
+            -51.42436758434783,
+            -44.13637383064641,
+            -53.478931842503385,
+            -55.42772891080858
+          ],
+          "averageRelevanceImprovement": -51.11685054207655,
+          "cacheHitRate": 45.45454545454545,
+          "fallbackRate": 0
+        }
+      },
+      "enhancedPatternMatching": {
+        "traditionalMatches": 0,
+        "enhancedConfidenceAverage": 0,
+        "hybridSearchIntegration": true
+      },
+      "performanceMetrics": {
+        "hybridSearchQueries": 16,
+        "semanticSearchHits": 19,
+        "fallbackToLegacy": 0,
+        "averageResponseTime": 3.146484375,
+        "consultationId": "4cb2f3ab"
+      },
+      "enhancedRecommendations": []
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# SISTEMA DE MEMÓRIA PERSISTENTE - GRUPO US
+
+## REGRAS OBRIGATÓRIAS DE MEMÓRIA
+
+### PRIMEIRA AÇÃO DE CADA CHAT
+- Ler @self.mdc e @project.mdc
+- Verificar @database-schema.mdc se envolver banco de dados
+- Consultar @apis.mdc se envolver APIs
+
+### ÚLTIMA AÇÃO DE CADA CHAT
+- Atualizar @self.mdc com erros e correções
+- Atualizar @project.mdc com novas preferências
+- Atualizar @database-schema.mdc se houve mudanças no schema
+- Atualizar @apis.mdc se APIs foram criadas/modificadas
+
+## REGRA: Aprender com Erros
+
+### Em Cada Erro ou Warning:
+1. **Detectar** saídas incorretas ou subótimas
+2. **Corrigir** o erro imediatamente
+3. **Salvar** erro e correção em @self.mdc usando:
+
+```markdown
+### Erro: [Descrição Curta]
+**Errado**:
+[código incorreto]
+
+**Correto**:
+[código corrigido]
+```
+
+## REGRA: Respeitar Preferências do Projeto
+Em Cada Requisição:
+- Ler @project.mdc para:
+  - Stack preferida (Next.js 14, TypeScript, Tailwind, Supabase)
+  - Padrões de código e nomenclatura
+  - Estrutura de pastas do GRUPO US
+- Aplicar preferências sem exceção
+- Salvar novas preferências descobertas
+
+## REGRA: Manter Schema do Banco Atualizado
+Em Requisições com Banco de Dados:
+- Ler @database-schema.mdc para entender:
+  - Tabelas, colunas, tipos e relacionamentos atuais
+  - Políticas RLS do Supabase
+- Aplicar conhecimento ao gerar queries SQL
+- Atualizar se houver modificações no schema
+
+## REGRA: Documentar APIs
+Em Requisições com APIs:
+- Ler @apis.mdc para conhecer endpoints existentes
+- Aplicar padrões ao criar/consumir APIs
+- Atualizar com novos endpoints criados
+
+## REGRA: Prevenir Repetição
+- Sempre ler @self.mdc antes de aplicar lógica
+- Se erro relacionado foi encontrado, usar correção salva
+- Registrar que correção anterior foi aplicada
+
+## REGRA: Manter Memória Limpa
+- Atualizar seções existentes com melhores soluções
+- Estruturar com headers ### claros
+- Agrupar por tópico
+- Manter apenas informações gerais e reutilizáveis
+
+## INTEGRAÇÃO COM TASK MASTER
+- Sincronizar com .taskmaster/tasks/
+- Atualizar progress-log após cada task
+- Manter contexto entre handoffs de 90%
+
+## CAMINHOS DE ARMAZENAMENTO
+- .cursor/rules/self.mdc: Log de erros e correções
+- .cursor/rules/project.mdc: Preferências e regras customizadas
+- .cursor/rules/database-schema.mdc: Schema Supabase
+- .cursor/rules/apis.mdc: Documentação de endpoints
+- memory-bank/: Documentação detalhada do projeto
+
+## ENFORCEMENT
+- Falhar em ler/atualizar memória é erro crítico
+- Todas requisições devem usar conhecimento armazenado
+- Minimizar tokens e API calls sempre

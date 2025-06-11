@@ -1,0 +1,15 @@
+{
+  "id": "command_1749302944878_5f7614",
+  "sessionId": "session_1749302918771_9f3265c2",
+  "timestamp": 1749302944878,
+  "command": "git add .",
+  "success": false,
+  "fallbackUsed": false,
+  "executionTime": 5117,
+  "nonInteractiveFlags": [],
+  "project": "unknown",
+  "context": {
+    "timestamp": 1749302944878,
+    "sessionId": "session_1749302918771_9f3265c2"
+  }
+}

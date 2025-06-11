@@ -1,0 +1,163 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 🚀 UNIFIED DEVELOPMENT ENVIRONMENT RULES - GRUPO US VIBECODE SYSTEM V3.1
+
+## 📋 MANDATORY REFERENCE SYSTEM
+
+**ALWAYS READ FIRST**: This file consolidates rules for both Augment Code and Cursor AI environments, ensuring seamless cross-platform development with shared context, memory, and standards.
+
+## 🎯 ENVIRONMENT SPECIALIZATION MATRIX
+
+### Augment Code - Backend & Architecture Specialist
+- **Primary Focus**: Complex backend development, API integration, database operations
+- **Complexity Range**: 7-10 (High complexity tasks)
+- **Specializations**: System architecture, performance optimization, complex refactoring
+- **Tools**: Chat mode, Next Edit, Instructions, Completions
+- **Memory Integration**: Full access to @project-core/memory/ system
+
+### Cursor AI - Frontend & UI Specialist  
+- **Primary Focus**: Interactive development, component creation, UI/UX improvements
+- **Complexity Range**: 1-6 (Low to medium complexity tasks)
+- **Specializations**: Frontend components, styling, interactive debugging
+- **Tools**: Composer mode, Chat mode, real-time feedback
+- **Memory Integration**: Shared access to @project-core/memory/ system
+
+## 🧠 UNIFIED MEMORY SYSTEM PROTOCOL
+
+### Mandatory Memory Consultation (Both Environments)
+```bash
+# ALWAYS execute before any task
+cat @project-core/memory/master_rule.md
+cat @project-core/memory/self_correction_log.md
+cat @project-core/memory/global-standards.md
+```
+
+### Memory Bank Structure (Shared)
+```
+@project-core/memory/
+├── master_rule.md                    # Core execution protocol
+├── augment-agent-guidelines-v3.md    # Augment-specific guidelines  
+├── self_correction_log.md            # Shared learning log
+├── global-standards.md               # Universal coding standards
+├── coding_standards/                 # Stack-specific standards
+└── protocols/                        # Execution protocols
+```
+
+## 🔄 UNIFIED EXECUTION PROTOCOL
+
+### Step 1: THINK (Analyze with Shared Memory)
+- **MANDATORY**: Consult @project-core/memory/master_rule.md first
+- **CRITICAL**: Check @project-core/memory/self_correction_log.md for past errors
+- **ESSENTIAL**: Review @project-core/memory/global-standards.md for patterns
+- **INTEGRATION**: Verify MCP servers status and availability
+- **COMPLEXITY ASSESSMENT**: Determine environment specialization (1-10 scale)
+
+### Step 2: PLAN (Environment-Aware Planning)
+- **Augment Tasks (7-10)**: Complex architecture, backend systems, API integration
+- **Cursor Tasks (1-6)**: UI components, styling, interactive features
+- **Cross-Environment**: Plan handoff points and shared artifacts
+- **Memory Integration**: Apply patterns from shared memory bank
+
+### Step 3: EXECUTE (Coordinated Implementation)
+- **Augment Execution**: Use Chat for exploration, Next Edit for refactoring, Instructions for precise changes
+- **Cursor Execution**: Use Composer for multi-file changes, Chat for debugging
+- **Shared Standards**: Apply @project-core/rules/ coding standards universally
+- **Memory Updates**: Document learnings in shared memory bank
+
+### Step 4: LEARN & IMPROVE (Unified Learning)
+- **Shared Documentation**: Update @project-core/memory/self_correction_log.md
+- **Cross-Environment Patterns**: Document successful handoff patterns
+- **Performance Metrics**: Track efficiency across both environments
+- **Continuous Improvement**: Apply learnings to both environments
+
+## 🤝 COORDINATION PROTOCOLS
+
+### Task Handoff: Augment → Cursor
+**Trigger Conditions**:
+- Backend/API development complete
+- Database schema finalized
+- Component specifications ready
+
+**Handoff Artifacts**:
+- API documentation with endpoints
+- Component interface specifications  
+- Design system requirements
+- Performance benchmarks
+
+### Task Handoff: Cursor → Augment
+**Trigger Conditions**:
+- UI components complete
+- Frontend integration points defined
+- Performance optimization needed
+
+**Handoff Artifacts**:
+- Component code and documentation
+- Integration requirements
+- Performance bottlenecks identified
+- Backend optimization needs
+
+## 🛠️ SHARED MCP INTEGRATION
+
+### MCP Servers (Both Environments)
+- **Sequential Thinking**: Complex reasoning (complexity ≥ 7)
+- **MCP Shrimp Task Manager**: Task coordination and management
+- **Playwright**: Automated testing and validation
+- **Figma**: Design-to-code generation
+- **Supabase**: Database operations and management
+
+### MCP Configuration Path
+```json
+{
+  "$ref": "@project-core/configs/mcp-master-unified.json",
+  "sharedAccess": true,
+  "crossEnvironmentCompatibility": true
+}
+```
+
+## 📊 QUALITY ASSURANCE (Universal)
+
+### Code Quality Standards
+- **TypeScript**: Strict mode enabled across all environments
+- **Testing**: Unit tests required for all new functions
+- **Documentation**: JSDoc comments for complex functions
+- **Performance**: Core Web Vitals compliance
+- **Security**: Input validation and RLS implementation
+
+### Cross-Environment Validation
+- **Consistency**: Shared coding standards application
+- **Integration**: Seamless handoff validation
+- **Performance**: End-to-end performance testing
+- **Documentation**: Unified documentation standards
+
+## 🔒 SECURITY & COMPLIANCE (Shared)
+
+### Environment Variables
+- **Centralized**: @project-core/env/ directory
+- **Security**: Never commit .env files
+- **Validation**: .gitignore verification before commits
+- **Rotation**: Regular API key rotation
+
+### Git Workflow (Universal)
+```bash
+# Semantic commits for both environments
+git commit -m "feat(augment): implement user authentication API"
+git commit -m "feat(cursor): create user profile component"
+git commit -m "fix(integration): resolve API-component data flow"
+```
+
+## 🚨 ERROR PREVENTION (Cross-Environment)
+
+### P.C.P.E. Protocol (Proactive Error Correction)
+- **Activation**: ANY error detected in either environment
+- **Action**: Pause and execute H.A.L.T. cycle
+- **Documentation**: Update shared self_correction_log.md
+- **Prevention**: Apply learnings to both environments
+
+### Environment-Specific Error Patterns
+- **Augment**: Complex refactoring errors, API integration issues
+- **Cursor**: Component integration errors, styling conflicts
+- **Shared**: Memory consultation failures, MCP connection issues
+

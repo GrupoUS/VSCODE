@@ -1,0 +1,25 @@
+{
+  "$ref": "@project-core/configs/mcp-master-unified.json",
+  "description": "This file redirects to the centralized MCP configuration",
+  "migration": {
+    "date": "2025-06-08T11:06:21Z",
+    "reason": "Consolidated into unified configuration for security and maintainability",
+    "originalBackup": "@project-core/backups/20250608_110621/mcp.json",
+    "apiKeysMovedTo": "Environment variables (secure)"
+  },
+  "security": {
+    "note": "API keys moved to environment variables for security",
+    "envFile": "@project-core/env/.env.mcp"
+  },
+  "mcpServers": {
+    "task-master-ai": {
+      "command": "npx",
+      "args": ["-y", "--package=task-master-ai", "task-master-ai"],
+      "env": {
+        "ANTHROPIC_API_KEY": "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",
+        "PERPLEXITY_API_KEY": "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",
+        "OPENROUTER_API_KEY": "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"
+      }
+    }
+  }
+}

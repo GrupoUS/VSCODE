@@ -1,0 +1,88 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+---
+description: "Self-correction memory for mistakes and fixes"
+globs: ["**/*"]
+alwaysApply: true
+version: "1.0.0"
+---
+
+# Self-Correction Memory
+
+Este arquivo registra erros cometidos e suas correções para prevenir repetição.
+
+---
+
+## TypeScript & Next.js
+
+### Erro: Import de componente shadcn/ui incorreto
+**Errado**:
+```typescript
+import { Button } from 'shadcn/ui'
+```
+**Correto**:
+```typescript
+import { Button } from '@/components/ui/button'
+```
+
+### Erro: Uso de 'use client' desnecessário
+**Errado**:
+```typescript
+'use client'
+
+export function StaticComponent() {
+  return <div>Conteúdo estático</div>
+}
+```
+**Correto**:
+```typescript
+// Sem 'use client' - Server Component por padrão
+export function StaticComponent() {
+  return <div>Conteúdo estático</div>
+}
+```
+
+## Supabase & Database
+
+### Erro: Fetch sem tratamento de erro
+**Errado**:
+```typescript
+const data = await supabase.from('users').select('*')
+```
+**Correto**:
+```typescript
+const { data, error } = await supabase.from('users').select('*')
+if (error) throw error
+```
+
+## State Management
+
+### Erro: Estado não tipado no Zustand
+**Errado**:
+```typescript
+const useStore = create((set) => ({
+  user: null,
+  setUser: (user) => set({ user })
+}))
+```
+**Correto**:
+```typescript
+interface StoreState {
+  user: User | null
+  setUser: (user: User | null) => void
+}
+
+const useStore = create<StoreState>((set) => ({
+  user: null,
+  setUser: (user) => set({ user })
+}))
+```
+
+## Regras Relacionadas
+- @memory.mdc: Regras principais do sistema de memória
+- @project.mdc: Padrões de código e nomenclatura aplicados
+- @database-schema.mdc: Schema para consultas SQL corretas
+- @apis.mdc: Padrões de API para evitar erros

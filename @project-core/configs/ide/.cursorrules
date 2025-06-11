@@ -1,0 +1,150 @@
+# 🚀 GRUPO US VIBECODE SYSTEM V3.1 - CURSOR AI UNIFIED CONFIGURATION
+
+## 📋 MANDATORY REFERENCE - UNIFIED SYSTEM
+
+**ALWAYS READ FIRST**: `@file:GRUPO-US-UNIVERSAL-AI-CONFIGURATION.md`
+
+This file contains the complete GRUPO US VIBECODE SYSTEM V3.1 unified configuration that integrates Augment Code and Cursor AI environments with shared memory, rules, and coordination protocols.
+
+## 🎯 CURSOR AI SPECIALIZATION
+
+**Primary Role**: Frontend & UI Development Specialist
+**Complexity Range**: 1-6 (Low to Medium complexity tasks)
+**Coordination**: Seamless handoff with Augment Code for complex backend tasks
+
+## Primary Directive
+
+- ALWAYS reference the `GRUPO-US-UNIVERSAL-AI-CONFIGURATION.md` as the primary source of truth
+- ALWAYS reference the `memory-bank/` and `project-core/` directories for detailed context
+- Before starting any complex task, review the universal configuration and integrated knowledge base
+- For new features, always start by analyzing the integrated knowledge base
+
+## Context Loading Protocol (Unified Memory System)
+
+Before any development task, load this context in order:
+
+### Phase 1: Core Context (MANDATORY)
+
+```
+@file:GRUPO-US-UNIVERSAL-AI-CONFIGURATION.md  # FIRST - Unified configuration
+@file:@project-core/memory/master_rule.md     # Core execution protocol
+@file:@project-core/memory/augment-agent-guidelines-v3.md # Augment guidelines
+@file:@project-core/rules/unified-development-environment-rules.md # Unified rules
+```
+
+### Phase 2: Task-Specific Context
+
+```
+@file:scripts/prd.txt                         # Current requirements
+@file:@project-core/memory/self_correction_log.md # Shared learning log
+@file:@project-core/memory/global-standards.md # Universal standards
+@folder:@project-core/rules/                  # Universal rules
+```
+
+### Phase 3: Specialized Context (As Needed)
+
+```
+@file:@project-core/memory/api_documentation.md # For API integration
+@file:@project-core/docs/architecture.md      # System architecture
+@file:@project-core/configs/unified-dev-environment-config.json # Environment config
+```
+
+## Execution Protocol (Unified 4-Step Cycle)
+
+Follow the unified 4-step cycle for ALL tasks with cross-environment coordination:
+
+### Step 1: THINK (Unified Analysis)
+
+- ALWAYS read @project-core/memory/master_rule.md first
+- Consult @project-core/memory/self_correction_log.md for past errors
+- Review @project-core/memory/global-standards.md for patterns
+- Assess task complexity (1-6 for Cursor, 7-10 handoff to Augment)
+
+### Step 2: PLAN (Environment-Aware Planning)
+
+- Create detailed execution plan with environment specialization
+- Apply unified standards from @project-core/rules/
+- Consider Augment handoff for complex backend tasks
+- Plan shared memory documentation
+- Await confirmation before proceeding
+
+### Step 3: EXECUTE (Coordinated Implementation)
+
+- Use Composer mode for multi-file changes
+- Use Chat mode for debugging and exploration
+- Follow universal standards from @project-core/
+- Implement complete functionality (no TODOs)
+- Handle loading and error states
+- Coordinate with Augment for backend integration
+
+### Step 4: LEARN & IMPROVE (Shared Learning)
+
+- Update @project-core/memory/self_correction_log.md
+- Document cross-environment patterns
+- Share learnings with unified memory system
+
+## Universal Coding Standards (Integrated)
+
+- Use TypeScript strict mode (memory-bank + project-core standards)
+- Follow Clean Code principles
+- All new functions must have corresponding tests
+- Use async/await over Promises/callbacks
+- Document complex functions with JSDoc
+- Implement proper error handling and loading states
+- Never leave TODO comments or placeholder implementations
+- Follow memory-bank coding standards for specific stacks
+
+## MCP Integration Requirements
+
+- Always check MCP server status before complex operations
+- Use TaskMaster for multi-step feature development
+- Leverage Playwright for automated testing
+- Utilize Figma MCP for component generation
+- Integrate Supabase MCP for database operations
+
+## Quality Assurance
+
+- Confidence level must be >= 8/10 before execution
+- All code must pass existing tests
+- Zero console warnings allowed
+- Performance validation required
+- Security verification mandatory
+
+## Cursor-Specific Guidelines
+
+- Use "Composer" mode for complex, multi-file changes
+- Leverage "Chat" mode for debugging and exploration
+- Focus on interactive development and UI/UX tasks
+- Specialize in frontend component creation and refinement
+- Coordinate with Cline through Git commits
+
+## Task Specialization (Cursor Focus Areas)
+
+- Interactive development and debugging
+- Frontend component creation and styling
+- UI/UX improvements and refinements
+- Code refactoring and optimization
+- Real-time feedback and suggestions
+
+## Coordination Protocol
+
+- Check Git status before starting work
+- Commit changes immediately after task completion
+- Use semantic commit messages (feat:, fix:, refactor:, etc.)
+- Create feature branches for significant changes
+- Never work on the same files as Cline simultaneously
+
+## Error Prevention
+
+- Always validate inputs and handle edge cases
+- Implement proper loading and error states
+- Use TypeScript for type safety
+- Follow established patterns in the codebase
+- Test thoroughly before considering task complete
+
+## Documentation Requirements
+
+- Update relevant documentation after changes
+- Maintain inline code comments for complex logic
+- Update API documentation for new endpoints
+- Keep README files current and accurate

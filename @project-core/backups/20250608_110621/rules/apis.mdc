@@ -1,0 +1,123 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+---
+description: "API endpoints documentation and patterns"
+globs: ["**/api/**", "**/*api*", "**/routes/**"]
+alwaysApply: true
+version: "1.0.0"
+---
+
+# Documentação de APIs - GRUPO US
+Version: 1.0.0
+
+## Propósito
+Documentação central de todos endpoints da aplicação. 
+**DEVE** ser consultado e atualizado sempre que APIs forem criadas/modificadas.
+
+## Padrão de Documentação
+
+### `[METHOD] /api/path/to/endpoint`
+- **Propósito**: [O que o endpoint faz]
+- **Autenticação**: [Supabase Auth | Public | Admin]
+- **Parâmetros (Query)**:
+  - `param` (type): [Descrição, validação]
+- **Body (JSON)**:
+  ```json
+  {
+    "field": "type" // Descrição
+  }
+  ```
+- **Resposta Sucesso (200):**
+  ```json
+  {
+    "field": "type" // Descrição
+  }
+  ```
+- **Erros:**
+  - 400: Dados inválidos
+  - 401: Não autenticado
+  - 403: Sem permissão
+  - 404: Não encontrado
+  - 500: Erro interno
+
+## Endpoints Implementados
+
+### POST /api/auth/register
+- **Propósito**: Registrar novo usuário
+- **Autenticação**: Public
+- **Body:**
+  ```json
+  {
+    "email": "string",
+    "password": "string",
+    "name": "string",
+    "clinicName": "string"
+  }
+  ```
+- **Resposta Sucesso:**
+  ```json
+  {
+    "user": { "id": "uuid", "email": "string" },
+    "session": { "access_token": "string" }
+  }
+  ```
+
+### GET /api/patients
+- **Propósito**: Listar pacientes da clínica
+- **Autenticação**: Supabase Auth (clinic owner/staff)
+- **Parâmetros:**
+  - page (number): Página (default: 1)
+  - limit (number): Items por página (default: 20)
+  - search (string): Busca por nome/email
+- **Resposta:**
+  ```json
+  {
+    "data": [{ "id": "uuid", "name": "string", "email": "string" }],
+    "total": 100,
+    "page": 1,
+    "totalPages": 5
+  }
+  ```
+
+## Padrões de API
+
+### Validação
+Sempre usar Zod para validar entrada:
+```typescript
+const schema = z.object({
+  email: z.string().email(),
+  name: z.string().min(2)
+})
+
+const validated = schema.parse(req.body)
+```
+
+### Tratamento de Erro
+```typescript
+try {
+  // lógica
+} catch (error) {
+  if (error instanceof z.ZodError) {
+    return NextResponse.json({ error: error.errors }, { status: 400 })
+  }
+  return NextResponse.json({ error: 'Internal error' }, { status: 500 })
+}
+```
+
+### Autenticação
+```typescript
+const supabase = createRouteHandlerClient({ cookies })
+const { data: { user } } = await supabase.auth.getUser()
+if (!user) {
+  return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+}
+```
+
+## Regras Relacionadas
+- @memory.mdc: Regras principais do sistema de memória
+- @project.mdc: Padrões de código e nomenclatura
+- @database-schema.mdc: Schema das tabelas para queries
+- @self.mdc: Erros comuns com APIs e suas correções

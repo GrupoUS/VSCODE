@@ -1,0 +1,301 @@
+{
+  "metadata": {
+    "name": "GRUPO US VIBECODE SYSTEM V4.0 - Unified Configuration",
+    "version": "4.0.0",
+    "description": "Shared configuration system for VS Code and Cursor AI unified environment",
+    "lastUpdated": "2025-01-27T12:00:00Z",
+    "author": "GRUPO US - VIBECODE SYSTEM",
+    "status": "MANDATORY_COMPLIANCE",
+    "syncRequired": true
+  },
+  "systemIdentification": {
+    "systemName": "GRUPO US VIBECODE SYSTEM",
+    "version": "4.0",
+    "architecture": "unified-cross-environment",
+    "masterRule": "@project-core/memory/master_rule.md",
+    "constitution": "@project-core/rules/00-vibecode-system-v4-master.md",
+    "complianceLevel": "absolute"
+  },
+  "environments": {
+    "vscode": {
+      "name": "VS Code + Augment",
+      "role": "backend-architecture-specialist",
+      "priority": 1,
+      "complexityRange": [7, 10],
+      "agents": ["ARCHITECT", "CODER"],
+      "capabilities": [
+        "codebase-context",
+        "next-edit-suggestions",
+        "instructions-mode",
+        "completions",
+        "chat-mode",
+        "complex-refactoring",
+        "architecture-design"
+      ],
+      "specializations": [
+        "backend-development",
+        "api-integration",
+        "database-operations",
+        "complex-refactoring",
+        "architecture-design",
+        "system-migrations"
+      ],
+      "configFiles": [
+        "@project-core/configs/ide/vscode/settings.json",
+        ".vscode/settings.json",
+        ".augmentignore",
+        ".augment-guidelines"
+      ],
+      "mcpTools": [
+        "sequential-thinking",
+        "think-mcp-server",
+        "mcp-shrimp-task-manager"
+      ]
+    },
+    "cursor": {
+      "name": "Cursor AI",
+      "role": "frontend-ui-specialist", 
+      "priority": 2,
+      "complexityRange": [3, 6],
+      "agents": ["MANAGER", "EXECUTOR"],
+      "capabilities": [
+        "composer-mode",
+        "chat-mode",
+        "interactive-development",
+        "ui-generation",
+        "real-time-feedback",
+        "multi-file-editing"
+      ],
+      "specializations": [
+        "frontend-development",
+        "component-creation",
+        "ui-ux-improvements",
+        "styling-optimization",
+        "interactive-debugging",
+        "visual-testing"
+      ],
+      "configFiles": [
+        "@project-core/configs/ide/cursor/.cursorrules",
+        "@project-core/configs/ide/cursor/mcp.json",
+        ".cursorrules"
+      ],
+      "mcpTools": [
+        "mcp-shrimp-task-manager",
+        "figma-mcp",
+        "playwright-mcp",
+        "tavily-mcp"
+      ]
+    }
+  },
+  "sharedConfiguration": {
+    "memorySystem": {
+      "centralPath": "@project-core/memory/",
+      "masterRule": "@project-core/memory/master_rule.md",
+      "guidelines": "@project-core/memory/augment-agent-guidelines-v3.md",
+      "selfCorrection": "@project-core/memory/self_correction_log.md",
+      "globalStandards": "@project-core/memory/global-standards.md",
+      "codingStandards": "@project-core/memory/coding_standards/",
+      "protocols": "@project-core/memory/protocols/",
+      "sharedAccess": true,
+      "crossEnvironmentSync": true
+    },
+    "rulesSystem": {
+      "centralPath": "@project-core/rules/",
+      "constitution": "@project-core/rules/00-vibecode-system-v4-master.md",
+      "masterProtocol": "@project-core/rules/01-core-principles-unified.md",
+      "codingStandards": "@project-core/rules/02-coding-standards-universal.md",
+      "aiRouting": "@project-core/rules/04-ai-routing-system.md",
+      "designSystem": "@project-core/rules/05-design-system-unified.md",
+      "mcpIntegration": "@project-core/rules/06-mcp-integration-core.md",
+      "errorProtocols": "@project-core/rules/07-error-protocols-unified.md"
+    },
+    "mcpIntegration": {
+      "configPath": "@project-core/configs/mcp-master-unified.json",
+      "vsCodeServers": [
+        "sequential-thinking",
+        "think-mcp-server",
+        "mcp-shrimp-task-manager"
+      ],
+      "cursorServers": [
+        "mcp-shrimp-task-manager",
+        "figma-mcp", 
+        "playwright-mcp",
+        "tavily-mcp"
+      ],
+      "sharedServers": [
+        "mcp-shrimp-task-manager"
+      ]
+    }
+  },
+  "unifiedWorkflows": {
+    "complexityRouting": {
+      "high": {
+        "range": [9, 10],
+        "environment": "vscode",
+        "agent": "ARCHITECT",
+        "tools": ["sequential-thinking", "think-mcp-server"],
+        "domains": ["architecture", "migration", "complex-refactor"]
+      },
+      "mediumHigh": {
+        "range": [7, 8],
+        "environment": "vscode",
+        "agent": "CODER", 
+        "tools": ["sequential-thinking", "mcp-shrimp"],
+        "domains": ["backend", "api", "database", "complex-logic"]
+      },
+      "medium": {
+        "range": [5, 6],
+        "environment": "cursor",
+        "agent": "MANAGER",
+        "tools": ["mcp-shrimp", "figma-mcp"],
+        "domains": ["coordination", "planning", "workflow"]
+      },
+      "low": {
+        "range": [3, 4],
+        "environment": "cursor",
+        "agent": "EXECUTOR",
+        "tools": ["figma-mcp", "playwright-mcp"],
+        "domains": ["frontend", "ui", "components", "styling"]
+      },
+      "research": {
+        "range": [1, 2],
+        "environment": "both",
+        "agent": "RESEARCHER",
+        "tools": ["tavily-mcp"],
+        "domains": ["research", "analysis", "documentation"]
+      }
+    },
+    "handoffProtocols": {
+      "vsCodeToCursor": {
+        "trigger": "frontend_implementation_needed",
+        "artifacts": [
+          "api-specifications",
+          "database-schemas",
+          "component-specifications",
+          "integration-points",
+          "performance-requirements"
+        ],
+        "validation": [
+          "api-functionality-verified",
+          "data-operations-tested",
+          "design-patterns-validated"
+        ]
+      },
+      "cursorToVSCode": {
+        "trigger": "backend_integration_needed",
+        "artifacts": [
+          "ui-components-implemented",
+          "frontend-interfaces-complete",
+          "integration-tests-written",
+          "component-documentation",
+          "usability-feedback"
+        ],
+        "validation": [
+          "responsive-design-confirmed",
+          "accessibility-compliance-verified",
+          "performance-optimized"
+        ]
+      }
+    }
+  },
+  "synchronizationProtocols": {
+    "configSync": {
+      "frequency": "real-time",
+      "method": "forced",
+      "validation": "mandatory",
+      "sources": [
+        "@project-core/configs/ide/vscode/settings.json",
+        "@project-core/configs/ide/cursor/.cursorrules",
+        "@project-core/configs/ide/cursor/mcp.json"
+      ],
+      "targets": [
+        ".vscode/settings.json",
+        ".cursorrules",
+        ".cursor/mcp.json"
+      ]
+    },
+    "memorySync": {
+      "frequency": "continuous",
+      "method": "bidirectional",
+      "validation": "automatic",
+      "sharedFiles": [
+        "@project-core/memory/master_rule.md",
+        "@project-core/memory/self_correction_log.md",
+        "@project-core/memory/global-standards.md"
+      ]
+    },
+    "learningSync": {
+      "frequency": "after-each-task",
+      "method": "consolidated",
+      "validation": "cross-environment",
+      "patterns": [
+        "success-patterns",
+        "error-patterns",
+        "optimization-patterns",
+        "handoff-patterns"
+      ]
+    }
+  },
+  "complianceMonitoring": {
+    "configCompliance": {
+      "level": "mandatory",
+      "tolerance": "zero",
+      "validation": "continuous",
+      "correction": "automatic"
+    },
+    "ruleCompliance": {
+      "masterRule": "100%",
+      "constitution": "100%",
+      "codingStandards": "100%",
+      "workflows": "100%"
+    },
+    "qualityGates": {
+      "vsCode": {
+        "confidence": ">=8/10",
+        "complexity": "7-10",
+        "architecture": "validated",
+        "performance": "optimized"
+      },
+      "cursor": {
+        "uiQuality": ">=95%",
+        "accessibility": "100% WCAG 2.1 AA",
+        "performance": ">=90 Lighthouse",
+        "responsiveness": "100%"
+      },
+      "unified": {
+        "syncSuccess": "100%",
+        "handoffSuccess": ">=95%",
+        "learningIntegration": ">=90%",
+        "crossEnvironmentConsistency": ">=98%"
+      }
+    }
+  },
+  "emergencyProtocols": {
+    "configRestoration": {
+      "trigger": "compliance_violation",
+      "action": "force_restore",
+      "source": "@project-core/configs/ide/",
+      "validation": "mandatory"
+    },
+    "syncFailureRecovery": {
+      "trigger": "sync_failure",
+      "action": "emergency_sync",
+      "coordination": "cross-environment",
+      "validation": "complete"
+    },
+    "memoryBankRecovery": {
+      "trigger": "memory_corruption",
+      "action": "restore_from_backup",
+      "source": "@project-core/backups/memory/",
+      "validation": "integrity_check"
+    }
+  },
+  "validation": {
+    "systemIntegrity": "verified",
+    "crossEnvironmentSync": "operational",
+    "memoryBankAccess": "confirmed",
+    "mcpIntegration": "validated",
+    "complianceLevel": "100%",
+    "operationalStatus": "UNIFIED_SYSTEM_ACTIVE"
+  }
+}

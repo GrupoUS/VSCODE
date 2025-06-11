@@ -1,0 +1,211 @@
+{
+  "agent_config": {
+    "agent_id": "boomerang",
+    "name": "Boomerang Master Coordinator",
+    "version": "1.0.0",
+    "description": "Central coordination agent for intelligent task routing and workflow orchestration",
+    "model_config": {
+      "model": "google/gemini-2.5-pro-exp-03-25",
+      "provider": "openrouter",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "temperature": 0.7,
+      "max_tokens": 8192,
+      "context_window": 200000,
+      "supports_thinking": false,
+      "supports_vision": false,
+      "supports_function_calling": true
+    },
+    "specialization": {
+      "primary_domains": [
+        "task_analysis",
+        "agent_coordination",
+        "workflow_orchestration",
+        "context_management",
+        "result_consolidation"
+      ],
+      "secondary_domains": [
+        "complexity_assessment",
+        "resource_allocation",
+        "progress_tracking",
+        "error_handling"
+      ],
+      "complexity_range": {
+        "min": 1,
+        "max": 10,
+        "optimal": [1, 10]
+      }
+    },
+    "capabilities": {
+      "task_analysis": {
+        "complexity_scoring": true,
+        "domain_identification": true,
+        "urgency_assessment": true,
+        "resource_estimation": true
+      },
+      "agent_coordination": {
+        "routing_decisions": true,
+        "workflow_orchestration": true,
+        "context_management": true,
+        "progress_tracking": true
+      },
+      "communication": {
+        "inter_agent_messaging": true,
+        "user_interaction": true,
+        "status_reporting": true,
+        "error_handling": true
+      }
+    },
+    "mcp_integration": {
+      "required_servers": [
+        "sequentialthinking_tools_mcp-sequentialthinking-tools",
+        "mcp-shrimp-task-manager",
+        "think_think-mcp-server"
+      ],
+      "optional_servers": [
+        "render-mermaid"
+      ],
+      "tool_permissions": {
+        "task_management": ["plan_task", "analyze_task", "split_tasks", "list_tasks"],
+        "thinking": ["process_thought", "sequentialthinking"],
+        "coordination": ["think"]
+      }
+    },
+    "decision_framework": {
+      "complexity_thresholds": {
+        "simple": [1, 2],
+        "medium": [3, 4], 
+        "complex": [5, 6],
+        "advanced": [7, 8],
+        "critical": [9, 10]
+      },
+      "routing_priorities": [
+        "task_complexity",
+        "agent_specialization",
+        "current_workload",
+        "urgency_level",
+        "resource_availability"
+      ],
+      "escalation_triggers": [
+        "agent_unavailable",
+        "task_too_complex",
+        "multiple_failures",
+        "user_intervention_needed"
+      ]
+    },
+    "workflow_patterns": {
+      "feature_development": {
+        "sequence": ["architect", "manager", "coder", "executor"],
+        "parallel_allowed": false,
+        "validation_points": ["design_review", "implementation_check", "final_validation"],
+        "refinement_agents": ["prompt_refiner", "tools_refiner", "config_refiner"],
+        "advisor_integration": true
+      },
+      "bug_fix": {
+        "sequence": ["executor", "coder", "executor"],
+        "parallel_allowed": true,
+        "validation_points": ["issue_analysis", "fix_validation"],
+        "refinement_agents": ["tools_refiner"],
+        "advisor_integration": false
+      },
+      "research": {
+        "sequence": ["researcher", "architect", "manager"],
+        "parallel_allowed": true,
+        "validation_points": ["research_complete", "analysis_done", "documentation_ready"],
+        "refinement_agents": ["prompt_refiner"],
+        "advisor_integration": true
+      },
+      "architecture_review": {
+        "sequence": ["architect", "researcher", "manager"],
+        "parallel_allowed": false,
+        "validation_points": ["design_analysis", "best_practices_check", "recommendations_ready"],
+        "refinement_agents": ["prompt_refiner", "config_refiner"],
+        "advisor_integration": true
+      },
+      "agent_creation": {
+        "sequence": ["advisor", "architect", "coder", "prompt_refiner", "tools_refiner", "config_refiner"],
+        "parallel_allowed": false,
+        "validation_points": ["requirements_analysis", "initial_agent_creation", "iterative_refinement", "final_validation"],
+        "refinement_agents": ["prompt_refiner", "tools_refiner", "config_refiner"],
+        "advisor_integration": true,
+        "archon_inspired": true
+      },
+      "self_reflection": {
+        "sequence": ["executor", "researcher", "manager"],
+        "parallel_allowed": true,
+        "validation_points": ["performance_analysis", "improvement_identification", "optimization_implementation"],
+        "refinement_agents": ["config_refiner"],
+        "advisor_integration": false,
+        "praisonai_inspired": true
+      }
+    },
+    "performance_metrics": {
+      "target_response_time": "30_seconds",
+      "routing_accuracy_target": 0.90,
+      "task_completion_rate_target": 0.95,
+      "user_satisfaction_target": 0.90,
+      "token_efficiency_target": 0.70
+    },
+    "error_handling": {
+      "retry_attempts": 3,
+      "fallback_strategies": [
+        "use_secondary_agent",
+        "decompose_task",
+        "escalate_to_human"
+      ],
+      "recovery_protocols": {
+        "agent_failure": "route_to_fallback",
+        "communication_error": "retry_with_backoff",
+        "context_loss": "rebuild_from_memory",
+        "system_overload": "queue_and_prioritize"
+      }
+    },
+    "learning_system": {
+      "success_pattern_tracking": true,
+      "failure_analysis": true,
+      "routing_optimization": true,
+      "performance_monitoring": true,
+      "self_reflection_enabled": true,
+      "iterative_refinement": true,
+      "advisor_recommendations": true,
+      "memory_integration": {
+        "read_from": "@project-core/memory/",
+        "write_to": "@project-core/memory/agent-learning/",
+        "update_frequency": "after_each_task",
+        "pattern_library": "@project-core/memory/learning/pattern-library.json",
+        "refinement_history": "@project-core/memory/agent-learning/refinement-history.json"
+      },
+      "archon_features": {
+        "tool_library_integration": true,
+        "agent_builder_mode": true,
+        "iterative_improvement": true,
+        "specialized_refiners": ["prompt_refiner", "tools_refiner", "config_refiner"]
+      },
+      "praisonai_features": {
+        "self_reflection_agents": true,
+        "multi_framework_support": true,
+        "workflow_orchestration": true,
+        "memory_persistence": true
+      }
+    }
+  },
+  "operational_rules": {
+    "initialization": {
+      "check_agent_availability": true,
+      "load_routing_matrix": true,
+      "verify_mcp_connections": true,
+      "initialize_memory_bank": true
+    },
+    "task_processing": {
+      "analyze_before_routing": true,
+      "confirm_agent_selection": false,
+      "track_progress": true,
+      "consolidate_results": true
+    },
+    "communication": {
+      "clear_agent_identification": true,
+      "progress_visibility": true,
+      "intervention_points": true,
+      "approval_workflows": false
+    }
+  }
+}

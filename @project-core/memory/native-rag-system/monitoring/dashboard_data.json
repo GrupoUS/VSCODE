@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-06-10T15:58:11.748924",
+  "uptime_seconds": 20.028741,
+  "system_status": "critical",
+  "current_metrics": {
+    "bridge_reuse_rate": {
+      "timestamp": "2025-06-10T15:57:54.728156",
+      "metric_name": "bridge_reuse_rate",
+      "value": 95.0,
+      "unit": "%",
+      "component": "js_bridge",
+      "status": "normal",
+      "threshold_exceeded": false
+    },
+    "memory_consultation_speed": {
+      "timestamp": "2025-06-10T15:58:06.753910",
+      "metric_name": "memory_consultation_speed",
+      "value": 250.0,
+      "unit": "ms",
+      "component": "memory_coordinator",
+      "status": "critical",
+      "threshold_exceeded": true
+    },
+    "embedding_service_time": {
+      "timestamp": "2025-06-10T15:58:06.754162",
+      "metric_name": "embedding_service_time",
+      "value": 600.0,
+      "unit": "ms",
+      "component": "embedding_service",
+      "status": "critical",
+      "threshold_exceeded": true
+    }
+  },
+  "summary_statistics": {
+    "bridge_reuse_rate": {
+      "current": 95.0,
+      "average": 95.0,
+      "min": 95.0,
+      "max": 95.0,
+      "trend": "stable"
+    },
+    "memory_consultation_speed": {
+      "current": 250.0,
+      "average": 126.25,
+      "min": 2.5,
+      "max": 250.0,
+      "trend": "stable"
+    },
+    "embedding_service_time": {
+      "current": 600.0,
+      "average": 390.0,
+      "min": 180.0,
+      "max": 600.0,
+      "trend": "stable"
+    }
+  },
+  "alert_counts": {
+    "total": 2,
+    "critical": 2,
+    "warning": 0,
+    "low": 0
+  },
+  "recent_alerts": [
+    {
+      "timestamp": "2025-06-10T15:58:06.753960",
+      "alert_type": "threshold",
+      "severity": "high",
+      "component": "memory_coordinator",
+      "message": "memory_consultation_speed exceeded critical threshold: 250.0ms",
+      "metric_value": 250.0,
+      "threshold_value": 500
+    },
+    {
+      "timestamp": "2025-06-10T15:58:06.754174",
+      "alert_type": "threshold",
+      "severity": "high",
+      "component": "embedding_service",
+      "message": "embedding_service_time exceeded critical threshold: 600.0ms",
+      "metric_value": 600.0,
+      "threshold_value": 500
+    }
+  ],
+  "baselines": {
+    "bridge_reuse_rate": {
+      "target": 85,
+      "warning": 70,
+      "critical": 50
+    },
+    "api_reduction_rate": {
+      "target": 25,
+      "warning": 20,
+      "critical": 15
+    },
+    "memory_consultation_speed": {
+      "target": 100,
+      "warning": 200,
+      "critical": 500
+    },
+    "crosscheck_analysis_time": {
+      "target": 50,
+      "warning": 100,
+      "critical": 200
+    },
+    "ecl_pipeline_performance": {
+      "target": 100,
+      "warning": 200,
+      "critical": 400
+    },
+    "embedding_service_time": {
+      "target": 200,
+      "warning": 300,
+      "critical": 500
+    },
+    "knowledge_graph_time": {
+      "target": 100,
+      "warning": 150,
+      "critical": 300
+    },
+    "success_rate": {
+      "target": 90,
+      "warning": 80,
+      "critical": 70
+    },
+    "error_rate": {
+      "target": 5,
+      "warning": 10,
+      "critical": 20
+    }
+  },
+  "monitoring_config": {
+    "metrics_tracked": 9,
+    "update_interval": "10s",
+    "retention_period": "100 entries per metric"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "pattern_1749302951894_182b88",
+  "sessionId": "session_1749302918771_9f3265c2",
+  "timestamp": 1749302951894,
+  "project": "neonpro",
+  "taskType": "optimization",
+  "complexity": 9,
+  "duration": 5002,
+  "approvalPhrase": "YARRR!",
+  "sequentialTasks": 1,
+  "filesModified": 4,
+  "commandsExecuted": 2,
+  "userInterventions": 0,
+  "success": false,
+  "errorTypes": [
+    "build_error",
+    "dependency_issue"
+  ],
+  "techStack": [
+    "Next.js 14",
+    "Webpack",
+    "Performance"
+  ],
+  "autonomousDecisions": [
+    "auto_approve_file_changes",
+    "select_non_interactive_flags"
+  ]
+}

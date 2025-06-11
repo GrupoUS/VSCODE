@@ -1,0 +1,195 @@
+{
+  "version": "3.0.0",
+  "name": "AUGMENT Performance Optimization System - Integrated",
+  "description": "GRUPO US VIBECODE SYSTEM V2.0 - Unified with intelligent model routing",
+  
+  "interface": {
+    "showModelSelection": true,
+    "showMaxMode": true,
+    "showAgentControls": true,
+    "useDirectTools": true,
+    "legacyMode": true
+  },
+  
+  "modelRouter": {
+    "enabled": true,
+    "configSource": "augment-interface-config.json",
+    "dailyBudget": 10.0,
+    "intelligentSelection": true,
+    "costOptimization": true,
+    "fallbackToLocal": true,
+    "interfaceControls": true,
+    "agentModelMapping": {
+      "augment-agent": {
+        "preferredModel": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "fallbackModel": "anthropic/claude-sonnet-4",
+        "complexityThreshold": 5
+      },
+      "taskmaster": {
+        "preferredModel": "google/gemini-2.5-pro-preview-05-06",
+        "fallbackModel": "anthropic/claude-sonnet-4",
+        "complexityThreshold": 7,
+        "autoActivateComplexity": 7
+      },
+      "playwright-agent": {
+        "preferredModel": "anthropic/claude-sonnet-4",
+        "fallbackModel": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "complexityThreshold": 5,
+        "keywords": ["automation", "test", "browser", "ui", "interaction"]
+      },
+      "figma-agent": {
+        "preferredModel": "anthropic/claude-sonnet-4",
+        "fallbackModel": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "complexityThreshold": 4,
+        "keywords": ["design", "component", "figma", "ui", "visual"]
+      },
+      "stripe-agent": {
+        "preferredModel": "anthropic/claude-sonnet-4",
+        "fallbackModel": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "complexityThreshold": 6,
+        "keywords": ["payment", "stripe", "financial", "transaction"]
+      }
+    }
+  },
+
+  "mcpServerMapping": {
+    "standardizedNames": {
+      "taskmaster-ai": "taskmaster-ai",
+      "playwright-mcp": "github.com/executeautomation/mcp-playwright",
+      "figma-developer-mcp": "figma-developer-mcp",
+      "stripe-agent-toolkit": "stripe-agent-toolkit",
+      "sequential-thinking": "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "github-mcp": "github.com/modelcontextprotocol/servers/tree/main/src/github",
+      "supabase-mcp": "github.com/supabase-community/supabase-mcp",
+      "gitlab-mcp": "gitlab-mcp"
+    },
+    "agentServerMapping": {
+      "taskmaster": ["taskmaster-ai", "sequential-thinking"],
+      "playwright-agent": ["playwright-mcp", "github-mcp"],
+      "figma-agent": ["figma-developer-mcp"],
+      "stripe-agent": ["stripe-agent-toolkit"],
+      "augment-agent": ["github-mcp", "supabase-mcp", "sequential-thinking"]
+    }
+  },
+
+  "batchProcessing": {
+    "enabled": true,
+    "agentSpecific": {
+      "playwright-agent": {
+        "batchSize": 5,
+        "waitTime": 1000,
+        "operations": ["screenshot", "navigation", "form_fill", "element_interaction"]
+      },
+      "figma-agent": {
+        "batchSize": 3,
+        "waitTime": 2000,
+        "operations": ["component_generation", "asset_export", "design_analysis"]
+      },
+      "stripe-agent": {
+        "batchSize": 4,
+        "waitTime": 1500,
+        "operations": ["payment_processing", "webhook_handling", "financial_analysis"]
+      },
+      "taskmaster": {
+        "batchSize": 10,
+        "waitTime": 500,
+        "operations": ["task_creation", "status_updates", "reporting"]
+      }
+    }
+  },
+
+  "intelligentCaching": {
+    "enabled": true,
+    "agentSpecific": {
+      "figma-agent": {
+        "cacheDesignTokens": true,
+        "cacheComponents": true,
+        "cacheDuration": 3600000
+      },
+      "playwright-agent": {
+        "cacheSelectors": true,
+        "cachePageStructures": true,
+        "cacheDuration": 1800000
+      },
+      "stripe-agent": {
+        "cacheProductData": true,
+        "cachePriceData": true,
+        "cacheDuration": 2700000
+      },
+      "taskmaster": {
+        "cacheTaskTemplates": true,
+        "cacheWorkflows": true,
+        "cacheDuration": 7200000
+      }
+    }
+  },
+  
+  "contextManagement": {
+    "enabled": true,
+    "unifiedStrategy": true,
+    "agentSpecific": {
+      "taskmaster": {
+        "maxTokens": 100000,
+        "compressionThreshold": 0.8,
+        "archiveToMemoryBank": true
+      },
+      "playwright-agent": {
+        "maxTokens": 50000,
+        "compressionThreshold": 0.7,
+        "archiveToMemoryBank": false
+      },
+      "figma-agent": {
+        "maxTokens": 75000,
+        "compressionThreshold": 0.75,
+        "archiveToMemoryBank": true
+      },
+      "stripe-agent": {
+        "maxTokens": 60000,
+        "compressionThreshold": 0.7,
+        "archiveToMemoryBank": true
+      }
+    },
+    "memoryBankIntegration": {
+      "enabled": true,
+      "autoArchive": true,
+      "compressionRatio": 0.3,
+      "preserveImportantContext": true
+    }
+  },
+
+  "performance": {
+    "targets": {
+      "apiCallsReduction": 60,
+      "responseTime": 2000,
+      "costPerFeature": 0.50,
+      "successRate": 85,
+      "errorRate": 5
+    },
+    "monitoring": {
+      "enabled": true,
+      "agentSpecific": true,
+      "realTimeMetrics": true,
+      "alertThresholds": {
+        "responseTime": 3000,
+        "errorRate": 10,
+        "budgetUsage": 80,
+        "agentSwitchFrequency": 15
+      }
+    }
+  },
+
+  "development": {
+    "debugMode": true,
+    "verboseLogging": true,
+    "testMode": false,
+    "mockData": false,
+    "performanceProfiling": true,
+    "legacyInterface": true,
+    "agentSwitchingDebug": true,
+    "mcpIntegrationDebug": true
+  }
+}
+
+
+
+

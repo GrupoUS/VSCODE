@@ -1,0 +1,171 @@
+{
+  "timestamp": "2025-06-05T16:37:21.818Z",
+  "summary": {
+    "passed": 31,
+    "failed": 0,
+    "warnings": 1,
+    "successRate": 97
+  },
+  "details": [
+    {
+      "name": "GitLab MCP Package",
+      "status": "PASS",
+      "message": "Globally installed"
+    },
+    {
+      "name": "GitLab MCP Server Config",
+      "status": "PASS",
+      "message": "Found in .vscode/mcp.json"
+    },
+    {
+      "name": "Environment Variables",
+      "status": "PASS",
+      "message": "All required variables configured"
+    },
+    {
+      "name": "GITLAB_PERSONAL_ACCESS_TOKEN",
+      "status": "PASS",
+      "message": "Defined in .env file"
+    },
+    {
+      "name": "GITLAB_API_URL",
+      "status": "PASS",
+      "message": "Defined in .env file"
+    },
+    {
+      "name": "GITLAB_READ_ONLY_MODE",
+      "status": "PASS",
+      "message": "Defined in .env file"
+    },
+    {
+      "name": "USE_GITLAB_WIKI",
+      "status": "PASS",
+      "message": "Defined in .env file"
+    },
+    {
+      "name": "USE_MILESTONE",
+      "status": "PASS",
+      "message": "Defined in .env file"
+    },
+    {
+      "name": "USE_PIPELINE",
+      "status": "PASS",
+      "message": "Defined in .env file"
+    },
+    {
+      "name": "GitHub Token",
+      "status": "PASS",
+      "message": "GitHub integration maintained"
+    },
+    {
+      "name": "gitlab-mcp-automation.md",
+      "status": "PASS",
+      "message": "Integration rules file exists"
+    },
+    {
+      "name": "gitlab-mcp-automation.md Content",
+      "status": "PASS",
+      "message": "Contains bilateral sync patterns"
+    },
+    {
+      "name": "taskmaster-gitlab-integration.md",
+      "status": "PASS",
+      "message": "Integration rules file exists"
+    },
+    {
+      "name": "taskmaster-gitlab-integration.md Content",
+      "status": "PASS",
+      "message": "Contains bilateral sync patterns"
+    },
+    {
+      "name": "gitlab-mcp-integration-analysis.md",
+      "status": "PASS",
+      "message": "Integration rules file exists"
+    },
+    {
+      "name": "gitlab-mcp-integration-analysis.md Content",
+      "status": "PASS",
+      "message": "Contains bilateral sync patterns"
+    },
+    {
+      "name": "TaskMaster CLI",
+      "status": "PASS",
+      "message": "Available and working"
+    },
+    {
+      "name": "TaskMaster-GitLab Rules",
+      "status": "WARN",
+      "message": "Integration triggers may need review"
+    },
+    {
+      "name": "Sequential Thinking GitLab",
+      "status": "PASS",
+      "message": "GitLab patterns included"
+    },
+    {
+      "name": "MCP Protocol Update",
+      "status": "PASS",
+      "message": "GitLab MCP included in protocol"
+    },
+    {
+      "name": "Safety: backup",
+      "status": "PASS",
+      "message": "Safety mechanism implemented"
+    },
+    {
+      "name": "Safety: rollback",
+      "status": "PASS",
+      "message": "Safety mechanism implemented"
+    },
+    {
+      "name": "Safety: conflict",
+      "status": "PASS",
+      "message": "Safety mechanism implemented"
+    },
+    {
+      "name": "Safety: validation",
+      "status": "PASS",
+      "message": "Safety mechanism implemented"
+    },
+    {
+      "name": "Safety: prompt_user",
+      "status": "PASS",
+      "message": "Safety mechanism implemented"
+    },
+    {
+      "name": "Documentation: gitlab-mcp-integration-analysis.md",
+      "status": "PASS",
+      "message": "Comprehensive documentation"
+    },
+    {
+      "name": "Documentation: gitlab-mcp-automation.md",
+      "status": "PASS",
+      "message": "Comprehensive documentation"
+    },
+    {
+      "name": "Documentation: taskmaster-gitlab-integration.md",
+      "status": "PASS",
+      "message": "Comprehensive documentation"
+    },
+    {
+      "name": "Documentation Completeness",
+      "status": "PASS",
+      "message": "All documentation files present and substantial"
+    },
+    {
+      "name": "Node.js Version",
+      "status": "PASS",
+      "message": "v22.16.0"
+    },
+    {
+      "name": "npm Version",
+      "status": "PASS",
+      "message": "11.4.1"
+    },
+    {
+      "name": "GitHub-GitLab Compatibility",
+      "status": "PASS",
+      "message": "Both GitHub and GitLab MCP configured"
+    }
+  ]
+}

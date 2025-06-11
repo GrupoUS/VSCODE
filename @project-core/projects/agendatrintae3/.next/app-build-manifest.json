@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-faefb1145bae7cb9.js",
+      "static/chunks/4bd1b696-a5c5f83270f96141.js",
+      "static/chunks/684-96bea1f91a4df005.js",
+      "static/chunks/main-app-9424ac29f83a6560.js",
+      "static/chunks/app/_not-found/page-c3b7a2487ec21c79.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-faefb1145bae7cb9.js",
+      "static/chunks/4bd1b696-a5c5f83270f96141.js",
+      "static/chunks/684-96bea1f91a4df005.js",
+      "static/chunks/main-app-9424ac29f83a6560.js",
+      "static/css/a4dd00a2337cc5a1.css",
+      "static/chunks/app/layout-e80cce9156acd9e1.js"
+    ],
+    "/paciente/page": [
+      "static/chunks/webpack-faefb1145bae7cb9.js",
+      "static/chunks/4bd1b696-a5c5f83270f96141.js",
+      "static/chunks/684-96bea1f91a4df005.js",
+      "static/chunks/main-app-9424ac29f83a6560.js",
+      "static/chunks/874-70467278f819ed47.js",
+      "static/chunks/app/paciente/page-5a3bd5e9cc40d0fd.js"
+    ],
+    "/admin/page": [
+      "static/chunks/webpack-faefb1145bae7cb9.js",
+      "static/chunks/4bd1b696-a5c5f83270f96141.js",
+      "static/chunks/684-96bea1f91a4df005.js",
+      "static/chunks/main-app-9424ac29f83a6560.js",
+      "static/chunks/874-70467278f819ed47.js",
+      "static/chunks/app/admin/page-c6b9ec828de071c3.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-faefb1145bae7cb9.js",
+      "static/chunks/4bd1b696-a5c5f83270f96141.js",
+      "static/chunks/684-96bea1f91a4df005.js",
+      "static/chunks/main-app-9424ac29f83a6560.js",
+      "static/chunks/874-70467278f819ed47.js",
+      "static/chunks/app/page-8f13c0858baf8478.js"
+    ]
+  }
+}

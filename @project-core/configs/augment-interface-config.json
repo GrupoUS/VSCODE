@@ -1,0 +1,375 @@
+{
+  "version": "3.0.0",
+  "name": "AUGMENT Interface Configuration with OpenRouter AI",
+  "description": "Intelligent automatic model switching for GRUPO US VIBECODE SYSTEM V2.0",
+  "lastUpdated": "2025-06-05",
+
+  "openRouter": {
+    "enabled": true,
+    "apiKey": "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",
+    "baseUrl": "https://openrouter.ai/api/v1",
+    "intelligentRouting": true,
+    "costOptimization": true,
+    "fallbackEnabled": true,
+    "usageTracking": true,
+    "maxRetries": 3,
+    "timeout": 30000
+  },
+  
+  "interface": {
+    "mode": "enhanced",
+    "showToolbar": true,
+    "showModelSelector": true,
+    "showMaxModeToggle": true,
+    "showAgentSelector": true,
+    "forceShowControls": true,
+    "enableAdvancedControls": true,
+    "defaultModel": "google/gemini-2.5-flash-preview-05-20:thinking",
+    "intelligentModelSwitching": true,
+    "autoModelSelection": true,
+    "defaultMaxMode": true,
+    "defaultAgent": "augment-agent",
+    "theme": "vibecode-dark",
+    "compactMode": false
+  },
+  
+  "toolbar": {
+    "position": "top",
+    "style": "enhanced",
+    "showLabels": true,
+    "showIcons": true,
+    "showTooltips": true,
+    "customButtons": [
+      {
+        "id": "taskmaster-quick",
+        "label": "TaskMaster",
+        "icon": "check-list",
+        "action": "activate-taskmaster"
+      },
+      {
+        "id": "performance-monitor",
+        "label": "Performance",
+        "icon": "chart",
+        "action": "show-performance"
+      }
+    ],
+    "quickActions": true,
+    "contextMenu": true
+  },
+  
+  "intelligentModelRouting": {
+    "enabled": true,
+    "taskAnalysis": {
+      "enabled": true,
+      "keywordDetection": true,
+      "complexityAnalysis": true,
+      "contextAnalysis": true,
+      "userIntentDetection": true
+    },
+    "models": {
+      "primary": {
+        "id": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "name": "Gemini 2.5 Flash Thinking",
+        "provider": "openrouter",
+        "useCases": ["general_tasks", "simple_queries", "basic_analysis", "file_operations"],
+        "complexityRange": [1, 4],
+        "keywords": ["help", "explain", "simple", "quick", "basic", "file", "read", "write"],
+        "cost": "low",
+        "speed": "fast",
+        "priority": 1
+      },
+      "coding": {
+        "id": "anthropic/claude-sonnet-4",
+        "name": "Claude Sonnet 4",
+        "provider": "openrouter",
+        "useCases": ["code_generation", "debugging", "programming", "technical_implementation"],
+        "complexityRange": [3, 8],
+        "keywords": ["code", "debug", "function", "class", "implement", "fix", "programming", "technical", "algorithm", "refactor", "optimize", "component", "react", "vue", "angular", "javascript", "typescript", "python", "java", "create", "build", "develop"],
+        "cost": "medium",
+        "speed": "medium",
+        "priority": 2
+      },
+      "strategic": {
+        "id": "google/gemini-2.5-pro-preview-05-06",
+        "name": "Gemini 2.5 Pro",
+        "provider": "openrouter",
+        "useCases": ["planning", "complex_reasoning", "strategic_thinking", "architecture"],
+        "complexityRange": [5, 10],
+        "keywords": ["plan", "strategy", "architecture", "design", "analyze", "complex", "workflow", "project", "organize", "structure"],
+        "cost": "high",
+        "speed": "slow",
+        "priority": 3
+      }
+    },
+    "fallbackChain": [
+      "google/gemini-2.5-flash-preview-05-20:thinking",
+      "anthropic/claude-sonnet-4",
+      "google/gemini-2.5-pro-preview-05-06",
+      "claude-3-sonnet",
+      "local-model"
+    ],
+    "selectionCriteria": {
+      "taskComplexity": 0.4,
+      "keywordMatch": 0.3,
+      "contextAnalysis": 0.2,
+      "costOptimization": 0.1
+    }
+  },
+
+  "modelSelector": {
+    "style": "enhanced-dropdown",
+    "showIcons": true,
+    "showDescriptions": true,
+    "showCostInfo": true,
+    "showPerformanceMetrics": true,
+    "showCurrentActive": true,
+    "showAutoSelection": true,
+    "groupByCapability": true,
+    "models": [
+      {
+        "id": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "name": "Gemini 2.5 Flash Thinking",
+        "description": "Primary model for general tasks and quick responses",
+        "icon": "zap",
+        "category": "primary",
+        "cost": "low",
+        "capability": "general",
+        "maxTokens": 32000,
+        "provider": "openrouter",
+        "recommended": ["general_tasks", "simple_queries", "basic_analysis", "file_operations"],
+        "default": true,
+        "autoSelect": true
+      },
+      {
+        "id": "anthropic/claude-sonnet-4",
+        "name": "Claude Sonnet 4",
+        "description": "Coding specialist for technical implementation",
+        "icon": "code",
+        "category": "coding",
+        "cost": "medium",
+        "capability": "advanced",
+        "maxTokens": 200000,
+        "provider": "openrouter",
+        "recommended": ["code_generation", "debugging", "programming", "technical_implementation"],
+        "autoSelect": true
+      },
+      {
+        "id": "google/gemini-2.5-pro-preview-05-06",
+        "name": "Gemini 2.5 Pro",
+        "description": "Strategic planner for complex reasoning and architecture",
+        "icon": "brain",
+        "category": "strategic",
+        "cost": "high",
+        "capability": "premium",
+        "maxTokens": 2000000,
+        "provider": "openrouter",
+        "recommended": ["planning", "complex_reasoning", "strategic_thinking", "architecture"],
+        "autoSelect": true
+      }
+    ]
+  },
+  
+  "agentSelector": {
+    "style": "enhanced-tabs",
+    "showIcons": true,
+    "showDescriptions": true,
+    "showStatus": true,
+    "allowMultipleActive": false,
+    "agents": [
+      {
+        "id": "augment-agent",
+        "name": "Augment Agent",
+        "description": "Agente padrão do Augment com capacidades completas",
+        "icon": "bot",
+        "category": "primary",
+        "capabilities": ["code_generation", "analysis", "debugging", "documentation"],
+        "default": true,
+        "mcpIntegration": true
+      },
+      {
+        "id": "taskmaster",
+        "name": "TaskMaster",
+        "description": "Agente especializado em gerenciamento de tarefas complexas",
+        "icon": "check-list",
+        "category": "specialized",
+        "capabilities": ["task_management", "project_planning", "workflow_automation"],
+        "autoActivateComplexity": 7,
+        "mcpIntegration": true,
+        "preferredModel": "google/gemini-2.5-pro-preview-05-06",
+        "fallbackModel": "anthropic/claude-sonnet-4",
+        "mcpServers": ["taskmaster-ai", "sequential-thinking"],
+        "keywords": ["plan", "task", "project", "organize", "workflow", "manage"]
+      },
+      {
+        "id": "playwright-agent",
+        "name": "Playwright Agent",
+        "description": "Agente para automação, testes e interação com browsers",
+        "icon": "browser",
+        "category": "automation",
+        "capabilities": ["browser_automation", "testing", "ui_interaction"],
+        "mcpIntegration": true,
+        "preferredModel": "anthropic/claude-sonnet-4",
+        "fallbackModel": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "mcpServers": ["github.com/executeautomation/mcp-playwright", "github-mcp"],
+        "keywords": ["automation", "test", "browser", "ui", "interaction", "screenshot", "navigate"]
+      },
+      {
+        "id": "figma-agent",
+        "name": "Figma Agent",
+        "description": "Agente para integração com Figma e design systems",
+        "icon": "design",
+        "category": "design",
+        "capabilities": ["figma_integration", "component_generation", "design_analysis"],
+        "mcpIntegration": true,
+        "preferredModel": "anthropic/claude-sonnet-4",
+        "fallbackModel": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "mcpServers": ["figma-developer-mcp"],
+        "keywords": ["design", "component", "figma", "ui", "visual", "interface", "prototype"]
+      },
+      {
+        "id": "stripe-agent",
+        "name": "Stripe Agent",
+        "description": "Agente para integração com Stripe e pagamentos",
+        "icon": "credit-card",
+        "category": "payments",
+        "capabilities": ["payment_processing", "stripe_integration", "financial_analysis"],
+        "mcpIntegration": true,
+        "preferredModel": "anthropic/claude-sonnet-4",
+        "fallbackModel": "google/gemini-2.5-flash-preview-05-20:thinking",
+        "mcpServers": ["stripe-agent-toolkit"],
+        "keywords": ["payment", "stripe", "financial", "transaction", "billing", "subscription"]
+      }
+    ]
+  },
+  
+  "maxMode": {
+    "toggleStyle": "enhanced-switch",
+    "label": "Modo Máximo",
+    "description": "Ativa todas as capacidades avançadas e otimizações",
+    "showStatus": true,
+    "features": {
+      "advancedReasoning": true,
+      "enhancedContext": true,
+      "performanceOptimization": true,
+      "mcpIntegration": true,
+      "sequentialThinking": true,
+      "batchProcessing": true,
+      "intelligentCaching": true
+    },
+    "autoActivateForComplexTasks": true,
+    "complexityThreshold": 7
+  },
+  
+  "performance": {
+    "showMetrics": true,
+    "showCostTracking": true,
+    "showResponseTimes": true,
+    "showModelUsage": true,
+    "showAutoSwitchingStats": true,
+    "realTimeMonitoring": true,
+    "alertThresholds": {
+      "responseTime": 3000,
+      "errorRate": 10,
+      "budgetUsage": 80,
+      "modelSwitchFrequency": 20
+    },
+    "costOptimization": {
+      "enabled": true,
+      "dailyBudget": 10.0,
+      "modelCostLimits": {
+        "google/gemini-2.5-flash-preview-05-20:thinking": 3.0,
+        "anthropic/claude-sonnet-4": 5.0,
+        "google/gemini-2.5-pro-preview-05-06": 2.0
+      },
+      "fallbackWhenBudgetExceeded": true
+    }
+  },
+  
+  "integration": {
+    "mcpServers": {
+      "enabled": true,
+      "autoConnect": true,
+      "showStatus": true,
+      "intelligentModelRouting": true,
+      "servers": [
+        "taskmaster-ai",
+        "github.com/executeautomation/mcp-playwright",
+        "figma-developer-mcp",
+        "stripe-agent-toolkit",
+        "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+        "github.com/modelcontextprotocol/servers/tree/main/src/github",
+        "github.com/supabase-community/supabase-mcp",
+        "gitlab-mcp"
+      ],
+      "serverAliases": {
+        "playwright-mcp": "github.com/executeautomation/mcp-playwright",
+        "sequential-thinking": "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+        "github-mcp": "github.com/modelcontextprotocol/servers/tree/main/src/github",
+        "supabase-mcp": "github.com/supabase-community/supabase-mcp"
+      }
+    },
+    "vibecodeSystem": {
+      "version": "2.0.0",
+      "enabled": true,
+      "optimizationLevel": "maximum",
+      "memoryBankIntegration": true,
+      "contextManagement": true,
+      "intelligentModelSwitching": true
+    },
+    "openRouterIntegration": {
+      "enabled": true,
+      "seamlessHandoff": true,
+      "contextPreservation": true,
+      "costTracking": true,
+      "usageAnalytics": true
+    }
+  },
+  
+  "accessibility": {
+    "highContrast": false,
+    "largeText": false,
+    "keyboardNavigation": true,
+    "screenReaderSupport": true
+  },
+  
+  "advanced": {
+    "debugMode": false,
+    "verboseLogging": false,
+    "experimentalFeatures": true,
+    "betaAccess": true,
+    "customCSS": "",
+    "customJS": "",
+    "modelSwitchingDebug": true,
+    "taskAnalysisLogging": true
+  },
+
+  "taskAnalysis": {
+    "enabled": true,
+    "realTimeAnalysis": true,
+    "contextWindow": 5,
+    "complexityFactors": {
+      "codeKeywords": ["function", "class", "import", "export", "async", "await", "interface", "type"],
+      "planningKeywords": ["plan", "strategy", "architecture", "design", "workflow", "organize"],
+      "technicalKeywords": ["debug", "fix", "optimize", "refactor", "implement", "algorithm"],
+      "complexityIndicators": ["complex", "advanced", "sophisticated", "comprehensive", "detailed"]
+    },
+    "learningEnabled": true,
+    "userFeedbackIntegration": true,
+    "adaptiveThresholds": true
+  },
+
+  "monitoring": {
+    "enabled": true,
+    "dashboardUrl": "/augment/dashboard",
+    "realTimeUpdates": true,
+    "exportReports": true,
+    "alertsEnabled": true,
+    "metrics": {
+      "modelUsageStats": true,
+      "switchingAccuracy": true,
+      "costEfficiency": true,
+      "responseQuality": true,
+      "userSatisfaction": true
+    }
+  }
+}

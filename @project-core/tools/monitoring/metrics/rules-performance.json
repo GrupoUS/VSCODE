@@ -1,0 +1,404 @@
+[
+  {
+    "type": "completion_rate",
+    "value": 92,
+    "context": {
+      "agent": "test",
+      "task": "monitoring_test"
+    },
+    "timestamp": "2025-06-06T18:07:24.333Z",
+    "agent": "test",
+    "task": "monitoring_test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "token_usage",
+    "value": 35000,
+    "context": {
+      "agent": "test",
+      "task": "monitoring_test"
+    },
+    "timestamp": "2025-06-06T18:07:24.334Z",
+    "agent": "test",
+    "task": "monitoring_test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "error_rate",
+    "value": 8,
+    "context": {
+      "agent": "test",
+      "task": "monitoring_test"
+    },
+    "timestamp": "2025-06-06T18:07:24.334Z",
+    "agent": "test",
+    "task": "monitoring_test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "loading_time",
+    "value": 1500,
+    "context": {
+      "agent": "test",
+      "task": "monitoring_test"
+    },
+    "timestamp": "2025-06-06T18:07:24.334Z",
+    "agent": "test",
+    "task": "monitoring_test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completion_rate",
+    "value": 92,
+    "context": {
+      "agent": "test",
+      "task": "monitoring_test"
+    },
+    "timestamp": "2025-06-06T18:07:44.766Z",
+    "agent": "test",
+    "task": "monitoring_test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "token_usage",
+    "value": 35000,
+    "context": {
+      "agent": "test",
+      "task": "monitoring_test"
+    },
+    "timestamp": "2025-06-06T18:07:44.767Z",
+    "agent": "test",
+    "task": "monitoring_test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "error_rate",
+    "value": 8,
+    "context": {
+      "agent": "test",
+      "task": "monitoring_test"
+    },
+    "timestamp": "2025-06-06T18:07:44.768Z",
+    "agent": "test",
+    "task": "monitoring_test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "loading_time",
+    "value": 1500,
+    "context": {
+      "agent": "test",
+      "task": "monitoring_test"
+    },
+    "timestamp": "2025-06-06T18:07:44.768Z",
+    "agent": "test",
+    "task": "monitoring_test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "session_start",
+    "value": 1,
+    "context": {
+      "agent": "validation-test",
+      "testType": "comprehensive"
+    },
+    "timestamp": "2025-06-06T18:14:25.584Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "loading_time",
+    "value": 4,
+    "context": {
+      "agent": "validation-test",
+      "task": "rule_loading_performance",
+      "rulesCount": 4
+    },
+    "timestamp": "2025-06-06T18:14:25.589Z",
+    "agent": "validation-test",
+    "task": "rule_loading_performance",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completion_rate",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "task": "Rule Loading Performance Test",
+      "complexity": 3,
+      "duration": 4
+    },
+    "timestamp": "2025-06-06T18:14:25.589Z",
+    "agent": "validation-test",
+    "task": "Rule Loading Performance Test",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completion_rate",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "task": "Agent Configuration Validation",
+      "complexity": 5,
+      "duration": 3
+    },
+    "timestamp": "2025-06-06T18:14:25.593Z",
+    "agent": "validation-test",
+    "task": "Agent Configuration Validation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completion_rate",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "task": "MCP Integration Validation",
+      "complexity": 7,
+      "duration": 4
+    },
+    "timestamp": "2025-06-06T18:14:25.598Z",
+    "agent": "validation-test",
+    "task": "MCP Integration Validation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "test_metric",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "task": "monitoring_validation"
+    },
+    "timestamp": "2025-06-06T18:14:25.599Z",
+    "agent": "validation-test",
+    "task": "monitoring_validation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completion_rate",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "task": "Monitoring System Validation",
+      "complexity": 4,
+      "duration": 2
+    },
+    "timestamp": "2025-06-06T18:14:25.600Z",
+    "agent": "validation-test",
+    "task": "Monitoring System Validation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completion_rate",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "task": "Feedback System Validation",
+      "complexity": 4,
+      "duration": 1
+    },
+    "timestamp": "2025-06-06T18:14:25.602Z",
+    "agent": "validation-test",
+    "task": "Feedback System Validation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completion_rate",
+    "value": 85,
+    "context": {
+      "agent": "validation-test",
+      "task": "real_development_simulation",
+      "complexity": 8
+    },
+    "timestamp": "2025-06-06T18:14:26.494Z",
+    "agent": "validation-test",
+    "task": "real_development_simulation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "token_usage",
+    "value": 45956,
+    "context": {
+      "agent": "validation-test",
+      "task": "real_development_simulation"
+    },
+    "timestamp": "2025-06-06T18:14:26.495Z",
+    "agent": "validation-test",
+    "task": "real_development_simulation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "error_rate",
+    "value": 12.5,
+    "context": {
+      "agent": "validation-test",
+      "task": "real_development_simulation"
+    },
+    "timestamp": "2025-06-06T18:14:26.495Z",
+    "agent": "validation-test",
+    "task": "real_development_simulation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completion_rate",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "task": "Real Development Task Simulation",
+      "complexity": 8,
+      "duration": 893
+    },
+    "timestamp": "2025-06-06T18:14:26.496Z",
+    "agent": "validation-test",
+    "task": "Real Development Task Simulation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "token_usage",
+    "value": 45956,
+    "context": {
+      "agent": "validation-test",
+      "task": "Real Development Task Simulation",
+      "complexity": 8
+    },
+    "timestamp": "2025-06-06T18:14:26.497Z",
+    "agent": "validation-test",
+    "task": "Real Development Task Simulation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "error_rate",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "task": "Real Development Task Simulation",
+      "errors": 1
+    },
+    "timestamp": "2025-06-06T18:14:26.497Z",
+    "agent": "validation-test",
+    "task": "Real Development Task Simulation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "system_validation",
+    "value": 91.66666666666666,
+    "context": {
+      "agent": "validation-test",
+      "task": "comprehensive_validation",
+      "totalTests": 24,
+      "duration": -1749233665582
+    },
+    "timestamp": "2025-06-06T18:14:26.499Z",
+    "agent": "validation-test",
+    "task": "comprehensive_validation",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "duration",
+    "value": 916,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.499Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completionRate",
+    "value": 100,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.500Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "avgTokensPerTask",
+    "value": 7659.333333333333,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.500Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "errorRate",
+    "value": 16.666666666666664,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.501Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "avgLoadingTime",
+    "value": 0,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.501Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "totalTasks",
+    "value": 6,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.502Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "completedTasks",
+    "value": 6,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.502Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "failedTasks",
+    "value": 0,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.502Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  },
+  {
+    "type": "totalErrors",
+    "value": 1,
+    "context": {
+      "agent": "validation-test",
+      "sessionType": "complete"
+    },
+    "timestamp": "2025-06-06T18:14:26.503Z",
+    "agent": "validation-test",
+    "task": "unknown",
+    "ruleSet": "project-core"
+  }
+]

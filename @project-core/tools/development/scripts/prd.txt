@@ -1,0 +1,69 @@
+<context>
+# Overview  
+Sistema de Auditoria e Otimização Arquitetural do PROJECT-CORE - Uma ferramenta abrangente para verificar a integridade da arquitetura de pastas, consolidar regras, eliminar redundâncias e garantir que todos os componentes do sistema (regras, tools, workflows) estejam corretamente interligados e otimizados para performance e clareza.
+
+# Core Features  
+1. **Verificação de Integridade Estrutural**: Rastrear todas as referências entre arquivos, confirmar que não existem caminhos quebrados, identificar conteúdo nulo e localizar arquivos duplicados ou redundantes.
+
+2. **Consolidação de Configurações Críticas**: Verificar e centralizar configurações do servidor MCP em um único arquivo mestre com redirecionamentos apropriados.
+
+3. **Otimização Profunda de Regras**: Analisar conteúdo de todas as regras para identificar sobreposições, avaliar relevância, e reescrever regras complexas para melhor performance.
+
+4. **Expansão de Templates**: Analisar estrutura dos templates e determinar viabilidade para expansão para novas stacks tecnológicas.
+
+# User Experience  
+- **Persona Principal**: Arquiteto de Software Full-Stack especialista em Laravel/Livewire e Next.js/React/Supabase
+- **Fluxo Principal**: Auditoria → Análise → Otimização → Validação → Documentação
+- **Interface**: Comandos TaskMaster integrados com relatórios detalhados e ações corretivas automatizadas
+</context>
+<PRD>
+# Technical Architecture  
+- **Sistema Base**: TaskMaster MCP Integration com VS Code/Cursor
+- **Componentes Principais**:
+  - Módulo de Verificação de Integridade (@project-core/tools/integrity-checker)
+  - Sistema de Consolidação de Regras (@project-core/tools/rules-optimizer)
+  - Analisador de Templates (@project-core/tools/template-analyzer)
+  - Gerador de Relatórios (@project-core/tools/audit-reporter)
+
+# Development Roadmap  
+
+## Phase 1: Infrastructure Setup
+- Criar estrutura de ferramentas de auditoria
+- Implementar verificador de integridade básico
+- Configurar sistema de logging e relatórios
+
+## Phase 2: Core Audit Features
+- Implementar verificação de links quebrados
+- Desenvolver detector de arquivos duplicados/vazios
+- Criar analisador de redundância de regras
+
+## Phase 3: Optimization Engine
+- Implementar consolidador de configurações MCP
+- Desenvolver otimizador de regras com análise de sobreposição
+- Criar sistema de reescrita automática de regras
+
+## Phase 4: Template Expansion System
+- Analisar estrutura atual de templates
+- Implementar sistema de expansão para novas stacks
+- Criar templates para Vue.js, Svelte, Django
+
+# Logical Dependency Chain
+1. **Foundation**: Verificação de integridade estrutural (crítico para tudo)
+2. **Analysis**: Detecção de redundâncias e problemas (depende da verificação)
+3. **Optimization**: Consolidação e otimização (depende da análise)
+4. **Expansion**: Sistema de templates (independente, pode ser paralelo)
+5. **Validation**: Testes e validação final (depende de todas as fases)
+
+# Risks and Mitigations  
+- **Risco**: Quebra de referências durante consolidação
+  - **Mitigação**: Backup automático e validação incremental
+- **Risco**: Perda de configurações críticas
+  - **Mitigação**: Sistema de versionamento e rollback
+- **Risco**: Conflitos entre regras otimizadas
+  - **Mitigação**: Testes automatizados e validação semântica
+
+# Appendix  
+- **Ferramentas Necessárias**: TaskMaster, PowerShell, Node.js
+- **Padrões de Qualidade**: ≥8/10 confidence level, 100% validation success
+- **Métricas de Sucesso**: Zero links quebrados, <15% redundância, performance otimizada
+</PRD>

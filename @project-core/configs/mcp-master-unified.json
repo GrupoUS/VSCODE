@@ -1,13 +1,27 @@
 {
   "metadata": {
     "name": "GRUPO US VIBECODE SYSTEM V4.0 - Master Unified MCP Configuration",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "description": "Centralized MCP configuration for VS Code/Augment and Cursor unified environment",
-    "lastUpdated": "2025-01-27T15:30:00Z",
+    "lastUpdated": "2024-03-19T15:30:00Z",
     "author": "GRUPO US - VIBECODE SYSTEM",
     "environment": "unified-cross-environment",
     "syncRequired": true,
-    "complianceLevel": "mandatory"
+    "complianceLevel": "mandatory",
+    "enhancedFeatures": [
+      "sequential-thinking-integration",
+      "advanced-frontend-reasoning",
+      "cross-environment-coordination",
+      "unified-memory-integration"
+    ],
+    "mcpServers": {
+      "total": 5,
+      "reasoning": ["sequential-thinking"],
+      "coordination": ["mcp-shrimp-task-manager"],
+      "design": ["figma-context-mcp"],
+      "testing": ["playwright-mcp"],
+      "research": ["tavily-mcp"]
+    }
   },
   "mcpServers": {
     "think-mcp-server": {
@@ -216,20 +230,63 @@
       "cursor": {
         "enabled": true,
         "configPath": ".cursor/mcp.json",
-        "syncSource": "@project-core/configs/ide/cursor/mcp.json",
+        "syncSource": "@project-core/configs/mcp-master-unified.json",
         "servers": [
+          "sequential-thinking",
           "mcp-shrimp-task-manager",
-          "figma-mcp",
+          "figma-context-mcp",
           "playwright-mcp",
           "tavily-mcp"
-        ]
+        ],
+        "cursorSpecificConfig": {
+          "composerMode": {
+            "mcpIntegration": true,
+            "multiFileEditing": true,
+            "contextAwareness": "enhanced",
+            "memoryBankIntegration": "@project-core/memory/",
+            "sequentialThinkingSupport": true,
+            "complexTaskDecomposition": true
+          },
+          "chatMode": {
+            "mcpToolsAccess": true,
+            "debuggingSupport": true,
+            "realTimeFeedback": true,
+            "vsCodeContextSharing": true,
+            "sequentialReasoningMode": true,
+            "structuredProblemSolving": true
+          },
+          "frontendSpecialization": {
+            "uiComponentFocus": true,
+            "responsiveDesignPriority": true,
+            "accessibilityChecks": true,
+            "performanceOptimization": true,
+            "designSystemThinking": true,
+            "componentArchitectureReasoning": true
+          },
+          "sequentialThinkingIntegration": {
+            "enabled": true,
+            "complexityThreshold": 5,
+            "autoActivateForComplexTasks": true,
+            "frontendOptimized": true,
+            "uiReasoningFocus": true,
+            "designSystemAnalysis": true,
+            "componentDecomposition": true
+          }
+        }
       }
     },
     "synchronization": {
       "automatic": true,
       "frequency": "real-time",
       "validation": "mandatory",
-      "enforcement": "strict"
+      "enforcement": "strict",
+      "cursorSync": {
+        "enabled": true,
+        "memoryBankSharing": true,
+        "configSynchronization": true,
+        "handoffProtocols": true,
+        "crossEnvironmentLearning": true
+      }
     }
   },
   "augmentIntegration": {
@@ -244,6 +301,38 @@
       "automatic": true,
       "healthCheck": true,
       "autoRestart": true
+    }
+  },
+  "workflowIntegration": {
+    "frontendWorkflows": {
+      "complexFrontendTasks": [
+        "sequential-thinking",
+        "mcp-shrimp-task-manager",
+        "figma-context-mcp"
+      ],
+      "componentDevelopment": [
+        "sequential-thinking",
+        "figma-context-mcp",
+        "mcp-shrimp-task-manager",
+        "playwright-mcp"
+      ],
+      "uiImplementation": [
+        "mcp-shrimp-task-manager",
+        "figma-context-mcp",
+        "sequential-thinking"
+      ],
+      "visualTesting": ["playwright-mcp", "mcp-shrimp-task-manager"],
+      "research": ["tavily-mcp", "mcp-shrimp-task-manager"],
+      "designSystemPlanning": [
+        "sequential-thinking",
+        "figma-context-mcp",
+        "tavily-mcp"
+      ],
+      "frontendArchitecture": [
+        "sequential-thinking",
+        "mcp-shrimp-task-manager",
+        "tavily-mcp"
+      ]
     }
   }
 }

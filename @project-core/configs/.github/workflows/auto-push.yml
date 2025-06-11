@@ -1,0 +1,30 @@
+name: Auto Push All Projects
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    # Executa todo dia às 02:00 UTC (23:00 BRT)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  auto-push:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Configure Git
+      run: |
+        git config --global user.name "Mauricio"
+        git config --global user.email "msm.jur@gmail.com"
+    
+    - name: Auto commit and push
+      run: |
+        git add .
+        git diff --staged --quiet || git commit -m "Auto-update $(date +'%Y-%m-%d %H:%M:%S')"
+        git push origin main

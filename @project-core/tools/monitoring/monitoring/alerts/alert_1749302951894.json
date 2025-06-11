@@ -1,0 +1,6 @@
+{
+  "type": "ERROR_RATE_HIGH",
+  "message": "Error rate 20.0% above target 5%",
+  "severity": "critical",
+  "timestamp": "2025-06-07T13:29:11.894Z"
+}

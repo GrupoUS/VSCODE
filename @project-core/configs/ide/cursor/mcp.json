@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "name": "GRUPO US VIBECODE SYSTEM V4.0 - Cursor MCP Configuration Enhanced",
+    "version": "4.0.1",
+    "description": "Unified MCP configuration for Cursor AI - Frontend & UI Specialist with Sequential Thinking",
+    "lastUpdated": "2025-01-27T15:00:00Z",
+    "author": "GRUPO US - VIBECODE SYSTEM",
+    "environment": "cursor-frontend-specialist",
+    "syncWith": "vscode-augment",
+    "complianceLevel": "mandatory",
+    "enhancedFeatures": [
+      "sequential-thinking-integration",
+      "advanced-frontend-reasoning",
+      "cross-environment-coordination",
+      "unified-memory-integration"
+    ],
+    "mcpServers": {
+      "total": 5,
+      "reasoning": ["sequential-thinking"],
+      "coordination": ["mcp-shrimp-task-manager"],
+      "design": ["figma-mcp"],
+      "testing": ["playwright-mcp"],
+      "research": ["tavily-mcp"]
+    }
+  },
+  "mcpServers": {
+    "sequential-thinking": {
+      "priority": 1,
+      "command": "npx",
+      "name": "Sequential Thinking MCP - Cursor Integration V4.0",
+      "description": "Advanced reasoning and problem decomposition for complex frontend tasks (≥5 complexity)",
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info",
+        "CURSOR_INTEGRATION": "true",
+        "FRONTEND_FOCUS": "true",
+        "MEMORY_BANK_PATH": "@project-core/memory",
+        "UNIFIED_SYSTEM": "true",
+        "CROSS_ENVIRONMENT": "true"
+      },
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true,
+      "capabilities": [
+        "problem-decomposition",
+        "structured-analysis",
+        "context-preservation",
+        "multi-phase-coordination",
+        "frontend-reasoning",
+        "ui-problem-solving",
+        "component-analysis",
+        "design-system-thinking"
+      ],
+      "integration": {
+        "workspace": "@project-core",
+        "rulesPath": "@project-core/rules",
+        "memoryPath": "@project-core/memory",
+        "masterRule": "@project-core/memory/master_rule.md",
+        "unifiedConfig": "@project-core/configs/ide/shared/unified-config.json"
+      },
+      "environments": ["cursor"],
+      "complexityRange": [5, 8],
+      "autoActivate": [
+        "complex_frontend_tasks",
+        "ui_architecture_decisions",
+        "component_design_analysis",
+        "frontend_problem_solving",
+        "design_system_planning"
+      ],
+      "cursorSpecific": {
+        "composerIntegration": true,
+        "chatModeSupport": true,
+        "frontendOptimized": true,
+        "uiReasoningFocus": true
+      }
+    },
+    "mcp-shrimp-task-manager": {
+      "priority": 2,
+      "command": "npx",
+      "name": "MCP Shrimp Task Manager - Cursor Integration",
+      "description": "Task coordination and workflow management for Cursor environment",
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info",
+        "CURSOR_INTEGRATION": "true",
+        "VSCODE_SYNC": "enabled",
+        "MEMORY_BANK_PATH": "@project-core/memory",
+        "UNIFIED_CONFIG": "true"
+      },
+      "args": [
+        "-y",
+        "mcp-shrimp-task-manager",
+        "--cursor-mode",
+        "--frontend-focus"
+      ],
+      "enabled": true,
+      "capabilities": [
+        "task-management",
+        "workflow-coordination",
+        "frontend-task-specialization",
+        "cursor-composer-integration",
+        "vscode-handoff-protocols"
+      ],
+      "integration": {
+        "workspace": "@project-core",
+        "rulesPath": "@project-core/rules",
+        "memoryPath": "@project-core/memory",
+        "cursorRules": "@project-core/configs/ide/cursor/.cursorrules",
+        "vscodeSyncPath": "@project-core/configs/ide/vscode/settings.json"
+      },
+      "autoActivate": [
+        "task_coordination",
+        "frontend_workflow",
+        "ui_development",
+        "component_creation"
+      ]
+    },
+    "figma-mcp": {
+      "priority": 3,
+      "command": "npx",
+      "name": "Figma MCP - Design to Code Integration",
+      "description": "Design-to-code generation and asset extraction for UI development",
+      "env": {
+        "NODE_ENV": "production",
+        "FIGMA_ACCESS_TOKEN": "${FIGMA_ACCESS_TOKEN}",
+        "CURSOR_INTEGRATION": "true",
+        "UI_FOCUS": "true"
+      },
+      "args": ["-y", "figma-mcp-server", "--cursor-optimized"],
+      "enabled": true,
+      "capabilities": [
+        "design-to-code",
+        "asset-extraction",
+        "component-generation",
+        "design-system-integration",
+        "responsive-design-conversion"
+      ],
+      "autoActivate": [
+        "ui_development",
+        "component_creation",
+        "design_implementation",
+        "asset_processing"
+      ],
+      "cursorSpecific": {
+        "composerIntegration": true,
+        "multiFileGeneration": true,
+        "componentScaffolding": true
+      }
+    },
+    "playwright-mcp": {
+      "priority": 4,
+      "command": "npx",
+      "name": "Playwright MCP - Visual Testing & Automation",
+      "description": "Visual testing and E2E automation for frontend validation",
+      "env": {
+        "NODE_ENV": "production",
+        "PLAYWRIGHT_BROWSERS_PATH": "0",
+        "CURSOR_INTEGRATION": "true",
+        "VISUAL_TESTING": "enabled"
+      },
+      "args": [
+        "-y",
+        "playwright-mcp-server",
+        "--visual-mode",
+        "--cursor-integration"
+      ],
+      "enabled": true,
+      "capabilities": [
+        "visual-testing",
+        "e2e-automation",
+        "screenshot-comparison",
+        "accessibility-testing",
+        "performance-testing"
+      ],
+      "autoActivate": [
+        "visual_testing",
+        "e2e_testing",
+        "ui_validation",
+        "accessibility_check"
+      ],
+      "cursorSpecific": {
+        "visualDebugging": true,
+        "interactiveMode": true,
+        "realTimeFeedback": true
+      }
+    },
+    "tavily-mcp": {
+      "priority": 5,
+      "command": "npx",
+      "name": "Tavily MCP - Research & Documentation",
+      "description": "Web research and documentation for frontend best practices and UI patterns",
+      "env": {
+        "NODE_ENV": "production",
+        "TAVILY_API_KEY": "${TAVILY_API_KEY}",
+        "CURSOR_INTEGRATION": "true",
+        "FRONTEND_FOCUS": "true",
+        "RESEARCH_MODE": "frontend"
+      },
+      "args": ["-y", "@tavily-ai/tavily-mcp", "--frontend-research"],
+      "enabled": true,
+      "capabilities": [
+        "web-research",
+        "best-practices-lookup",
+        "documentation-search",
+        "frontend-patterns-research",
+        "ui-library-research",
+        "design-trends-analysis",
+        "accessibility-guidelines",
+        "performance-optimization-research"
+      ],
+      "autoActivate": [
+        "research_needed",
+        "best_practices_lookup",
+        "documentation_search",
+        "pattern_research",
+        "ui_inspiration",
+        "accessibility_research"
+      ],
+      "cursorSpecific": {
+        "researchIntegration": true,
+        "documentationSupport": true,
+        "patternDiscovery": true,
+        "frontendFocused": true
+      },
+      "integration": {
+        "workspace": "@project-core",
+        "memoryPath": "@project-core/memory",
+        "researchCache": "@project-core/memory/research-cache"
+      }
+    }
+  },
+  "cursorSpecificConfig": {
+    "composerMode": {
+      "mcpIntegration": true,
+      "multiFileEditing": true,
+      "contextAwareness": "enhanced",
+      "memoryBankIntegration": "@project-core/memory/",
+      "sequentialThinkingSupport": true,
+      "complexTaskDecomposition": true
+    },
+    "chatMode": {
+      "mcpToolsAccess": true,
+      "debuggingSupport": true,
+      "realTimeFeedback": true,
+      "vsCodeContextSharing": true,
+      "sequentialReasoningMode": true,
+      "structuredProblemSolving": true
+    },
+    "frontendSpecialization": {
+      "uiComponentFocus": true,
+      "responsiveDesignPriority": true,
+      "accessibilityChecks": true,
+      "performanceOptimization": true,
+      "designSystemThinking": true,
+      "componentArchitectureReasoning": true
+    },
+    "sequentialThinkingIntegration": {
+      "enabled": true,
+      "complexityThreshold": 5,
+      "autoActivateForComplexTasks": true,
+      "frontendOptimized": true,
+      "uiReasoningFocus": true,
+      "designSystemAnalysis": true,
+      "componentDecomposition": true
+    }
+  },
+  "unifiedIntegration": {
+    "vsCodeSync": {
+      "enabled": true,
+      "memoryBankSharing": true,
+      "configSynchronization": true,
+      "handoffProtocols": true,
+      "crossEnvironmentLearning": true
+    },
+    "memoryBankIntegration": {
+      "path": "@project-core/memory/",
+      "masterRule": "@project-core/memory/master_rule.md",
+      "selfCorrectionLog": "@project-core/memory/self_correction_log.md",
+      "globalStandards": "@project-core/memory/global-standards.md",
+      "sharedLearning": true
+    },
+    "complianceMonitoring": {
+      "configValidation": "continuous",
+      "ruleCompliance": "mandatory",
+      "syncVerification": "automatic",
+      "deviationCorrection": "forced"
+    }
+  },
+  "workflowIntegration": {
+    "frontendWorkflows": {
+      "complexFrontendTasks": [
+        "sequential-thinking",
+        "mcp-shrimp-task-manager",
+        "figma-mcp"
+      ],
+      "componentDevelopment": [
+        "sequential-thinking",
+        "figma-mcp",
+        "mcp-shrimp-task-manager",
+        "playwright-mcp"
+      ],
+      "uiImplementation": [
+        "mcp-shrimp-task-manager",
+        "figma-mcp",
+        "sequential-thinking"
+      ],
+      "visualTesting": ["playwright-mcp", "mcp-shrimp-task-manager"],
+      "research": ["tavily-mcp", "mcp-shrimp-task-manager"],
+      "designSystemPlanning": [
+        "sequential-thinking",
+        "figma-mcp",
+        "tavily-mcp"
+      ],
+      "frontendArchitecture": [
+        "sequential-thinking",
+        "mcp-shrimp-task-manager",
+        "tavily-mcp"
+      ]
+    },
+    "handoffWorkflows": {
+      "fromVSCode": {
+        "receiveArtifacts": [
+          "api-specifications",
+          "database-schemas",
+          "component-specs",
+          "integration-points"
+        ],
+        "validateInputs": [
+          "api-functionality",
+          "data-operations",
+          "design-patterns"
+        ]
+      },
+      "toVSCode": {
+        "deliverArtifacts": [
+          "ui-components",
+          "frontend-interfaces",
+          "integration-tests",
+          "component-documentation"
+        ],
+        "validateOutputs": [
+          "responsive-design",
+          "accessibility-compliance",
+          "performance-optimization"
+        ]
+      }
+    }
+  },
+  "qualityGates": {
+    "frontendQuality": {
+      "componentQuality": ">=95%",
+      "accessibilityScore": "100% WCAG 2.1 AA",
+      "performanceScore": ">=90 Lighthouse",
+      "responsiveDesign": "100% compliance"
+    },
+    "crossEnvironmentQuality": {
+      "vsCodeHandoffSuccess": ">=95%",
+      "memoryBankSync": "100%",
+      "configCompliance": "100%",
+      "learningIntegration": ">=90%"
+    }
+  },
+  "monitoring": {
+    "mcpServerHealth": {
+      "healthCheckInterval": 30,
+      "autoRestart": true,
+      "failureThreshold": 3,
+      "alerting": true
+    },
+    "performanceMetrics": {
+      "responseTime": "track",
+      "successRate": "track",
+      "resourceUsage": "monitor",
+      "cursorIntegrationMetrics": "detailed"
+    },
+    "complianceMetrics": {
+      "configDrift": "detect",
+      "ruleViolations": "alert",
+      "syncFailures": "immediate_correction",
+      "qualityGateFailures": "block_execution"
+    }
+  },
+  "emergencyProtocols": {
+    "configRestoration": {
+      "backupPath": "@project-core/backups/cursor-config/",
+      "autoRestore": true,
+      "validationRequired": true
+    },
+    "syncFailureRecovery": {
+      "forceSync": true,
+      "vsCodeCoordination": true,
+      "memoryBankRecovery": true
+    },
+    "complianceViolation": {
+      "immediateCorrection": true,
+      "alerting": "critical",
+      "executionBlock": true
+    }
+  },
+  "validation": {
+    "configIntegrity": "mandatory",
+    "mcpServerCompatibility": "verified",
+    "cursorIntegration": "tested",
+    "vsCodeSync": "validated",
+    "memoryBankAccess": "confirmed",
+    "complianceLevel": "100%"
+  }
+}
