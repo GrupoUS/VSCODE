@@ -4234,3 +4234,59 @@ git remote add origin https://github_pat_***@github.com/GrupoUS/aegiswallet.git
 - **Monitoramento Contínuo**: Score de 100% deve ser mantido em execuções futuras
 
 ---
+
+## 🐍 **PYTHON VIRTUAL ENVIRONMENT SETUP - 2025-01-27**
+
+### **Problema Identificado**
+
+- **Erro**: VS Code warning sobre pacotes Python instalados globalmente
+- **Causa**: Instalação de `psutil` no ambiente global em vez de virtual environment
+- **Risco**: Conflitos de dependências entre projetos
+
+### **Solução Implementada**
+
+1. **Virtual Environment Criado**: `@project-core/venv/`
+2. **VS Code Configurado**: Python interpreter apontando para venv
+3. **Script de Ativação**: `activate_venv.py` para automação
+4. **Dependências Isoladas**: Todas as dependências no ambiente virtual
+
+### **Comandos de Correção**
+
+```bash
+# Criar ambiente virtual
+python -m venv "@project-core/venv"
+
+# Ativar e instalar dependências
+"@project-core/venv/Scripts/activate" && pip install -r "@project-core/requirements.txt"
+
+# Configurar VS Code
+# Adicionar ao settings.json:
+"python.defaultInterpreterPath": "./@project-core/venv/Scripts/python.exe"
+
+# Testar solução
+python "@project-core/automation/tasks/activate_venv.py"
+```
+
+### **Prevenção Futura**
+
+- ✅ **Sempre usar ambiente virtual** para projetos Python
+- ✅ **Script de ativação automática** criado
+- ✅ **VS Code configurado** para usar venv automaticamente
+- ✅ **Documentação atualizada** para novos desenvolvedores
+
+### **Arquivos Modificados**
+
+- `.vscode/settings.json` - Configuração Python
+- `@project-core/requirements.txt` - Dependência virtualenv
+- `@project-core/automation/tasks/activate_venv.py` - Script de ativação
+- `@project-core/activate_venv.ps1` - Script PowerShell
+- `@project-core/activate_venv.bat` - Script Batch
+
+### **Validação**
+
+- ✅ Ambiente virtual funcional
+- ✅ Scripts consolidados funcionando
+- ✅ Dependências isoladas
+- ✅ VS Code configurado corretamente
+
+---
