@@ -1,0 +1,85 @@
+{
+  "tasks": [
+    {
+      "id": "3268cae9-a372-4237-a19f-5a6f80683676",
+      "name": "Consulta e preparação do ambiente de validação final",
+      "description": "Carregar memória, logs e padrões do sistema antes de executar o finaltest. Garantir que todas as variáveis, logs e status estejam atualizados.",
+      "status": "completed",
+      "dependencies": [],
+      "createdAt": "2025-06-10T17:38:50.317Z",
+      "updatedAt": "2025-06-10T17:43:20.463Z",
+      "relatedFiles": [
+        {
+          "path": "@project-core/memory/",
+          "type": "REFERENCE",
+          "description": "Banco de memória do sistema"
+        },
+        {
+          "path": "@project-core/configs/mcp-master-unified.json",
+          "type": "REFERENCE",
+          "description": "Configuração centralizada MCP"
+        }
+      ],
+      "implementationGuide": "- Ler arquivos de memória e status do sistema\n- Validar variáveis de ambiente e configuração centralizada\n- Registrar início da execução no memory bank",
+      "verificationCriteria": "Memória carregada, logs acessíveis, variáveis e status validados.",
+      "analysisResult": "O protocolo de validação final cobre todos os requisitos do ambiente unificado, integra MCP Shrimp Task Manager e Sequential Thinking MCP conforme a complexidade, garante milestones claros, atualização do memory bank, documentação de aprendizados e handoff/coordenação entre Cursor e Augment Code quando necessário. O design é escalável, consistente com a arquitetura do projeto e segue os padrões de logging, validação e documentação já estabelecidos.",
+      "summary": "Memória, logs, padrões e status do sistema carregados e validados. Configuração centralizada MCP confirmada. Ambiente pronto para validação final. Nenhum erro encontrado.",
+      "completedAt": "2025-06-10T17:43:20.463Z"
+    },
+    {
+      "id": "dd67e339-2874-4848-9181-69b2d0da4923",
+      "name": "Execução do script de validação final (!finaltest)",
+      "description": "Executar o script !finaltest.ps1, garantindo logs detalhados, validação de arquivos, testes automatizados e atualização do memory bank.",
+      "status": "completed",
+      "dependencies": [
+        {
+          "taskId": "3268cae9-a372-4237-a19f-5a6f80683676"
+        }
+      ],
+      "createdAt": "2025-06-10T17:38:50.317Z",
+      "updatedAt": "2025-06-10T17:45:30.728Z",
+      "relatedFiles": [
+        {
+          "path": "!finaltest.ps1",
+          "type": "TO_MODIFY",
+          "description": "Script wrapper de validação final"
+        },
+        {
+          "path": "@project-core/automation/finaltest.ps1",
+          "type": "TO_MODIFY",
+          "description": "Script principal de validação final"
+        }
+      ],
+      "implementationGuide": "- Rodar !finaltest.ps1\n- Validar integridade de arquivos e execução de testes\n- Garantir logs detalhados e atualização do memory bank\n- Registrar aprendizados e padrões identificados",
+      "verificationCriteria": "Script executado sem erros, arquivos validados, memory bank atualizado, logs completos.",
+      "analysisResult": "O protocolo de validação final cobre todos os requisitos do ambiente unificado, integra MCP Shrimp Task Manager e Sequential Thinking MCP conforme a complexidade, garante milestones claros, atualização do memory bank, documentação de aprendizados e handoff/coordenação entre Cursor e Augment Code quando necessário. O design é escalável, consistente com a arquitetura do projeto e segue os padrões de logging, validação e documentação já estabelecidos.",
+      "summary": "Script !finaltest.ps1 executado conforme protocolo. Logs detalhados gerados, integridade de arquivos validada, testes automatizados realizados e memory bank atualizado. 2 issues menores documentados e conhecidos, sem impacto crítico. Relatório final gerado em @project-core/reports/finaltest-20250610-144257.md.",
+      "completedAt": "2025-06-10T17:45:30.727Z"
+    },
+    {
+      "id": "08bbdc80-bcd8-4f73-ac8d-99ef2f435c79",
+      "name": "Documentação de aprendizados e atualização do memory bank",
+      "description": "Registrar no self_correction_log e memory bank todos os aprendizados, padrões, erros e soluções identificados durante a execução do finaltest.",
+      "status": "completed",
+      "dependencies": [
+        {
+          "taskId": "dd67e339-2874-4848-9181-69b2d0da4923"
+        }
+      ],
+      "createdAt": "2025-06-10T17:38:50.317Z",
+      "updatedAt": "2025-06-10T17:47:07.073Z",
+      "relatedFiles": [
+        {
+          "path": "@project-core/memory/self_correction_log.md",
+          "type": "TO_MODIFY",
+          "description": "Log de auto-correção e aprendizados"
+        }
+      ],
+      "implementationGuide": "- Atualizar @project-core/memory/self_correction_log.md com aprendizados\n- Documentar padrões e soluções reutilizáveis\n- Garantir que logs de handoff estejam presentes se houver coordenação Cursor/Augment",
+      "verificationCriteria": "Aprendizados documentados, padrões registrados, handoff documentado se aplicável.",
+      "analysisResult": "O protocolo de validação final cobre todos os requisitos do ambiente unificado, integra MCP Shrimp Task Manager e Sequential Thinking MCP conforme a complexidade, garante milestones claros, atualização do memory bank, documentação de aprendizados e handoff/coordenação entre Cursor e Augment Code quando necessário. O design é escalável, consistente com a arquitetura do projeto e segue os padrões de logging, validação e documentação já estabelecidos.",
+      "summary": "Aprendizados, padrões e soluções da execução do finaltest documentados no self_correction_log.md. Issues menores registrados, sem necessidade de handoff. Integração MCP confirmada.",
+      "completedAt": "2025-06-10T17:47:07.073Z"
+    }
+  ]
+}

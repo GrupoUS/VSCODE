@@ -1,0 +1,16 @@
+{"timestamp": "2025-06-10T15:55:26.460870", "metric_name": "bridge_reuse_rate", "value": 100.0, "unit": "%", "component": "js_bridge", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:55:26.460916", "metric_name": "memory_consultation_speed", "value": 1.4, "unit": "ms", "component": "memory_coordinator", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:55:26.460928", "metric_name": "embedding_service_time", "value": 161.0, "unit": "ms", "component": "embedding_service", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:55:26.460934", "metric_name": "knowledge_graph_time", "value": 74.7, "unit": "ms", "component": "knowledge_graph", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:57:54.728156", "metric_name": "bridge_reuse_rate", "value": 95.0, "unit": "%", "component": "js_bridge", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:57:54.728194", "metric_name": "memory_consultation_speed", "value": 2.5, "unit": "ms", "component": "memory_coordinator", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:57:54.728206", "metric_name": "embedding_service_time", "value": 180.0, "unit": "ms", "component": "embedding_service", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:58:06.753910", "metric_name": "memory_consultation_speed", "value": 250.0, "unit": "ms", "component": "memory_coordinator", "status": "critical", "threshold_exceeded": true}
+{"timestamp": "2025-06-10T15:58:06.754162", "metric_name": "embedding_service_time", "value": 600.0, "unit": "ms", "component": "embedding_service", "status": "critical", "threshold_exceeded": true}
+{"timestamp": "2025-06-10T15:58:11.851041", "metric_name": "embedding_service_time", "value": 56.673526763916016, "unit": "ms", "component": "js_bridge", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:58:11.851060", "metric_name": "bridge_reuse_rate", "value": 100.0, "unit": "%", "component": "js_bridge", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:58:11.907536", "metric_name": "knowledge_graph_time", "value": 56.45155906677246, "unit": "ms", "component": "js_bridge", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:58:11.907565", "metric_name": "bridge_reuse_rate", "value": 100.0, "unit": "%", "component": "js_bridge", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:58:15.033185", "metric_name": "enhanced_memory_time", "value": 0.28705596923828125, "unit": "ms", "component": "js_bridge", "status": "normal", "threshold_exceeded": false}
+{"timestamp": "2025-06-10T15:58:15.033203", "metric_name": "bridge_reuse_rate", "value": 0.0, "unit": "%", "component": "js_bridge", "status": "critical", "threshold_exceeded": true}
+{"timestamp": "2025-06-10T15:58:15.034149", "metric_name": "memory_consultation_speed", "value": 1.4772415161132812, "unit": "ms", "component": "memory_coordinator", "status": "normal", "threshold_exceeded": false}

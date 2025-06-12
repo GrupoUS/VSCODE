@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-06-09T17:59:41.221Z",
+  "tests": [
+    {
+      "name": "DIRECTORY_STRUCTURE",
+      "passed": false,
+      "message": "4/8 required items found",
+      "type": "test",
+      "timestamp": "2025-06-09T17:59:41.227Z"
+    },
+    {
+      "name": "KNOWLEDGE_GRAPH_ENGINE",
+      "passed": true,
+      "message": "All knowledge graph tests passed",
+      "type": "test",
+      "timestamp": "2025-06-09T17:59:41.336Z"
+    },
+    {
+      "name": "SEMANTIC_SEARCH_ENGINE",
+      "passed": true,
+      "message": "All semantic search tests passed",
+      "type": "test",
+      "timestamp": "2025-06-09T17:59:41.670Z"
+    },
+    {
+      "name": "EXISTING_SYSTEM_INTEGRATION",
+      "passed": true,
+      "message": "8/8 existing components preserved",
+      "type": "test",
+      "timestamp": "2025-06-09T17:59:41.671Z"
+    },
+    {
+      "name": "PERFORMANCE_BENCHMARKS",
+      "passed": false,
+      "message": "Performance targets not met (avg: 4265.40ms/2000ms, max: 5372ms/5000ms)",
+      "type": "test",
+      "timestamp": "2025-06-09T18:00:03.070Z"
+    },
+    {
+      "name": "MEMORY_CONSULTATION_PROTOCOLS",
+      "passed": true,
+      "message": "Consultation protocols exist but may need optimization",
+      "type": "warning",
+      "timestamp": "2025-06-09T18:00:08.204Z"
+    },
+    {
+      "name": "MCP_INTEGRATION",
+      "passed": true,
+      "message": "MCP integration compatibility verified",
+      "type": "test",
+      "timestamp": "2025-06-09T18:00:08.206Z"
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "passed": 5,
+    "failed": 2,
+    "warnings": 0
+  },
+  "performance": {
+    "averageSearchTime": 4265.4,
+    "maxSearchTime": 5372,
+    "searchTimes": [
+      5328,
+      5372,
+      159,
+      5268,
+      5200
+    ]
+  },
+  "recommendations": [
+    "Run setup commands to create missing directories and files",
+    "Consider optimizing search algorithms or caching strategies",
+    "Remove remaining TaskMaster references from guidelines"
+  ],
+  "generatedAt": "2025-06-09T18:00:08.206Z",
+  "version": "5.0",
+  "system": "Cognee-Enhanced Memory System",
+  "overallStatus": "FAILED"
+}

@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "name": "GRUPO US VIBECODE SYSTEM V4.0 - VS Code/Augment MCP Configuration",
+    "version": "4.0.0",
+    "description": "Unified MCP configuration for VS Code + Augment - Backend & Architecture Specialist",
+    "lastUpdated": "2025-01-27T12:00:00Z",
+    "author": "GRUPO US - VIBECODE SYSTEM",
+    "environment": "vscode-augment-backend-specialist",
+    "syncWith": "cursor",
+    "complianceLevel": "mandatory",
+    "sourceConfig": "@project-core/configs/mcp-master-unified.json"
+  },
+  "mcpServers": {
+
+      "integration": {
+        "workspace": "@project-core",
+        "rulesPath": "@project-core/rules",
+        "memoryPath": "@project-core/memory",
+        "thoughtLogPath": "@project-core/memory/thought_log.md",
+        "cacheDir": "@project-core/memory/think-mcp-cache",
+        "masterRule": "@project-core/memory/master_rule.md",
+        "unifiedConfig": "@project-core/configs/ide/shared/unified-config.json"
+      },
+      "environments": ["vscode-augment"],
+      "complexityRange": [7, 10],
+      "augmentIntegration": {
+        "chatMode": true,
+        "nextEdit": true,
+        "instructions": true,
+        "completions": true,
+        "contextAware": true
+      }
+    },
+    "sequential-thinking": {
+      "priority": 2,
+      "command": "npx",
+      "name": "Sequential Thinking MCP - Unified V4.0",
+      "description": "Advanced reasoning and problem decomposition for complex tasks (≥7)",
+      "env": {
+        "NODE_ENV": "production",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "UNIFIED_SYSTEM": "true",
+        "MEMORY_BANK_PATH": "@project-core/memory",
+        "MASTER_RULE_PATH": "@project-core/memory/master_rule.md"
+      },
+      "args": [
+        "-y",
+        "--package=sequential-thinking-mcp",
+        "sequential-thinking-mcp"
+      ],
+      "enabled": true,
+      "capabilities": [
+        "problem-decomposition",
+        "structured-analysis",
+        "context-preservation",
+        "multi-phase-coordination",
+        "unified-memory-integration"
+      ],
+      "environments": ["vscode-augment"],
+      "complexityRange": [7, 10],
+      "autoActivate": "complexity >= 7",
+      "augmentIntegration": {
+        "architectMode": true,
+        "coderMode": true,
+        "complexRefactoring": true,
+        "systemDesign": true
+      }
+    },
+    "mcp-shrimp-task-manager": {
+      "priority": 3,
+      "command": "npx",
+      "name": "MCP Shrimp Task Manager - Unified V4.0",
+      "description": "Cross-environment task coordination and management with unified memory integration",
+      "env": {
+        "NODE_ENV": "production",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+        "UNIFIED_SYSTEM": "true",
+        "CROSS_ENVIRONMENT": "true",
+        "MEMORY_BANK_PATH": "@project-core/memory",
+        "VSCODE_SYNC": "enabled",
+        "CURSOR_SYNC": "enabled"
+      },
+      "args": ["-y", "mcp-shrimp-task-manager", "--unified-mode"],
+      "enabled": true,
+      "capabilities": [
+        "task-coordination",
+        "project-management",
+        "workflow-automation",
+        "cross-environment-handoff",
+        "unified-memory-integration",
+        "vscode-cursor-coordination"
+      ],
+      "environments": ["vscode-augment", "cursor"],
+      "complexityRange": [3, 10],
+      "integration": {
+        "vsCodeConfig": "@project-core/configs/ide/vscode/settings.json",
+        "cursorConfig": "@project-core/configs/ide/cursor/.cursorrules",
+        "memoryBank": "@project-core/memory/",
+        "handoffProtocols": "@project-core/rules/unified-development-environment-rules.md"
+      },
+      "augmentIntegration": {
+        "handoffManagement": true,
+        "taskCoordination": true,
+        "crossEnvironmentSync": true,
+        "memoryBankIntegration": true
+      }
+    }
+  },
+  "vsCodeSpecificConfig": {
+    "augmentIntegration": {
+      "enabled": true,
+      "configPath": "@project-core/configs/mcp-master-unified.json",
+      "autoStart": true,
+      "healthCheck": true,
+      "autoRestart": true,
+      "memoryIntegration": true
+    },
+    "chatMode": {
+      "mcpToolsAccess": true,
+      "contextAware": true,
+      "memoryBankIntegration": "@project-core/memory/",
+      "cursorContextSharing": true
+    },
+    "nextEdit": {
+      "mcpIntegration": true,
+      "sequentialThinkingSupport": true,
+      "complexityAssessment": true,
+      "memoryPatternMatching": true
+    },
+    "instructions": {
+      "mcpToolsAccess": true,
+      "ruleCompliance": true,
+      "memoryBankConsultation": true,
+      "crossEnvironmentAwareness": true
+    },
+    "backendSpecialization": {
+      "apiDevelopment": true,
+      "databaseOperations": true,
+      "systemArchitecture": true,
+      "complexRefactoring": true
+    }
+  },
+  "unifiedIntegration": {
+    "cursorSync": {
+      "enabled": true,
+      "memoryBankSharing": true,
+      "configSynchronization": true,
+      "handoffProtocols": true,
+      "crossEnvironmentLearning": true
+    },
+    "memoryBankIntegration": {
+      "path": "@project-core/memory/",
+      "masterRule": "@project-core/memory/master_rule.md",
+      "selfCorrectionLog": "@project-core/memory/self_correction_log.md",
+      "globalStandards": "@project-core/memory/global-standards.md",
+      "sharedLearning": true
+    },
+    "complianceMonitoring": {
+      "configValidation": "continuous",
+      "ruleCompliance": "mandatory",
+      "syncVerification": "automatic",
+      "deviationCorrection": "forced"
+    }
+  },
+  "workflowIntegration": {
+    "backendWorkflows": {
+      "architectureDesign": [
+        "think-mcp-server",
+        "sequential-thinking",
+        "mcp-shrimp-task-manager"
+      ],
+      "complexRefactoring": [
+        "sequential-thinking",
+        "think-mcp-server",
+        "mcp-shrimp-task-manager"
+      ],
+      "apiDevelopment": [
+        "mcp-shrimp-task-manager",
+        "think-mcp-server"
+      ],
+      "systemIntegration": [
+        "mcp-shrimp-task-manager",
+        "sequential-thinking"
+      ]
+    },
+    "handoffWorkflows": {
+      "toCursor": {
+        "deliverArtifacts": [
+          "api-specifications",
+          "database-schemas",
+          "component-specifications",
+          "integration-points",
+          "performance-requirements"
+        ],
+        "validateOutputs": [
+          "api-functionality",
+          "data-operations",
+          "design-patterns",
+          "performance-benchmarks"
+        ]
+      },
+      "fromCursor": {
+        "receiveArtifacts": [
+          "ui-components",
+          "frontend-interfaces",
+          "integration-tests",
+          "component-documentation",
+          "usability-feedback"
+        ],
+        "validateInputs": [
+          "responsive-design",
+          "accessibility-compliance",
+          "performance-optimization"
+        ]
+      }
+    }
+  },
+  "qualityGates": {
+    "backendQuality": {
+      "architectureCompliance": ">=95%",
+      "apiPerformance": ">=90%",
+      "codeComplexity": "<=7",
+      "refactoringSuccess": ">=95%"
+    },
+    "crossEnvironmentQuality": {
+      "cursorHandoffSuccess": ">=95%",
+      "memoryBankSync": "100%",
+      "configCompliance": "100%",
+      "learningIntegration": ">=90%"
+    }
+  },
+  "monitoring": {
+    "mcpServerHealth": {
+      "healthCheckInterval": 30,
+      "autoRestart": true,
+      "failureThreshold": 3,
+      "alerting": true
+    },
+    "augmentIntegration": {
+      "connectionStatus": "monitor",
+      "toolsAvailability": "track",
+      "performanceMetrics": "detailed",
+      "errorTracking": "comprehensive"
+    },
+    "complianceMetrics": {
+      "configDrift": "detect",
+      "ruleViolations": "alert",
+      "syncFailures": "immediate_correction",
+      "qualityGateFailures": "block_execution"
+    }
+  },
+  "emergencyProtocols": {
+    "configRestoration": {
+      "backupPath": "@project-core/backups/vscode-config/",
+      "autoRestore": true,
+      "validationRequired": true
+    },
+    "syncFailureRecovery": {
+      "forceSync": true,
+      "cursorCoordination": true,
+      "memoryBankRecovery": true
+    },
+    "augmentConnectionFailure": {
+      "autoReconnect": true,
+      "fallbackMode": true,
+      "alerting": "critical"
+    }
+  },
+  "validation": {
+    "configIntegrity": "mandatory",
+    "mcpServerCompatibility": "verified",
+    "augmentIntegration": "tested",
+    "cursorSync": "validated",
+    "memoryBankAccess": "confirmed",
+    "complianceLevel": "100%"
+  }
+}

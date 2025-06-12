@@ -1,0 +1,303 @@
+{
+  "metadata": {
+    "name": "GRUPO US VIBECODE SYSTEM V4.0 - Master Unified MCP Configuration",
+    "version": "4.0.1",
+    "description": "Centralized MCP configuration for VS Code/Augment and Cursor unified environment",
+    "lastUpdated": "2024-03-19T15:30:00Z",
+    "author": "GRUPO US - VIBECODE SYSTEM",
+    "environment": "unified-cross-environment",
+    "syncRequired": true,
+    "complianceLevel": "mandatory",
+    "enhancedFeatures": [
+      "sequential-thinking-integration",
+      "advanced-frontend-reasoning",
+      "cross-environment-coordination",
+      "unified-memory-integration"
+    ],
+    "mcpServers": {
+      "total": 5,
+      "reasoning": ["sequential-thinking"],
+      "coordination": ["mcp-shrimp-task-manager"],
+      "design": ["figma-context-mcp"],
+      "testing": ["playwright-mcp"],
+      "research": ["tavily-mcp"]
+    }
+  },
+  "mcpServers": {
+    "sequential-thinking": {
+      "priority": 2,
+      "command": "npx",
+      "name": "Sequential Thinking MCP - Unified V4.0",
+      "description": "Advanced reasoning and problem decomposition for complex tasks (≥7)",
+      "env": {
+        "NODE_ENV": "production",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "UNIFIED_SYSTEM": "true",
+        "MEMORY_BANK_PATH": "@project-core/memory",
+        "MASTER_RULE_PATH": "@project-core/memory/master_rule.md"
+      },
+      "args": [
+        "-y",
+        "--package=sequential-thinking-mcp",
+        "sequential-thinking-mcp"
+      ],
+      "enabled": true,
+      "capabilities": [
+        "problem-decomposition",
+        "structured-analysis",
+        "context-preservation",
+        "multi-phase-coordination",
+        "unified-memory-integration"
+      ],
+      "environments": ["vscode-augment"],
+      "complexityRange": [7, 10],
+      "autoActivate": "complexity >= 7"
+    },
+    "mcp-shrimp-task-manager": {
+      "priority": 3,
+      "command": "npx",
+      "name": "MCP Shrimp Task Manager - Unified V4.0",
+      "description": "Cross-environment task coordination and management with unified memory integration",
+      "env": {
+        "NODE_ENV": "production",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+        "UNIFIED_SYSTEM": "true",
+        "CROSS_ENVIRONMENT": "true",
+        "MEMORY_BANK_PATH": "@project-core/memory",
+        "VSCODE_SYNC": "enabled",
+        "CURSOR_SYNC": "enabled"
+      },
+      "args": ["-y", "mcp-shrimp-task-manager", "--unified-mode"],
+      "enabled": true,
+      "capabilities": [
+        "task-coordination",
+        "project-management",
+        "workflow-automation",
+        "cross-environment-handoff",
+        "unified-memory-integration",
+        "vscode-cursor-coordination"
+      ],
+      "environments": ["vscode-augment", "cursor"],
+      "complexityRange": [3, 10],
+      "integration": {
+        "vsCodeConfig": "@project-core/configs/ide/vscode/settings.json",
+        "cursorConfig": "@project-core/configs/ide/cursor/.cursorrules",
+        "memoryBank": "@project-core/memory/",
+        "handoffProtocols": "@project-core/rules/unified-development-environment-rules.md"
+      }
+    },
+    "context7-mcp": {
+      "priority": 4,
+      "name": "Context7 MCP (via Smithery)",
+      "description": "Fetches up-to-date, version-specific documentation and code examples.",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@upstash/context7-mcp",
+        "--key",
+        "13fee89a-5427-41f8-8054-41d37e75e33b"
+      ],
+      "enabled": true,
+      "capabilities": [
+        "documentation-retrieval",
+        "code-examples",
+        "version-specific-info"
+      ]
+    },
+    "playwright-mcp": {
+      "priority": 5,
+      "name": "Playwright MCP",
+      "description": "Provides browser automation capabilities using Playwright for web page interaction and testing.",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest", "mcp", "--allowed-origins", "*"],
+      "enabled": true,
+      "capabilities": [
+        "browser-automation",
+        "web-interaction",
+        "accessibility-snapshot",
+        "vision-mode",
+        "test-generation"
+      ]
+    }
+  },
+  "security": {
+    "apiKeyManagement": {
+      "rotation": false,
+      "validation": true,
+      "encryption": true,
+      "description": "API key security settings - Keys stored in environment variables"
+    },
+    "accessControl": {
+      "restrictedCommands": [],
+      "allowedPaths": ["@project-core", "scripts", "docs"]
+    }
+  },
+  "performance": {
+    "caching": {
+      "enabled": true,
+      "ttl": 3600,
+      "maxSize": "100MB"
+    },
+    "optimization": {
+      "lazyLoading": true,
+      "batchRequests": true,
+      "compressionEnabled": true
+    }
+  },
+  "logging": {
+    "level": "info",
+    "format": "structured",
+    "outputs": ["@project-core/logs/mcp-activity.log"],
+    "components": {
+      "sequential-thinking": "debug",
+      "mcp-shrimp-task-manager": "info",
+      "security": "warn",
+      "performance": "info"
+    }
+  },
+  "integration": {
+    "workspace": {
+      "root": "C:/Users/Admin/OneDrive/GRUPOUS/VSCODE",
+      "projectCore": "@project-core",
+      "projectsDirectory": "@project-core/projects",
+      "knowledgeBase": "@project-core/knowledge-base",
+      "automation": "@project-core/automation",
+      "projectStructure": {
+        "enforced": true,
+        "isolationRequired": true,
+        "description": "All development projects must reside within @project-core/projects/ directory"
+      }
+    },
+    "rules": {
+      "centralizedPath": "@project-core/rules",
+      "loadingStrategy": "hierarchical",
+      "conditionalLoading": true
+    },
+    "memory": {
+      "persistentPath": "@project-core/memory",
+      "learningEnabled": true,
+      "autoBackup": true
+    }
+  },
+  "unifiedSystemConfig": {
+    "crossEnvironmentSupport": {
+      "vsCodeAugment": {
+        "enabled": true,
+        "configPath": ".vscode/mcp.json",
+        "syncSource": "@project-core/configs/mcp-master-unified.json",
+        "servers": ["sequential-thinking", "mcp-shrimp-task-manager"]
+      },
+      "cursor": {
+        "enabled": true,
+        "configPath": ".cursor/mcp.json",
+        "syncSource": "@project-core/configs/mcp-master-unified.json",
+        "servers": [
+          "sequential-thinking",
+          "mcp-shrimp-task-manager",
+          "figma-context-mcp",
+          "playwright-mcp",
+          "tavily-mcp"
+        ],
+        "cursorSpecificConfig": {
+          "composerMode": {
+            "mcpIntegration": true,
+            "multiFileEditing": true,
+            "contextAwareness": "enhanced",
+            "memoryBankIntegration": "@project-core/memory/",
+            "sequentialThinkingSupport": true,
+            "complexTaskDecomposition": true
+          },
+          "chatMode": {
+            "mcpToolsAccess": true,
+            "debuggingSupport": true,
+            "realTimeFeedback": true,
+            "vsCodeContextSharing": true,
+            "sequentialReasoningMode": true,
+            "structuredProblemSolving": true
+          },
+          "frontendSpecialization": {
+            "uiComponentFocus": true,
+            "responsiveDesignPriority": true,
+            "accessibilityChecks": true,
+            "performanceOptimization": true,
+            "designSystemThinking": true,
+            "componentArchitectureReasoning": true
+          },
+          "sequentialThinkingIntegration": {
+            "enabled": true,
+            "complexityThreshold": 5,
+            "autoActivateForComplexTasks": true,
+            "frontendOptimized": true,
+            "uiReasoningFocus": true,
+            "designSystemAnalysis": true,
+            "componentDecomposition": true
+          }
+        }
+      }
+    },
+    "synchronization": {
+      "automatic": true,
+      "frequency": "real-time",
+      "validation": "mandatory",
+      "enforcement": "strict",
+      "cursorSync": {
+        "enabled": true,
+        "memoryBankSharing": true,
+        "configSynchronization": true,
+        "handoffProtocols": true,
+        "crossEnvironmentLearning": true
+      }
+    }
+  },
+  "augmentIntegration": {
+    "configPath": "@project-core/configs/mcp-master-unified.json",
+    "settingsIntegration": {
+      "mcp.configPath": "@project-core/configs/mcp-master-unified.json",
+      "mcp.enabled": true,
+      "mcp.autoStart": true,
+      "mcp.memoryIntegration": true
+    },
+    "serverDetection": {
+      "automatic": true,
+      "healthCheck": true,
+      "autoRestart": true
+    }
+  },
+  "workflowIntegration": {
+    "frontendWorkflows": {
+      "complexFrontendTasks": [
+        "sequential-thinking",
+        "mcp-shrimp-task-manager",
+        "figma-context-mcp"
+      ],
+      "componentDevelopment": [
+        "sequential-thinking",
+        "figma-context-mcp",
+        "mcp-shrimp-task-manager",
+        "playwright-mcp"
+      ],
+      "uiImplementation": [
+        "mcp-shrimp-task-manager",
+        "figma-context-mcp",
+        "sequential-thinking"
+      ],
+      "visualTesting": ["playwright-mcp", "mcp-shrimp-task-manager"],
+      "research": ["tavily-mcp", "mcp-shrimp-task-manager"],
+      "designSystemPlanning": [
+        "sequential-thinking",
+        "figma-context-mcp",
+        "tavily-mcp"
+      ],
+      "frontendArchitecture": [
+        "sequential-thinking",
+        "mcp-shrimp-task-manager",
+        "tavily-mcp"
+      ]
+    }
+  }
+}

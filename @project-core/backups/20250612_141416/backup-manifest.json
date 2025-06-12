@@ -1,0 +1,53 @@
+{
+  "timestamp": "20250612_141416",
+  "type": "incremental",
+  "description": "Pre-GitHub-Sync-Backup-20250612-141416",
+  "files": [
+    {
+      "path": "@project-core\\configs",
+      "size": 37427249,
+      "last_modified": 1749746473.4258406
+    },
+    {
+      "path": "@project-core\\memory",
+      "size": 4427878,
+      "last_modified": 1749747475.6606293
+    },
+    {
+      "path": "@project-core\\rules",
+      "size": 298061,
+      "last_modified": 1749747397.2650545
+    },
+    {
+      "path": "@project-core\\automation",
+      "size": 1665569,
+      "last_modified": 1749747800.0554001
+    },
+    {
+      "path": "@project-core\\scripts",
+      "size": 134973,
+      "last_modified": 1749748181.6930106
+    },
+    {
+      "path": "@project-core\\docs",
+      "size": 707060,
+      "last_modified": 1749748232.791945
+    },
+    {
+      "path": ".env.example",
+      "size": 332,
+      "last_modified": 1749677829.1701365
+    },
+    {
+      "path": ".gitignore",
+      "size": 2583,
+      "last_modified": 1749748148.2096114
+    },
+    {
+      "path": "README.md",
+      "size": 6386,
+      "last_modified": 1749680614.5754893
+    }
+  ],
+  "total_size": 44670091
+}

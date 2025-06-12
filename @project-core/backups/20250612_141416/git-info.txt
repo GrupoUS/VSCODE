@@ -1,0 +1,183 @@
+Git Backup Information
+Generated: 2025-06-12 14:14:31.680348
+Description: Pre-GitHub-Sync-Backup-20250612-141416
+
+Current Branch:
+clean-final
+
+Recent Commits:
+d5b096fac UPDATE: Mark subproject as dirty to indicate uncommitted changes
+5a1896675  SECURITY: Remover tokens expostos dos scripts - Usar variÃ¡veis de ambiente
+3dda563cf  FINALTEST COMPLETO + SINCRONIZAÃ‡ÃƒO SOBERANA: ConfiguraÃ§Ã£o finalizada dos 3 projetos (NeonPro, AegisWallet, AgendaTrintaE3) - Sistema VIBECODE V4.5 validado 100% - Scripts de automaÃ§Ã£o criados - AutenticaÃ§Ã£o GitHub ativa - Memory bank atualizado
+420806b8a  CONFIGURAÃ‡ÃƒO SINCRONIZAÃ‡ÃƒO SOBERANA COMPLETA - Projetos NeonPro, AgendaTrintaE3, AegisWallet configurados com autosync soberano
+d9f9181b3 CHORE: Forca a sincronizacao total do local para o remoto - 2025-06-12 11:52:44
+29df143ab [AUTOSYNC] Auto-sync VIBECODE
+a08168b6a [AUTOSYNC] SincronizaÃ§Ã£o automÃ¡tica do sistema VIBECODE V4.5 - 2025-06-12 11:31:14
+ef6c8aa86 [AUTO-SYNC] Secure sync at 2025-06-12 11:30:10
+6c6b1e092 [VSCODE] SincronizaÃ§Ã£o completa - Sistema !syncgithub implementado e branches limpos
+0fb0c9a86 [SECURITY] Pre-cleanup commit - Document GitHub Push Protection resolution
+
+
+Status:
+ M .gitignore
+ D @project-core/automation/__pycache__/cache_cleanup.cpython-313.pyc
+ D @project-core/automation/__pycache__/dependency_check.cpython-313.pyc
+ D @project-core/automation/__pycache__/system_health_check.cpython-313.pyc
+ D @project-core/automation/__pycache__/validate_mcp_configuration_enhanced.cpython-313.pyc
+ D @project-core/automation/__pycache__/validate_system.cpython-313.pyc
+ M @project-core/automation/finaltest_unified.py
+ M @project-core/automation/helpers/data/json_utils.py
+ D @project-core/automation/tasks/__pycache__/maintenance.cpython-313.pyc
+ M @project-core/automation/tasks/maintenance.py
+ M @project-core/automation/tasks/run_tests.py
+ M @project-core/automation/tasks/setup.py
+ M @project-core/automation/tasks/sync.py
+ D @project-core/backups/mcp-configs/mcp_20250612_122022.json
+ M @project-core/docs/setup_guide_unified.md
+ D @project-core/memory/backups/augment-memories-backup-2025-01-10.txt
+ D @project-core/memory/deprecated/backup-2025-01-10/README.md
+ M @project-core/memory/master_rule.md
+ D @project-core/memory/native-rag-system/central_hub/__pycache__/augment_bridge.cpython-313.pyc
+ D @project-core/memory/native-rag-system/central_hub/__pycache__/crosscheck_system.cpython-313.pyc
+ D @project-core/memory/native-rag-system/central_hub/__pycache__/memory_coordinator.cpython-313.pyc
+ D @project-core/memory/native-rag-system/cognee_ecl_pipeline/__pycache__/ecl_pipeline.cpython-313.pyc
+ D @project-core/memory/native-rag-system/cognee_ecl_pipeline/__pycache__/ecl_pipeline_part2.cpython-313.pyc
+ D @project-core/memory/native-rag-system/crawl4ai_strategies/__pycache__/agentic_rag.cpython-313.pyc
+ D @project-core/memory/native-rag-system/crawl4ai_strategies/__pycache__/contextual_embeddings.cpython-313.pyc
+ D @project-core/memory/native-rag-system/crawl4ai_strategies/__pycache__/hybrid_search.cpython-313.pyc
+ D @project-core/memory/native-rag-system/crawl4ai_strategies/__pycache__/reranking.cpython-313.pyc
+ D @project-core/memory/native-rag-system/integration/__pycache__/js_bridge.cpython-313.pyc
+ D @project-core/memory/native-rag-system/integration/__pycache__/mcp_integration.cpython-313.pyc
+ D @project-core/memory/native-rag-system/monitoring/__pycache__/monitoring_integration.cpython-313.pyc
+ D @project-core/memory/native-rag-system/monitoring/__pycache__/production_monitor.cpython-313.pyc
+ M @project-core/memory/self_correction_log.md
+ M @project-core/projects/agendatrintae3/.gitignore
+ D @project-core/reports/ADVANCED_ANALYSIS_REPORT.md
+ D @project-core/reports/AUTOMATION_REFACTOR_LOG.md
+ D @project-core/reports/FINAL_EXECUTION_REPORT.md
+ D @project-core/reports/HYPER_OPTIMIZATION_LOG.md
+ D @project-core/reports/HYPER_OPTIMIZATION_PLAN.md
+ D @project-core/reports/HYPER_OPTIMIZATION_PROGRESS_REPORT.md
+ D @project-core/reports/REORGANIZACAO_ARQUITETURAL_V4_RELATORIO_FINAL.md
+ D @project-core/reports/SCRIPT_ANALYSIS_REPORT.md
+ D @project-core/reports/SCRIPT_MIGRATION_PLAN.md
+ D @project-core/reports/backup-monitoring-20250612-112259.json
+ D @project-core/reports/backup-monitoring-20250612-112350.json
+ D @project-core/reports/backup-monitoring-20250612-112359.json
+ D @project-core/reports/backup-monitoring-20250612-113349.json
+ D @project-core/reports/backup-monitoring-20250612-113358.json
+ D @project-core/reports/backup-monitoring-20250612-113619.json
+ D @project-core/reports/backup-system-validation-20250612-112958.json
+ D @project-core/reports/backup-system-validation-20250612-113203.json
+ D @project-core/reports/backup-system-validation-20250612-113315.json
+ D @project-core/reports/backup-system-validation-20250612-113616.json
+ D @project-core/reports/backup-validation-20250612-112350.json
+ D @project-core/reports/backup-validation-20250612-112958.json
+ D @project-core/reports/backup-validation-20250612-113203.json
+ D @project-core/reports/backup-validation-20250612-113205.json
+ D @project-core/reports/backup-validation-20250612-113315.json
+ D @project-core/reports/backup-validation-20250612-113316.json
+ D @project-core/reports/backup-validation-20250612-113358.json
+ D @project-core/reports/backup-validation-20250612-113617.json
+ D @project-core/reports/backup-validation-20250612-113618.json
+ D @project-core/reports/backup-validation-20250612-113619.json
+ D @project-core/reports/enhanced-finaltest-implementation-summary.md
+ D @project-core/reports/enhanced-finaltest-validation-report.md
+ D @project-core/reports/finaltest-20250608-125026.md
+ D @project-core/reports/finaltest-20250610-144257.md
+ D @project-core/reports/finaltest-20250610-144526.md
+ D @project-core/reports/finaltest-20250610-185507.md
+ D @project-core/reports/finaltest-backup-protection-20250612-113616.json
+ D @project-core/reports/finaltest-consolidated-report.md
+ D @project-core/reports/finaltest-post-migration-20250611-175412.md
+ D @project-core/reports/finaltest-post-migration-20250611-175447.md
+ D @project-core/reports/finaltest-post-migration-20250611-175903.md
+ D @project-core/reports/finaltest-post-migration-20250611-175930.md
+ D @project-core/reports/finaltest-post-migration-20250611-180015.md
+ D @project-core/reports/finaltest-post-migration-20250611-180806.md
+ D @project-core/reports/finaltest-post-migration-20250611-180815.md
+ D @project-core/reports/finaltest-post-migration-20250611-180913.md
+ D @project-core/reports/finaltest-post-migration-20250611-181615.md
+ D @project-core/reports/finaltest-post-migration-20250611-181624.md
+ D @project-core/reports/finaltest-post-migration-20250611-181638.md
+ D @project-core/reports/finaltest-report-20250612-103600.md
+ D @project-core/reports/finaltest-report-20250612-122012.md
+ D @project-core/reports/finaltest-simple-20250612_121114.json
+ D @project-core/reports/force-sync-projects-report.md
+ D @project-core/reports/python_migration_report.md
+ D @project-core/reports/smart-backup-system-test-20250612-112259.json
+ D @project-core/reports/smart-backup-system-test-20250612-112350.json
+ D @project-core/reports/smart-backup-system-test-20250612-113358.json
+ D @project-core/reports/smart-backup-system-test-20250612-113619.json
+ D @project-core/reports/sync-verification-final-report.md
+ D @project-core/reports/syncgithub-execution-report.md
+ D @project-core/reports/task-validation-20250608-123025.md
+ D @project-core/reports/task-validation-20250608-123149.md
+ D @project-core/reports/test_report_basic_20250612_121427.json
+ D @project-core/reports/unified-integration-validation.json
+ D @project-core/scripts/__pycache__/simple_sync.cpython-313.pyc
+ D @project-core/tests/expanded-scenarios-v4.ps1
+ D @project-core/tests/figma-context-mcp-test-plan.md
+ D @project-core/tests/handoff-protocols-v4.ps1
+ D @project-core/tests/integration/shrimp-task-manager-integration.test.js
+ D @project-core/tests/mcp-integration-test.ps1
+ D @project-core/tests/mcp-shrimp-scenarios-v4.ps1
+ D @project-core/tests/stress-tests-v4.ps1
+ M @project-core/tools/extensions
+ D @project-core/tools/harmoniza-facil-agendas/public/file.svg
+ D @project-core/tools/harmoniza-facil-agendas/public/globe.svg
+ D @project-core/tools/harmoniza-facil-agendas/public/next.svg
+ D @project-core/tools/harmoniza-facil-agendas/public/vercel.svg
+ D @project-core/tools/harmoniza-facil-agendas/public/window.svg
+ D @project-core/tools/harmoniza-facil-agendas/src/app/admin/page.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/app/favicon.ico
+ D @project-core/tools/harmoniza-facil-agendas/src/app/globals.css
+ D @project-core/tools/harmoniza-facil-agendas/src/app/layout.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/app/paciente/page.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/app/page.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/components/features/calendar/calendar-view.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/components/providers.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/components/theme-toggle.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/components/ui/button.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/components/ui/card.tsx
+ D @project-core/tools/harmoniza-facil-agendas/src/lib/utils.ts
+ D @project-core/tools/harmoniza-facil-agendas/src/styles/calendar.css
+ D @project-core/tools/harmoniza-facil-agendas/tests/e2e/homepage.spec.ts
+ D @project-core/tools/harmoniza-facil-agendas/tests/e2e/playwright.config.ts
+ D @project-core/tools/harmoniza-facil-agendas/tests/unit/components/theme-toggle.test.tsx
+ D @project-core/tools/harmoniza-facil-agendas/tests/unit/jest.config.js
+ D @project-core/tools/harmoniza-facil-agendas/tests/unit/jest.setup.js
+ D @project-core/tools/mcp-servers/mcp-crawl4ai-rag
+ D @project-core/tools/netlify/functions/stripe-webhook.js
+ D @project-core/tools/task-master/task-manager.js
+ D @project-core/tools/taskmaster-integration/config/default.json
+ D @project-core/tools/taskmaster-playwright-integration/index.js
+ D @project-core/tools/taskmaster-playwright-integration/test-integration.js
+ D @project-core/tools/tests-examples/demo-todo-app.spec.ts
+ D @project-core/tools/tests/automation.spec.js
+ D @project-core/tools/tests/example.spec.ts
+ D @project-core/tools/tests/final-usability-report.md
+ D @project-core/tools/tests/priority-fixes-list.md
+ D @project-core/tools/tests/root-cause-analysis.md
+ D @project-core/tools/tests/usability-test-results.md
+ D @project-core/tools/tests/usability-test-scenarios.md
+?? @project-core/automation/ehs_protections.py
+?? @project-core/automation/relocate_backups.ps1
+?? @project-core/automation/tasks/archive_manager.py
+?? @project-core/automation/test_ehs_integration.py
+?? @project-core/configs/ehs_config.json
+?? @project-core/docs/SETUP_GUIDE.md
+?? @project-core/docs/ehs-workflow-integration.md
+?? @project-core/docs/system_status_dashboard.md
+?? @project-core/projects/aegiswallet/.gitignore
+?? @project-core/projects/aegiswallet/sync-secure.ps1
+?? @project-core/projects/agendatrintae3/sync-secure.ps1
+?? @project-core/rules/09-file-separation-policy.md
+?? @project-core/scripts/setup_environment.py
+
+
+Stash List:
+stash@{0}: On main: migrate
+stash@{1}: WIP on production-clean: 31debb97a ðŸš€ VIBECODE SYSTEM V4.0 - AtualizaÃ§Ã£o de sincronizaÃ§Ã£o e configuraÃ§Ã£o
+stash@{2}: On main: jÃ¡ alterados
+

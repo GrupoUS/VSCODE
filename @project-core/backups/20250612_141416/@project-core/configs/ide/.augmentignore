@@ -1,0 +1,96 @@
+# ===============================================================================
+# AUGMENT IGNORE - GRUPO US VIBECODE SYSTEM V2.0
+# ===============================================================================
+# Controla quais arquivos são indexados pelo Augment Code
+# Baseado nas melhores práticas da documentação oficial
+# ===============================================================================
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache de desenvolvimento
+node_modules/.cache
+.next
+.turbo
+.swc
+.tsbuildinfo
+*.tsbuildinfo
+.eslintcache
+
+# Build outputs
+dist/
+build/
+out/
+.vercel/
+
+# Dados sensíveis (já no .gitignore, mas garantindo)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+secrets/
+private/
+
+# Backups e arquivos temporários do sistema
+*.bak
+*~
+Thumbs.db
+.DS_Store
+
+# Arquivos de teste grandes
+test-data/
+mock-data/
+fixtures/large/
+
+# Documentação gerada automaticamente
+docs/api/generated/
+coverage/
+
+# ===============================================================================
+# INCLUSÕES IMPORTANTES (usar ! para incluir arquivos do .gitignore)
+# ===============================================================================
+
+# Incluir dependências importantes para contexto
+!node_modules/react
+!node_modules/@types
+!node_modules/next
+!node_modules/typescript
+
+# Incluir configurações importantes mesmo se estiverem no .gitignore
+!tsconfig.json
+!next.config.js
+!tailwind.config.js
+!package.json
+!package-lock.json
+
+# Incluir arquivos de configuração do projeto
+!@project-core/configs
+!@project-core/rules
+!@project-core/memory
+
+# ===============================================================================
+# OTIMIZAÇÕES ESPECÍFICAS GRUPO US
+# ===============================================================================
+
+# Excluir backups antigos mas manter estrutura
+@project-core/backups/*/
+!@project-core/backups/README.md
+
+# Excluir cache do Figma mas manter configurações
+@project-core/tools/figma-cache/
+!@project-core/tools/figma-integration/config/
+
+# Excluir relatórios antigos mas manter templates
+@project-core/reports/*.md
+!@project-core/reports/templates/
+
+# Excluir logs de automação mas manter scripts
+@project-core/automation/*.log
+!@project-core/automation/*.ps1
+!@project-core/automation/*.sh

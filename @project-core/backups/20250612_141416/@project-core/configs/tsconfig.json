@@ -1,0 +1,10 @@
+{
+  "extends": "./@project-core/configs/tsconfig.json",
+  "include": [
+    "@project-core/configs/next-env.d.ts",
+    "@project-core/configs/.next/types/**/*.ts",
+    "@project-core/configs/**/*.ts",
+    "@project-core/configs/**/*.tsx",
+    ".next/types/**/*.ts"
+  ]
+}

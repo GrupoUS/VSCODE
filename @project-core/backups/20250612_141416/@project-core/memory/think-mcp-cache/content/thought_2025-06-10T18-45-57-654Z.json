@@ -1,0 +1,18 @@
+{
+  "content": "Design a scalable microservices architecture for a multi-tenant SaaS platform with real-time features",
+  "tag": "thinking_hard",
+  "complexity": 8,
+  "insights": [
+    "Deep systematic analysis performed",
+    "Multiple perspectives considered",
+    "Risk factors identified",
+    "Dependencies mapped",
+    "Quality criteria established"
+  ],
+  "nextSteps": [],
+  "memoryReferences": [
+    "master_rule.md consulted",
+    "self_correction_log.md consulted",
+    "global-standards.md consulted"
+  ]
+}

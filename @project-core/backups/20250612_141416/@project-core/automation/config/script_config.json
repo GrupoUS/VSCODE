@@ -1,0 +1,93 @@
+{
+  "version": "4.0",
+  "description": "VIBECODE System V4.0 - Script Configuration",
+  "last_updated": "2025-01-27",
+  
+  "global_settings": {
+    "project_root": ".",
+    "project_core": "@project-core",
+    "log_level": "INFO",
+    "backup_retention_days": 30,
+    "max_backup_size_mb": 100
+  },
+  
+  "scripts": {
+    "run_tests": {
+      "description": "Consolidated testing and validation suite",
+      "default_level": "basic",
+      "backup_protection": true,
+      "memory_validation": true,
+      "report_generation": true
+    },
+    
+    "sync": {
+      "description": "Consolidated Git synchronization manager",
+      "default_target": "all",
+      "auto_push": false,
+      "force_sync_warning": true,
+      "backup_before_force": true,
+      "known_projects": ["@neonpro", "@aegiswallet", "@harmoniza-facil-agendas", "@project-core"]
+    },
+    
+    "maintenance": {
+      "description": "Consolidated backup and cleanup manager",
+      "auto_cleanup": false,
+      "dry_run_default": true,
+      "exclusion_patterns": [
+        "*/backups/*", "*/backup/*", "*/.backup/*",
+        "*/node_modules/*", "*/.git/*", "*/.next/*",
+        "*/dist/*", "*/build/*", "*/.cache/*",
+        "*/__pycache__/*", "*.pyc", "*.pyo",
+        "*.tmp", "*.temp", "*.log"
+      ]
+    },
+    
+    "monitor": {
+      "description": "Consolidated system monitoring suite",
+      "default_type": "structure",
+      "continuous_mode": false,
+      "default_interval": 300,
+      "performance_thresholds": {
+        "cpu_percent": 80,
+        "memory_percent": 85,
+        "disk_percent": 90
+      }
+    },
+    
+    "setup": {
+      "description": "Consolidated system setup and configuration",
+      "auto_install": false,
+      "validate_after_install": true,
+      "components": ["sync", "optimization", "workflow", "git", "structure"]
+    }
+  },
+  
+  "critical_files": [
+    "@project-core/memory/master_rule.md",
+    "@project-core/memory/self_correction_log.md",
+    "@project-core/memory/global-standards.md",
+    "@project-core/rules/00-vibecode-system-v4-master.md"
+  ],
+  
+  "critical_directories": [
+    "@project-core/memory",
+    "@project-core/rules",
+    "@project-core/automation",
+    "@project-core/configs"
+  ],
+  
+  "logging": {
+    "format": "%(asctime)s - %(levelname)s - %(message)s",
+    "log_directory": "@project-core/logs",
+    "max_log_size_mb": 10,
+    "log_rotation_count": 5
+  },
+  
+  "reporting": {
+    "output_directory": "@project-core/reports",
+    "timestamp_format": "%Y%m%d_%H%M%S",
+    "include_metadata": true,
+    "auto_cleanup_reports": true,
+    "report_retention_days": 14
+  }
+}
