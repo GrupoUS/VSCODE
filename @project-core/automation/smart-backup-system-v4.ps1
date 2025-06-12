@@ -119,9 +119,23 @@ function Write-Log {
 function Test-ExclusionPatterns {
     param([string]$Path)
 
+    # Normalize path separators for consistent matching
+    $normalizedPath = $Path -replace '\\', '/'
+
     foreach ($pattern in $Config.ExclusionPatterns) {
-        if ($Path -like $pattern) {
+        # Convert pattern to regex for more accurate matching
+        $regexPattern = $pattern -replace '\*', '.*' -replace '/', '[/\\]'
+        if ($normalizedPath -match $regexPattern) {
             return $true
+        }
+
+        # Also check if any parent directory matches the pattern
+        $pathParts = $normalizedPath -split '/'
+        for ($i = 0; $i -lt $pathParts.Length; $i++) {
+            $partialPath = ($pathParts[0..$i] -join '/')
+            if ($partialPath -match $regexPattern) {
+                return $true
+            }
         }
     }
     return $false

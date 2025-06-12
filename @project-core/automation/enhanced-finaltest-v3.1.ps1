@@ -318,20 +318,20 @@ function Remove-LegacySystems {
                         }
                     }
                 } else {
-                    # Fallback method with size validation
-                    $itemSize = if (Test-Path $Item -PathType Container) { (Get-ChildItem $Item -Recurse -File | Measure-Object Length -Sum).Sum } else { (Get-Item $Item).Length }
-                    if ($itemSize -lt 50MB) {
-                        if (Test-Path $Item -PathType Container) {
-                            Copy-Item -Path $Item -Destination $BackupItemPath -Recurse -Force
-                            Write-Log "📦 Backed up directory: $Item" "INFO"
+                    # Fallback method with Smart Backup System V4.0 call
+                    Write-Log "🛡️ Using Smart Backup System V4.0 fallback for safe backup creation" "INFO"
+                    try {
+                        $fallbackResult = & "@project-core/automation/smart-backup-system-v4.ps1" -SourcePath $Item -BackupName "finaltest-fallback-$(Split-Path $Item -Leaf)" -MaxSizeMB 50 -DryRun:$DryRun
+                        if ($fallbackResult.Success) {
+                            Write-Log "📦 Smart backup fallback created: $Item" "INFO"
+                            $BackedUpItems += $Item
+                        } else {
+                            Write-Log "🚫 Smart backup fallback failed for ${Item}: $($fallbackResult.Error)" "WARNING"
                         }
-                        else {
-                            Copy-Item -Path $Item -Destination $BackupItemPath -Force
-                            Write-Log "📦 Backed up file: $Item" "INFO"
-                        }
-                        $BackedUpItems += $Item
-                    } else {
-                        Write-Log "🚫 Skipped oversized item: $Item ($([math]::Round($itemSize/1MB, 2)) MB)" "WARNING"
+                    }
+                    catch {
+                        Write-Log "⚠️ Smart backup fallback error for ${Item}: $($_.Exception.Message)" "WARNING"
+                        Write-Log "🚫 Skipping backup for safety - item not backed up: ${Item}" "WARNING"
                     }
                 }
 
