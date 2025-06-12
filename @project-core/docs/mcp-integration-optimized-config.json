@@ -1,0 +1,325 @@
+{
+  "mcpIntegrationConfig": {
+    "version": "3.0.0",
+    "lastUpdated": "2025-01-09T18:30:00Z",
+    "description": "Configuração otimizada de integração entre servidores MCP - GRUPO US VIBECODE V3.0",
+    
+    "servers": {
+      "sequentialthinking": {
+        "status": "active",
+        "priority": 2,
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+        "capabilities": ["structured-thinking", "problem-decomposition"],
+        "performance": {
+          "avgTokens": 2000,
+          "avgResponseTime": 30,
+          "successRate": 0.95
+        },
+        "triggers": {
+          "complexity": [1, 3],
+          "confidence": [8, 10],
+          "keywords": ["analyze", "think", "decompose", "structure"]
+        }
+      },
+      
+      "sequentialthinking-tools": {
+        "status": "active",
+        "priority": 1,
+        "command": "npx", 
+        "args": ["-y", "mcp-sequentialthinking-tools"],
+        "capabilities": ["tool-recommendations", "workflow-optimization", "fallback-suggestions"],
+        "performance": {
+          "avgTokens": 3000,
+          "avgResponseTime": 45,
+          "successRate": 0.92
+        },
+        "triggers": {
+          "complexity": [4, 6],
+          "multipleTools": true,
+          "keywords": ["recommend", "tools", "workflow", "integrate"]
+        },
+        "integrations": {
+          "searchTools": {
+            "primary": "context7",
+            "fallbacks": ["perplexity-search", "web-search"],
+            "disabled": []
+          },
+          "documentationTools": {
+            "primary": "context7",
+            "resolve": "resolve-library-id",
+            "get": "get-library-docs"
+          }
+        }
+      },
+      
+      "shrimp-task-manager": {
+        "status": "active",
+        "priority": 4,
+        "command": "npx",
+        "args": ["-y", "@smithery/cli@latest", "run", "@cjo4m06/mcp-shrimp-task-manager"],
+        "capabilities": ["chain-of-thought", "task-verification", "dependency-tracking"],
+        "performance": {
+          "avgTokens": 4000,
+          "avgResponseTime": 90,
+          "successRate": 0.90
+        },
+        "triggers": {
+          "complexity": [9, 10],
+          "confidence": [1, 4],
+          "keywords": ["complex", "verify", "dependencies", "chain"]
+        }
+      },
+      
+      "context7": {
+        "status": "active",
+        "priority": 1,
+        "capabilities": ["documentation-search", "library-resolution", "code-examples"],
+        "performance": {
+          "avgTokens": 1500,
+          "avgResponseTime": 15,
+          "successRate": 0.98
+        },
+        "triggers": {
+          "keywords": ["documentation", "library", "framework", "API", "examples"],
+          "automatic": true
+        }
+      },
+      
+      "perplexity-search": {
+        "status": "active",
+        "priority": 2,
+        "capabilities": ["advanced-search", "research", "citations"],
+        "performance": {
+          "avgTokens": 1200,
+          "avgResponseTime": 25,
+          "successRate": 0.95
+        },
+        "triggers": {
+          "keywords": ["research", "search", "find", "investigate", "analyze"],
+          "automatic": true
+        }
+      },
+
+      "web-search": {
+        "status": "active",
+        "priority": 3,
+        "capabilities": ["general-search", "fallback-search"],
+        "performance": {
+          "avgTokens": 800,
+          "avgResponseTime": 10,
+          "successRate": 0.85
+        },
+        "triggers": {
+          "fallback": true,
+          "keywords": ["search", "find", "lookup"]
+        }
+      }
+    },
+    
+    "workflowOptimization": {
+      "automaticTriggers": {
+        "enabled": true,
+        "rules": [
+          {
+            "condition": "complexity >= 7 OR confidence <= 5",
+            "action": "escalate_to_task_manager",
+            "servers": ["shrimp-task-manager"]
+          },
+          {
+            "condition": "multiple_tools_needed = true",
+            "action": "use_sequential_thinking_tools",
+            "servers": ["sequentialthinking-tools"]
+          },
+          {
+            "condition": "documentation_needed = true",
+            "action": "search_documentation",
+            "servers": ["context7"]
+          },
+          {
+            "condition": "search_needed = true AND context7_failed = true",
+            "action": "fallback_search",
+            "servers": ["web-search"]
+          }
+        ]
+      },
+      
+      "cacheStrategy": {
+        "enabled": true,
+        "ttl": 3600,
+        "maxSize": "50MB",
+        "cacheKeys": [
+          "documentation_queries",
+          "library_resolutions", 
+          "search_results",
+          "tool_recommendations"
+        ],
+        "invalidation": {
+          "onError": true,
+          "onTimeout": true,
+          "manual": true
+        }
+      },
+      
+      "fallbackChain": {
+        "search": [
+          "context7",
+          "perplexity-search",
+          "web-search",
+          "manual_fallback"
+        ],
+        "thinking": [
+          "sequentialthinking-tools",
+          "sequentialthinking",
+          "manual_analysis"
+        ],
+        "taskManagement": [
+          "shrimp-task-manager",
+          "manual_breakdown"
+        ]
+      }
+    },
+    
+    "performanceOptimization": {
+      "tokenManagement": {
+        "budgetPerTask": 10000,
+        "warningThreshold": 8000,
+        "optimizations": [
+          "batch_operations",
+          "cache_reuse",
+          "smart_routing"
+        ]
+      },
+      
+      "responseTimeTargets": {
+        "context7": 15,
+        "sequentialthinking": 30,
+        "sequentialthinking-tools": 45,
+        "web-search": 10,
+        "shrimp-task-manager": 90
+      },
+      
+      "loadBalancing": {
+        "enabled": true,
+        "strategy": "least_loaded",
+        "healthChecks": {
+          "interval": 300,
+          "timeout": 10,
+          "retries": 3
+        }
+      }
+    },
+    
+    "errorHandling": {
+      "retryPolicy": {
+        "maxRetries": 3,
+        "backoffStrategy": "exponential",
+        "retryableErrors": [
+          "timeout",
+          "connection_error",
+          "rate_limit"
+        ]
+      },
+      
+      "fallbackBehavior": {
+        "onServerFailure": "use_fallback_chain",
+        "onTimeout": "switch_to_faster_server",
+        "onRateLimit": "queue_request"
+      },
+      
+      "monitoring": {
+        "logLevel": "info",
+        "metricsCollection": true,
+        "alerting": {
+          "successRateThreshold": 0.85,
+          "responseTimeThreshold": 120
+        }
+      }
+    },
+    
+    "integrationPatterns": {
+      "sequentialWorkflow": {
+        "description": "Fluxo sequencial otimizado para tarefas complexas",
+        "steps": [
+          {
+            "step": 1,
+            "server": "sequentialthinking-tools",
+            "action": "analyze_and_recommend",
+            "fallback": "sequentialthinking"
+          },
+          {
+            "step": 2,
+            "server": "context7",
+            "action": "search_documentation",
+            "fallback": "web-search"
+          },
+          {
+            "step": 3,
+            "server": "sequentialthinking-tools",
+            "action": "synthesize_results",
+            "fallback": "manual_synthesis"
+          }
+        ]
+      },
+      
+      "parallelWorkflow": {
+        "description": "Execução paralela para máxima eficiência",
+        "concurrent": [
+          {
+            "server": "context7",
+            "action": "search_documentation"
+          },
+          {
+            "server": "sequentialthinking-tools", 
+            "action": "analyze_requirements"
+          }
+        ],
+        "merge": "combine_results"
+      }
+    },
+    
+    "qualityAssurance": {
+      "validationRules": [
+        {
+          "rule": "response_completeness",
+          "threshold": 0.8,
+          "action": "request_elaboration"
+        },
+        {
+          "rule": "accuracy_check",
+          "method": "cross_reference",
+          "sources": ["context7", "web-search"]
+        }
+      ],
+      
+      "successMetrics": {
+        "taskCompletionRate": 0.95,
+        "userSatisfaction": 0.9,
+        "tokenEfficiency": 0.7,
+        "responseTimeCompliance": 0.85
+      }
+    }
+  },
+  
+  "deploymentConfig": {
+    "environment": "production",
+    "region": "us-east-1",
+    "scaling": {
+      "autoScale": true,
+      "minInstances": 1,
+      "maxInstances": 5
+    },
+    "security": {
+      "apiKeyRotation": false,
+      "encryptionAtRest": true,
+      "accessLogging": true
+    }
+  },
+  
+  "maintenanceSchedule": {
+    "healthChecks": "every_5_minutes",
+    "performanceReview": "weekly",
+    "configurationUpdate": "monthly",
+    "fullAudit": "quarterly"
+  }
+}

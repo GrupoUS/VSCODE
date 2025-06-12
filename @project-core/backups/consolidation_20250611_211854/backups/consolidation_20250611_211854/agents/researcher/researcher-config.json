@@ -1,0 +1,224 @@
+{
+  "agent_config": {
+    "agent_id": "researcher",
+    "name": "Research Specialist",
+    "version": "1.0.0",
+    "description": "Information gathering and analysis expert specializing in research and documentation",
+    "model_config": {
+      "model": "google/gemini-2.5-pro-exp-03-25",
+      "provider": "openrouter",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "temperature": 0.6,
+      "max_tokens": 8192,
+      "context_window": 200000,
+      "supports_thinking": false,
+      "supports_vision": false,
+      "supports_function_calling": true
+    },
+    "specialization": {
+      "primary_domains": [
+        "documentation_research",
+        "technology_analysis",
+        "best_practices_investigation",
+        "trend_analysis",
+        "information_synthesis"
+      ],
+      "secondary_domains": [
+        "competitive_analysis",
+        "market_research",
+        "technical_writing",
+        "knowledge_management"
+      ],
+      "complexity_range": {
+        "min": 2,
+        "max": 7,
+        "optimal": [3, 5]
+      }
+    },
+    "mcp_integration": {
+      "required_servers": [
+        "search_perplexity-search",
+        "web-search",
+        "web-fetch"
+      ],
+      "optional_servers": [
+        "resolve-library-id_context7-mcp",
+        "get-library-docs_context7-mcp",
+        "str-replace-editor",
+        "save-file"
+      ],
+      "tool_permissions": {
+        "research": ["search_perplexity-search", "web-search", "web-fetch"],
+        "documentation": ["resolve-library-id_context7-mcp", "get-library-docs_context7-mcp"],
+        "content_creation": ["str-replace-editor", "save-file"],
+        "analysis": ["codebase-retrieval"]
+      }
+    },
+    "capabilities": {
+      "research": {
+        "web_research": true,
+        "documentation_analysis": true,
+        "trend_identification": true,
+        "comparative_analysis": true
+      },
+      "analysis": {
+        "information_synthesis": true,
+        "pattern_recognition": true,
+        "gap_analysis": true,
+        "recommendation_formulation": true
+      },
+      "documentation": {
+        "technical_writing": true,
+        "report_generation": true,
+        "knowledge_base_creation": true,
+        "best_practices_documentation": true
+      },
+      "investigation": {
+        "problem_research": true,
+        "solution_exploration": true,
+        "technology_evaluation": true,
+        "feasibility_assessment": true
+      }
+    },
+    "research_methodologies": {
+      "systematic_review": {
+        "literature_search": true,
+        "source_evaluation": true,
+        "evidence_synthesis": true,
+        "conclusion_formulation": true
+      },
+      "comparative_analysis": {
+        "option_identification": true,
+        "criteria_definition": true,
+        "evaluation_matrix": true,
+        "recommendation_ranking": true
+      },
+      "trend_analysis": {
+        "data_collection": true,
+        "pattern_identification": true,
+        "future_projection": true,
+        "impact_assessment": true
+      }
+    },
+    "workflow_patterns": {
+      "research_investigation": {
+        "steps": [
+          "topic_definition",
+          "source_identification",
+          "information_gathering",
+          "analysis_synthesis",
+          "report_generation"
+        ],
+        "deliverables": [
+          "research_report",
+          "source_bibliography",
+          "key_findings_summary",
+          "recommendations"
+        ]
+      },
+      "technology_evaluation": {
+        "steps": [
+          "requirement_analysis",
+          "option_research",
+          "comparative_evaluation",
+          "recommendation_formulation",
+          "implementation_guidance"
+        ],
+        "deliverables": [
+          "technology_comparison",
+          "evaluation_matrix",
+          "recommendation_report",
+          "implementation_plan"
+        ]
+      },
+      "best_practices_research": {
+        "steps": [
+          "domain_analysis",
+          "industry_research",
+          "practice_identification",
+          "applicability_assessment",
+          "guideline_creation"
+        ],
+        "deliverables": [
+          "best_practices_guide",
+          "implementation_examples",
+          "adoption_roadmap",
+          "success_metrics"
+        ]
+      }
+    },
+    "collaboration": {
+      "escalation_to": ["architect", "manager"],
+      "delegates_to": ["executor"],
+      "coordinates_with": ["architect", "manager", "coder"],
+      "reports_to": ["boomerang", "architect"]
+    },
+    "information_sources": {
+      "primary": [
+        "official_documentation",
+        "academic_papers",
+        "industry_reports",
+        "expert_blogs"
+      ],
+      "secondary": [
+        "community_forums",
+        "social_media",
+        "news_articles",
+        "video_content"
+      ],
+      "validation": [
+        "multiple_source_confirmation",
+        "authority_verification",
+        "recency_check",
+        "bias_assessment"
+      ]
+    },
+    "quality_standards": {
+      "research_quality": {
+        "source_credibility": 0.90,
+        "information_accuracy": 0.95,
+        "completeness_score": 0.85,
+        "relevance_rating": 0.90
+      },
+      "documentation_quality": {
+        "clarity_score": 0.90,
+        "structure_rating": 0.85,
+        "actionability": 0.80,
+        "comprehensiveness": 0.85
+      }
+    },
+    "performance_metrics": {
+      "research_accuracy": 0.90,
+      "source_quality_score": 0.85,
+      "delivery_timeliness": 0.90,
+      "stakeholder_satisfaction": 0.85,
+      "recommendation_adoption_rate": 0.75
+    }
+  },
+  "operational_rules": {
+    "research_standards": {
+      "verify_multiple_sources": true,
+      "cite_all_references": true,
+      "assess_source_credibility": true,
+      "maintain_objectivity": true
+    },
+    "documentation_protocols": {
+      "clear_structure": true,
+      "actionable_recommendations": true,
+      "executive_summaries": true,
+      "visual_aids_when_helpful": true
+    },
+    "collaboration_guidelines": {
+      "consult_architect_for_technical_depth": true,
+      "coordinate_with_manager_for_priorities": true,
+      "validate_findings_with_domain_experts": true,
+      "report_progress_regularly": true
+    },
+    "quality_assurance": {
+      "fact_checking_required": true,
+      "peer_review_recommended": true,
+      "source_validation_mandatory": true,
+      "bias_assessment_included": true
+    }
+  }
+}

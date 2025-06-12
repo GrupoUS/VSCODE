@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "description": "Configuração de sincronização para projetos individuais com seus respectivos repositórios GitHub",
+  "systemConfig": {
+    "rootPath": "C:\\Users\\Admin\\OneDrive\\GRUPOUS\\VSCODE",
+    "projectsBasePath": "@project-core\\projects",
+    "defaultBranch": "main",
+    "gitUserEmail": "admin@grupous.com",
+    "gitUserName": "GrupoUS"
+  },
+  "projects": {
+    "neonpro": {
+      "name": "NeonPro",
+      "localPath": "@project-core\\projects\\neonpro",
+      "repositoryUrl": "https://github.com/GrupoUS/neonpro.git",
+      "branch": "main",
+      "description": "Projeto NeonPro - Sistema principal",
+      "enabled": true,
+      "syncSettings": {
+        "autoCommit": true,
+        "forcePush": false,
+        "createBackup": true,
+        "validateSecrets": true
+      }
+    },
+    "aegiswallet": {
+      "name": "AegisWallet",
+      "localPath": "@project-core\\projects\\aegiswallet",
+      "repositoryUrl": "https://github.com/GrupoUS/aegiswallet.git",
+      "branch": "main",
+      "description": "Projeto AegisWallet - Carteira digital",
+      "enabled": true,
+      "syncSettings": {
+        "autoCommit": true,
+        "forcePush": false,
+        "createBackup": true,
+        "validateSecrets": true
+      }
+    },
+    "agendatrintae3": {
+      "name": "AgendaTrintaE3",
+      "localPath": "@project-core\\projects\\agendatrintae3",
+      "repositoryUrl": "https://github.com/GrupoUS/agendatrintae3.git",
+      "branch": "main",
+      "description": "Projeto Agenda Trinta E3 - Sistema de agendamento",
+      "enabled": true,
+      "syncSettings": {
+        "autoCommit": true,
+        "forcePush": false,
+        "createBackup": true,
+        "validateSecrets": true
+      }
+    }
+  },
+  "globalSettings": {
+    "maxConcurrentSyncs": 3,
+    "timeoutMinutes": 10,
+    "retryAttempts": 3,
+    "logLevel": "INFO",
+    "createSummaryReport": true,
+    "notifyOnErrors": true
+  },
+  "excludePatterns": [
+    "node_modules/**",
+    ".next/**",
+    "dist/**",
+    "build/**",
+    "*.log",
+    "*.tmp",
+    ".env*",
+    "*.cache"
+  ]
+}

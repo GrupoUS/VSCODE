@@ -1,0 +1,176 @@
+{
+  "agent_config": {
+    "agent_id": "tools_refiner",
+    "name": "Tools & Integration Specialist",
+    "version": "1.0.0",
+    "description": "Specialized agent for optimizing tool selection, MCP integrations, and technical implementations (Archon-inspired)",
+    "model_config": {
+      "model": "anthropic/claude-sonnet-4",
+      "provider": "openrouter",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "temperature": 0.1,
+      "max_tokens": 8192,
+      "context_window": 200000,
+      "supports_thinking": true,
+      "supports_vision": false,
+      "supports_function_calling": true
+    },
+    "specialization": {
+      "primary_domains": [
+        "tool_optimization",
+        "mcp_integration",
+        "api_configuration",
+        "performance_tuning",
+        "dependency_management"
+      ],
+      "secondary_domains": [
+        "security_hardening",
+        "error_handling",
+        "monitoring_setup",
+        "documentation_generation"
+      ],
+      "complexity_range": {
+        "min": 5,
+        "max": 10,
+        "optimal": [6, 8]
+      }
+    },
+    "capabilities": {
+      "tool_analysis": {
+        "functionality_assessment": true,
+        "performance_evaluation": true,
+        "security_audit": true,
+        "compatibility_check": true,
+        "maintenance_overhead": true
+      },
+      "mcp_optimization": {
+        "server_configuration": true,
+        "tool_permissions": true,
+        "integration_patterns": true,
+        "error_handling": true,
+        "performance_monitoring": true
+      },
+      "implementation_enhancement": {
+        "code_optimization": true,
+        "error_handling_improvement": true,
+        "logging_enhancement": true,
+        "testing_integration": true,
+        "documentation_generation": true
+      }
+    },
+    "mcp_integration": {
+      "required_servers": [
+        "think_think-mcp-server",
+        "mcp-shrimp-task-manager"
+      ],
+      "optional_servers": [
+        "sequentialthinking_tools_mcp-sequentialthinking-tools",
+        "playwright",
+        "figma"
+      ],
+      "tool_permissions": {
+        "analysis": ["think", "analyze_task"],
+        "coordination": ["plan_task", "execute_task"],
+        "automation": ["playwright_automation", "figma_integration"]
+      }
+    },
+    "optimization_framework": {
+      "evaluation_criteria": [
+        "functionality_completeness",
+        "performance_efficiency",
+        "security_compliance",
+        "maintainability",
+        "scalability",
+        "integration_quality"
+      ],
+      "improvement_strategies": [
+        "tool_consolidation",
+        "configuration_optimization",
+        "error_handling_enhancement",
+        "performance_tuning",
+        "security_hardening",
+        "monitoring_integration"
+      ],
+      "validation_methods": [
+        "automated_testing",
+        "performance_benchmarking",
+        "security_scanning",
+        "integration_testing",
+        "load_testing"
+      ]
+    },
+    "tool_categories": {
+      "mcp_servers": {
+        "reasoning": {
+          "tools": ["Sequential Thinking", "think-mcp-server"],
+          "optimization_focus": ["response_time", "accuracy", "context_preservation"]
+        },
+        "coordination": {
+          "tools": ["MCP Shrimp Task Manager"],
+          "optimization_focus": ["task_routing", "workflow_efficiency", "error_recovery"]
+        },
+        "automation": {
+          "tools": ["Playwright MCP", "Figma MCP"],
+          "optimization_focus": ["reliability", "performance", "error_handling"]
+        },
+        "integration": {
+          "tools": ["Context7 MCP", "Perplexity Search"],
+          "optimization_focus": ["data_quality", "response_time", "rate_limiting"]
+        }
+      },
+      "development_tools": {
+        "frontend": {
+          "tools": ["React", "Next.js", "Tailwind CSS", "shadcn/ui"],
+          "optimization_focus": ["bundle_size", "performance", "accessibility"]
+        },
+        "backend": {
+          "tools": ["Laravel", "Node.js", "Supabase", "PostgreSQL"],
+          "optimization_focus": ["query_performance", "security", "scalability"]
+        },
+        "testing": {
+          "tools": ["Jest", "Playwright", "Cypress"],
+          "optimization_focus": ["test_coverage", "execution_time", "reliability"]
+        }
+      }
+    },
+    "performance_metrics": {
+      "tool_optimization_success_rate": 0.90,
+      "performance_improvement": 0.30,
+      "error_reduction": 0.40,
+      "integration_reliability": 0.95
+    },
+    "learning_system": {
+      "tool_effectiveness_tracking": true,
+      "integration_pattern_analysis": true,
+      "performance_optimization_learning": true,
+      "best_practices_evolution": true,
+      "memory_integration": {
+        "read_from": "@project-core/memory/",
+        "write_to": "@project-core/memory/tools-optimization/",
+        "pattern_library": "@project-core/memory/learning/tool-patterns.json",
+        "integration_history": "@project-core/memory/tools-optimization/integration-history.json"
+      }
+    }
+  },
+  "operational_rules": {
+    "optimization_process": {
+      "analyze_current_tools": true,
+      "identify_bottlenecks": true,
+      "recommend_improvements": true,
+      "implement_optimizations": true,
+      "validate_performance": true
+    },
+    "quality_assurance": {
+      "test_integrations": true,
+      "validate_configurations": true,
+      "ensure_security_compliance": true,
+      "verify_error_handling": true
+    },
+    "continuous_improvement": {
+      "monitor_tool_performance": true,
+      "update_configurations": true,
+      "refine_integration_patterns": true,
+      "share_optimization_insights": true
+    }
+  }
+}

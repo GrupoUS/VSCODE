@@ -1,0 +1,115 @@
+version: "4.5.0"
+description: "GRUPO US VIBECODE SYSTEM V4.5 - Workflows Low-Code"
+
+workflows:
+  - name: "complex-development"
+    description: "Workflow para desenvolvimento complexo com arquitetura e implementação"
+    steps:
+      - name: "architecture-planning"
+        agent: "ARCHITECT"
+        tools: ["sequential-thinking", "think-mcp-server"]
+        refiners: ["PROMPT_REFINER", "WORKFLOW_REFINER"]
+        validation:
+          - type: "architecture-review"
+            criteria: ["scalability", "security", "performance"]
+          - type: "documentation"
+            required: true
+
+      - name: "implementation"
+        agent: "CODER"
+        tools: ["mcp-shrimp"]
+        refiners: ["PROMPT_REFINER"]
+        validation:
+          - type: "code-review"
+            criteria: ["quality", "standards", "tests"]
+          - type: "performance"
+            metrics: ["response-time", "resource-usage"]
+
+      - name: "validation"
+        agent: "MANAGER"
+        tools: ["playwright-mcp"]
+        refiners: []
+        validation:
+          - type: "testing"
+            coverage: 90
+          - type: "security"
+            scan: true
+
+  - name: "ui-development"
+    description: "Workflow para desenvolvimento de UI com foco em design e experiência"
+    steps:
+      - name: "design-implementation"
+        agent: "EXECUTOR"
+        tools: ["figma-mcp"]
+        refiners: ["PROMPT_REFINER"]
+        validation:
+          - type: "design-review"
+            criteria: ["accessibility", "responsiveness", "consistency"]
+          - type: "performance"
+            metrics: ["load-time", "interaction-speed"]
+
+      - name: "testing"
+        agent: "MANAGER"
+        tools: ["playwright-mcp"]
+        refiners: []
+        validation:
+          - type: "visual-testing"
+            coverage: 100
+          - type: "accessibility"
+            wcag: "2.1 AA"
+
+  - name: "research-analysis"
+    description: "Workflow para pesquisa e análise de tecnologias e soluções"
+    steps:
+      - name: "initial-research"
+        agent: "RESEARCHER"
+        tools: ["tavily-mcp"]
+        refiners: ["PROMPT_REFINER"]
+        validation:
+          - type: "coverage"
+            criteria: ["completeness", "relevance"]
+          - type: "documentation"
+            required: true
+
+      - name: "analysis"
+        agent: "RESEARCHER"
+        tools: ["sequential-thinking"]
+        refiners: ["WORKFLOW_REFINER"]
+        validation:
+          - type: "quality"
+            criteria: ["depth", "accuracy"]
+          - type: "recommendations"
+            required: true
+
+  - name: "system-optimization"
+    description: "Workflow para otimização e melhoria do sistema"
+    steps:
+      - name: "analysis"
+        agent: "ARCHITECT"
+        tools: ["sequential-thinking", "think-mcp-server"]
+        refiners: ["PROMPT_REFINER", "WORKFLOW_REFINER"]
+        validation:
+          - type: "performance-analysis"
+            metrics: ["response-time", "resource-usage"]
+          - type: "bottleneck-identification"
+            required: true
+
+      - name: "implementation"
+        agent: "CODER"
+        tools: ["mcp-shrimp"]
+        refiners: ["PROMPT_REFINER"]
+        validation:
+          - type: "optimization-verification"
+            metrics: ["improvement-percentage"]
+          - type: "regression-testing"
+            required: true
+
+      - name: "documentation"
+        agent: "MANAGER"
+        tools: []
+        refiners: []
+        validation:
+          - type: "documentation-review"
+            criteria: ["completeness", "clarity"]
+          - type: "knowledge-graph-update"
+            required: true
