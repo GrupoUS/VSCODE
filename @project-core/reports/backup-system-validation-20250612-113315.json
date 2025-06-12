@@ -1,0 +1,129 @@
+{
+  "operation": "BackupSystemValidation",
+  "timestamp": "2025-06-12T11:33:15Z",
+  "phases": {
+    "enforcement": {
+      "UpdateDetails": [
+        "Added safety header to @project-core/automation/auto_backup.py",
+        "Added safety header to @project-core/automation/manage-backups.ps1"
+      ],
+      "UpdatesFailed": 0,
+      "ScriptsUpdated": 2
+    },
+    "exclusionPatterns": {
+      "TestsFailed": 0,
+      "ExclusionPatternsTested": 6,
+      "TestsPassed": 1
+    },
+    "integration": {
+      "TestSuiteExists": true,
+      "MonitoringSystemExists": true,
+      "SmartBackupSystemExists": true,
+      "IntegrationScore": 80,
+      "Issues": [
+        "Size validation test inconclusive"
+      ]
+    },
+    "sizeValidation": {
+      "TestsFailed": 1,
+      "TestResults": [],
+      "TestsPassed": 0
+    },
+    "audit": [
+      {
+        "HasExclusionPatterns": false,
+        "HasSizeValidation": true,
+        "Script": "@project-core/automation/auto_backup.py",
+        "RiskLevel": "HIGH",
+        "HasSmartBackupIntegration": true,
+        "UnsafeOperations": [
+          {
+            "Line": 167,
+            "Match": "shutil.copytree(",
+            "Pattern": "shutil\\.copytree\\("
+          },
+          {
+            "Line": 183,
+            "Match": "shutil.copytree(",
+            "Pattern": "shutil\\.copytree\\("
+          },
+          {
+            "Line": 173,
+            "Match": "shutil.copy2(",
+            "Pattern": "shutil\\.copy2\\("
+          },
+          {
+            "Line": 189,
+            "Match": "shutil.copy2(",
+            "Pattern": "shutil\\.copy2\\("
+          }
+        ]
+      },
+      {
+        "HasExclusionPatterns": false,
+        "HasSizeValidation": true,
+        "Script": "@project-core/automation/enhanced-finaltest-v3.1.ps1",
+        "RiskLevel": "LOW",
+        "HasSmartBackupIntegration": true,
+        "UnsafeOperations": []
+      },
+      {
+        "HasExclusionPatterns": false,
+        "HasSizeValidation": false,
+        "Script": "@project-core/automation/setup-augment-optimization.ps1",
+        "RiskLevel": "LOW",
+        "HasSmartBackupIntegration": false,
+        "UnsafeOperations": []
+      },
+      {
+        "HasExclusionPatterns": false,
+        "HasSizeValidation": false,
+        "Script": "@project-core/automation/project-core-cleanup-phase2.ps1",
+        "RiskLevel": "LOW",
+        "HasSmartBackupIntegration": false,
+        "UnsafeOperations": []
+      },
+      {
+        "HasExclusionPatterns": false,
+        "HasSizeValidation": true,
+        "Script": "@project-core/automation/consolidate-backups.ps1",
+        "RiskLevel": "LOW",
+        "HasSmartBackupIntegration": false,
+        "UnsafeOperations": []
+      },
+      {
+        "HasExclusionPatterns": false,
+        "HasSizeValidation": true,
+        "Script": "@project-core/automation/manage-backups.ps1",
+        "RiskLevel": "HIGH",
+        "HasSmartBackupIntegration": true,
+        "UnsafeOperations": [
+          {
+            "Line": 157,
+            "Match": "Copy-Item -Path $logsBackup -Destination \"@project-core/logs\" -Recurse -Force",
+            "Pattern": "Copy-Item.*-Recurse.*-Force"
+          },
+          {
+            "Line": 162,
+            "Match": "Copy-Item -Path $logsBackup -Destination \"@project-core/logs\" -Recurse -Force",
+            "Pattern": "Copy-Item.*-Recurse.*-Force"
+          },
+          {
+            "Line": 166,
+            "Match": "Copy-Item -Path $logsBackup -Destination \"@project-core/logs\" -Recurse -Force",
+            "Pattern": "Copy-Item.*-Recurse.*-Force"
+          }
+        ]
+      },
+      {
+        "HasExclusionPatterns": false,
+        "HasSizeValidation": false,
+        "Script": "@project-core/automation/manage-backups.py",
+        "RiskLevel": "LOW",
+        "HasSmartBackupIntegration": false,
+        "UnsafeOperations": []
+      }
+    ]
+  },
+  "version": "4.0.0"
+}

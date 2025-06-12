@@ -281,8 +281,8 @@ function Test-SizeValidationEnforcement {
             New-Item -ItemType Directory -Path $testDir -Force | Out-Null
         }
 
-        # Create a file that exceeds 1MB limit
-        $largeContent = "Large test content " * 50000
+        # Create a file that exceeds 1MB limit (need more content to exceed 1MB)
+        $largeContent = "Large test content that will exceed the 1MB limit when repeated many times. " * 15000
         $largeContent | Out-File "$testDir/large-file.txt" -Encoding UTF8
 
         $result = & $Config.SmartBackupScript -SourcePath $testDir -BackupName "size-test" -MaxSizeMB 1 -DryRun

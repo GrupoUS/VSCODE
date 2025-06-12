@@ -1,0 +1,124 @@
+{
+  "timestamp": "2025-06-12T11:36:16Z",
+  "phases": {
+    "sizeValidation": {
+      "TestsPassed": 0,
+      "TestResults": [],
+      "TestsFailed": 1
+    },
+    "audit": [
+      {
+        "HasSizeValidation": true,
+        "HasExclusionPatterns": false,
+        "UnsafeOperations": [
+          {
+            "Match": "shutil.copytree(",
+            "Pattern": "shutil\\.copytree\\(",
+            "Line": 175
+          },
+          {
+            "Match": "shutil.copytree(",
+            "Pattern": "shutil\\.copytree\\(",
+            "Line": 191
+          },
+          {
+            "Match": "shutil.copy2(",
+            "Pattern": "shutil\\.copy2\\(",
+            "Line": 181
+          },
+          {
+            "Match": "shutil.copy2(",
+            "Pattern": "shutil\\.copy2\\(",
+            "Line": 197
+          }
+        ],
+        "HasSmartBackupIntegration": true,
+        "Script": "@project-core/automation/auto_backup.py",
+        "RiskLevel": "HIGH"
+      },
+      {
+        "HasSizeValidation": true,
+        "HasExclusionPatterns": false,
+        "UnsafeOperations": [],
+        "HasSmartBackupIntegration": true,
+        "Script": "@project-core/automation/enhanced-finaltest-v3.1.ps1",
+        "RiskLevel": "LOW"
+      },
+      {
+        "HasSizeValidation": false,
+        "HasExclusionPatterns": false,
+        "UnsafeOperations": [],
+        "HasSmartBackupIntegration": false,
+        "Script": "@project-core/automation/setup-augment-optimization.ps1",
+        "RiskLevel": "LOW"
+      },
+      {
+        "HasSizeValidation": false,
+        "HasExclusionPatterns": false,
+        "UnsafeOperations": [],
+        "HasSmartBackupIntegration": false,
+        "Script": "@project-core/automation/project-core-cleanup-phase2.ps1",
+        "RiskLevel": "LOW"
+      },
+      {
+        "HasSizeValidation": true,
+        "HasExclusionPatterns": false,
+        "UnsafeOperations": [],
+        "HasSmartBackupIntegration": false,
+        "Script": "@project-core/automation/consolidate-backups.ps1",
+        "RiskLevel": "LOW"
+      },
+      {
+        "HasSizeValidation": true,
+        "HasExclusionPatterns": false,
+        "UnsafeOperations": [
+          {
+            "Match": "Copy-Item -Path $logsBackup -Destination \"@project-core/logs\" -Recurse -Force",
+            "Pattern": "Copy-Item.*-Recurse.*-Force",
+            "Line": 165
+          },
+          {
+            "Match": "Copy-Item -Path $logsBackup -Destination \"@project-core/logs\" -Recurse -Force",
+            "Pattern": "Copy-Item.*-Recurse.*-Force",
+            "Line": 170
+          },
+          {
+            "Match": "Copy-Item -Path $logsBackup -Destination \"@project-core/logs\" -Recurse -Force",
+            "Pattern": "Copy-Item.*-Recurse.*-Force",
+            "Line": 174
+          }
+        ],
+        "HasSmartBackupIntegration": true,
+        "Script": "@project-core/automation/manage-backups.ps1",
+        "RiskLevel": "HIGH"
+      },
+      {
+        "HasSizeValidation": false,
+        "HasExclusionPatterns": false,
+        "UnsafeOperations": [],
+        "HasSmartBackupIntegration": false,
+        "Script": "@project-core/automation/manage-backups.py",
+        "RiskLevel": "LOW"
+      }
+    ],
+    "integration": {
+      "TestSuiteExists": true,
+      "SmartBackupSystemExists": true,
+      "Issues": [
+        "Size validation test inconclusive"
+      ],
+      "MonitoringSystemExists": true,
+      "IntegrationScore": 80
+    },
+    "exclusionPatterns": {
+      "TestsPassed": 1,
+      "ExclusionPatternsTested": 6,
+      "TestsFailed": 0
+    },
+    "enforcement": {
+      "EnforcementSkipped": true
+    }
+  },
+  "operation": "BackupSystemValidation",
+  "version": "4.0.0"
+}

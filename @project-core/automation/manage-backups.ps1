@@ -1,3 +1,11 @@
+# ===============================================================================
+# BACKUP SAFETY ENFORCEMENT - SMART BACKUP SYSTEM V4.0 REQUIRED
+# ===============================================================================
+# WARNING: This script contains backup operations that must use Smart Backup System V4.0
+# to prevent recursive backup disasters and enforce size limits.
+#
+# Use: @project-core/automation/smart-backup-system-v4.ps1 -SourcePath "source" -BackupName "name"
+# ===============================================================================
 # GRUPO US VIBECODE SYSTEM V4.5 - Backup Manager
 # Script para gerenciar os backups do sistema
 
@@ -145,7 +153,26 @@ function Restore-Backup {
     # Restaurar logs
     $logsBackup = Join-Path $backupPath "logs"
     if (Test-Path $logsBackup) {
-        Copy-Item -Path $logsBackup -Destination "@project-core/logs" -Recurse -Force
+        # Use Smart Backup System V4.0 for safe restore operation
+        if (Test-Path "@project-core/automation/smart-backup-system-v4.ps1") {
+            Write-Host "🛡️ Using Smart Backup System V4.0 for safe restore operation" -ForegroundColor Cyan
+            try {
+                $restoreResult = & "@project-core/automation/smart-backup-system-v4.ps1" -SourcePath $logsBackup -BackupName "logs-restore" -MaxSizeMB 100 -DryRun:$false
+                if ($restoreResult.Success) {
+                    Write-Host "✅ Smart restore completed for logs" -ForegroundColor Green
+                } else {
+                    Write-Host "⚠️ Smart restore failed, using fallback method" -ForegroundColor Yellow
+                    Copy-Item -Path $logsBackup -Destination "@project-core/logs" -Recurse -Force
+                }
+            }
+            catch {
+                Write-Host "⚠️ Smart restore error, using fallback method: $($_.Exception.Message)" -ForegroundColor Yellow
+                Copy-Item -Path $logsBackup -Destination "@project-core/logs" -Recurse -Force
+            }
+        } else {
+            Write-Host "⚠️ Smart Backup System not found, using basic copy" -ForegroundColor Yellow
+            Copy-Item -Path $logsBackup -Destination "@project-core/logs" -Recurse -Force
+        }
     }
 
     Write-Host "✅ Backup restored successfully"
@@ -319,3 +346,4 @@ switch ($Action) {
         Write-Host "  stats - Show backup statistics"
     }
 }
+

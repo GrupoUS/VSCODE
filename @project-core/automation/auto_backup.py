@@ -1,3 +1,11 @@
+# ===============================================================================
+# BACKUP SAFETY ENFORCEMENT - SMART BACKUP SYSTEM V4.0 REQUIRED
+# ===============================================================================
+# WARNING: This script contains backup operations that must use Smart Backup System V4.0
+# to prevent recursive backup disasters and enforce size limits.
+#
+# Use: @project-core/automation/smart-backup-system-v4.ps1 -SourcePath "source" -BackupName "name"
+# ===============================================================================
 #!/usr/bin/env python3
 """
 ===============================================================================
@@ -477,3 +485,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+

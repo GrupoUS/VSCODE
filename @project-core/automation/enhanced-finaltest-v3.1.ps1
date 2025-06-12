@@ -304,15 +304,19 @@ function Remove-LegacySystems {
                         # Fallback to original method with size check
                         $itemSize = if (Test-Path $Item -PathType Container) { (Get-ChildItem $Item -Recurse -File | Measure-Object Length -Sum).Sum } else { (Get-Item $Item).Length }
                         if ($itemSize -lt 50MB) {
-                            if (Test-Path $Item -PathType Container) {
-                                Copy-Item -Path $Item -Destination $BackupItemPath -Recurse -Force
-                                Write-Log "📦 Backed up directory: $Item" "INFO"
+                            # Use Smart Backup System V4.0 for safe fallback backup
+                            try {
+                                $safeBackupResult = & "@project-core/automation/smart-backup-system-v4.ps1" -SourcePath $Item -BackupName "finaltest-safe-$(Split-Path $Item -Leaf)" -MaxSizeMB 50 -DryRun:$DryRun
+                                if ($safeBackupResult.Success) {
+                                    Write-Log "📦 Safe backup created: $Item" "INFO"
+                                    $BackedUpItems += $Item
+                                } else {
+                                    Write-Log "🚫 Safe backup failed for $Item, skipping for safety" "WARNING"
+                                }
                             }
-                            else {
-                                Copy-Item -Path $Item -Destination $BackupItemPath -Force
-                                Write-Log "📦 Backed up file: $Item" "INFO"
+                            catch {
+                                Write-Log "⚠️ Safe backup error for $Item, skipping for safety: $($_.Exception.Message)" "WARNING"
                             }
-                            $BackedUpItems += $Item
                         } else {
                             Write-Log "🚫 Skipped oversized item: $Item ($([math]::Round($itemSize/1MB, 2)) MB)" "WARNING"
                         }

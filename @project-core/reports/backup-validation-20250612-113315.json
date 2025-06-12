@@ -1,0 +1,51 @@
+{
+  "version": "4.0.0",
+  "exclusionPatterns": [
+    "*/backups/*",
+    "*/backup/*",
+    "*/.backup/*",
+    "*/old/*",
+    "*/legacy/*",
+    "*/archived/*",
+    "*/node_modules/*",
+    "*/.git/*",
+    "*/.next/*",
+    "*/dist/*",
+    "*/build/*",
+    "*/.nuxt/*",
+    "*/.output/*",
+    "*/.cache/*",
+    "*/cache/*",
+    "*/.temp/*",
+    "*/temp/*",
+    "*/.tmp/*",
+    "*/tmp/*",
+    "*/.vscode/*",
+    "*/.idea/*",
+    "*/Thumbs.db",
+    "*/.DS_Store",
+    "*.zip",
+    "*.rar",
+    "*.7z",
+    "*.tar.gz",
+    "*.iso",
+    "*.dmg",
+    "*.exe",
+    "*.msi"
+  ],
+  "timestamp": "2025-06-12T11:33:16Z",
+  "result": {
+    "Error": "Size limit exceeded",
+    "SizeMB": 2.16,
+    "Success": false
+  },
+  "operation": "SmartBackupSystem",
+  "parameters": {
+    "maxSizeMB": 1,
+    "backupName": "validation-test",
+    "sourcePath": "@project-core/memory",
+    "dryRun": {
+      "IsPresent": true
+    }
+  }
+}

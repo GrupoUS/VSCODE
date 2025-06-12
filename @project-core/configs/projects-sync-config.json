@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "description": "Configuração de sincronização para projetos individuais com seus respectivos repositórios GitHub",
+  "version": "2.0.0",
+  "description": "Configuração de sincronização SOBERANA para projetos individuais - Pastas locais SEMPRE dominantes",
   "systemConfig": {
     "rootPath": "C:\\Users\\Admin\\OneDrive\\GRUPOUS\\VSCODE",
     "projectsBasePath": "@project-core\\projects",
@@ -18,7 +18,11 @@
       "enabled": true,
       "syncSettings": {
         "autoCommit": true,
-        "forcePush": false,
+        "forcePush": true,
+        "forceUpdate": true,
+        "localSovereign": true,
+        "deleteRemoteNotLocal": true,
+        "overwriteRemote": true,
         "createBackup": true,
         "validateSecrets": true
       }
@@ -32,7 +36,11 @@
       "enabled": true,
       "syncSettings": {
         "autoCommit": true,
-        "forcePush": false,
+        "forcePush": true,
+        "forceUpdate": true,
+        "localSovereign": true,
+        "deleteRemoteNotLocal": true,
+        "overwriteRemote": true,
         "createBackup": true,
         "validateSecrets": true
       }
@@ -46,7 +54,11 @@
       "enabled": true,
       "syncSettings": {
         "autoCommit": true,
-        "forcePush": false,
+        "forcePush": true,
+        "forceUpdate": true,
+        "localSovereign": true,
+        "deleteRemoteNotLocal": true,
+        "overwriteRemote": true,
         "createBackup": true,
         "validateSecrets": true
       }
@@ -58,7 +70,9 @@
     "retryAttempts": 3,
     "logLevel": "INFO",
     "createSummaryReport": true,
-    "notifyOnErrors": true
+    "notifyOnErrors": true,
+    "sovereignMode": true,
+    "backupBeforeForce": true
   },
   "excludePatterns": [
     "node_modules/**",
@@ -68,6 +82,7 @@
     "*.log",
     "*.tmp",
     ".env*",
-    "*.cache"
+    "*.cache",
+    ".git/**"
   ]
 }
