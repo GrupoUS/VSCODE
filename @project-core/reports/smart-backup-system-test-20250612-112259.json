@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-06-12T11:22:59Z",
+  "results": [
+    {
+      "Result": "FAIL",
+      "Test": "SmallDirectory",
+      "Error": "A parameter with the name 'Verbose' was defined multiple times for the command."
+    },
+    {
+      "Result": "FAIL",
+      "Test": "LargeDirectory",
+      "Error": "A parameter with the name 'Verbose' was defined multiple times for the command."
+    },
+    {
+      "Result": "FAIL",
+      "Test": "RecursivePrevention",
+      "Error": "A parameter with the name 'Verbose' was defined multiple times for the command."
+    },
+    {
+      "Result": "FAIL",
+      "Test": "ExclusionPatterns",
+      "Error": "A parameter with the name 'Verbose' was defined multiple times for the command."
+    },
+    {
+      "Result": "PASS",
+      "Test": "MonitoringSystem",
+      "Summary": {
+        "totalSizeGB": 0.0,
+        "issueCount": 0,
+        "directoryCount": 0,
+        "recommendationCount": 0
+      }
+    }
+  ],
+  "operation": "SmartBackupSystemTests",
+  "mode": "DRY_RUN",
+  "version": "4.0.0",
+  "summary": {
+    "successRate": 60.0,
+    "totalTests": 5,
+    "passed": 3,
+    "failed": 4
+  }
+}

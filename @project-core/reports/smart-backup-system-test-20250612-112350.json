@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "failed": 2,
+    "passed": 3,
+    "totalTests": 5,
+    "successRate": 60.0
+  },
+  "operation": "SmartBackupSystemTests",
+  "results": [
+    {
+      "Result": "PASS",
+      "Test": "SmallDirectory"
+    },
+    {
+      "Test": "LargeDirectory",
+      "Result": "FAIL",
+      "Error": "Size validation failed"
+    },
+    {
+      "Result": "PASS",
+      "Test": "RecursivePrevention"
+    },
+    {
+      "Result": "FAIL",
+      "Test": "ExclusionPatterns"
+    },
+    {
+      "Summary": {
+        "recommendationCount": 0,
+        "directoryCount": 0,
+        "totalSizeGB": 0.0,
+        "issueCount": 0
+      },
+      "Test": "MonitoringSystem",
+      "Result": "PASS"
+    }
+  ],
+  "mode": "DRY_RUN",
+  "timestamp": "2025-06-12T11:23:50Z",
+  "version": "4.0.0"
+}

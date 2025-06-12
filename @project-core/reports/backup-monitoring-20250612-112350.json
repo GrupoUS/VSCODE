@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "recommendationCount": 0,
+    "directoryCount": 0,
+    "totalSizeGB": 0.0,
+    "issueCount": 0
+  },
+  "analysis": {
+    "Directories": [],
+    "TotalSize": {
+      "SizeMB": 0.0,
+      "SizeBytes": 0,
+      "FileCount": 0,
+      "SizeGB": 0.0
+    },
+    "Issues": []
+  },
+  "operation": "BackupMonitoring",
+  "recommendations": null,
+  "timestamp": "2025-06-12T11:23:50Z",
+  "configuration": {
+    "MaxIndividualSizeMB": 100,
+    "AutoCleanup": {
+      "IsPresent": false
+    },
+    "AlertFile": "@project-core/reports/backup-alerts-20250612.json",
+    "BackupRoot": "@project-core/backups/test-backups",
+    "ReportFile": "@project-core/reports/backup-monitoring-20250612-112350.json",
+    "CriticalThresholdGB": 0.95,
+    "MaxTotalSizeGB": 1,
+    "WarningThresholdGB": 0.8,
+    "LogFile": "@project-core/logs/backup-monitoring-20250612.log"
+  },
+  "version": "4.0.0"
+}

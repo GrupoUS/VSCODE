@@ -65,3 +65,26 @@ jobs:
           else
             echo "✅ Nenhum arquivo .env encontrado"
           fi
+
+      - name: Install Python Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r @project-core/requirements.txt
+
+      - name: VIBECODE System Validation
+        run: |
+          echo "🧠 VIBECODE SYSTEM V4.0 - Security & Validation"
+
+          # Architecture validation
+          echo "🏗️ Validando arquitetura..."
+          python @project-core/automation/architecture_manager.py --validate-structure
+
+          # System health check
+          echo "🏥 Verificando saúde do sistema..."
+          python @project-core/automation/validation_suite.py --health-check
+
+          # Dependency check
+          echo "📦 Verificando dependências..."
+          python @project-core/automation/dependency_check.py --check-all
+
+          echo "✅ Validação VIBECODE concluída"

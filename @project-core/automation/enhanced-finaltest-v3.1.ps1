@@ -50,12 +50,12 @@ function Write-Log {
 # Create backup directory
 function Initialize-Backup {
     Write-Log "🔄 Initializing backup system..." "INFO"
-    
+
     if (-not (Test-Path $Config.BackupPath)) {
         New-Item -ItemType Directory -Path $Config.BackupPath -Force | Out-Null
         Write-Log "✅ Backup directory created: $($Config.BackupPath)" "SUCCESS"
     }
-    
+
     # Create backup manifest
     $BackupManifest = @{
         timestamp     = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
@@ -64,7 +64,7 @@ function Initialize-Backup {
         backupPath    = $Config.BackupPath
         operations    = @()
     }
-    
+
     $BackupManifest | ConvertTo-Json -Depth 10 | Out-File "$($Config.BackupPath)/backup-manifest.json" -Encoding UTF8
     Write-Log "✅ Backup manifest created" "SUCCESS"
 }
@@ -72,7 +72,7 @@ function Initialize-Backup {
 # PHASE 1: Task-Driven Rule Updates
 function Update-TaskDrivenRules {
     Write-Log "🎯 PHASE 1: Task-Driven Rule Updates" "INFO"
-    
+
     # Analyze current session context for learnings
     $SessionLearnings = @{
         timestamp     = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
@@ -81,10 +81,10 @@ function Update-TaskDrivenRules {
         patterns      = @()
         optimizations = @()
     }
-    
+
     # Update self-correction log with session learnings
     Write-Log "📝 Updating self-correction log with session learnings..." "INFO"
-    
+
     $SelfCorrectionUpdate = @"
 
 ---
@@ -144,10 +144,10 @@ function Update-TaskDrivenRules {
         Add-Content -Path "@project-core/memory/self_correction_log.md" -Value $SelfCorrectionUpdate -Encoding UTF8
         Write-Log "✅ Self-correction log updated with session learnings" "SUCCESS"
     }
-    
+
     # Update global standards if new patterns identified
     Write-Log "📋 Checking global standards for updates..." "INFO"
-    
+
     if (Test-Path "@project-core/memory/global-standards.md") {
         $GlobalStandardsUpdate = @"
 
@@ -169,37 +169,37 @@ function Update-TaskDrivenRules {
 **Enhanced !finaltest V3.1 Update**: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
 
 "@
-        
+
         if (-not $DryRun) {
             Add-Content -Path "@project-core/memory/global-standards.md" -Value $GlobalStandardsUpdate -Encoding UTF8
             Write-Log "✅ Global standards updated with maintenance protocols" "SUCCESS"
         }
     }
-    
+
     $Config.UpdateResults += "Task-driven rule updates completed successfully"
 }
 
 # PHASE 2: Project-Core System Synchronization
 function Sync-ProjectCoreSystem {
     Write-Log "🔄 PHASE 2: Project-Core System Synchronization" "INFO"
-    
+
     # Validate configuration files
     $ConfigFiles = @(
         "@project-core/configs/mcp-master-unified.json",
         "@project-core/configs/unified-dev-environment-config.json",
         "@project-core/configs/vscode-unified-settings.json"
     )
-    
+
     foreach ($ConfigFile in $ConfigFiles) {
         if (Test-Path $ConfigFile) {
             try {
                 $Content = Get-Content $ConfigFile -Raw | ConvertFrom-Json
                 Write-Log "✅ Configuration valid: $ConfigFile" "SUCCESS"
-                
+
                 # Update lastValidated timestamp
                 if ($Content.PSObject.Properties.Name -contains "metadata") {
                     $Content.metadata.lastValidated = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
-                    
+
                     if (-not $DryRun) {
                         $Content | ConvertTo-Json -Depth 10 | Out-File $ConfigFile -Encoding UTF8
                         Write-Log "✅ Updated validation timestamp: $ConfigFile" "SUCCESS"
@@ -214,17 +214,17 @@ function Sync-ProjectCoreSystem {
             Write-Log "⚠️ Configuration file not found: $ConfigFile" "WARNING"
         }
     }
-    
+
     # Refresh MCP server configurations
     Write-Log "🔧 Refreshing MCP server configurations..." "INFO"
-    
+
     if (Test-Path "@project-core/configs/mcp-master-unified.json") {
         $McpConfig = Get-Content "@project-core/configs/mcp-master-unified.json" -Raw | ConvertFrom-Json
-        
+
         # Update metadata
         $McpConfig.metadata.lastOptimized = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
         $McpConfig.metadata.optimizedBy = "Enhanced !finaltest V3.1"
-        
+
         # Ensure all required servers are enabled
         $RequiredServers = @("sequential-thinking", "mcp-shrimp-task-manager")
         foreach ($Server in $RequiredServers) {
@@ -233,13 +233,13 @@ function Sync-ProjectCoreSystem {
                 Write-Log "✅ Ensured server enabled: $Server" "SUCCESS"
             }
         }
-        
+
         if (-not $DryRun) {
             $McpConfig | ConvertTo-Json -Depth 10 | Out-File "@project-core/configs/mcp-master-unified.json" -Encoding UTF8
             Write-Log "✅ MCP configuration refreshed and optimized" "SUCCESS"
         }
     }
-    
+
     $Config.UpdateResults += "Project-core system synchronization completed"
 }
 
@@ -292,15 +292,48 @@ function Remove-LegacySystems {
             $BackupItemPath = Join-Path $Config.BackupPath (Split-Path $Item -Leaf)
 
             try {
-                if (Test-Path $Item -PathType Container) {
-                    Copy-Item -Path $Item -Destination $BackupItemPath -Recurse -Force
-                    Write-Log "📦 Backed up directory: $Item" "INFO"
+                # Use Smart Backup System V4.0 to prevent recursive backup disasters
+                if (Test-Path "@project-core/automation/smart-backup-system-v4.ps1") {
+                    Write-Log "🛡️ Using Smart Backup System V4.0 for safe backup creation" "INFO"
+                    $smartBackupResult = & "@project-core/automation/smart-backup-system-v4.ps1" -SourcePath $Item -BackupName "finaltest-deprecated-$(Split-Path $Item -Leaf)" -MaxSizeMB 50 -DryRun:$DryRun
+                    if ($smartBackupResult.Success) {
+                        Write-Log "📦 Smart backup created: $Item" "INFO"
+                        $BackedUpItems += $Item
+                    } else {
+                        Write-Log "⚠️ Smart backup failed for $Item - using fallback method" "WARNING"
+                        # Fallback to original method with size check
+                        $itemSize = if (Test-Path $Item -PathType Container) { (Get-ChildItem $Item -Recurse -File | Measure-Object Length -Sum).Sum } else { (Get-Item $Item).Length }
+                        if ($itemSize -lt 50MB) {
+                            if (Test-Path $Item -PathType Container) {
+                                Copy-Item -Path $Item -Destination $BackupItemPath -Recurse -Force
+                                Write-Log "📦 Backed up directory: $Item" "INFO"
+                            }
+                            else {
+                                Copy-Item -Path $Item -Destination $BackupItemPath -Force
+                                Write-Log "📦 Backed up file: $Item" "INFO"
+                            }
+                            $BackedUpItems += $Item
+                        } else {
+                            Write-Log "🚫 Skipped oversized item: $Item ($([math]::Round($itemSize/1MB, 2)) MB)" "WARNING"
+                        }
+                    }
+                } else {
+                    # Fallback method with size validation
+                    $itemSize = if (Test-Path $Item -PathType Container) { (Get-ChildItem $Item -Recurse -File | Measure-Object Length -Sum).Sum } else { (Get-Item $Item).Length }
+                    if ($itemSize -lt 50MB) {
+                        if (Test-Path $Item -PathType Container) {
+                            Copy-Item -Path $Item -Destination $BackupItemPath -Recurse -Force
+                            Write-Log "📦 Backed up directory: $Item" "INFO"
+                        }
+                        else {
+                            Copy-Item -Path $Item -Destination $BackupItemPath -Force
+                            Write-Log "📦 Backed up file: $Item" "INFO"
+                        }
+                        $BackedUpItems += $Item
+                    } else {
+                        Write-Log "🚫 Skipped oversized item: $Item ($([math]::Round($itemSize/1MB, 2)) MB)" "WARNING"
+                    }
                 }
-                else {
-                    Copy-Item -Path $Item -Destination $BackupItemPath -Force
-                    Write-Log "📦 Backed up file: $Item" "INFO"
-                }
-                $BackedUpItems += $Item
 
                 # Remove the deprecated item
                 if (-not $DryRun) {
