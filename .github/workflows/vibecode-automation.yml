@@ -7,18 +7,18 @@ on:
     branches: [main, develop]
   schedule:
     # Executa diariamente às 02:00 UTC
-    - cron: '0 2 * * *'
+    - cron: "0 2 * * *"
   workflow_dispatch:
     inputs:
       comprehensive_test:
-        description: 'Executar testes abrangentes'
+        description: "Executar testes abrangentes"
         required: false
-        default: 'false'
+        default: false
         type: boolean
       cleanup_system:
-        description: 'Executar limpeza do sistema'
+        description: "Executar limpeza do sistema"
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 jobs:
@@ -35,30 +35,30 @@ jobs:
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          python-version: "3.11"
+          cache: "pip"
 
       - name: 📦 Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r @project-core/requirements.txt
 
-      - name: 🏗️ Architecture Validation
+      - name: 🏗️ Structure Validation
         run: |
-          echo "🧠 VIBECODE SYSTEM V4.0 - Architecture Validation"
-          python @project-core/automation/architecture_manager.py --validate-structure
+          echo "🧠 VIBECODE SYSTEM V4.0 - Structure Validation"
+          python @project-core/automation/tasks/monitor.py --type structure
 
           if [ $? -eq 0 ]; then
-            echo "✅ Arquitetura validada com sucesso"
+            echo "✅ Estrutura validada com sucesso"
           else
-            echo "❌ Falha na validação de arquitetura"
+            echo "❌ Falha na validação de estrutura"
             exit 1
           fi
 
       - name: 🏥 System Health Check
         run: |
           echo "🏥 Verificando saúde do sistema..."
-          python @project-core/automation/validation_suite.py --health-check --detailed
+          python @project-core/automation/tasks/monitor.py --type performance
 
           if [ $? -eq 0 ]; then
             echo "✅ Sistema saudável"
@@ -66,32 +66,32 @@ jobs:
             echo "⚠️ Problemas de saúde detectados"
           fi
 
-      - name: 📋 Dependency Verification
+      - name: 📋 Memory Validation
         run: |
-          echo "📦 Verificando dependências..."
-          python @project-core/automation/dependency_check.py --check-all
+          echo "🧠 Verificando sistema de memória..."
+          python @project-core/automation/tasks/monitor.py --validate-memory
 
           if [ $? -eq 0 ]; then
-            echo "✅ Dependências OK"
+            echo "✅ Sistema de memória OK"
           else
-            echo "❌ Problemas de dependência detectados"
+            echo "❌ Problemas no sistema de memória"
             exit 1
           fi
 
-      - name: 🧪 Final Test Suite
+      - name: 🧪 Comprehensive Test Suite
         run: |
-          echo "🚀 Executando teste final..."
+          echo "🚀 Executando suite de testes..."
 
           if [ "${{ github.event.inputs.comprehensive_test }}" = "true" ]; then
-            python @project-core/automation/validation_suite.py --final-test --comprehensive --generate-report
+            python @project-core/automation/tasks/run_tests.py --level comprehensive --backup-protection --memory-validation --report
           else
-            python @project-core/automation/validation_suite.py --final-test --generate-report
+            python @project-core/automation/tasks/run_tests.py --level enhanced --report
           fi
 
           if [ $? -eq 0 ]; then
-            echo "✅ Teste final passou"
+            echo "✅ Testes passaram"
           else
-            echo "❌ Teste final falhou"
+            echo "❌ Testes falharam"
             exit 1
           fi
 
@@ -99,7 +99,7 @@ jobs:
         if: github.event.inputs.cleanup_system == 'true'
         run: |
           echo "🧹 Executando limpeza do sistema..."
-          python @project-core/automation/system_cleanup.py --cleanup-cache --consolidate-backups --dry-run
+          python @project-core/automation/tasks/maintenance.py --cleanup --dry-run
 
           echo "✅ Limpeza concluída (dry-run)"
 
@@ -111,10 +111,10 @@ jobs:
           mkdir -p @project-core/reports
 
           # Análise de métricas de aprendizado
-          python @project-core/automation/learning_optimizer.py --analyze-metrics --days=7
+          python @project-core/automation/tasks/monitor.py --learning-metrics
 
           # Escanear oportunidades de otimização
-          python @project-core/automation/learning_optimizer.py --scan-opportunities
+          python @project-core/automation/tasks/monitor.py --scan-optimization
 
           echo "✅ Relatórios gerados"
 
@@ -140,7 +140,7 @@ jobs:
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: 📦 Install Dependencies
         run: |
@@ -150,7 +150,7 @@ jobs:
       - name: 🔄 Validate Sync Status
         run: |
           echo "🔍 Validando status de sincronização..."
-          python @project-core/automation/sync_manager.py --validate
+          python @project-core/automation/tasks/sync.py --status
 
           if [ $? -eq 0 ]; then
             echo "✅ Sincronização validada"
@@ -158,15 +158,15 @@ jobs:
             echo "⚠️ Problemas de sincronização detectados"
           fi
 
-      - name: 🚫 Check Unnecessary Branches
+      - name: 🔍 Monitor Sync Health
         run: |
-          echo "🚫 Verificando branches desnecessárias..."
-          python @project-core/automation/sync_manager.py --prevent-branches --check-only
+          echo "🔍 Monitorando saúde da sincronização..."
+          python @project-core/automation/tasks/monitor.py --type sync
 
           if [ $? -eq 0 ]; then
-            echo "✅ Estrutura de branches OK"
+            echo "✅ Sincronização saudável"
           else
-            echo "⚠️ Branches desnecessárias detectadas"
+            echo "⚠️ Problemas de sincronização detectados"
           fi
 
   learning-optimization:
@@ -181,32 +181,24 @@ jobs:
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: 📦 Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r @project-core/requirements.txt
 
-      - name: 🧠 Activate Learning System
+      - name: 🧠 Learning Metrics Analysis
         run: |
-          echo "🧠 Ativando sistema de aprendizado..."
-          SESSION_ID="github-action-$(date +%Y%m%d-%H%M%S)"
-          python @project-core/automation/learning_optimizer.py --activate --session-id="$SESSION_ID"
-
-          echo "✅ Sistema de aprendizado ativado: $SESSION_ID"
-
-      - name: 📊 Analyze Learning Metrics
-        run: |
-          echo "📊 Analisando métricas de aprendizado..."
-          python @project-core/automation/learning_optimizer.py --analyze-metrics --days=30 --detailed
+          echo "🧠 Analisando métricas de aprendizado..."
+          python @project-core/automation/tasks/monitor.py --learning-metrics
 
           echo "✅ Análise de métricas concluída"
 
       - name: 🔍 Scan Optimization Opportunities
         run: |
           echo "🔍 Escaneando oportunidades de otimização..."
-          python @project-core/automation/learning_optimizer.py --scan-opportunities
+          python @project-core/automation/tasks/monitor.py --scan-optimization
 
           echo "✅ Escaneamento concluído"
 
@@ -214,9 +206,9 @@ jobs:
         run: |
           echo "⚡ Executando otimizações seguras..."
 
-          # Apenas otimizações de baixo risco
-          python @project-core/automation/system_cleanup.py --cleanup-cache --dry-run
-          python @project-core/automation/system_cleanup.py --consolidate-backups --dry-run
+          # Limpeza segura com dry-run
+          python @project-core/automation/tasks/maintenance.py --cleanup --dry-run
+          python @project-core/automation/tasks/maintenance.py --consolidate --dry-run
 
           echo "✅ Otimizações seguras executadas (dry-run)"
 
@@ -240,9 +232,9 @@ jobs:
 
           echo "✅ Relatório gerado: learning_report_$TIMESTAMP.md"
 
-                    - name: 📤 Upload Learning Reports
-         uses: actions/upload-artifact@v4
-         with:
-           name: learning-reports-${{ github.run_number }}
-           path: "@project-core/reports/learning_report_*.md"
-           retention-days: 90
+      - name: 📤 Upload Learning Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: learning-reports-${{ github.run_number }}
+          path: "@project-core/reports/learning_report_*.md"
+          retention-days: 90

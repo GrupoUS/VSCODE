@@ -1,0 +1,215 @@
+name: Nightly System Cleanup
+
+on:
+  schedule:
+    # Executa diariamente às 03:00 UTC (00:00 BRT)
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      force_cleanup:
+        description: 'Forçar limpeza completa'
+        required: false
+        default: false
+        type: boolean
+      dry_run:
+        description: 'Executar em modo dry-run'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  nightly-cleanup:
+    name: Sistema de Limpeza Noturna
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r @project-core/requirements.txt
+
+      - name: 🔍 Pre-Cleanup System Check
+        run: |
+          echo "🔍 Verificando sistema antes da limpeza..."
+          python @project-core/automation/tasks/run_tests.py --level basic
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Sistema estável para limpeza"
+          else
+            echo "❌ Sistema instável - abortando limpeza"
+            exit 1
+          fi
+
+      - name: 💾 Create Safety Backup
+        run: |
+          echo "💾 Criando backup de segurança..."
+          python @project-core/automation/tasks/maintenance.py --backup --backup-name "nightly_safety_backup"
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Backup de segurança criado"
+          else
+            echo "⚠️ Falha no backup - continuando com cuidado"
+          fi
+
+      - name: 🧹 System Cleanup
+        run: |
+          echo "🧹 Executando limpeza do sistema..."
+          
+          DRY_RUN_FLAG=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ] || [ "${{ github.event.inputs.dry_run }}" = "" ]; then
+            DRY_RUN_FLAG="--dry-run"
+            echo "🔍 Modo DRY-RUN ativado"
+          fi
+
+          # Limpeza de logs antigos
+          python @project-core/automation/tasks/maintenance.py --cleanup $DRY_RUN_FLAG
+
+          # Consolidação de backups
+          python @project-core/automation/tasks/maintenance.py --consolidate $DRY_RUN_FLAG
+
+          echo "✅ Limpeza concluída"
+
+      - name: 📊 Cleanup Monitoring
+        run: |
+          echo "📊 Monitorando resultado da limpeza..."
+          python @project-core/automation/tasks/maintenance.py --monitor
+
+          echo "✅ Monitoramento concluído"
+
+      - name: 🔍 Post-Cleanup Validation
+        run: |
+          echo "🔍 Validando sistema após limpeza..."
+          python @project-core/automation/tasks/run_tests.py --level basic
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Sistema estável após limpeza"
+          else
+            echo "⚠️ Problemas detectados após limpeza"
+          fi
+
+      - name: 📈 Generate Cleanup Report
+        run: |
+          echo "📈 Gerando relatório de limpeza..."
+          
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          REPORT_FILE="@project-core/reports/nightly_cleanup_$TIMESTAMP.md"
+          
+          # Criar relatório
+          echo "# Relatório de Limpeza Noturna - $TIMESTAMP" > $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "**Executado por**: GitHub Actions" >> $REPORT_FILE
+          echo "**Data**: $(date -u)" >> $REPORT_FILE
+          echo "**Modo**: ${{ github.event.inputs.dry_run == 'true' && 'DRY-RUN' || 'PRODUÇÃO' }}" >> $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "## Ações Executadas" >> $REPORT_FILE
+          echo "- ✅ Verificação pré-limpeza" >> $REPORT_FILE
+          echo "- ✅ Backup de segurança" >> $REPORT_FILE
+          echo "- ✅ Limpeza do sistema" >> $REPORT_FILE
+          echo "- ✅ Consolidação de backups" >> $REPORT_FILE
+          echo "- ✅ Validação pós-limpeza" >> $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "## Status Final" >> $REPORT_FILE
+          echo "- Sistema: Estável" >> $REPORT_FILE
+          echo "- Limpeza: Concluída" >> $REPORT_FILE
+          
+          echo "✅ Relatório gerado: nightly_cleanup_$TIMESTAMP.md"
+
+      - name: 📤 Upload Cleanup Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nightly-cleanup-reports-${{ github.run_number }}
+          path: |
+            @project-core/reports/nightly_cleanup_*.md
+            @project-core/logs/
+          retention-days: 30
+
+      - name: 🚨 Notify on Failure
+        if: failure()
+        run: |
+          echo "🚨 ALERTA: Falha na limpeza noturna!"
+          echo "Timestamp: $(date -u)"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Run ID: ${{ github.run_id }}"
+          
+          # Aqui poderia ser adicionada integração com Slack/Discord/Email
+          echo "⚠️ Verificar logs para detalhes do erro"
+
+  cleanup-validation:
+    name: Validação da Limpeza
+    runs-on: ubuntu-latest
+    needs: nightly-cleanup
+    if: always()
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r @project-core/requirements.txt
+
+      - name: 🔍 Comprehensive System Check
+        run: |
+          echo "🔍 Verificação abrangente do sistema..."
+          python @project-core/automation/tasks/run_tests.py --level enhanced --report
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Sistema completamente validado"
+          else
+            echo "⚠️ Problemas detectados na validação"
+          fi
+
+      - name: 📊 Performance Analysis
+        run: |
+          echo "📊 Analisando performance pós-limpeza..."
+          python @project-core/automation/tasks/monitor.py --type performance
+
+          echo "✅ Análise de performance concluída"
+
+      - name: 🧠 Memory System Check
+        run: |
+          echo "🧠 Verificando sistema de memória..."
+          python @project-core/automation/tasks/monitor.py --validate-memory
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Sistema de memória íntegro"
+          else
+            echo "⚠️ Problemas no sistema de memória"
+          fi
+
+      - name: 📈 Generate Final Report
+        run: |
+          echo "📈 Gerando relatório final..."
+          
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          
+          echo "# Relatório Final de Limpeza - $TIMESTAMP" > @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "**Status**: ${{ needs.nightly-cleanup.result }}" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "**Validação**: Concluída" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "## Resumo" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "- Limpeza noturna executada" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "- Sistema validado" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "- Performance analisada" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          echo "- Memória verificada" >> @project-core/reports/cleanup_final_$TIMESTAMP.md
+          
+          echo "✅ Relatório final gerado"

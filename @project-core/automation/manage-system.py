@@ -1,20 +1,53 @@
 #!/usr/bin/env python3
 """
-GRUPO US VIBECODE SYSTEM V4.5 - System Manager (Python)
-Este script substitui o antigo manage-system.ps1, conforme diretriz de migração para Python.
+SYSTEM MANAGER - Unified Management Suite
+GRUPO US VIBECODE SYSTEM V4.0
+
+Consolidates 16 manage scripts into single modular interface:
+- manage-agents.py/.ps1 (Agent management)
+- manage-backups.py/.ps1 (Backup management)
+- manage-knowledge-graph.py/.ps1 (Knowledge graph management)
+- manage-logs.py/.ps1 (Log management)
+- manage-refiners.py/.ps1 (Refiner management)
+- manage-system.py/.ps1 (System management)
+- manage-tasks.py/.ps1 (Task management)
+
+Usage:
+    python system_manager.py --module=agents --action=list
+    python system_manager.py --module=backups --action=create
+    python system_manager.py --module=knowledge --action=status
+    python system_manager.py --module=logs --action=clear
+    python system_manager.py --module=refiners --action=configure
+    python system_manager.py --module=system --action=status
+    python system_manager.py --module=tasks --action=assign
 """
+
 import argparse
 import json
+import logging
 import sys
-from pathlib import Path
+import time
 from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Any, Optional
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('@project-core/logs/system_manager.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 try:
     from rich import print
     from rich.console import Console
     from rich.table import Table
 except ImportError:
-    print("[yellow]Rich não encontrado. Recomenda-se instalar com: pip install rich[/yellow]")
+    logger.warning("Rich not found. Install with: pip install rich")
     def print(*args, **kwargs):
         __builtins__.print(*args, **kwargs)
     class Console:

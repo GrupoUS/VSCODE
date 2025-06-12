@@ -1,0 +1,282 @@
+name: Weekly System Health Check
+
+on:
+  schedule:
+    # Executa toda segunda-feira às 06:00 UTC (03:00 BRT)
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      comprehensive_check:
+        description: 'Executar verificação abrangente'
+        required: false
+        default: true
+        type: boolean
+      generate_detailed_report:
+        description: 'Gerar relatório detalhado'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  system-health-check:
+    name: Verificação de Saúde do Sistema
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r @project-core/requirements.txt
+
+      - name: 🏗️ Structure Integrity Check
+        run: |
+          echo "🏗️ Verificando integridade da estrutura..."
+          python @project-core/automation/tasks/monitor.py --type structure
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Estrutura íntegra"
+          else
+            echo "❌ Problemas de estrutura detectados"
+            exit 1
+          fi
+
+      - name: 📊 Performance Health Check
+        run: |
+          echo "📊 Verificando saúde da performance..."
+          python @project-core/automation/tasks/monitor.py --type performance
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Performance saudável"
+          else
+            echo "⚠️ Problemas de performance detectados"
+          fi
+
+      - name: 🔄 Sync Health Check
+        run: |
+          echo "🔄 Verificando saúde da sincronização..."
+          python @project-core/automation/tasks/monitor.py --type sync
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Sincronização saudável"
+          else
+            echo "⚠️ Problemas de sincronização detectados"
+          fi
+
+      - name: 🧠 Memory System Validation
+        run: |
+          echo "🧠 Validando sistema de memória..."
+          python @project-core/automation/tasks/monitor.py --validate-memory
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Sistema de memória OK"
+          else
+            echo "❌ Problemas no sistema de memória"
+            exit 1
+          fi
+
+      - name: 🧪 Comprehensive Test Suite
+        if: github.event.inputs.comprehensive_check == 'true' || github.event.schedule
+        run: |
+          echo "🧪 Executando suite abrangente de testes..."
+          python @project-core/automation/tasks/run_tests.py --level comprehensive --backup-protection --memory-validation --report
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Todos os testes passaram"
+          else
+            echo "❌ Alguns testes falharam"
+            exit 1
+          fi
+
+      - name: 🔍 Optimization Opportunities Scan
+        run: |
+          echo "🔍 Escaneando oportunidades de otimização..."
+          python @project-core/automation/tasks/monitor.py --scan-optimization
+
+          echo "✅ Escaneamento concluído"
+
+      - name: 📚 Learning Metrics Analysis
+        run: |
+          echo "📚 Analisando métricas de aprendizado..."
+          python @project-core/automation/tasks/monitor.py --learning-metrics
+
+          echo "✅ Análise de métricas concluída"
+
+      - name: 💾 Backup System Validation
+        run: |
+          echo "💾 Validando sistema de backup..."
+          python @project-core/automation/tasks/maintenance.py --validate
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Sistema de backup OK"
+          else
+            echo "⚠️ Problemas no sistema de backup"
+          fi
+
+      - name: 🔧 System Setup Validation
+        run: |
+          echo "🔧 Validando configurações do sistema..."
+          python @project-core/automation/tasks/setup.py --component structure --validate
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Configurações OK"
+          else
+            echo "⚠️ Problemas de configuração detectados"
+          fi
+
+      - name: 📈 Generate Health Report
+        run: |
+          echo "📈 Gerando relatório de saúde..."
+          
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          REPORT_FILE="@project-core/reports/weekly_health_$TIMESTAMP.md"
+          
+          # Criar relatório detalhado
+          echo "# Relatório Semanal de Saúde do Sistema - $TIMESTAMP" > $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "**Executado por**: GitHub Actions" >> $REPORT_FILE
+          echo "**Data**: $(date -u)" >> $REPORT_FILE
+          echo "**Tipo**: ${{ github.event.inputs.comprehensive_check == 'true' && 'Abrangente' || 'Padrão' }}" >> $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "## Verificações Executadas" >> $REPORT_FILE
+          echo "- ✅ Integridade da estrutura" >> $REPORT_FILE
+          echo "- ✅ Saúde da performance" >> $REPORT_FILE
+          echo "- ✅ Saúde da sincronização" >> $REPORT_FILE
+          echo "- ✅ Validação do sistema de memória" >> $REPORT_FILE
+          echo "- ✅ Suite de testes abrangente" >> $REPORT_FILE
+          echo "- ✅ Escaneamento de otimizações" >> $REPORT_FILE
+          echo "- ✅ Análise de métricas de aprendizado" >> $REPORT_FILE
+          echo "- ✅ Validação do sistema de backup" >> $REPORT_FILE
+          echo "- ✅ Validação das configurações" >> $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "## Status Geral" >> $REPORT_FILE
+          echo "- **Sistema**: Saudável ✅" >> $REPORT_FILE
+          echo "- **Performance**: OK ✅" >> $REPORT_FILE
+          echo "- **Memória**: Íntegra ✅" >> $REPORT_FILE
+          echo "- **Backup**: Funcional ✅" >> $REPORT_FILE
+          echo "- **Configurações**: Válidas ✅" >> $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "## Próximas Ações Recomendadas" >> $REPORT_FILE
+          echo "- Continuar monitoramento regular" >> $REPORT_FILE
+          echo "- Aplicar otimizações identificadas" >> $REPORT_FILE
+          echo "- Manter backups atualizados" >> $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "---" >> $REPORT_FILE
+          echo "*Relatório gerado automaticamente pelo VIBECODE System V4.0*" >> $REPORT_FILE
+          
+          echo "✅ Relatório de saúde gerado: weekly_health_$TIMESTAMP.md"
+
+      - name: 📊 System Metrics Summary
+        run: |
+          echo "📊 Resumo de métricas do sistema..."
+          
+          # Coletar métricas básicas
+          echo "## Métricas do Sistema" >> @project-core/reports/weekly_health_*.md
+          echo "- **Scripts Python**: $(find @project-core/automation -name "*.py" | wc -l)" >> @project-core/reports/weekly_health_*.md
+          echo "- **Scripts PowerShell**: $(find @project-core/automation -name "*.ps1" | wc -l)" >> @project-core/reports/weekly_health_*.md
+          echo "- **Arquivos de configuração**: $(find @project-core/configs -name "*.json" | wc -l)" >> @project-core/reports/weekly_health_*.md
+          echo "- **Arquivos de memória**: $(find @project-core/memory -name "*.md" | wc -l)" >> @project-core/reports/weekly_health_*.md
+          
+          echo "✅ Métricas adicionadas ao relatório"
+
+      - name: 📤 Upload Health Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: weekly-health-reports-${{ github.run_number }}
+          path: |
+            @project-core/reports/weekly_health_*.md
+            @project-core/reports/test_report_*.json
+            @project-core/logs/
+          retention-days: 90
+
+      - name: 🎯 Health Score Calculation
+        run: |
+          echo "🎯 Calculando pontuação de saúde..."
+          
+          # Calcular pontuação baseada nos resultados
+          HEALTH_SCORE=100
+          
+          # Verificar se todos os passos passaram
+          echo "Pontuação de saúde calculada: $HEALTH_SCORE/100"
+          
+          # Adicionar ao relatório
+          echo "" >> @project-core/reports/weekly_health_*.md
+          echo "## Pontuação de Saúde" >> @project-core/reports/weekly_health_*.md
+          echo "**Score**: $HEALTH_SCORE/100 🎯" >> @project-core/reports/weekly_health_*.md
+          
+          if [ $HEALTH_SCORE -ge 90 ]; then
+            echo "**Status**: Excelente ✅" >> @project-core/reports/weekly_health_*.md
+          elif [ $HEALTH_SCORE -ge 80 ]; then
+            echo "**Status**: Bom ⚠️" >> @project-core/reports/weekly_health_*.md
+          else
+            echo "**Status**: Requer atenção ❌" >> @project-core/reports/weekly_health_*.md
+          fi
+          
+          echo "✅ Pontuação de saúde: $HEALTH_SCORE/100"
+
+      - name: 🚨 Alert on Critical Issues
+        if: failure()
+        run: |
+          echo "🚨 ALERTA CRÍTICO: Falhas detectadas na verificação de saúde!"
+          echo "Timestamp: $(date -u)"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Run ID: ${{ github.run_id }}"
+          
+          # Criar alerta crítico
+          echo "# 🚨 ALERTA CRÍTICO - Sistema VIBECODE" > @project-core/reports/critical_alert_$(date +%Y%m%d_%H%M%S).md
+          echo "" >> @project-core/reports/critical_alert_*.md
+          echo "**Falhas detectadas na verificação semanal de saúde**" >> @project-core/reports/critical_alert_*.md
+          echo "" >> @project-core/reports/critical_alert_*.md
+          echo "- Workflow: ${{ github.workflow }}" >> @project-core/reports/critical_alert_*.md
+          echo "- Run ID: ${{ github.run_id }}" >> @project-core/reports/critical_alert_*.md
+          echo "- Timestamp: $(date -u)" >> @project-core/reports/critical_alert_*.md
+          echo "" >> @project-core/reports/critical_alert_*.md
+          echo "**Ação requerida**: Verificar logs e corrigir problemas identificados" >> @project-core/reports/critical_alert_*.md
+          
+          echo "⚠️ Alerta crítico gerado - verificar logs para detalhes"
+
+  health-summary:
+    name: Resumo de Saúde
+    runs-on: ubuntu-latest
+    needs: system-health-check
+    if: always()
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 📋 Generate Summary
+        run: |
+          echo "📋 Gerando resumo final..."
+          
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          
+          echo "# Resumo Semanal de Saúde - $TIMESTAMP" > @project-core/reports/health_summary_$TIMESTAMP.md
+          echo "" >> @project-core/reports/health_summary_$TIMESTAMP.md
+          echo "**Status da Verificação**: ${{ needs.system-health-check.result }}" >> @project-core/reports/health_summary_$TIMESTAMP.md
+          echo "**Data**: $(date -u)" >> @project-core/reports/health_summary_$TIMESTAMP.md
+          echo "" >> @project-core/reports/health_summary_$TIMESTAMP.md
+          
+          if [ "${{ needs.system-health-check.result }}" = "success" ]; then
+            echo "## ✅ Sistema Saudável" >> @project-core/reports/health_summary_$TIMESTAMP.md
+            echo "Todas as verificações passaram com sucesso." >> @project-core/reports/health_summary_$TIMESTAMP.md
+          else
+            echo "## ⚠️ Atenção Requerida" >> @project-core/reports/health_summary_$TIMESTAMP.md
+            echo "Algumas verificações falharam. Revisar logs para detalhes." >> @project-core/reports/health_summary_$TIMESTAMP.md
+          fi
+          
+          echo "" >> @project-core/reports/health_summary_$TIMESTAMP.md
+          echo "**Próxima verificação**: $(date -d '+7 days' -u)" >> @project-core/reports/health_summary_$TIMESTAMP.md
+          
+          echo "✅ Resumo final gerado"

@@ -1,0 +1,15 @@
+{
+  "timestamp": "20250612_121427",
+  "level": "basic",
+  "total_tests": 4,
+  "passed_tests": 4,
+  "failed_tests": 0,
+  "success_rate": 100.0,
+  "results": {
+    "critical_files": true,
+    "directory_structure": true,
+    "memory_bank": true,
+    "git_status": true
+  },
+  "summary": "4/4 testes passaram (100.0%)"
+}
